@@ -64,3 +64,7 @@ Nguồn để dịch https://github.com/ajaymache/machine-learning-yearning
 | 56      | [chưa có tên](ch56.md) | chưa bắt đầu |
 | 57      | [chưa có tên](ch57.md) | chưa bắt đầu |
 | 58      | [chưa có tên](ch58.md) | chưa bắt đầu |
+
+
+
+File ảnh của tất cả các chương đều để chung tại thư mục /img, với cách lưu tên file [tại đây](img/readme.md)
