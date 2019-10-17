@@ -1,5 +1,7 @@
 # Machine-Learning-Yearning-Vietnamese-Translation
 
+Nguồn để dịch https://github.com/ajaymache/machine-learning-yearning
+
 ## Mục lục
 
 | Chương | Tên chương            | Tình trạng   |
