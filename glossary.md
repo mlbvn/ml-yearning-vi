@@ -1,4 +1,4 @@
-# Bảng dịch các thuật ngữ Anh Việt
+# Bảng thuật ngữ
 
 Các thuật ngữ cần được dịch theo chuẩn trong file này.
 
