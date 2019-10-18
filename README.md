@@ -2,6 +2,10 @@
 
 Nguồn để dịch https://github.com/ajaymache/machine-learning-yearning
 
+## Bảng song ngữ
+
+Tất cả các thuật ngữ cần được dịch theo chuẩn trong file [glossary](glossary.md).
+
 ## Mục lục
 
 | Chương | Tên chương                      | Tình trạng   | Người dịch chính   |
