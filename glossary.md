@@ -5,7 +5,7 @@
 | English | Tiếng Việt |
 |---| ---|
 | development set | tập phát triển|
-| gradient descent| gradient descenct|
+| gradient descent| gradient descent|
 | training set| tập huấn luyện|
 
 
