@@ -83,6 +83,9 @@ Khi đó, ảnh sẽ được hiển thị cùng với tên như ảnh đầu ti
 ### Ch14
 [Nội dung chương 14](../chapters/ch14.md)
 
+`C14_01.png`  
+![img](C14_01.png)
+
 ### Ch15
 [Nội dung chương 15](../chapters/ch15.md)
 
