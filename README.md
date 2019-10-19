@@ -19,7 +19,7 @@ Công việc cụ thể trong từng cột có thể được tìm thấy tại 
 |--------|---------------------------------|---------------------------|----------------------------|--------------|--------------|
 | 1      | [chưa có tên](chapters/ch01.md) | [đã hoàn thành](/pull/24) | [đã hoàn thành](/pull/24)  | chưa bắt đầu | chưa bắt đầu |
 | 2      | [chưa có tên](chapters/ch02.md) | [đã hoàn thành](/pull/32) | [đang thực hiện](/pull/32) | chưa bắt đầu | chưa bắt đầu |
-| 3      | [chưa có tên](chapters/ch03.md) | chưa bắt đầu              | chưa bắt đầu               | chưa bắt đầu | chưa bắt đầu |
+| 3      | [chưa có tên](chapters/ch03.md) | [đã hoàn thành](/pull/47) | [đã hoàn thành](/pull/47)  | chưa bắt đầu | chưa bắt đầu |
 | 4      | [chưa có tên](chapters/ch04.md) | chưa bắt đầu              | chưa bắt đầu               | chưa bắt đầu | chưa bắt đầu |
 | 5      | [chưa có tên](chapters/ch05.md) | chưa bắt đầu              | chưa bắt đầu               | chưa bắt đầu | chưa bắt đầu |
 | 6      | [chưa có tên](chapters/ch06.md) | chưa bắt đầu              | chưa bắt đầu               | chưa bắt đầu | chưa bắt đầu |
