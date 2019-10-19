@@ -140,11 +140,29 @@ Khi đó, ảnh sẽ được hiển thị cùng với tên như ảnh đầu ti
 ### Ch28
 [Nội dung chương 28](../chapters/ch28.md)
 
+`C28_01.png`
+![img](C28_01.png)
+
+`C28_02.png`
+![img](C28_02.png)
+
+`C28_03.png`
+![img](C28_03.png)
+
 ### Ch29
 [Nội dung chương 29](../chapters/ch29.md)
 
+`C29_01.png`
+![img](C29_01.png)
+
 ### Ch30
 [Nội dung chương 30](../chapters/ch30.md)
+
+`C30_01.png`
+![img](C30_01.png)
+
+`C30_02.png`
+![img](C30_02.png)
 
 ### Ch31
 [Nội dung chương 31](../chapters/ch31.md)
