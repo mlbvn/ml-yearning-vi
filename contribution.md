@@ -6,7 +6,7 @@
 Một chương được hoàn thành khi nó trải qua các công đoạn:
 
 ## 1. Copy + format từ bản gốc
-Để tiện cho việc dịch và review, mỗi chương bắt đầu với việc copy bản gốc và định dạng. Ví dụ như [ở đây](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/24/files).
+Để tiện cho việc dịch và review, mỗi chương bắt đầu với việc copy chương tương ứng từ [bản gốc](https://www.deeplearning.ai/machine-learning-yearning/) và định dạng theo markdown. Ví dụ như [ở đây](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/24/files).
 
 Một vài lưu ý:
 1. Tên chương để ở heading 1, ví dụ:
