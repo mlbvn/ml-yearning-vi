@@ -5,12 +5,15 @@ Một vài lưu ý khi lưu ảnh mới:
 * Tên file được lưu dưới dạng `Caa_bb.png` trong đó `C` là ký tự thể hiện `Chương`, `aa` thể hiện số thứ tự chương, `bb` thể hiện số thứ tự của ảnh trong chương. Ví dụ. Ảnh thứ nhất của chương một có tên là `C01_01.png`.
 * Ảnh sau khi được thêm vào thư mục `imgs` cần được link vào trong file này ở dưới chương tương ứng để tiện kiểm tra chất lượng ảnh.
 * Cú pháp link ảnh:
-[aaa](#ch01)
+
 ```
 `Caa_bb.png`
 ![img](Caa_bb.png)
 ```
-khi đó, ảnh sẽ được hiển thị cùng với tên như ảnh đầu tiên của Chương 1 dưới đây.
+Khi đó, ảnh sẽ được hiển thị cùng với tên như ảnh đầu tiên của [Chương 1](#ch01) dưới đây.
+
+
+## Mục lục tới ảnh của các chương:
 
 | Chương      | Chương      | Chương      | Chương      | Chương      | Chương      |
 |-------------|-------------|-------------|-------------|-------------|-------------|
