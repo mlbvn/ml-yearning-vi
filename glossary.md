@@ -13,7 +13,7 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | ---------------- | ---------------- |
 | development set  | tập phát triển   |
 | gradient descent | gradient descent |
-| hidden unit      | nốt ẩn           |
+| hidden unit      | nút ẩn           |
 | layer            | tầng             |
 | machine learning | machine learning |
 | neural network   | mạng neural      |
@@ -29,7 +29,7 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | gradient descent | gradient descent |
 | machine learning | machine learning |
 | mạng neural      | nerual network   |
-| nốt ẩn           | hidden unit      |
+| nút ẩn           | hidden unit      |
 | tầng             | layer            |
 | tập huấn luyện   | training set     |
 | tập phát triển   | development set  |
