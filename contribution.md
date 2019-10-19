@@ -46,3 +46,5 @@ Sau khi một Pull Request được approve, nhóm điều hành sẽ xóa phầ
 Trong năm bước bên trên, bạn có thể đóng góp ở bất cứ bước nào ngoại trừ bước cuối chỉ có nhóm điều hành mới được thực hiện. Mỗi bước nhỏ nên tạo một Pull Request riêng để thuận lợi cho việc Review.
 
 Lưu ý: Mỗi Pull Request chỉ nên thực hiện một công việc duy nhất. Không nên gộp nhiều công việc vào một Pull Request.
+
+**Mọi đóng góp của các bạn đều được lưu lại trong lịch sử của repo này.**
