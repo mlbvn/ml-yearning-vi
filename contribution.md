@@ -2,6 +2,8 @@
 
 **Dự án không thể thành công nếu không có sự đóng góp của cộng đồng. Nếu bạn muốn đóng góp một phần vào dự án, bạn vui lòng xem các công việc cần thực hiện [tại đây](/issues). Các công việc được gán nhãn [high priority](/issues?q=is%3Aissue+is%3Aopen+label%3A%22high+priority%22) là các công việc cần được hoàn thành trước.**
 
+Việc đóng góp được thực hiện qua các Pull Request. Đây là bài [hướng dẫn tạo pull request](https://codetot.net/contribute-github/) khá chi tiết, các bạn có thể tham khảo.
+
 # Các bước dịch một chương
 Một chương được hoàn thành khi nó trải qua các công đoạn:
 
