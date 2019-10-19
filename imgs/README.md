@@ -38,6 +38,10 @@ Khi đó, ảnh sẽ được hiển thị cùng với tên như ảnh đầu ti
 ### Ch02
 [Nội dung chương 2](../chapters/ch02.md)
 
+`C02_01.png`
+
+![img](C02_01.png)
+
 ### Ch03
 [Nội dung chương 3](../chapters/ch03.md)
 
