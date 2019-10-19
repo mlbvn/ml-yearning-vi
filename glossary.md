@@ -11,7 +11,7 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 
 | English             | Tiếng Việt       |
 | --------------------| ---------------- |
-| deep learning       | deep learning
+| deep learning       | deep learning    |
 | development set     | tập phát triển   |
 | gradient descent    | gradient descent |
 | hidden unit         | nút ẩn           |
@@ -28,7 +28,7 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 
 | Tiếng Việt       | English             |
 | ---------------- | ----------------    |
-| deep learning    | deep learning
+| deep learning    | deep learning       |
 | gradient descent | gradient descent    |
 | machine learning | machine learning    |
 | mạng neural      | nerual network      |
