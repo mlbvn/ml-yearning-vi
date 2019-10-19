@@ -59,8 +59,14 @@ Khi đó, ảnh sẽ được hiển thị cùng với tên như ảnh đầu ti
 ### Ch05
 [Nội dung chương 5](../chapters/ch05.md)
 
+`C05_01.png`
+![img](C05_01.png)
+
 ### Ch06
 [Nội dung chương 6](../chapters/ch06.md)
+
+`C06_01.png`
+![img](C06_01.png)
 
 ### Ch07
 [Nội dung chương 7](../chapters/ch07.md)
@@ -73,6 +79,9 @@ Khi đó, ảnh sẽ được hiển thị cùng với tên như ảnh đầu ti
 
 ### Ch10
 [Nội dung chương 10](../chapters/ch10.md)
+
+`C10_01.png`
+![img](C10_01.png)
 
 ### Ch11
 [Nội dung chương 11](../chapters/ch11.md)
