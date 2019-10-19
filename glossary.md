@@ -13,6 +13,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 
 ## Anh - Việt
 
+<<<<<<< HEAD
 
 | English                           | Tiếng Việt (Nếu bạn bổ sung thì KHÔNG căn chỉnh các dòng khác) | Thảo luận tại                                              |
 |-----------------------------------|----------------------------------------------------------------|------------------------------------------------------------|
@@ -77,3 +78,32 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | tune parameters                   | điều chỉnh tham số                                             |                                                            |
 | underfit                          | underfit                                                       | [#87](http://bit.ly/2BvfPYA)                               |
 | variance (bias as variance)       | phương sai                                                     | [#125](http://bit.ly/32HJI3S)                              |
+=======
+| English          | Tiếng Việt       |
+| ---------------- | ---------------- |
+| development set  | tập phát triển   |
+| gradient descent | gradient descent |
+| hidden unit      | nút ẩn           |
+| layer            | tầng             |
+| machine learning | machine learning |
+| neural network   | mạng neural      |
+| regularization   | regularization   |
+| training set     | tập huấn luyện   |
+
+
+
+
+## Việt - Anh
+
+| Tiếng Việt       | English          |
+| ---------------- | ---------------- |
+| gradient descent | gradient descent |
+| machine learning | machine learning |
+| mạng neural      | nerual network   |
+| nút ẩn           | hidden unit      |
+| regularization   | regularization   |
+| tầng             | layer            |
+| tập huấn luyện   | training set     |
+| tập phát triển   | development set  |
+
+>>>>>>> Sửa lại thứ tự trong glossary (#69)
