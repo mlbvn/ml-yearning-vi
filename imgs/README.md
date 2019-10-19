@@ -89,26 +89,58 @@ Khi đó, ảnh sẽ được hiển thị cùng với tên như ảnh đầu ti
 ### Ch11
 [Nội dung chương 11](../chapters/ch11.md)
 
+`C11_01.png`  
+![img](C11_01.png)
+
 ### Ch12
 [Nội dung chương 12](../chapters/ch12.md)
 
 ### Ch13
 [Nội dung chương 13](../chapters/ch13.md)
 
+`C13_01.png`  
+![img](C13_01.png)
+
 ### Ch14
 [Nội dung chương 14](../chapters/ch14.md)
+
+`C14_01.png`  
+![img](C14_01.png)
 
 ### Ch15
 [Nội dung chương 15](../chapters/ch15.md)
 
+`C15_01.png`  
+![img](C15_01.png)
+
+`C15_02.png`  
+![img](C15_02.png)
+
 ### Ch16
 [Nội dung chương 16](../chapters/ch16.md)
+
+`C16_01.png`  
+![img](C16_01.png)
+
 
 ### Ch17
 [Nội dung chương 17](../chapters/ch17.md)
 
+`C17_01.png`  
+![img](C17_01.png)
+
+`C17_02.png`  
+![img](C17_02.png)
+
+
 ### Ch18
 [Nội dung chương 18](../chapters/ch18.md)
+
+`C18_01.png`  
+![img](C18_01.png)
+
+`C18_02.png`  
+![img](C18_02.png)
 
 ### Ch19
 [Nội dung chương 19](../chapters/ch19.md)
