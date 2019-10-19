@@ -41,8 +41,20 @@ Khi đó, ảnh sẽ được hiển thị cùng với tên như ảnh đầu ti
 ### Ch03
 [Nội dung chương 3](../chapters/ch03.md)
 
+`C03_01.png`
+![img](C03_01.png)
+
 ### Ch04
 [Nội dung chương 4](../chapters/ch04.md)
+
+`C04_01.png`
+![img](C04_01.png)
+
+`C04_02.png`
+![img](C04_02.png)
+
+`C04_03.png`
+![img](C04_03.png)
 
 ### Ch05
 [Nội dung chương 5](../chapters/ch05.md)
