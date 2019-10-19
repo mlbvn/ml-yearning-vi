@@ -43,6 +43,8 @@ Khi có Pull Request mới, sẽ cần rất nhiều bình luận và kiểm tra
 Sau khi một Pull Request được approve, nhóm điều hành sẽ xóa phần tiếng Anh và các dấu `->`, chỉ để phần tiếng Việt trước khi merge và master branch.
 
 # Làm thế nào để đóng góp vào việc dịch?
-Trong năm bước bên trên, bạn có thể đóng góp ở bất cứ bước nào ngoại trừ bước cuối chỉ có nhóm điều hành mới được thực hiện.
+Trong năm bước bên trên, bạn có thể đóng góp ở bất cứ bước nào ngoại trừ bước cuối chỉ có nhóm điều hành mới được thực hiện. Mỗi bước nhỏ nên tạo một Pull Request riêng để thuận lợi cho việc Review.
+
+Lưu ý: Mỗi Pull Request chỉ nên thực hiện một công việc duy nhất. Không nên gộp nhiều công việc vào một Pull Request.
 
 Ngoài ra việc lấy các ảnh trong sách đưa vào thư mục [imgs](../imgs) cũng rất cần thiết.
