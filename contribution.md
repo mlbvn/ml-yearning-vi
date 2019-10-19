@@ -21,7 +21,12 @@ Machine learning is the foundation of countless important applications, includin
 
 ```
 
-3. Sau mỗi dòng là một dấu mũi tên (`->`) và một dòng trắng để người dịch điền về sau. Người dịch bắt đầu ở dòng **dưới dấu mũi tên**.
+3. Sau mỗi dòng là một dấu mũi tên (`->`) và một dòng trắng để người dịch điền về sau. Người dịch bắt đầu ở dòng **dưới dấu mũi tên**. Ví dụ:
+```
+Your team has a lot of ideas, such as:
+->
+Đội của bạn có rất nhiều ý tưởng, chẳng hạn:
+```
 
 4. Các chữ in đậm, in nghiêng cần được định dạng như bản gốc, ví dụ:
 ```
