@@ -15,8 +15,8 @@ Toàn bộ hình ảnh trong sách được lưu trong thư mục `imgs`. Click 
 
 | Chương | Tên chương                      | Tình trạng   | Người dịch chính   |
 |--------|---------------------------------|--------------|--------------------|
-| 1      | [chưa có tên](chapters/ch01.md) | chưa bắt đầu | Vũ Hữu Tiệp        |
-| 2      | [chưa có tên](chapters/ch02.md) | chưa bắt đầu | Nguyễn Cảnh Thướng |
+| 1      | [chưa có tên](chapters/ch01.md) | chưa bắt đầu | Nguyễn Cảnh Thướng |
+| 2      | [chưa có tên](chapters/ch02.md) | chưa bắt đầu |                    |
 | 3      | [chưa có tên](chapters/ch03.md) | chưa bắt đầu |                    |
 | 4      | [chưa có tên](chapters/ch04.md) | chưa bắt đầu |                    |
 | 5      | [chưa có tên](chapters/ch05.md) | chưa bắt đầu |                    |
