@@ -13,7 +13,7 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 |------------------|------------------|
 | development set  | tập phát triển   |
 | gradient descent | hạ dốc gradient  |
-| machine learning | machine learning |
+| machine learning | máy học          |
 | training set     | tập huấn luyện   |
 
 
@@ -22,6 +22,6 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | Tiếng Việt       | English          |
 |------------------|------------------|
 | hạ dốc gradient  | gradient descent |
-| machine learning | machine learning |
+| máy học          | machine learning |
 | tập huấn luyện   | training set     |
 | tập phát triển   | development set  |
