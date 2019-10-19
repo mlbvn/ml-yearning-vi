@@ -9,20 +9,6 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 
 ## Anh - Việt
 
-<<<<<<< HEAD
-| English             | Tiếng Việt       |
-| --------------------| ---------------- |
-| deep learning       | deep learning    |
-| development set     | tập phát triển   |
-| gradient descent    | gradient descent |
-| hidden unit         | nút ẩn           |
-| layer               | tầng             |
-| machine learning    | machine learning |
-| neural network      | mạng neural      |
-| training set        | tập huấn luyện   |
-| regularization      | regularization   |
-| supervised learning | học có giám sát  |
-=======
 | English          | Tiếng Việt       |
 | ---------------- | ---------------- |
 | development set  | tập phát triển   |
@@ -34,26 +20,11 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | regularization   | regularization   |
 | training set     | tập huấn luyện   |
 
->>>>>>> upstream/master
 
 
 
 ## Việt - Anh
 
-<<<<<<< HEAD
-| Tiếng Việt       | English             |
-| ---------------- | ----------------    |
-| deep learning    | deep learning       |
-| gradient descent | gradient descent    |
-| machine learning | machine learning    |
-| mạng neural      | nerual network      |
-| nút ẩn           | hidden unit         |
-| tầng             | layer               |
-| tập huấn luyện   | training set        |
-| tập phát triển   | development set     |
-| regularization   | regularization      |
-| học có giám sát  | supervised learning |
-=======
 | Tiếng Việt       | English          |
 | ---------------- | ---------------- |
 | gradient descent | gradient descent |
@@ -65,4 +36,3 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | tập huấn luyện   | training set     |
 | tập phát triển   | development set  |
 
->>>>>>> upstream/master
