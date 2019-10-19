@@ -14,6 +14,9 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | development set  | tập phát triển   |
 | gradient descent | hạ dốc gradient  |
 | machine learning | máy học          |
+| neural network   | mạng nơ ron      |
+| regularization   | chính quy hóa    |
+| startup          | khởi nghiệp      |
 | training set     | tập huấn luyện   |
 
 
@@ -21,7 +24,10 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 
 | Tiếng Việt       | English          |
 |------------------|------------------|
+| chính quy hóa    | regularization   |
+| khởi nghiệp      | startup          | 
 | hạ dốc gradient  | gradient descent |
 | máy học          | machine learning |
+| mạng nơ ron      | neural network   |
 | tập huấn luyện   | training set     |
 | tập phát triển   | development set  |
