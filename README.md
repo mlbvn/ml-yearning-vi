@@ -1,6 +1,6 @@
 # Dự án dịch sách [Machine Learning Yearning](https://www.deeplearning.ai/machine-learning-yearning/), Andrew Ng ra tiếng Việt
 
-Nguồn để dịch https://github.com/ajaymache/machine-learning-yearning. Đây là bản Draft chứ không phải bản chính thức. Tuy nhiên, nội dung bản này cũng đã khá đầy đủ.
+Nguồn để dịch https://github.com/ajaymache/machine-learning-yearning. Mặc dù là bản Draft, nội dung bản này cũng đã khá đầy đủ.
 
 ## Hình ảnh trong sách
 Toàn bộ hình ảnh trong sách được lưu trong thư mục `imgs`. Click vào [đây](imgs/README.md) để xem toàn bộ ảnh.
