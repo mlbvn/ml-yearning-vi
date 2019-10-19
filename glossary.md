@@ -17,8 +17,9 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | layer            | tầng             |
 | machine learning | machine learning |
 | neural network   | mạng neural      |
-| training set     | tập huấn luyện   |
 | regularization   | regularization   |
+| training set     | tập huấn luyện   |
+
 
 
 
@@ -30,7 +31,8 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | machine learning | machine learning |
 | mạng neural      | nerual network   |
 | nút ẩn           | hidden unit      |
+| regularization   | regularization   |
 | tầng             | layer            |
 | tập huấn luyện   | training set     |
 | tập phát triển   | development set  |
-| regularization   | regularization   |
+
