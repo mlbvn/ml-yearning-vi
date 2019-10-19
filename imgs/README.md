@@ -98,6 +98,10 @@ Khi đó, ảnh sẽ được hiển thị cùng với tên như ảnh đầu ti
 ### Ch16
 [Nội dung chương 16](../chapters/ch16.md)
 
+`C16_01.png`  
+![img](C16_01.png)
+
+
 ### Ch17
 [Nội dung chương 17](../chapters/ch17.md)
 
