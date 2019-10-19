@@ -1,4 +1,5 @@
 ## Hình ảnh trong các chương được đặt chung trong thư mục này.
+** Dự án cần sự đóng góp của các bạn trong việc lấy toàn bộ ảnh trong sách đưa vào thư mục này theo hướng dẫn dưới đây.**
 
 Một vài lưu ý khi lưu ảnh mới:
 * Mọi ảnh lưu ở định dạng `.png`.
