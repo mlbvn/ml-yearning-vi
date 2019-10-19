@@ -11,17 +11,27 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 
 | English          | Tiếng Việt       |
 |------------------|------------------|
-| development set  | tập phát triển   |
+| deep learning | deep learning |
+| development set  | tập phát triển |
 | gradient descent | gradient descent |
+| linear regression | hồi quy tuyến tính |
+| logistic regression | logistic regression |
 | machine learning | machine learning |
-| training set     | tập huấn luyện   |
+| neural networks | neural networks
+| training set | tập huấn luyện |
+| supervised learning | học có giám sát |
 
 
 ## Việt - Anh
 
 | Tiếng Việt       | English          |
 |------------------|------------------|
+| deep learning | deep learning |
 | gradient descent | gradient descent |
+| hồi quy tuyến tính | linear regression |
+| học có giám sát | supervised learning |
+| logistic regression | logistic regression |
 | machine learning | machine learning |
-| tập huấn luyện   | training set     |
-| tập phát triển   | development set  |
+| neural networks | neural networks
+| tập huấn luyện | training set |
+| tập phát triển | development set |
