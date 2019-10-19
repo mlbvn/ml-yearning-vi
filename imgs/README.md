@@ -89,6 +89,12 @@ Khi đó, ảnh sẽ được hiển thị cùng với tên như ảnh đầu ti
 ### Ch15
 [Nội dung chương 15](../chapters/ch15.md)
 
+`C15_01.png`  
+![img](C15_01.png)
+
+`C15_02.png`  
+![img](C15_02.png)
+
 ### Ch16
 [Nội dung chương 16](../chapters/ch16.md)
 
