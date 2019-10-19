@@ -10,18 +10,27 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 ## Anh - Việt
 
 | English          | Tiếng Việt       |
-|------------------|------------------|
+| ---------------- | ---------------- |
 | development set  | tập phát triển   |
 | gradient descent | gradient descent |
+| hidden unit      | nút ẩn           |
+| layer            | tầng             |
 | machine learning | machine learning |
+| neural network   | mạng neural      |
 | training set     | tập huấn luyện   |
+| regularization   | regularization   |
+
 
 
 ## Việt - Anh
 
 | Tiếng Việt       | English          |
-|------------------|------------------|
+| ---------------- | ---------------- |
 | gradient descent | gradient descent |
 | machine learning | machine learning |
+| mạng neural      | nerual network   |
+| nút ẩn           | hidden unit      |
+| tầng             | layer            |
 | tập huấn luyện   | training set     |
 | tập phát triển   | development set  |
+| regularization   | regularization   |
