@@ -17,7 +17,7 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | linear regression | hồi quy tuyến tính |
 | logistic regression | logistic regression |
 | machine learning | machine learning |
-| neural networks | neural networks
+| neural networks | neural networks |
 | training set | tập huấn luyện |
 | supervised learning | học có giám sát |
 
@@ -32,6 +32,6 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | học có giám sát | supervised learning |
 | logistic regression | logistic regression |
 | machine learning | machine learning |
-| neural networks | neural networks
+| neural networks | neural networks |
 | tập huấn luyện | training set |
 | tập phát triển | development set |
