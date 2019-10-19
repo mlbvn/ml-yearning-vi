@@ -6,6 +6,9 @@ Nguồn để dịch https://github.com/ajaymache/machine-learning-yearning
 
 Tất cả các thuật ngữ cần được dịch theo chuẩn trong file [glossary](glossary.md).
 
+## Đóng góp vào dự án
+[Làm thế nào để đóng góp vào dự án](contribution.md).
+
 ## Mục lục
 
 | Chương | Tên chương                      | Tình trạng   | Người dịch chính   |
