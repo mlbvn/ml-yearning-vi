@@ -4,6 +4,13 @@
 
 Việc đóng góp được thực hiện qua các Pull Request. Đây là bài [hướng dẫn tạo pull request](https://codetot.net/contribute-github/) khá chi tiết, các bạn có thể tham khảo.
 
+Lưu ý khi tạo Pull Requests:
+
+* Kiểm tra trong [Issues](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/issues) và [Pull Requests](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pulls) xem đã có ai đề cập hoặc làm việc đó chưa, tránh dẫm chân lên nhau.
+
+* Khi bạn bắt đầu làm một việc mới, bạn để lại một comment ở issue tương ứng, hoặc tạo issue mới, hoặc tạo một Pull Request mới với tiêu đề tương ứng để những người làm sau không làm trùng công việc của bạn.
+
+
 # Các bước dịch một chương
 Một chương được hoàn thành khi nó trải qua các công đoạn:
 
