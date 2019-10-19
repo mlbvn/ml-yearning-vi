@@ -3,8 +3,10 @@
 Nguồn để dịch https://github.com/ajaymache/machine-learning-yearning
 
 ## Bảng thuật ngữ
-
 Tất cả các thuật ngữ cần được dịch theo chuẩn trong file [glossary](glossary.md).
+
+## Hình ảnh trong sách
+Toàn bộ hình ảnh trong sách được lưu trong thư mục `imgs`. Click vào [đây](imgs/README.md) để xem toàn bộ ảnh.
 
 ## Đóng góp vào dự án
 [Làm thế nào để đóng góp vào dự án](contribution.md).
