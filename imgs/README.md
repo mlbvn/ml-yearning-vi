@@ -105,6 +105,13 @@ Khi đó, ảnh sẽ được hiển thị cùng với tên như ảnh đầu ti
 ### Ch17
 [Nội dung chương 17](../chapters/ch17.md)
 
+`C17_01.png`  
+![img](C17_01.png)
+
+`C17_02.png`  
+![img](C17_02.png)
+
+
 ### Ch18
 [Nội dung chương 18](../chapters/ch18.md)
 
