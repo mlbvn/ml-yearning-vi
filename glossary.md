@@ -11,15 +11,15 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 
 | English                           | Tiếng Việt                          |
 | --------------------------------- | ----------------------------------- |
-| accuracy                          | độ chính xác                        |
+| accuracy                          |                                     |
 | benchmark                         | bảng so sánh                        |
 | big data                          | big data                            |
 | classifier                        | bộ phân loại                        |
-| constrain                         | giới hạn                            |
+| constrain                         | ràng buộc                           |
 | development set                   | tập phát triển                      |
 | deep learning                     | học sâu                             |
-| distribution                      | phân bô                             |
-| gradient descent                  | gradient descent                    |
+| distribution                      | phân phối                           |
+| gradient descent                  |                                     |
 | heuristic                         | thực nghiệm                         |
 | hidden unit                       | nút ẩn                              |
 | hand-engineering                  | tự tạo                              |
@@ -29,11 +29,11 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | example                           | mẫu                                 |
 | f1 score                          | chỉ số F1                           |
 | false negative rate               |                                     |
-| feature                           | đặc trưng                           |
+| feature                           |                                     |
 | layer                             | tầng                                |
 | linear regression                 | hồi quy tuyến tính                  |
 | learning curve                    | đường học                           |
-| learning algorithm                | thuật toán học máy                  |
+| learning algorithm                | thuật toán học                      |
 | logistic regression               | hồi quy logistic                    |
 | machine learning                  | machine learning                    |
 | metric                            | phép đo                             |
@@ -48,12 +48,11 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | regularization                    | regularization                      |
 | running time                      | thời gian chạy                      |
 | satisficing metric                | phép đo thỏa mãn                    |
-| single number evaluation metric   | phép đánh dùng một giá trị duy nhất |
-| spam email                        | thư rác                             |
+| single-number evaluation metric   | phép đánh dùng một giá trị duy nhất |
+| spam email                        | email rác                           |
 | supervised learning               | học có giám sát                     |
 | training set                      | tập huấn luyện                      |
 | test set                          | tập kiểm tra                        |
-|                                   |                                     |
 
 
 
