@@ -2,10 +2,14 @@
 
 Các thuật ngữ cần được dịch theo chuẩn trong file này.
 
-Nếu một từ chưa có trong bảng Anh - Việt, bạn có thể tạo một Pull Request mới để thêm từ đó vào _cả hai bảng_ dưới đây.
+Nếu một từ chưa có trong bảng Anh - Việt, bạn có thể tạo một Pull Request mới để thêm từ đó vào bảng dưới đây.
 Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn có thể giữ nguyên bản tiếng Anh.
 
 *Chú ý giữ thứ tự theo bảng chữ cái để tiện tra cứu.*
+
+## Tham khảo bảng glossary của nhóm dịch sách Deep Learning
+
+Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn có thể tham khảo [cách làm của nhóm dịch sách Deep Learning](https://docs.google.com/spreadsheets/d/1Hcd4AqR7Xzd08Ws0gwhZ-LX6XNzJKgCDy0VcFc3D66c/edit#gid=0). Các từ trong danh sách này đều đã được thảo luận khá kỹ.
 
 ## Anh - Việt
 
