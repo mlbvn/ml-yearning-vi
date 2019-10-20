@@ -12,7 +12,7 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | English                           | Tiếng Việt         |
 | --------------------------------- | ------------------ |
 | accuracy                          |                    |
-| benchmark                         | bảng so sánh       |
+| benchmark                         |                    |
 | big data                          | big data           |
 | classifier                        | bộ phân loại       |
 | constrain                         | ràng buộc          |
@@ -22,7 +22,7 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | gradient descent                  |                    |
 | heuristic                         | thực nghiệm        |
 | hidden unit                       | nút ẩn             |
-| hand-engineering                  | tự tạo             |
+| hand-engineering                  |                    |
 | iteration                         | vòng lặp           |
 | error analysis                    | phân tích lỗi      |
 | evaluation metric                 | phép đánh giá      |
@@ -38,16 +38,16 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | machine learning                  | machine learning   |
 | metric                            | phép đo            |
 | multiple-number evaluation metric | phép đo đa trị     |
-| negative examples                 | nhãn tiêu cực      |
+| negative examples                 |                    |
 | neural network                    | mạng neural        |
 | overfit                           |                    |
-| optimizing metric                 | phép đo tối ưu     |
-| positive sample                   | nhãn tích cực      |
-| precision                         |                    |
-| recall                            |                    |
+| optimizing metric                 |                    |
+| positive sample                   |                    |
+| precision                         | precision          |
+| recall                            | recall             |
 | regularization                    | regularization     |
 | running time                      | thời gian chạy     |
-| satisficing metric                | phép đo thỏa mãn   |
+| satisficing metric                |                    |
 | single-number evaluation metric   | phép đo đơn trị    |
 | spam email                        | email rác          |
 | supervised learning               | học có giám sát    |
