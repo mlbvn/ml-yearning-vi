@@ -19,6 +19,9 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | neural network   | mạng neural      |
 | regularization   | regularization   |
 | training set     | tập huấn luyện   |
+| precision        | precision        |
+| recall           | recall           |
+| metric​           | phép đo          |
 
 
 
