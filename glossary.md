@@ -9,33 +9,78 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 
 ## Anh - Việt
 
-| English          | Tiếng Việt       |
-| ---------------- | ---------------- |
-| development set  | tập phát triển   |
-| gradient descent | gradient descent |
-| hidden unit      | nút ẩn           |
-| layer            | tầng             |
-| machine learning | machine learning |
-| neural network   | mạng neural      |
-| regularization   | regularization   |
-| training set     | tập huấn luyện   |
-| precision        | precision        |
-| recall           | recall           |
-| metric​           | phép đo          |
+| English                           | Tiếng Việt         |
+| --------------------------------- | ------------------ |
+| accuracy                          |                    |
+| benchmark                         |                    |
+| big data                          | big data           |
+| classifier                        | bộ phân loại       |
+| constrain                         | ràng buộc          |
+| development set                   | tập phát triển     |
+| deep learning                     | deep learning      |
+| distribution                      | phân phối          |
+| gradient descent                  |                    |
+| heuristic                         | thực nghiệm        |
+| hidden unit                       | nút ẩn             |
+| hand-engineering                  |                    |
+| iteration                         | vòng lặp           |
+| error analysis                    | phân tích lỗi      |
+| evaluation metric                 | phép đánh giá      |
+| example                           | mẫu                |
+| f1 score                          | chỉ số F1          |
+| false negative rate               |                    |
+| feature                           | đặc trưng          |
+| layer                             | tầng               |
+| linear regression                 | hồi quy tuyến tính |
+| learning curve                    | đường học          |
+| learning algorithm                | thuật toán học     |
+| logistic regression               | hồi quy logistic   |
+| machine learning                  | machine learning   |
+| metric                            | phép đo            |
+| multiple-number evaluation metric | phép đo đa trị     |
+| negative examples                 |                    |
+| neural network                    | mạng neural        |
+| overfit                           |                    |
+| optimizing metric                 |                    |
+| positive sample                   |                    |
+| precision                         | precision          |
+| recall                            | recall             |
+| regularization                    | regularization     |
+| running time                      | thời gian chạy     |
+| satisficing metric                |                    |
+| single-number evaluation metric   | phép đo đơn trị    |
+| spam email                        | email rác          |
+| supervised learning               | học có giám sát    |
+| training set                      | tập huấn luyện     |
+| test set                          | tập kiểm tra       |
 
 
 
 
 ## Việt - Anh
 
-| Tiếng Việt       | English          |
-| ---------------- | ---------------- |
-| gradient descent | gradient descent |
-| machine learning | machine learning |
-| mạng neural      | nerual network   |
-| nút ẩn           | hidden unit      |
-| regularization   | regularization   |
-| tầng             | layer            |
-| tập huấn luyện   | training set     |
-| tập phát triển   | development set  |
+| Tiếng Việt       | English             |
+| ---------------- | ------------------- |
+| gradient descent | gradient descent    |
+| học có kiểm soát | supervised learning |
+| machine learning | machine learning    |
+| mạng neural      | nerual network      |
+| nút ẩn           | hidden unit         |
+| phép đánh giá    | evaluation metric   |
+| regularization   | regularization      |
+| tầng             | layer               |
+| tập huấn luyện   | training set        |
+| tập phát triển   | development set     |
+|                  | linear regression   |
+|                  | logistic regression |
+|                  | learning curve      |
+|                  | hand-engineering    |
+|                  | feature             |
+|                  | positive sample     |
+|                  | negative sample     |
+|                  | test set            |
+|                  | distribution        |
+|                  | overfit             |
+|                  | benchmark           |
+|                  | example             |
 
