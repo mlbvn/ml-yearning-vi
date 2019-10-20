@@ -19,7 +19,7 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | development set                   | tập phát triển                                                 |
 | deep learning                     | deep learning                                                  |
 | distribution                      | phân phối                                                      |
-| gradient descent                  | gradient descent                                               |
+| gradient descent                  |                                                                |
 | heuristic                         | thực nghiệm                                                    |
 | hidden unit                       | nút ẩn                                                         |
 | hand-engineering                  | thiết kế bằng tay                                              |
