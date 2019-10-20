@@ -19,16 +19,17 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | development set                   | tập phát triển                                                 |
 | deep learning                     | deep learning                                                  |
 | distribution                      | phân phối                                                      |
-| gradient descent                  |                                                                |
+| gradient descent                  | gradient descent                                               |
 | heuristic                         | thực nghiệm                                                    |
 | hidden unit                       | nút ẩn                                                         |
-| hand-engineering                  |                                                                |
+| hand-engineering                  | thiết kế bằng tay                                              |
 | iteration                         | vòng lặp                                                       |
 | error analysis                    | phân tích lỗi                                                  |
 | evaluation metric                 | phép đánh giá                                                  |
 | example                           | mẫu                                                            |
 | f1 score                          | chỉ số F1                                                      |
-| false negative rate               |                                                                |
+| false negative                    | âm tính giả                                                    |
+| false positive                    | dương tính giả                                                 |
 | feature                           | đặc trưng                                                      |
 | layer                             | tầng                                                           |
 | linear regression                 | hồi quy tuyến tính                                             |
@@ -38,11 +39,11 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | machine learning                  | machine learning                                               |
 | metric                            | phép đo                                                        |
 | multiple-number evaluation metric | phép đo đa trị                                                 |
-| negative examples                 |                                                                |
+| negative sample/example           | mẫu âm                                                         |
 | neural network                    | mạng neural                                                    |
 | overfit                           |                                                                |
 | optimizing metric                 |                                                                |
-| positive sample                   |                                                                |
+| positive sample/example           | mẫu dương                                                      |
 | precision                         | precision                                                      |
 | recall                            | recall                                                         |
 | regularization                    | regularization                                                 |
@@ -51,6 +52,8 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | single-number evaluation metric   | phép đo đơn trị                                                |
 | spam email                        | email rác                                                      |
 | supervised learning               | học có giám sát                                                |
-| training set                      | tập huấn luyện                                                 |
 | test set                          | tập kiểm tra                                                   |
+| training set                      | tập huấn luyện                                                 |
+| true negative                     | âm tính thật                                                   |
+| true positive                     | dương tính thật                                                |
 
