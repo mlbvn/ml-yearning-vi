@@ -17,7 +17,7 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | classifier                        | bộ phân loại       |
 | constrain                         | ràng buộc          |
 | development set                   | tập phát triển     |
-| deep learning                     | học sâu            |
+| deep learning                     | deep learning      |
 | distribution                      | phân phối          |
 | gradient descent                  |                    |
 | heuristic                         | thực nghiệm        |
