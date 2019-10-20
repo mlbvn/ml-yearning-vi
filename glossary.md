@@ -12,17 +12,17 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | English                           | Tiếng Việt (Nếu bạn bổ sung thì KHÔNG căn chỉnh các dòng khác) |
 |-----------------------------------|----------------------------------------------------------------|
 | accuracy                          | độ chính xác                                                   |
-| benchmark                         |                                                                |
+| benchmark                         | chuẩn so sánh                                                  |
 | big data                          | big data                                                       |
 | classifier                        | bộ phân loại                                                   |
 | constrain                         | ràng buộc                                                      |
 | development set                   | tập phát triển                                                 |
 | deep learning                     | deep learning                                                  |
 | distribution                      | phân phối                                                      |
-| gradient descent                  |                                                                |
+| gradient descent                  | hạ dốc                                                         |
 | heuristic                         | thực nghiệm                                                    |
 | hidden unit                       | nút ẩn                                                         |
-| hand-engineering                  | thiết kế bằng tay                                              |
+| hand-engineering                  | thiết kế thủ công                                              |
 | iteration                         | vòng lặp                                                       |
 | error analysis                    | phân tích lỗi                                                  |
 | evaluation metric                 | phép đánh giá                                                  |
@@ -31,24 +31,25 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | false negative                    | âm tính giả                                                    |
 | false positive                    | dương tính giả                                                 |
 | feature                           | đặc trưng                                                      |
+| fit                                | fit                                                             |
 | layer                             | tầng                                                           |
 | linear regression                 | hồi quy tuyến tính                                             |
-| learning curve                    |                                                                |
+| learning curve                    | đồ thị học                                                     |
 | learning algorithm                | thuật toán học                                                 |
 | logistic regression               | hồi quy logistic                                               |
 | machine learning                  | machine learning                                               |
 | metric                            | phép đo                                                        |
 | multiple-number evaluation metric | phép đo đa trị                                                 |
 | negative sample/example           | mẫu âm                                                         |
-| neural network                    | mạng neural                                                    |
-| overfit                           |                                                                |
-| optimizing metric                 |                                                                |
+| neural network                    | neural network                                                 |
+| overfit                           | overfit                                                          |
+| optimizing metric                 | phép đo cần tối ưu                                            |
 | positive sample/example           | mẫu dương                                                      |
 | precision                         | precision                                                      |
 | recall                            | recall                                                         |
 | regularization                    | regularization                                                 |
 | running time                      | thời gian chạy                                                 |
-| satisficing metric                |                                                                |
+| satisficing metric                 | phép đo cần thỏa mãn                                            |
 | single-number evaluation metric   | phép đo đơn trị                                                |
 | spam email                        | email rác                                                      |
 | supervised learning               | học có giám sát                                                |
@@ -56,4 +57,4 @@ Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn c�
 | training set                      | tập huấn luyện                                                 |
 | true negative                     | âm tính thật                                                   |
 | true positive                     | dương tính thật                                                |
-
+| underfit                           | underfit                                                        |
