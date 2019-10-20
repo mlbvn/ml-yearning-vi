@@ -19,10 +19,10 @@ Công việc cụ thể trong từng cột có thể được tìm thấy tại 
 |--------|--------------------------------------------------------------|------------------------------|------------------------------|------------------------------|------------|
 | 1      | [Tại sao cần chiến lược Machine Learning](chapters/ch01.md)  | [#24](http://bit.ly/2o5uk2s) | [#24](http://bit.ly/2o5uk2s) | [#40](http://bit.ly/2qt2j5I) | hoàn thành |
 | 2      | [Cách sử dụng cuốn sách khi làm việc nhóm](chapters/ch02.md) | [#32](http://bit.ly/2pDar3e) | [#32](http://bit.ly/2pDar3e) | [#54](http://bit.ly/2P3wMRW) | hoàn thành |
-| 3      | [Điều kiện tiên quyết và Ký hiệu](chapters/ch03.md)          | [#42](http://bit.ly/2qsUHQE) | [#42](http://bit.ly/2qsUHQE) | [#90](http://bit.ly/2pG1Yfi) |            |
+| 3      | [Điều kiện tiên quyết và Ký hiệu](chapters/ch03.md)          | [#42](http://bit.ly/2qsUHQE) | [#42](http://bit.ly/2qsUHQE) | [#90](http://bit.ly/2pG1Yfi) | hoàn thành |
 | 4      | [chưa có tên](chapters/ch04.md)                              | [#42](http://bit.ly/2qsUHQE) | [#42](http://bit.ly/2qsUHQE) | [#83](http://bit.ly/2Bqursa) |            |
 | 5      | [chưa có tên](chapters/ch05.md)                              | [#42](http://bit.ly/2qsUHQE) | [#42](http://bit.ly/2qsUHQE) | [#82](http://bit.ly/2Mt4jmV) |            |
-| 6      | [chưa có tên](chapters/ch06.md)                              | [#42](http://bit.ly/2qsUHQE) | [#42](http://bit.ly/2qsUHQE) | chưa bắt đầu                 |            |
+| 6      | [chưa có tên](chapters/ch06.md)                              | [#42](http://bit.ly/2qsUHQE) | [#42](http://bit.ly/2qsUHQE) | [#91](http://bit.ly/2MxIAKE) |            |
 | 7      | [chưa có tên](chapters/ch07.md)                              | [#42](http://bit.ly/2qsUHQE) | [#42](http://bit.ly/2qsUHQE) | [#70](http://bit.ly/35Jetrj) |            |
 | 8      | [chưa có tên](chapters/ch08.md)                              | [#42](http://bit.ly/2qsUHQE) | [#42](http://bit.ly/2qsUHQE) | [#80](http://bit.ly/2pGMCqX) |            |
 | 9      | [chưa có tên](chapters/ch09.md)                              | [#42](http://bit.ly/2qsUHQE) | [#42](http://bit.ly/2qsUHQE) | [#77](http://bit.ly/2VVgJXM) |            |
