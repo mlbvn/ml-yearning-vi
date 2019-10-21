@@ -10,8 +10,7 @@ Tất cả các thuật ngữ cần được dịch theo chuẩn trong file [glo
 
 ## Đóng góp vào dự án
 
-Bảng dưới đây thể hiện tiến độ của toàn bộ dự án. Hai cột 'Ảnh' và 'Copy bản gốc' có thể được thực hiện ngay và công việc review không quá phức tạp. Riêng hai cột 'Thuật ngữ' và 'Dịch' cần sự góp sức của nhiều người hơn.
-Công việc cụ thể trong từng cột có thể được tìm thấy tại [Làm thế nào để đóng góp vào dự án](contribution.md).
+Bảng dưới đây thể hiện tiến độ của toàn bộ dự án. Hai cột 'Ảnh' và 'Copy bản gốc' đã hoàn thành. Cột 'Dịch' cần sự góp sức của nhiều người hơn, cả việc dịch và việc review các Pull Request. Mời bạn xem thêm [Làm thế nào để đóng góp vào dự án](contribution.md).
 
 ## Mục lục
 
