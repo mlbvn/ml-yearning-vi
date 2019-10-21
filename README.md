@@ -57,21 +57,21 @@ Công việc cụ thể trong từng cột có thể được tìm thấy tại 
 | 38     | [chưa có tên](chapters/ch38.md)                              | [#45](http://bit.ly/2qqUY6x) | [#57](http://bit.ly/2p00QU3) | chưa bắt đầu                 |            |
 | 39     | [chưa có tên](chapters/ch39.md)                              | [#45](http://bit.ly/2qqUY6x) | [#57](http://bit.ly/2p00QU3) | chưa bắt đầu                 |            |
 | 40     | [chưa có tên](chapters/ch40.md)                              | [#45](http://bit.ly/2qqUY6x) | [#57](http://bit.ly/2p00QU3) | chưa bắt đầu                 |            |
-| 41     | [chưa có tên](chapters/ch41.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
-| 42     | [chưa có tên](chapters/ch42.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
-| 43     | [chưa có tên](chapters/ch43.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
-| 44     | [chưa có tên](chapters/ch44.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
-| 45     | [chưa có tên](chapters/ch45.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
-| 46     | [chưa có tên](chapters/ch46.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
-| 47     | [chưa có tên](chapters/ch47.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
-| 48     | [chưa có tên](chapters/ch48.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
-| 49     | [chưa có tên](chapters/ch49.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
-| 50     | [chưa có tên](chapters/ch50.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
-| 51     | [chưa có tên](chapters/ch51.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
-| 52     | [chưa có tên](chapters/ch52.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
-| 53     | [chưa có tên](chapters/ch53.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
-| 54     | [chưa có tên](chapters/ch54.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
-| 55     | [chưa có tên](chapters/ch55.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
-| 56     | [chưa có tên](chapters/ch56.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
-| 57     | [chưa có tên](chapters/ch57.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
-| 58     | [chưa có tên](chapters/ch58.md)                              | [#45](http://bit.ly/2qqUY6x) | chưa bắt đầu                 | chưa bắt đầu                 |            |
+| 41     | [chưa có tên](chapters/ch41.md)                              | [#45](http://bit.ly/2qqUY6x) | [#98](http://bit.ly/33LP8Ln) | chưa bắt đầu                 |            |
+| 42     | [chưa có tên](chapters/ch42.md)                              | [#45](http://bit.ly/2qqUY6x) | [#98](http://bit.ly/33LP8Ln) | chưa bắt đầu                 |            |
+| 43     | [chưa có tên](chapters/ch43.md)                              | [#45](http://bit.ly/2qqUY6x) | [#98](http://bit.ly/33LP8Ln) | chưa bắt đầu                 |            |
+| 44     | [chưa có tên](chapters/ch44.md)                              | [#45](http://bit.ly/2qqUY6x) | [#98](http://bit.ly/33LP8Ln) | chưa bắt đầu                 |            |
+| 45     | [chưa có tên](chapters/ch45.md)                              | [#45](http://bit.ly/2qqUY6x) | [#98](http://bit.ly/33LP8Ln) | chưa bắt đầu                 |            |
+| 46     | [chưa có tên](chapters/ch46.md)                              | [#45](http://bit.ly/2qqUY6x) | [#98](http://bit.ly/33LP8Ln) | chưa bắt đầu                 |            |
+| 47     | [chưa có tên](chapters/ch47.md)                              | [#45](http://bit.ly/2qqUY6x) | [#98](http://bit.ly/33LP8Ln) | chưa bắt đầu                 |            |
+| 48     | [chưa có tên](chapters/ch48.md)                              | [#45](http://bit.ly/2qqUY6x) | [#98](http://bit.ly/33LP8Ln) | chưa bắt đầu                 |            |
+| 49     | [chưa có tên](chapters/ch49.md)                              | [#45](http://bit.ly/2qqUY6x) | [#98](http://bit.ly/33LP8Ln) | chưa bắt đầu                 |            |
+| 50     | [chưa có tên](chapters/ch50.md)                              | [#45](http://bit.ly/2qqUY6x) | [#98](http://bit.ly/33LP8Ln) | chưa bắt đầu                 |            |
+| 51     | [chưa có tên](chapters/ch51.md)                              | [#45](http://bit.ly/2qqUY6x) | [#99](http://bit.ly/2MYQjQT) | chưa bắt đầu                 |            |
+| 52     | [chưa có tên](chapters/ch52.md)                              | [#45](http://bit.ly/2qqUY6x) | [#99](http://bit.ly/2MYQjQT) | chưa bắt đầu                 |            |
+| 53     | [chưa có tên](chapters/ch53.md)                              | [#45](http://bit.ly/2qqUY6x) | [#99](http://bit.ly/2MYQjQT) | chưa bắt đầu                 |            |
+| 54     | [chưa có tên](chapters/ch54.md)                              | [#45](http://bit.ly/2qqUY6x) | [#99](http://bit.ly/2MYQjQT) | chưa bắt đầu                 |            |
+| 55     | [chưa có tên](chapters/ch55.md)                              | [#45](http://bit.ly/2qqUY6x) | [#99](http://bit.ly/2MYQjQT) | chưa bắt đầu                 |            |
+| 56     | [chưa có tên](chapters/ch56.md)                              | [#45](http://bit.ly/2qqUY6x) | [#99](http://bit.ly/2MYQjQT) | chưa bắt đầu                 |            |
+| 57     | [chưa có tên](chapters/ch57.md)                              | [#45](http://bit.ly/2qqUY6x) | [#99](http://bit.ly/2MYQjQT) | chưa bắt đầu                 |            |
+| 58     | [chưa có tên](chapters/ch58.md)                              | [#45](http://bit.ly/2qqUY6x) | [#99](http://bit.ly/2MYQjQT) | chưa bắt đầu                 |            |
