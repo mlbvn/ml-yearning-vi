@@ -46,7 +46,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | metric                            | phép đo                                                        |                              |
 | multiple-number evaluation metric | phép đo đa trị                                                 |                              |
 | negative sample/example           | mẫu âm                                                         |                              |
-| neural network                    | mạng neural                                                    | [#87](http://bit.ly/2BvfPYA) |
+| neural network                    | mạng neural                                                    | [#87](http://bit.ly/2BvfPYA) [#115](http://bit.ly/2MAkizG) |
 | overfit                            | overfit                                                         | [#87](http://bit.ly/2BvfPYA) |
 | optimizing metric                 | phép đo để tối ưu                                              | [#87](http://bit.ly/2BvfPYA) |
 | positive sample/example           | mẫu dương                                                      |                              |
