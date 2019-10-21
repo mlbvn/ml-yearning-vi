@@ -19,7 +19,7 @@ Bảng dưới đây thể hiện tiến độ của toàn bộ dự án. Hai c�
 | 1      | [Tại sao cần chiến lược Machine Learning](chapters/ch01.md)  | [#24](http://bit.ly/2o5uk2s) | [#24](http://bit.ly/2o5uk2s) | [#40](http://bit.ly/2qt2j5I) | hoàn thành |
 | 2      | [Cách sử dụng cuốn sách khi làm việc nhóm](chapters/ch02.md) | [#32](http://bit.ly/2pDar3e) | [#32](http://bit.ly/2pDar3e) | [#54](http://bit.ly/2P3wMRW) | hoàn thành |
 | 3      | [Điều kiện tiên quyết và Ký hiệu](chapters/ch03.md)          | [#42](http://bit.ly/2qsUHQE) | [#42](http://bit.ly/2qsUHQE) | [#90](http://bit.ly/2pG1Yfi) | hoàn thành |
-| 4      | [chưa có tên](chapters/ch04.md)                              | [#42](http://bit.ly/2qsUHQE) | [#42](http://bit.ly/2qsUHQE) | [#83](http://bit.ly/2Bqursa) |            |
+| 4      | [Quy mô quyết định mô hình machine learning](chapters/ch04.md) | [#42](http://bit.ly/2qsUHQE) | [#42](http://bit.ly/2qsUHQE) | [#83](http://bit.ly/2Bqursa) | hoàn thành |
 | 5      | [chưa có tên](chapters/ch05.md)                              | [#42](http://bit.ly/2qsUHQE) | [#42](http://bit.ly/2qsUHQE) | [#82](http://bit.ly/2Mt4jmV) |            |
 | 6      | [chưa có tên](chapters/ch06.md)                              | [#42](http://bit.ly/2qsUHQE) | [#42](http://bit.ly/2qsUHQE) | [#91](http://bit.ly/2MxIAKE) |            |
 | 7      | [chưa có tên](chapters/ch07.md)                              | [#42](http://bit.ly/2qsUHQE) | [#42](http://bit.ly/2qsUHQE) | [#70](http://bit.ly/35Jetrj) |            |
@@ -27,7 +27,7 @@ Bảng dưới đây thể hiện tiến độ của toàn bộ dự án. Hai c�
 | 9      | [chưa có tên](chapters/ch09.md)                              | [#42](http://bit.ly/2qsUHQE) | [#42](http://bit.ly/2qsUHQE) | [#77](http://bit.ly/2VVgJXM) |            |
 | 10     | [chưa có tên](chapters/ch10.md)                              | [#42](http://bit.ly/2qsUHQE) | [#42](http://bit.ly/2qsUHQE) | chưa bắt đầu                 |            |
 | 11     | [chưa có tên](chapters/ch11.md)                              | [#45](http://bit.ly/2qqUY6x) | [#50](http://bit.ly/33K1NOX) | chưa bắt đầu                 |            |
-| 12     | [chưa có tên](chapters/ch12.md)                              | [#45](http://bit.ly/2qqUY6x) | [#50](http://bit.ly/33K1NOX) | chưa bắt đầu                 |            |
+| 12     | [chưa có tên](chapters/ch12.md)                              | [#45](http://bit.ly/2qqUY6x) | [#50](http://bit.ly/33K1NOX) | đã bắt đầu                   |            |
 | 13     | [chưa có tên](chapters/ch13.md)                              | [#45](http://bit.ly/2qqUY6x) | [#50](http://bit.ly/33K1NOX) | chưa bắt đầu                 |            |
 | 14     | [chưa có tên](chapters/ch14.md)                              | [#45](http://bit.ly/2qqUY6x) | [#50](http://bit.ly/33K1NOX) | chưa bắt đầu                 |            |
 | 15     | [chưa có tên](chapters/ch15.md)                              | [#45](http://bit.ly/2qqUY6x) | [#50](http://bit.ly/33K1NOX) | chưa bắt đầu                 |            |
