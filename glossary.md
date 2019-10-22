@@ -20,7 +20,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | big data                          | big data                                                       |                              |
 | classifier                        | bộ phân loại                                                   |                              |
 | constrain                         | ràng buộc                                                      |                              |
-| cross validation set              | tập kiểm định chéo                                             |                              |
+| cross validation                  | kiểm định chéo                                                 |                              |
 | development set                   | tập phát triển                                                 |                              |
 | deep learning                     | deep learning                                                  |                              |
 | distribution                      | phân phối                                                      |                              |
