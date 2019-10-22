@@ -26,6 +26,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | deep learning                     | deep learning                                                  |                                                            |
 | development set                   | tập phát triển                                                 |                                                            |
 | distribution                      | phân phối                                                      |                                                            |
+| early stopping                    |                                                                |                                                            |
 | error analysis                    | phân tích lỗi                                                  |                                                            |
 | error rate                        |                                                                |                                                            |
 | evaluation metric                 | phép đánh giá                                                  |                                                            |
