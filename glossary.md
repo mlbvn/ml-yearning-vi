@@ -71,6 +71,6 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | training set                      | tập huấn luyện                                                 |                                                            |
 | true negative                     | âm tính thật                                                   |                                                            |
 | true positive                     | dương tính thật                                                |                                                            |
-| tune parameters                   | tinh chỉnh tham số                                             |                                                            |
+| tune parameters                   | điều chỉnh tham số                                             |                                                            |
 | underfit                          | underfit                                                       | [#87](http://bit.ly/2BvfPYA)                               |
 | variance                          |                                                                |                                                            |
