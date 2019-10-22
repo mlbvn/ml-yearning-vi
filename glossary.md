@@ -18,7 +18,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 |-----------------------------------|----------------------------------------------------------------|------------------------------------------------------------|
 | accuracy                          | độ chính xác                                                   |                                                            |
 | benchmark                         | đánh giá xếp hạng                                              | [#87](http://bit.ly/2BvfPYA)                               |
-| bias (bias as variance)           |                                                                | [#125](http://bit.ly/32HJI3S)                              |
+| bias (bias as variance)           | độ lệch                                                        | [#125](http://bit.ly/32HJI3S)                              |
 | big data                          | big data                                                       |                                                            |
 | Blackbox dev set                  |                                                                |                                                            |
 | classifier                        | bộ phân loại                                                   |                                                            |
@@ -74,4 +74,4 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | true positive                     | dương tính thật                                                |                                                            |
 | tune parameters                   | điều chỉnh tham số                                             |                                                            |
 | underfit                          | underfit                                                       | [#87](http://bit.ly/2BvfPYA)                               |
-| variance (bias as variance)       |                                                                | [#125](http://bit.ly/32HJI3S)                              |
+| variance (bias as variance)       | phương sai                                                     | [#125](http://bit.ly/32HJI3S)                              |
