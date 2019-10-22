@@ -18,6 +18,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 |-----------------------------------|----------------------------------------------------------------|------------------------------------------------------------|
 | accuracy                          | độ chính xác                                                   |                                                            |
 | benchmark                         | đánh giá xếp hạng                                              | [#87](http://bit.ly/2BvfPYA)                               |
+| bias                              |                                                                |                                                            |
 | big data                          | big data                                                       |                                                            |
 | Blackbox dev set                  |                                                                |                                                            |
 | classifier                        | bộ phân loại                                                   |                                                            |
@@ -25,6 +26,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | deep learning                     | deep learning                                                  |                                                            |
 | development set                   | tập phát triển                                                 |                                                            |
 | distribution                      | phân phối                                                      |                                                            |
+| early stopping                    |                                                                |                                                            |
 | error analysis                    | phân tích lỗi                                                  |                                                            |
 | error rate                        |                                                                |                                                            |
 | evaluation metric                 | phép đánh giá                                                  |                                                            |
@@ -58,6 +60,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | positive sample/example           | mẫu dương                                                      |                                                            |
 | precision                         | precision                                                      |                                                            |
 | recall                            | recall                                                         |                                                            |
+| recognition                       |                                                                |                                                            |
 | regularization                    | regularization                                                 |                                                            |
 | running time                      | thời gian chạy                                                 |                                                            |
 | satisficing metric                | phép đo thỏa mãn                                               | [#87](http://bit.ly/2BvfPYA)                               |
@@ -70,3 +73,4 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | true positive                     | dương tính thật                                                |                                                            |
 | tune parameters                   |                                                                |                                                            |
 | underfit                          | underfit                                                       | [#87](http://bit.ly/2BvfPYA)                               |
+| variance                          |                                                                |                                                            |
