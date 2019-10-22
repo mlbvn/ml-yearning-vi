@@ -26,9 +26,9 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | deep learning                     | deep learning                                                  |                                                            |
 | development set                   | tập phát triển                                                 |                                                            |
 | distribution                      | phân phối                                                      |                                                            |
-| early stopping                    |                                                                |                                                            |
+| early stopping                    | dừng sớm                                                       |                                                            |
 | error analysis                    | phân tích lỗi                                                  |                                                            |
-| error rate                        |                                                                |                                                            |
+| error rate                        | tỉ lệ lỗi                                                      |                                                            |
 | evaluation metric                 | phép đánh giá                                                  |                                                            |
 | example                           | mẫu                                                            |                                                            |
 | Eyeball dev set                   |                                                                |                                                            |
@@ -49,9 +49,9 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | logistic regression               | hồi quy logistic                                               |                                                            |
 | machine learning                  | machine learning                                               |                                                            |
 | metric                            | phép đo                                                        |                                                            |
-| misclassified                     |                                                                |                                                            |
-| mislabeled                        |                                                                |                                                            |
-| model                             |                                                                |                                                            |
+| misclassified                     | bị phân loại lỗi                                               |                                                            |
+| mislabeled                        | bị gán nhãn lỗi                                                |                                                            |
+| model                             | mô hình                                                        |                                                            |
 | multiple-number evaluation metric | phép đo đa trị                                                 |                                                            |
 | negative sample/example           | mẫu âm                                                         |                                                            |
 | neural network                    | mạng neural                                                    | [#87](http://bit.ly/2BvfPYA) [#115](http://bit.ly/2MAkizG) |
@@ -60,7 +60,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | positive sample/example           | mẫu dương                                                      |                                                            |
 | precision                         | precision                                                      |                                                            |
 | recall                            | recall                                                         |                                                            |
-| recognition                       |                                                                |                                                            |
+| recognition                       | nhận dạng                                                      |                                                            |
 | regularization                    | regularization                                                 |                                                            |
 | running time                      | thời gian chạy                                                 |                                                            |
 | satisficing metric                | phép đo thỏa mãn                                               | [#87](http://bit.ly/2BvfPYA)                               |
@@ -71,6 +71,6 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | training set                      | tập huấn luyện                                                 |                                                            |
 | true negative                     | âm tính thật                                                   |                                                            |
 | true positive                     | dương tính thật                                                |                                                            |
-| tune parameters                   |                                                                |                                                            |
+| tune parameters                   | tinh chỉnh tham số                                             |                                                            |
 | underfit                          | underfit                                                       | [#87](http://bit.ly/2BvfPYA)                               |
 | variance                          |                                                                |                                                            |
