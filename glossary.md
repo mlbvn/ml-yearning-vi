@@ -46,6 +46,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | Blackbox dev set                  |                                                                |                                                            |
 | classifier                        | bộ phân loại                                                   |                                                            |
 | constrain                         | ràng buộc                                                      |                                                            |
+| cross validation                  | kiểm định chéo                                                 |                                                            |
 | deep learning                     | deep learning                                                  |                                                            |
 | development set                   | tập phát triển                                                 |                                                            |
 | distribution                      | phân phối                                                      |                                                            |
