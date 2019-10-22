@@ -30,7 +30,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | evaluation metric                 | phép đánh giá                                                  |                                                            |
 | example                           | mẫu                                                            |                                                            |
 | Eyeball dev set                   |                                                                |                                                            |
-| f1 score                          | chỉ số F1                                                      |                                                            |
+| F1 score                          | chỉ số F1                                                      |                                                            |
 | false negative                    | âm tính giả                                                    |                                                            |
 | false positive                    | dương tính giả                                                 |                                                            |
 | feature                           | đặc trưng                                                      |                                                            |
