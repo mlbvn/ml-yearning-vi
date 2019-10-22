@@ -14,52 +14,52 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 ## Anh - Việt
 
 
-| English                           | Tiếng Việt (Nếu bạn bổ sung thì KHÔNG căn chỉnh các dòng khác) | Thảo luận tại                |
-|-----------------------------------|----------------------------------------------------------------|------------------------------|
-| accuracy                          | độ chính xác                                                   |                              |
-| benchmark                         | đánh giá xếp hạng                                              | [#87](http://bit.ly/2BvfPYA) |
-| big data                          | big data                                                       |                              |
-| classifier                        | bộ phân loại                                                   |                              |
-| constrain                         | ràng buộc                                                      |                              |
-| development set                   | tập phát triển                                                 |                              |
-| deep learning                     | deep learning                                                  |                              |
-| distribution                      | phân phối                                                      |                              |
-| gradient descent                  | hạ dốc                                                         | [#87](http://bit.ly/2BvfPYA) |
-| heuristic                         | thực nghiệm                                                    |                              |
-| hidden unit                       | nút ẩn                                                         |                              |
-| hand-engineering                  | thiết kế thủ công                                              |                              |
-| iteration                         | vòng lặp                                                       |                              |
-| error analysis                    | phân tích lỗi                                                  |                              |
-| evaluation metric                 | phép đánh giá                                                  |                              |
-| example                           | mẫu                                                            |                              |
-| f1 score                          | chỉ số F1                                                      |                              |
-| false negative                    | âm tính giả                                                    |                              |
-| false positive                    | dương tính giả                                                 |                              |
-| feature                           | đặc trưng                                                      |                              |
-| fit                                | fit                                                             |
-| layer                             | tầng                                                           |                              |
-| linear regression                 | hồi quy tuyến tính                                             |                              |
-| learning curve                    | quá trình học                                                  | [#87](http://bit.ly/2BvfPYA) |
-| learning algorithm                | thuật toán học                                                 |                              |
-| logistic regression               | hồi quy logistic                                               |                              |
-| machine learning                  | machine learning                                               |                              |
-| metric                            | phép đo                                                        |                              |
-| multiple-number evaluation metric | phép đo đa trị                                                 |                              |
-| negative sample/example           | mẫu âm                                                         |                              |
+| English                           | Tiếng Việt (Nếu bạn bổ sung thì KHÔNG căn chỉnh các dòng khác) | Thảo luận tại                                              |
+|-----------------------------------|----------------------------------------------------------------|------------------------------------------------------------|
+| accuracy                          | độ chính xác                                                   |                                                            |
+| benchmark                         | đánh giá xếp hạng                                              | [#87](http://bit.ly/2BvfPYA)                               |
+| big data                          | big data                                                       |                                                            |
+| classifier                        | bộ phân loại                                                   |                                                            |
+| constrain                         | ràng buộc                                                      |                                                            |
+| development set                   | tập phát triển                                                 |                                                            |
+| deep learning                     | deep learning                                                  |                                                            |
+| distribution                      | phân phối                                                      |                                                            |
+| gradient descent                  | hạ dốc                                                         | [#87](http://bit.ly/2BvfPYA)                               |
+| heuristic                         | thực nghiệm                                                    |                                                            |
+| hidden unit                       | nút ẩn                                                         |                                                            |
+| hand-engineering                  | thiết kế thủ công                                              |                                                            |
+| iteration                         | vòng lặp                                                       |                                                            |
+| error analysis                    | phân tích lỗi                                                  |                                                            |
+| evaluation metric                 | phép đánh giá                                                  |                                                            |
+| example                           | mẫu                                                            |                                                            |
+| f1 score                          | chỉ số F1                                                      |                                                            |
+| false negative                    | âm tính giả                                                    |                                                            |
+| false positive                    | dương tính giả                                                 |                                                            |
+| feature                           | đặc trưng                                                      |                                                            |
+| fit                               | fit                                                            |                                                            |
+| layer                             | tầng                                                           |                                                            |
+| linear regression                 | hồi quy tuyến tính                                             |                                                            |
+| learning curve                    | quá trình học                                                  | [#87](http://bit.ly/2BvfPYA)                               |
+| learning algorithm                | thuật toán học                                                 |                                                            |
+| logistic regression               | hồi quy logistic                                               |                                                            |
+| machine learning                  | machine learning                                               |                                                            |
+| metric                            | phép đo                                                        |                                                            |
+| multiple-number evaluation metric | phép đo đa trị                                                 |                                                            |
+| negative sample/example           | mẫu âm                                                         |                                                            |
 | neural network                    | mạng neural                                                    | [#87](http://bit.ly/2BvfPYA) [#115](http://bit.ly/2MAkizG) |
-| overfit                            | overfit                                                         | [#87](http://bit.ly/2BvfPYA) |
-| optimizing metric                 | phép đo để tối ưu                                              | [#87](http://bit.ly/2BvfPYA) |
-| positive sample/example           | mẫu dương                                                      |                              |
-| precision                         | precision                                                      |                              |
-| recall                            | recall                                                         |                              |
-| regularization                    | regularization                                                 |                              |
-| running time                      | thời gian chạy                                                 |                              |
-| satisficing metric                 | phép đo thỏa mãn                                               | [#87](http://bit.ly/2BvfPYA) |
-| single-number evaluation metric   | phép đo đơn trị                                                |                              |
-| spam email                        | email rác                                                      |                              |
-| supervised learning               | học có giám sát                                                |                              |
-| test set                          | tập kiểm tra                                                   |                              |
-| training set                      | tập huấn luyện                                                 |                              |
-| true negative                     | âm tính thật                                                   |                              |
-| true positive                     | dương tính thật                                                |                              |
-| underfit                           | underfit                                                        | [#87](http://bit.ly/2BvfPYA) |
+| overfit                           | overfit                                                        | [#87](http://bit.ly/2BvfPYA)                               |
+| optimizing metric                 | phép đo để tối ưu                                              | [#87](http://bit.ly/2BvfPYA)                               |
+| positive sample/example           | mẫu dương                                                      |                                                            |
+| precision                         | precision                                                      |                                                            |
+| recall                            | recall                                                         |                                                            |
+| regularization                    | regularization                                                 |                                                            |
+| running time                      | thời gian chạy                                                 |                                                            |
+| satisficing metric                | phép đo thỏa mãn                                               | [#87](http://bit.ly/2BvfPYA)                               |
+| single-number evaluation metric   | phép đo đơn trị                                                |                                                            |
+| spam email                        | email rác                                                      |                                                            |
+| supervised learning               | học có giám sát                                                |                                                            |
+| test set                          | tập kiểm tra                                                   |                                                            |
+| training set                      | tập huấn luyện                                                 |                                                            |
+| true negative                     | âm tính thật                                                   |                                                            |
+| true positive                     | dương tính thật                                                |                                                            |
+| underfit                          | underfit                                                       | [#87](http://bit.ly/2BvfPYA)                               |
