@@ -43,31 +43,37 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | F1 score                          | chỉ số F1                                                      |                                                            |
 =======
 | big data                          | big data                                                       |                                                            |
+| Blackbox dev set                  |                                                                |                                                            |
 | classifier                        | bộ phân loại                                                   |                                                            |
 | constrain                         | ràng buộc                                                      |                                                            |
-| development set                   | tập phát triển                                                 |                                                            |
 | deep learning                     | deep learning                                                  |                                                            |
+| development set                   | tập phát triển                                                 |                                                            |
 | distribution                      | phân phối                                                      |                                                            |
-| gradient descent                  | hạ dốc                                                         | [#87](http://bit.ly/2BvfPYA)                               |
-| heuristic                         | thực nghiệm                                                    |                                                            |
-| hidden unit                       | nút ẩn                                                         |                                                            |
-| hand-engineering                  | thiết kế thủ công                                              |                                                            |
-| iteration                         | vòng lặp                                                       |                                                            |
 | error analysis                    | phân tích lỗi                                                  |                                                            |
+| error rate                        |                                                                |                                                            |
 | evaluation metric                 | phép đánh giá                                                  |                                                            |
 | example                           | mẫu                                                            |                                                            |
+<<<<<<< HEAD
 | f1 score                          | chỉ số F1                                                      |                                                            |
 >>>>>>> align (#122)
+=======
+| Eyeball dev set                   |                                                                |                                                            |
+| F1 score                          | chỉ số F1                                                      |                                                            |
+>>>>>>> add terminologies in part 2 and reorder (#123)
 | false negative                    | âm tính giả                                                    |                                                            |
 | false positive                    | dương tính giả                                                 |                                                            |
 | feature                           | đặc trưng                                                      |                                                            |
 | fit                               | fit                                                            |                                                            |
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> add terminologies in part 2 and reorder (#123)
 | hand-engineering                  | thiết kế thủ công                                              |                                                            |
 | iteration                         | vòng lặp                                                       |                                                            |
 | gradient descent                  | hạ dốc                                                         | [#87](http://bit.ly/2BvfPYA)                               |
 | heuristic                         | thực nghiệm                                                    |                                                            |
 | hidden unit                       | nút ẩn                                                         |                                                            |
+<<<<<<< HEAD
 | hyperameter                       | siêu tham số                                                   |                                                            |
 | layer                             | tầng                                                           |                                                            |
 | learning curve                    | quá trình học                                                  | [#87](http://bit.ly/2BvfPYA)                               |
@@ -300,18 +306,23 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | underfit                           | underfit                                                        | [#87](http://bit.ly/2BvfPYA) |
 >>>>>>> Update glossary.md (#87)
 =======
+=======
+>>>>>>> add terminologies in part 2 and reorder (#123)
 | layer                             | tầng                                                           |                                                            |
-| linear regression                 | hồi quy tuyến tính                                             |                                                            |
 | learning curve                    | quá trình học                                                  | [#87](http://bit.ly/2BvfPYA)                               |
 | learning algorithm                | thuật toán học                                                 |                                                            |
+| linear regression                 | hồi quy tuyến tính                                             |                                                            |
 | logistic regression               | hồi quy logistic                                               |                                                            |
 | machine learning                  | machine learning                                               |                                                            |
 | metric                            | phép đo                                                        |                                                            |
+| misclassified                     |                                                                |                                                            |
+| mislabeled                        |                                                                |                                                            |
+| model                             |                                                                |                                                            |
 | multiple-number evaluation metric | phép đo đa trị                                                 |                                                            |
 | negative sample/example           | mẫu âm                                                         |                                                            |
 | neural network                    | mạng neural                                                    | [#87](http://bit.ly/2BvfPYA) [#115](http://bit.ly/2MAkizG) |
-| overfit                           | overfit                                                        | [#87](http://bit.ly/2BvfPYA)                               |
 | optimizing metric                 | phép đo để tối ưu                                              | [#87](http://bit.ly/2BvfPYA)                               |
+| overfit                           | overfit                                                        | [#87](http://bit.ly/2BvfPYA)                               |
 | positive sample/example           | mẫu dương                                                      |                                                            |
 | precision                         | precision                                                      |                                                            |
 | recall                            | recall                                                         |                                                            |
@@ -325,5 +336,6 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | training set                      | tập huấn luyện                                                 |                                                            |
 | true negative                     | âm tính thật                                                   |                                                            |
 | true positive                     | dương tính thật                                                |                                                            |
+| tune parameters                   |                                                                |                                                            |
 | underfit                          | underfit                                                       | [#87](http://bit.ly/2BvfPYA)                               |
 >>>>>>> align (#122)
