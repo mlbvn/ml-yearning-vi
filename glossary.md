@@ -49,8 +49,8 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | logistic regression               | hồi quy logistic                                               |                                                            |
 | machine learning                  | machine learning                                               |                                                            |
 | metric                            | phép đo                                                        |                                                            |
-| misclassified                     | bị phân loại lỗi                                               |                                                            |
-| mislabeled                        | bị gán nhãn lỗi                                                |                                                            |
+| misclassified                     | bị phân loại nhầm                                              |                                                            |
+| mislabeled                        | bị gán nhãn nhầm                                               |                                                            |
 | model                             | mô hình                                                        |                                                            |
 | multiple-number evaluation metric | phép đo đa trị                                                 |                                                            |
 | negative sample/example           | mẫu âm                                                         |                                                            |
