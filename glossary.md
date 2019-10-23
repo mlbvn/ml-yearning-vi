@@ -18,7 +18,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 |-----------------------------------|----------------------------------------------------------------|------------------------------------------------------------|
 | accuracy                          | độ chính xác                                                   |                                                            |
 | benchmark                         | đánh giá xếp hạng                                              | [#87](http://bit.ly/2BvfPYA)                               |
-| bias (bias as variance)           | độ lệch                                                        | [#125](http://bit.ly/32HJI3S)                              |
+| bias (bias as variance)           | độ chệch                                                       | [#125](http://bit.ly/32HJI3S)                              |
 | big data                          | big data                                                       |                                                            |
 | Blackbox dev set                  |                                                                |                                                            |
 | classifier                        | bộ phân loại                                                   |                                                            |
