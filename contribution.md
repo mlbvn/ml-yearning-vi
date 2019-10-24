@@ -16,7 +16,7 @@ Lưu ý khi tạo một PR:
 Đây là giai đoạn dịch từ bản tiếng Anh sang bản tiếng Việt lần đầu tiên. Bản dịch này phải đảm bảo ý nghĩa của bản dịch sát với bản gốc, việc trau chuốt ngôn từ sẽ được làm kỹ hơn ở giai đoạn 2. Nếu trong quá trình dịch, bạn gặp một thuật ngữ chưa có trong bảng thuật ngữ, bạn có thể tạo một PR riêng cho việc thêm thuật ngữ mới vào bảng. Bản dịch thô chỉ được chấp nhận nếu tất cả các thuật ngữ đã có trong Bảng thuật ngữ.
 
 Một vài lưu ý:
-1. Bản dịch tiếng Việt phải bắt đầu từ dòng **ngay** dưới dấu `->`. Việc này để đảm bảo khi hiển thị những thay đổi trong mỗi PR, github cũng hiển thị phần nghĩa gốc tiếng Anh ngay trên dấu `->`. Việc này giúp cho quá trình review thuận tiện hơn. Chẳng hạn:
+1. Bản dịch tiếng Việt phải bắt đầu từ dòng **ngay** dưới dấu `->`. Việc này để đảm bảo khi hiển thị những thay đổi trong mỗi PR, github cũng hiển thị phần nghĩa gốc tiếng Anh ngay trên dấu `->`, giúp cho quá trình review thuận tiện hơn. Chẳng hạn:
 
 ```
 Machine learning is the foundation of countless important applications, including web search, email anti-spam, speech recognition, product recommendations, and more. I assume that you or your team is working on a machine learning application, and that you want to make rapid progress. This book will help you do so.
@@ -36,7 +36,7 @@ Machine learning là nền tảng cho nhiều ững dụng quan trọng, ...
 ```
 
 ## Giai đoạn 2
-Trong giai đoạn này, các chương sẽ được trau chuốt hơn về mặt ngôn từ, cách diễn đạt. Giai đoạn này chỉ được thực hiện sau giai đoạn 1.
+Trong giai đoạn này, các chương sẽ được trau chuốt hơn về mặt ngôn từ, cách diễn đạt. Giai đoạn này chỉ được thực hiện sau khi giai đoạn 1 đã hoàn thành.
 
 # Bổ sung thuật ngữ
 Các thuật ngữ tiếng Anh xuất hiện trong sách nếu chưa có trong [Bảng thuật ngữ](glossary.md) cần được thêm vào bảng này thông qua các PR. Vì mỗi PR chỉ được chấp nhận sau khi review nhiều vòng và trải qua nhiều thảo luận, bạn không nên thay đổi quá nhiều thuật ngữ cùng lúc trong một PR.
