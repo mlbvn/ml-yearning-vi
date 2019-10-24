@@ -1,6 +1,6 @@
 ## Nếu bạn tạo Pull Request để dịch, vui lòng hoàn thành các thông tin dưới đây.
 
-* [x] Đánh dấu [x] thể hiện dấu tick vào các câu dưới đây cho các câu trả lời 'Có' hoặc 'Đúng'
+* [x] Đánh dấu [x] (không có dấu cách quanh x) thể hiện dấu tick vào các câu dưới đây cho các câu trả lời 'Có' hoặc 'Đúng'
 
 * [ ] Pull Request này được link tới một issue? Đánh số issue đó *ngay sau* dấu #
 
