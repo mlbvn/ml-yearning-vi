@@ -26,7 +26,7 @@ Bảng dưới đây thể hiện tiến độ của toàn bộ dự án. Hai c�
 | 8      | [Thiết lập một phép đo đơn trị làm mục tiêu tối ưu](chapters/ch08.md)    | [#80](http://bit.ly/2pGMCqX)  | hoàn thành  |                               |             |
 | 9      | [Phép đo tối ưu và phép đo thỏa mãn](chapters/ch09.md)                   | [#77](http://bit.ly/2VVgJXM)  | hoàn thành  |                               |             |
 | 10     | [chưa có tên](chapters/ch10.md)                                          | [#117](http://bit.ly/2WdLYxp) |             |                               |             |
-| 11     | [chưa có tên](chapters/ch11.md)                                          |                               |             |                               |             |
+| 11     | [chưa có tên](chapters/ch11.md)                                          | [#150](http://bit.ly/361NZkJ) |             |                               |             |
 | 12     | [chưa có tên](chapters/ch12.md)                                          | [#113](http://bit.ly/2Pe9d9a) |             |                               |             |
 | 13     | [chưa có tên](chapters/ch13.md)                                          |                               |             |                               |             |
 | 14     | [chưa có tên](chapters/ch14.md)                                          | [#140](http://bit.ly/2W6QbDa) |             |                               |             |
