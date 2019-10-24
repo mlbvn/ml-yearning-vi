@@ -25,10 +25,14 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | benchmark                         | đánh giá xếp hạng                                              | [#87](http://bit.ly/2BvfPYA)                               |
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 | bias (bias as variance)           | độ chệch                                                       | [#125](http://bit.ly/32HJI3S)                              |
 =======
 | bias (bias as variance)           |                                                                | [#125](http://bit.ly/32HJI3S)                              |
 >>>>>>> update bias and variance discussion links (#135)
+=======
+| bias (bias as variance)           | độ chệch                                                       | [#125](http://bit.ly/32HJI3S)                              |
+>>>>>>> add bias and variance to glossary  (#125)
 | big data                          | big data                                                       |                                                            |
 | Blackbox dev set                  |                                                                |                                                            |
 | classifier                        | bộ phân loại                                                   |                                                            |
@@ -111,6 +115,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | true positive                     | dương tính thật                                                |                                                            |
 | tune parameters                   | điều chỉnh tham số                                             |                                                            |
 | underfit                          | underfit                                                       | [#87](http://bit.ly/2BvfPYA)                               |
+<<<<<<< HEAD
 <<<<<<< HEAD
 | variance (bias as variance)       | phương sai                                                     | [#125](http://bit.ly/32HJI3S)                              |
 =======
@@ -348,3 +353,6 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 =======
 | variance (bias as variance)       |                                                                | [#125](http://bit.ly/32HJI3S)                              |
 >>>>>>> update bias and variance discussion links (#135)
+=======
+| variance (bias as variance)       | phương sai                                                     | [#125](http://bit.ly/32HJI3S)                              |
+>>>>>>> add bias and variance to glossary  (#125)
