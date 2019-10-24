@@ -56,7 +56,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | multiple-number evaluation metric | phép đo đa trị                                                 |                                                            |
 | negative sample/example           | mẫu âm                                                         |                                                            |
 | neural network                    | mạng neural                                                    | [#87](http://bit.ly/2BvfPYA) [#115](http://bit.ly/2MAkizG) |
-| optimizing metric                 | phép đo để tối ưu                                              | [#87](http://bit.ly/2BvfPYA)                               |
+| optimizing metric                 | phép đo tối ưu                                                 | [#87](http://bit.ly/2BvfPYA)                               |
 | overfit                           | overfit                                                        | [#87](http://bit.ly/2BvfPYA)                               |
 | positive sample/example           | mẫu dương                                                      |                                                            |
 | precision                         | precision                                                      |                                                            |
@@ -64,7 +64,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | recognition                       | nhận dạng                                                      |                                                            |
 | regularization                    | regularization                                                 |                                                            |
 | running time                      | thời gian chạy                                                 |                                                            |
-| satisficing metric                | phép đo thỏa mãn                                               | [#87](http://bit.ly/2BvfPYA)                               |
+| satisficing metric                | phép đo tối ưu                                                 | [#87](http://bit.ly/2BvfPYA)                               |
 | single-number evaluation metric   | phép đo đơn trị                                                |                                                            |
 | spam email                        | email rác                                                      |                                                            |
 | supervised learning               | học có giám sát                                                |                                                            |
