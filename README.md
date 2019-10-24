@@ -23,7 +23,7 @@ Bảng dưới đây thể hiện tiến độ của toàn bộ dự án. Hai c�
 | 5      | [Tập phát triển và tập kiểm tra](chapters/ch05.md)                       | [#82](http://bit.ly/2Mt4jmV)  | hoàn thành  |                               |             |
 | 6      | [Tập phát triển và tập kiểm tra nên có cùng phân phối](chapters/ch06.md) | [#91](http://bit.ly/2MxIAKE)  | hoàn thành  |                               |             |
 | 7      | [Tập phát triển/kiểm tra cần lớn đến mức nào?](chapters/ch07.md)         | [#70](http://bit.ly/35Jetrj)  | hoàn thành  |                               |             |
-| 8      | [chưa có tên](chapters/ch08.md)                                          | [#80](http://bit.ly/2pGMCqX)  |             |                               |             |
+| 8      | [Thiết lập một phép đo đơn trị làm mục tiêu tối ưu](chapters/ch08.md)    | [#80](http://bit.ly/2pGMCqX)  | hoàn thành  |                               |             |
 | 9      | [chưa có tên](chapters/ch09.md)                                          | [#77](http://bit.ly/2VVgJXM)  |             |                               |             |
 | 10     | [chưa có tên](chapters/ch10.md)                                          | [#117](http://bit.ly/2WdLYxp) |             |                               |             |
 | 11     | [chưa có tên](chapters/ch11.md)                                          |                               |             |                               |             |
