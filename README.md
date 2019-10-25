@@ -1,4 +1,4 @@
-[[#]] Dự án dịch sách [Machine Learning Yearning](https://www.deeplearning.ai/machine-learning-yearning/), Andrew Ng ra tiếng Việt
+# Dự án dịch sách [Machine Learning Yearning](https://www.deeplearning.ai/machine-learning-yearning/), Andrew Ng ra tiếng Việt
 
 Nguồn để dịch https://github.com/ajaymache/machine-learning-yearning. Mặc dù là bản Draft, nội dung bản này cũng đã khá đầy đủ.
 
