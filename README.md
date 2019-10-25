@@ -2,15 +2,12 @@
 
 Nguồn để dịch https://github.com/ajaymache/machine-learning-yearning. Mặc dù là bản Draft, nội dung bản này cũng đã khá đầy đủ.
 
-## Hình ảnh trong sách
-Toàn bộ hình ảnh trong sách được lưu trong thư mục `imgs`. Click vào [đây](imgs/README.md) để xem toàn bộ ảnh.
-
 ## Bảng thuật ngữ
 Tất cả các thuật ngữ cần được dịch theo chuẩn trong file [glossary](glossary.md).
 
 ## Đóng góp vào dự án
 
-Bảng dưới đây thể hiện tiến độ của toàn bộ dự án. Hai cột 'Ảnh' và 'Copy bản gốc' đã hoàn thành. Cột 'Dịch' cần sự góp sức của nhiều người hơn, cả việc dịch và việc review các Pull Request. Mời bạn xem thêm [Làm thế nào để đóng góp vào dự án](contribution.md).
+Bảng dưới đây thể hiện tiến độ của toàn bộ dự án. Mời bạn xem thêm [Làm thế nào để đóng góp vào dự án](contribution.md).
 
 ## Mục lục
 
