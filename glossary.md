@@ -44,7 +44,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | heuristic                         | thực nghiệm                                                    |                                                            |
 | hidden unit                       | nút ẩn                                                         |                                                            |
 | layer                             | tầng                                                           |                                                            |
-| learning curve                    | quá trình học                                                  | [#87](http://bit.ly/2BvfPYA)                               |
+| learning curve                    | đồ thị quá trình học                                                  | [#87](http://bit.ly/2BvfPYA)                               |
 | learning algorithm                | thuật toán học                                                 |                                                            |
 | linear regression                 | hồi quy tuyến tính                                             |                                                            |
 | logistic regression               | hồi quy logistic                                               |                                                            |
