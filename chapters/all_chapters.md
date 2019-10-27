@@ -64,8 +64,7 @@ Nếu chọn đúng một trong những hướng kể trên, có thể bạn s�
 
 Cuốn sách này sẽ giúp bạn trả lời câu hỏi đó. Phần lớn các vấn đề về machine learning đều có những dấu hiệu riêng ẩn chứa gợi ý về phương hướng giải quyết. Việc học để phát hiện ra những dấu hiệu đó sẽ giúp bạn tiết kiệm hàng tháng hay thậm chí hàng năm trời phát triển sản phẩm. 
 
-
-
+------------------
 > # 2. How to use this book to help your team
 
 # 2. Cách sử dụng cuốn sách khi làm việc nhóm
@@ -88,8 +87,7 @@ Chỉ với một vài thay đổi nhỏ về thứ tự ưu tiên có thể tá
 
 ![img](../imgs/C02_01.png)
 
-
-
+------------------
 ># 3. Prerequisites and Notation
 
 # 3. Điều kiện tiên quyết và Ký hiệu
@@ -113,8 +111,7 @@ Nếu những khái niệm nêu trên còn mới với bạn thì bạn hãy xem
 
 ![img](../imgs/C03_01.png)
 
-
-
+------------------
 > # 4. Scale drives machine learning progress
 
 # 4. Quy mô quyết định mô hình machine learning
@@ -178,6 +175,7 @@ Còn nhiều chủ đề quan trọng khác, như kiến trúc mạng neural, v�
 Quá trình đạt được (i) huấn luyện mạng lớn trên (ii) tập dữ liệu lớn có thể phức tạp hơn bạn tưởng. Nhưng đừng lo, vấn đề này sẽ được thảo luận đầy đủ và chi tiết trong cuốn sách này. Chúng ta sẽ bắt đầu với các chiến thuật chung, hữu ích cho cả thuật toán truyền thống lẫn mạng neural, và từ từ xây dựng chiến thuật mới cho việc xây dựng các hệ thống deep learning. 
 
 
+------------------
 > # 5. Your development and test sets
 
 # 5. Tập phát triển và tập kiểm tra
@@ -256,8 +254,7 @@ Nếu bạn thực sự không có cách nào để có được dữ liệu g�
 
 Ta cần thẩm định để quyết định được cần phải tập trung bao nhiêu cho việc phát triển tập phát triển và tập kiểm tra. Tuy nhiên đừng đánh đồng phân phối giữa tập huấn luyện và tập kiểm tra. Hãy chọn ra những mẫu kiểm tra phản ánh cái mà bạn muốn thực hiện tốt, hơn là bất kì dữ liệu nào bạn tình cờ có được cho tập huấn luyện.
 
-
-
+------------------
 **Chương này đã được merge nhưng cần một lần chỉnh sửa văn phong nữa. Mong các bạn đóng góp bằng cách tạo Pull Request mới.**
 -----------
 
@@ -307,8 +304,7 @@ Nhiều vấn đề phức tạp có thể xảy ra khi làm việc với các �
 
 Nếu bạn đang làm việc với một bài toán đánh giá xếp hạng của bên thứ ba, họ có thể cung cấp tập phát triển và tập kiểm tra có phân phối khác nhau. Nếu so sánh với bài toán có tập phát triển và tập kiểm tra đến từ cùng phân phối, bài toán này có kết quả phụ thuộc nhiều vào may mắn hơn là kỹ năng của bạn. Việc phát triển các thuật toán mà mô hình được huấn luyện trên một phân phối để khái quát hóa tốt trên một phân phối khác là một vấn đề quan trọng trong nghiên cứu. Tuy nhiên, nếu mục tiêu của bạn là cải thiện một ứng dụng machine learning cụ thể thay vì tạo ra tiến triển trong nghiên cứu, tôi khuyên bạn chọn tập phát triển và tập kiểm tra đến từ cùng phân phối. Điều này sẽ khiến nhóm bạn làm việc hiệu quả hơn.
 
-
-
+------------------
 > # 7. How large do the dev/test sets need to be?
 
 # 7. Tập phát triển/kiểm tra cần lớn đến mức nào?
@@ -334,8 +330,7 @@ Vậy còn kích thước của tập kiểm tra thì sao? Nó cần đủ lớn
 
 [2] Trên lý thuyết, ta cũng có thể kiểm tra xem một thay đổi trong thuật toán có tạo ra sự khác biệt có ý nghĩa thống kê trên tập phát triển hay không. Trong thực tế, hầu hết mọi người đều không quan tâm đến điều này (trừ khi họ muốn công bố các các bài báo khoa học). Tôi thường thấy các bài kiểm định thống kê không mấy hữu ích trong việc đánh giá tiến độ phát triển.
 
-
-
+------------------
 > # 8. Establish a single-number evaluation metric for your team to optimize
 
 # 8. Thiết lập một phép đo đơn trị làm mục tiêu tối ưu
@@ -391,8 +386,7 @@ Một ví dụ cuối cùng, giả sử bạn đang theo dõi riêng biệt về
 
 [4] Nếu bạn muốn đọc thêm về chỉ số F1, xem [https://en.wikipedia.org/wiki/F1_score](https://en.wikipedia.org/wiki/F1_score). Chỉ số F1 là trung bình điều hoà của Precision và Recall, được tính bằng 2/((1/Precision) + (1/Recall))
 
-
-
+------------------
 > # 9. Optimizing and satisficing metrics
 
 # 9. Phép đo tối ưu và phép đo thỏa mãn
@@ -435,8 +429,7 @@ Ví dụ cuối cùng, giả sử bạn cần xây dựng một thiết bị ph�
 
 Một khi nhóm của bạn thống nhất về việc phép đo nào cần được tối ưu, cả nhóm sẽ đạt tiến độ nhanh hơn.
 
-
-
+------------------
 > # 10. Having a dev set and metric speeds up iterations
 
 # 10. Xây dựng một tập phát triển và một phép đo sẽ tăng tốc quá trình làm việc
@@ -466,6 +459,7 @@ Thật sự rất khó để đoán trước phương án tiếp cận nào tố
 
 Ngược lại, giả sử bạn không có một tập phát triển và phép đo cụ thể. Như vậy mỗi khi nhóm của bạn phát triển một bộ phân loại mèo mới, bạn sẽ phải tích hợp nó vào ứng dụng, và ngồi thử nghiệm ứng dụng đó một vài tiếng để kiểm tra liệu bộ phân loại mới có cải thiện hay không. Quá trình này sẽ cực kì chậm! Đồng thời, nhóm của bạn sẽ rất khó nhận ra sự khác biệt nếu độ chính xác chỉ cải thiện từ 95.0% lên 95.1%, bạn sẽ không thể phát hiện sự cải thiện 0.1% đó chỉ qua việc ngồi thử nghiệm trên ứng dụng. Và hệ thống sau cùng là tích lũy của rất nhiểu bước cải thiện nhỏ 0.1%. Có một tập phát triển và phép đo cho phép bạn nhanh chóng phát hiện ra ý tưởng nào sẽ đem lại những cải tiến nhỏ (hoặc lớn), và từ đó bạn có thể quyết định những ý tưởng nào cần hoàn thiện thêm hoặc loại bỏ.
 
+------------------
 > # 12. Takeaways: Setting up development and test sets
 
 # 12. Điều cần nhớ: Thiết lập các tập phát triển và kiểm tra
@@ -506,7 +500,7 @@ Ngược lại, giả sử bạn không có một tập phát triển và phép 
 
 * Nếu tập phát triển và phép đo không còn chỉ cho nhóm của bạn đi đúng hướng, hãy nhanh chóng thay đổi chúng: (i) Nếu thuật toán đã overfit tập phát triển, hãy thu thập thêm dữ liệu cho tập này. (ii) Nếu phân phối xác suất thực tế mà bạn quan tâm khác với phân phối xác suất của tập phát triển/kiểm tra, hãy tạo tập phát triển và kiểm tra mới. (iii) Nếu phép đo không còn đo lường được điều quan trọng nhất với bạn, hãy thay đổi phép đo.
 
-
+------------------
 > # 14. Error analysis: Look at dev set examples to evaluate ideas
 # 14. Phân tích lỗi: đánh giá ý tưởng dựa trên tập phát triển 
 
@@ -555,3 +549,5 @@ Quan sát 100 mẫu để phân tích lỗi không tốn nhiều thời gian. K�
 > Error Analysis refers to the process of examining dev set examples that your algorithm misclassified, so that you can understand the underlying causes of the errors. This can help you prioritize projects—as in this example—and inspire new directions, which we will discuss next. The next few chapters will also present best practices for carrying out error analyses.
 
 Việc phân tích lỗi là quá trình kiểm tra các mẫu trong tập phát triển bị phân loại nhầm, từ đó bạn có thể hiểu được nguyên nhân.  Hiểu rõ nguyên nhân tạo ra lỗi sẽ giúp bạn nhìn ra những hướng giải quyết mới mà chúng ta sẽ thảo luận ở phần sau. Một số chương tiếp theo sẽ trình bày những "best practices" được dùng để phân tích lỗi. 
+
+------------------
