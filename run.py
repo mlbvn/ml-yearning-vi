@@ -16,11 +16,10 @@ PENDING_CHAPTERS = [13, 15, 16, 17, 18, 19, 20]
 CHAPTERS_DIR = './chapters/'
 ALL_CHAPTERS_FILENAME = 'all_chapters.md'
 
-
 def main():
     with codecs.open(os.path.join(CHAPTERS_DIR, ALL_CHAPTERS_FILENAME), 'w', encoding='utf-8') as all_file:
         # table of content
-        all_file.write("**MỤC LỤC**\n\n")
+        all_file.write("# MỤC LỤC\n")
         for i in range(1, NUM_CHAPTERS_PHASE_1 + 1):
             if i in PENDING_CHAPTERS:
                 continue
@@ -53,6 +52,7 @@ def main():
                         print('Line with decode error:')
                         print(e)
             all_file.write('\n')
+            all_file.write("[Về Mục lục](#muc-luc)\n")
 
 
 if __name__ == '__main__':
