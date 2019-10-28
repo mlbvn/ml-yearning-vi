@@ -12,6 +12,7 @@
 * [10. Xây dựng một tập phát triển và một phép đo sẽ tăng tốc quá trình làm việc](#10-xây-dựng-một-tập-phát-triển-và-một-phép-đo-sẽ-tăng-tốc-quá-trình-làm-việc)
 * [12. Điều cần nhớ: Thiết lập các tập phát triển và kiểm tra](#12-điều-cần-nhớ-thiết-lập-các-tập-phát-triển-và-kiểm-tra)
 * [14. Phân tích lỗi: đánh giá ý tưởng dựa trên tập phát triển](#14-phân-tích-lỗi-đánh-giá-ý-tưởng-dựa-trên-tập-phát-triển)
+* [21. Những ví dụ về Độ chệch và Phương sai](#21-những-ví-dụ-về-độ-chệch-và-phương-sai)
 ------------------
 > # 1. Why Machine Learning Strategy
 
@@ -564,4 +565,77 @@ Quan sát 100 mẫu để phân tích lỗi không tốn nhiều thời gian. K�
 > Error Analysis refers to the process of examining dev set examples that your algorithm misclassified, so that you can understand the underlying causes of the errors. This can help you prioritize projects—as in this example—and inspire new directions, which we will discuss next. The next few chapters will also present best practices for carrying out error analyses.
 
 Việc phân tích lỗi là quá trình kiểm tra các mẫu trong tập phát triển bị phân loại nhầm, từ đó bạn có thể hiểu được nguyên nhân.  Hiểu rõ nguyên nhân tạo ra lỗi sẽ giúp bạn nhìn ra những hướng giải quyết mới mà chúng ta sẽ thảo luận ở phần sau. Một số chương tiếp theo sẽ trình bày những "best practices" được dùng để phân tích lỗi. 
+
+------------------
+># 21. Examples of Bias and Variance
+
+# 21. Những ví dụ về Độ chệch và Phương sai
+
+> Consider our cat classification task. An “ideal” classifier (such as a human) might achieve nearly perfect performance in this task.
+
+Hãy xem xét việc phân loại mèo của chúng ta. Một bộ phân loại "lý tưởng" (như con người) có thẻ đạt được hiệu suất gần như hoàn hảo cho việc này.
+
+> Suppose your algorithm performs as follows:
+
+Giả sử thuật toán của bạn thực hiện như sau:
+
+> * Training error = 1%
+
+* Tỉ lệ lỗi huấn luyện = 1%
+
+> * Dev error = 11%
+
+* Tỉ lệ lỗi phát triển = 11%
+
+> What problem does it have? Applying the definitions from the previous chapter, we estimate the bias as 1%, and the variance as 10% (=11%-1%). Thus, it has **high variance**. The classifier has very low training error, but it is failing to generalize to the dev set. This is also called **overfitting**.
+
+Nó gặp phải vấn đề gì? Áp dụng định nghĩa từ những chương trước, chúng ta ước tính độ chệch là 1% và phương sai là 10% (=11%-1%). Do đó, nó có **phương sai cao**. Bộ phân loại có lỗi huấn luyện rất thấp, nhưng nó lại không khái quát hoá được cho tập phát triển. Điều này cũng được gọi là **overfitting**.
+
+> Now consider this:
+
+Bây giờ hãy xem xét điều này:
+
+> * Training error = 15%
+
+* Tỉ lệ lỗi huấn luyện = 5%
+
+> * Dev error = 16%
+
+Tỉ lệ lỗi phát triển = 16%
+
+> We estimate the bias as 15%, and variance as 1%. This classifier is fitting the training set poorly with 15% error, but its error on the dev set is barely higher than the training error. This classifier therefore has **high bias**, but low variance. We say that this algorithm is **underfitting**.
+
+Chúng ta ước tính độ chệch là 15% và phương sai là 1%. Bộ phân loại này khớp khá kém với tập huấn luyện với 15% tỉ lệ lỗi, nhưng tỉ lệ lỗi ở tập phát triển chỉ cao hơn một chút so với tập huấn luyện. Do đó, bộ phân loại này có **độ chệch cao**, nhưng phương sai thấp. Chúng ta nói rằng thuật toán này là **underfitting**.
+
+> Now consider this:
+
+Bây giờ hãy xem xét điều này:
+
+> * Training error = 15%
+
+* Tỉ lệ lỗi huấn luyện = 15%
+
+> * Dev error = 30%
+
+* Tỉ lệ lỗi phát triển = 30%
+
+> We estimate the bias as 15%, and variance as 15%. This classifier has **high bias and high variance**: It is doing poorly on the training set, and therefore has high bias, and its performance on the dev set is even worse, so it also has high variance. The overfitting/underfitting terminology is hard to apply here since the classifier is simultaneously overfitting and underfitting.
+
+Chúng ta ước tính độ chệch là 15% và phương sai là 15%. Bộ phân loại này có **độ chệch cao và phương sai cao**: Nó hoạt động kém ở tập huấn luyện, và do đó có độ chệch cao, và hiệu suất của nó trên tập phát triển còn tệ hơn, do đó nó cũng có phương sai cao. Thuật ngữ overfitting/underfitting rất khó áp dụng ở đây vì bộ phân loại đồng thời bị overfitting và underfitting.
+
+> Finally, consider this:
+
+Cuối cùng, hãy xem xét điều này:
+
+> * Training error = 0.5%
+
+* Tỉ lệ lỗi huấn luyện = 0,5%
+
+> * Dev error = 1%
+
+* Tỉ lệ lỗi phát triển = 1%
+
+> This classifier is doing well, as it has low bias and low variance. Congratulations on achieving this great performance!
+
+Bộ phân loại này đang hoạt động tốt, vì nó có độ chệch thấp và phương sai thấp. Chúc mừng bạn đã đạt được hiệu suất tuyệt vời!
 
