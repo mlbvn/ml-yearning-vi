@@ -1,3 +1,36 @@
+Table of Contents
+=================
+
+   * [1. Why Machine Learning Strategy](#1-why-machine-learning-strategy)
+   * [1. Tại sao cần chiến lược Machine Learning](#1-tại-sao-cần-chiến-lược-machine-learning)
+   * [2. How to use this book to help your team](#2-how-to-use-this-book-to-help-your-team)
+   * [2. Cách sử dụng cuốn sách khi làm việc nhóm](#2-cách-sử-dụng-cuốn-sách-khi-làm-việc-nhóm)
+   * [3. Prerequisites and Notation](#3-prerequisites-and-notation)
+   * [3. Điều kiện tiên quyết và Ký hiệu](#3-điều-kiện-tiên-quyết-và-ký-hiệu)
+   * [4. Scale drives machine learning progress](#4-scale-drives-machine-learning-progress)
+   * [4. Quy mô quyết định mô hình machine learning](#4-quy-mô-quyết-định-mô-hình-machine-learning)
+   * [5. Your development and test sets](#5-your-development-and-test-sets)
+   * [5. Tập phát triển và tập kiểm tra](#5-tập-phát-triển-và-tập-kiểm-tra)
+      * [What happened?](#what-happened)
+      * [Điều gì đã xảy ra?](#điều-gì-đã-xảy-ra)
+      * [<strong>Chương này đã được merge nhưng cần một lần chỉnh sửa văn phong nữa. Mong các bạn đóng góp bằng cách tạo Pull Request mới.</strong>](#chương-này-đã-được-merge-nhưng-cần-một-lần-chỉnh-sửa-v
+ăn-phong-nữa-mong-các-bạn-đóng-góp-bằng-cách-tạo-pull-request-mới)
+   * [Your dev and test sets should come from the same distribution](#your-dev-and-test-sets-should-come-from-the-same-distribution)
+   * [Tập phát triển và tập kiểm tra nên có cùng phân phối](#tập-phát-triển-và-tập-kiểm-tra-nên-có-cùng-phân-phối)
+   * [7. How large do the dev/test sets need to be?](#7-how-large-do-the-devtest-sets-need-to-be)
+   * [7. Tập phát triển/kiểm tra cần lớn đến mức nào?](#7-tập-phát-triểnkiểm-tra-cần-lớn-đến-mức-nào)
+   * [8. Establish a single-number evaluation metric for your team to optimize](#8-establish-a-single-number-evaluation-metric-for-your-team-to-optimize)
+   * [8. Thiết lập một phép đo đơn trị làm mục tiêu tối ưu](#8-thiết-lập-một-phép-đo-đơn-trị-làm-mục-tiêu-tối-ưu)
+   * [9. Optimizing and satisficing metrics](#9-optimizing-and-satisficing-metrics)
+   * [9. Phép đo tối ưu và phép đo thỏa mãn](#9-phép-đo-tối-ưu-và-phép-đo-thỏa-mãn)
+   * [10. Having a dev set and metric speeds up iterations](#10-having-a-dev-set-and-metric-speeds-up-iterations)
+   * [10. Xây dựng một tập phát triển và một phép đo sẽ tăng tốc quá trình làm việc](#10-xây-dựng-một-tập-phát-triển-và-một-phép-đo-sẽ-tăng-tốc-quá-trình-làm-việc)
+   * [12. Takeaways: Setting up development and test sets](#12-takeaways-setting-up-development-and-test-sets)
+   * [12. Điều cần nhớ: Thiết lập các tập phát triển và kiểm tra](#12-điều-cần-nhớ-thiết-lập-các-tập-phát-triển-và-kiểm-tra)
+   * [14. Error analysis: Look at dev set examples to evaluate ideas](#14-error-analysis-look-at-dev-set-examples-to-evaluate-ideas)
+   * [14. Phân tích lỗi: đánh giá ý tưởng dựa trên tập phát triển](#14-phân-tích-lỗi-đánh-giá-ý-tưởng-dựa-trên-tập-phát-triển)
+
+
 > # 1. Why Machine Learning Strategy
 
 # 1. Tại sao cần chiến lược Machine Learning 
