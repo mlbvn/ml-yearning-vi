@@ -31,7 +31,7 @@ def main():
                         line = line.strip()
                         link = line.replace(' ', '-').replace('.', '').replace('#-', '#').replace(':', '').lower()
                         full_link = "[{display_text}]({link_to_chapter})".format(
-                            display_text=line,
+                            display_text=line[len('# '):],
                             link_to_chapter=link
                         )
 
