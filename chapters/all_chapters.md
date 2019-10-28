@@ -1,3 +1,18 @@
+**MỤC LỤC**
+
+* [1. Tại sao cần chiến lược Machine Learning](#1-tại-sao-cần-chiến-lược-machine-learning)
+* [2. Cách sử dụng cuốn sách khi làm việc nhóm](#2-cách-sử-dụng-cuốn-sách-khi-làm-việc-nhóm)
+* [3. Điều kiện tiên quyết và Ký hiệu](#3-điều-kiện-tiên-quyết-và-ký-hiệu)
+* [4. Quy mô quyết định mô hình machine learning](#4-quy-mô-quyết-định-mô-hình-machine-learning)
+* [5. Tập phát triển và tập kiểm tra](#5-tập-phát-triển-và-tập-kiểm-tra)
+* [6. Tập phát triển và tập kiểm tra nên có cùng phân phối](#6-tập-phát-triển-và-tập-kiểm-tra-nên-có-cùng-phân-phối)
+* [7. Tập phát triển/kiểm tra cần lớn đến mức nào?](#7-tập-phát-triển/kiểm-tra-cần-lớn-đến-mức-nào?)
+* [8. Thiết lập một phép đo đơn trị làm mục tiêu tối ưu](#8-thiết-lập-một-phép-đo-đơn-trị-làm-mục-tiêu-tối-ưu)
+* [9. Phép đo tối ưu và phép đo thỏa mãn](#9-phép-đo-tối-ưu-và-phép-đo-thỏa-mãn)
+* [10. Xây dựng một tập phát triển và một phép đo sẽ tăng tốc quá trình làm việc](#10-xây-dựng-một-tập-phát-triển-và-một-phép-đo-sẽ-tăng-tốc-quá-trình-làm-việc)
+* [12. Điều cần nhớ: Thiết lập các tập phát triển và kiểm tra](#12-điều-cần-nhớ-thiết-lập-các-tập-phát-triển-và-kiểm-tra)
+* [14. Phân tích lỗi: đánh giá ý tưởng dựa trên tập phát triển](#14-phân-tích-lỗi-đánh-giá-ý-tưởng-dựa-trên-tập-phát-triển)
+------------------
 > # 1. Why Machine Learning Strategy
 
 # 1. Tại sao cần chiến lược Machine Learning 
@@ -194,9 +209,9 @@ Tuy nhiên, khi triển khai bộ nhận dạng mèo này lên một ứng dụn
 
 ![img](../imgs/C05_01.png)
 
-> ## What happened?
+> **What happened?**
 
-## Điều gì đã xảy ra?
+**Điều gì đã xảy ra?**
 
 > You figure out that the pictures users are uploading have a different look than the website images that make up your training set: Users are uploading pictures taken with mobile phones, which tend to be lower resolution, blurrier, and poorly lit. Since your training/test sets were made of website images, your algorithm did not generalize well to the actual distribution you care about: mobile phone pictures.
 
@@ -258,9 +273,9 @@ Ta cần thẩm định để quyết định được cần phải tập trung 
 **Chương này đã được merge nhưng cần một lần chỉnh sửa văn phong nữa. Mong các bạn đóng góp bằng cách tạo Pull Request mới.**
 -----------
 
-> # Your dev and test sets should come from the same distribution
+> # 6. Your dev and test sets should come from the same distribution
 
-# Tập phát triển và tập kiểm tra nên có cùng phân phối
+# 6. Tập phát triển và tập kiểm tra nên có cùng phân phối
 
 <img src="../imgs/C06_01.png" width=300 align=center>
 
@@ -550,4 +565,3 @@ Quan sát 100 mẫu để phân tích lỗi không tốn nhiều thời gian. K�
 
 Việc phân tích lỗi là quá trình kiểm tra các mẫu trong tập phát triển bị phân loại nhầm, từ đó bạn có thể hiểu được nguyên nhân.  Hiểu rõ nguyên nhân tạo ra lỗi sẽ giúp bạn nhìn ra những hướng giải quyết mới mà chúng ta sẽ thảo luận ở phần sau. Một số chương tiếp theo sẽ trình bày những "best practices" được dùng để phân tích lỗi. 
 
-------------------
