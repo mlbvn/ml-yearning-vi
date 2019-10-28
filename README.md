@@ -33,7 +33,7 @@ Bảng dưới đây thể hiện tiến độ của toàn bộ dự án. Mời 
 | 18     | [chưa có tên](chapters/ch18.md)                                                               |                               |             |                               |             |
 | 19     | [chưa có tên](chapters/ch19.md)                                                               |                               |             |                               |             |
 | 20     | [chưa có tên](chapters/ch20.md)                                                               |                               |             |                               |             |
-| 21     | [chưa có tên](chapters/ch21.md)                                                               |                               |             |                               |             |
+| 21     | [Những ví dụ về Độ chệch và Phương sai](chapters/ch21.md)                                     | [#173](http://bit.ly/2MSzFn7) | hoàn thành  |                               |             |
 | 22     | [chưa có tên](chapters/ch22.md)                                                               |                               |             |                               |             |
 | 23     | [chưa có tên](chapters/ch23.md)                                                               |                               |             |                               |             |
 | 24     | [chưa có tên](chapters/ch24.md)                                                               |                               |             |                               |             |
