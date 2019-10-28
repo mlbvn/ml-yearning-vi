@@ -25,16 +25,16 @@ Bảng dưới đây thể hiện tiến độ của toàn bộ dự án. Mời 
 | 10     | [Xây dựng một tập phát triển và một phép đo sẽ tăng tốc quá trình làm việc](chapters/ch10.md) | [#117](http://bit.ly/2WdLYxp) | hoàn thành  |                               |             |
 | 11     | [chưa có tên](chapters/ch11.md)                                                               | [#150](http://bit.ly/361NZkJ) |             |                               |             |
 | 12     | [Điều cần nhớ: Thiết lập các tập phát triển và kiểm tra](chapters/ch12.md)                    | [#113](http://bit.ly/2Pe9d9a) | hoàn thành  |                               |             |
-| 13     | [chưa có tên](chapters/ch13.md)                                                               |                               |             |                               |             |
+| 13     | [chưa có tên](chapters/ch13.md)                                                               | [#160](http://bit.ly/2PprDnG) |             |                               |             |
 | 14     | [Phân tích lỗi: đánh giá ý tưởng dựa trên tập phát triển](chapters/ch14.md)                   | [#140](http://bit.ly/2W6QbDa) | hoàn thành  |                               |             |
-| 15     | [chưa có tên](chapters/ch15.md)                                                               |                               |             |                               |             |
-| 16     | [chưa có tên](chapters/ch16.md)                                                               |                               |             |                               |             |
-| 17     | [chưa có tên](chapters/ch17.md)                                                               |                               |             |                               |             |
-| 18     | [chưa có tên](chapters/ch18.md)                                                               |                               |             |                               |             |
-| 19     | [chưa có tên](chapters/ch19.md)                                                               |                               |             |                               |             |
-| 20     | [chưa có tên](chapters/ch20.md)                                                               |                               |             |                               |             |
-| 21     | [chưa có tên](chapters/ch21.md)                                                               |                               |             |                               |             |
-| 22     | [chưa có tên](chapters/ch22.md)                                                               |                               |             |                               |             |
+| 15     | [chưa có tên](chapters/ch15.md)                                                               | [#161](http://bit.ly/36g8aMf) |             |                               |             |
+| 16     | [chưa có tên](chapters/ch16.md)                                                               | [#164](http://bit.ly/2MRrGqB) |             |                               |             |
+| 17     | [chưa có tên](chapters/ch17.md)                                                               | [#168](http://bit.ly/2JoQ5RZ) |             |                               |             |
+| 18     | [chưa có tên](chapters/ch18.md)                                                               | [#156](http://bit.ly/348mZhW) |             |                               |             |
+| 19     | [chưa có tên](chapters/ch19.md)                                                               | [#169](http://bit.ly/2WhQkUc) |             |                               |             |
+| 20     | [chưa có tên](chapters/ch20.md)                                                               | [#172](http://bit.ly/2MSAigt) |             |                               |             |
+| 21     | [Những ví dụ về Độ chệch và Phương sai](chapters/ch21.md)                                     | [#173](http://bit.ly/2MSzFn7) | hoàn thành  |                               |             |
+| 22     | [chưa có tên](chapters/ch22.md)                                                               | [#175](http://bit.ly/2BNdPeH) |             |                               |             |
 | 23     | [chưa có tên](chapters/ch23.md)                                                               |                               |             |                               |             |
 | 24     | [chưa có tên](chapters/ch24.md)                                                               |                               |             |                               |             |
 | 25     | [chưa có tên](chapters/ch25.md)                                                               |                               |             |                               |             |
