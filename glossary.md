@@ -34,7 +34,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | bias (bias as variance)           | độ chệch                                                       | [#125](http://bit.ly/32HJI3S)                              |
 >>>>>>> add bias and variance to glossary  (#125)
 | big data                          | big data                                                       |                                                            |
-| Blackbox dev set                  |                                                                |                                                            |
+| Blackbox dev set                  |  tập phát triển Blackbox                                                              |                                                            |
 | classifier                        | bộ phân loại                                                   |                                                            |
 | constrain                         | ràng buộc                                                      |                                                            |
 | cross validation                  | kiểm định chéo                                                 |                                                            |
@@ -47,7 +47,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | error rate                        | tỉ lệ lỗi                                                      |                                                            |
 | evaluation metric                 | phép đánh giá                                                  |                                                            |
 | example                           | mẫu                                                            |                                                            |
-| Eyeball dev set                   |                                                                |                                                            |
+| Eyeball dev set                   |    Tập phát triển Eyeball                                                            |                                                            |
 | F1 score                          | chỉ số F1                                                      |                                                            |
 =======
 | big data                          | big data                                                       |                                                            |
