@@ -22,6 +22,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | English                           | Tiếng Việt (Nếu bạn bổ sung thì KHÔNG căn chỉnh các dòng khác) | Thảo luận tại                                              |
 |-----------------------------------|----------------------------------------------------------------|------------------------------------------------------------|
 | accuracy                          | độ chính xác                                                   |                                                            |
+| background noise                  | nhiễu nền                                                      | [193](http://bit.ly/31ObyKI)                               |
 | benchmark                         | đánh giá xếp hạng                                              | [#87](http://bit.ly/2BvfPYA)                               |
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,7 +35,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | bias (bias as variance)           | độ chệch                                                       | [#125](http://bit.ly/32HJI3S)                              |
 >>>>>>> add bias and variance to glossary  (#125)
 | big data                          | big data                                                       |                                                            |
-| Blackbox dev set                  |  tập phát triển Blackbox                                                              |                                                            |
+| Blackbox dev set                  | tập phát triển Blackbox                                        | [#162](http://bit.ly/2MVHcl7)                              |
 | classifier                        | bộ phân loại                                                   |                                                            |
 | constrain                         | ràng buộc                                                      |                                                            |
 | cross validation                  | kiểm định chéo                                                 |                                                            |
@@ -47,7 +48,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | error rate                        | tỉ lệ lỗi                                                      |                                                            |
 | evaluation metric                 | phép đánh giá                                                  |                                                            |
 | example                           | mẫu                                                            |                                                            |
-| Eyeball dev set                   |    Tập phát triển Eyeball                                                            |                                                            |
+| Eyeball dev set                   | Tập phát triển Eyeball                                         | [#162](http://bit.ly/2MVHcl7)                              |
 | F1 score                          | chỉ số F1                                                      |                                                            |
 =======
 | big data                          | big data                                                       |                                                            |
@@ -85,7 +86,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 <<<<<<< HEAD
 | hyperameter                       | siêu tham số                                                   |                                                            |
 | layer                             | tầng                                                           |                                                            |
-| learning curve                    | đồ thị quá trình học                                                  | [#87](http://bit.ly/2BvfPYA)                               |
+| learning curve                    | đồ thị quá trình học                                           | [#87](http://bit.ly/2BvfPYA)                               |
 | learning algorithm                | thuật toán học                                                 |                                                            |
 | linear regression                 | hồi quy tuyến tính                                             |                                                            |
 | logistic regression               | hồi quy logistic                                               |                                                            |
