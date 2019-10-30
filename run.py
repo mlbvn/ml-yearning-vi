@@ -10,8 +10,8 @@ import os
 
 
 NUM_CHAPTERS = 58
-NUM_CHAPTERS_PHASE_1 = 21
-PENDING_CHAPTERS = [16, 17, 18, 19, 20]
+MAX_CHAPTER = 21
+PENDING_CHAPTERS = [17, 18, 19, 20]
 
 CHAPTERS_DIR = './chapters/'
 ALL_CHAPTERS_FILENAME = 'all_chapters.md'
@@ -21,7 +21,7 @@ def main():
     with codecs.open(os.path.join(CHAPTERS_DIR, ALL_CHAPTERS_FILENAME), 'w', encoding='utf-8') as all_file:
         # table of content
         all_file.write("**MỤC LỤC**\n\n")
-        for i in range(1, NUM_CHAPTERS_PHASE_1 + 1):
+        for i in range(1, MAX_CHAPTER + 1):
             if i in PENDING_CHAPTERS:
                 continue
             chapter_path = os.path.join(CHAPTERS_DIR, 'ch{:02d}.md'.format(i))
@@ -40,7 +40,7 @@ def main():
 
 
         # main content
-        for i in range(1, NUM_CHAPTERS_PHASE_1 + 1):
+        for i in range(1, MAX_CHAPTER + 1):
             if i in PENDING_CHAPTERS:
                 continue
             all_file.write('------------------\n')
