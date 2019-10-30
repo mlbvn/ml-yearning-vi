@@ -778,7 +778,7 @@ Vậy bạn có nên sửa lại những nhãn sai trong tập phát triển kh�
 
 > Suppose you keep improving the cat classifier and reach the following performance:
 
-Giả sử bạn tiếp tục cải thiện bộ nhận dạng mèo và đạt kết hiệu:
+Giả sử bạn tiếp tục cải thiện bộ nhận dạng mèo và đạt kết quả:
 
 > * Overall accuracy on dev set.................... 98.0% (2.0% overall error.)
 
