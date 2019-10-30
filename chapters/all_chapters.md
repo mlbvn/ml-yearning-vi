@@ -3,7 +3,7 @@
 * [1. Tại sao cần chiến lược Machine Learning](#1-tại-sao-cần-chiến-lược-machine-learning)
 * [2. Cách sử dụng cuốn sách khi làm việc nhóm](#2-cách-sử-dụng-cuốn-sách-khi-làm-việc-nhóm)
 * [3. Điều kiện tiên quyết và Ký hiệu](#3-điều-kiện-tiên-quyết-và-ký-hiệu)
-* [4. Quy mô quyết định mô hình machine learning](#4-quy-mô-quyết-định-mô-hình-machine-learning)
+* [4. Quy mô thúc đẩy quá trình phát triển machine learning](#4-quy-mô-thúc-đẩy-quá-trình-phát-triển-machine-learning)
 * [5. Tập phát triển và tập kiểm tra](#5-tập-phát-triển-và-tập-kiểm-tra)
 * [6. Tập phát triển và tập kiểm tra nên có cùng phân phối](#6-tập-phát-triển-và-tập-kiểm-tra-nên-có-cùng-phân-phối)
 * [7. Tập phát triển/kiểm tra cần lớn đến mức nào?](#7-tập-phát-triển/kiểm-tra-cần-lớn-đến-mức-nào?)
@@ -134,7 +134,7 @@ Nếu những khái niệm nêu trên còn mới với bạn thì bạn hãy xem
 ------------------
 > # 4. Scale drives machine learning progress
 
-# 4. Quy mô quyết định mô hình machine learning
+# 4. Quy mô thúc đẩy quá trình phát triển machine learning
 
 > Many of the ideas of deep learning (neural networks) have been around for decades. Why are these ideas taking off now?
 
