@@ -10,7 +10,7 @@ import os
 
 
 NUM_CHAPTERS = 58
-MAX_CHAPTER = 21
+MAX_CHAPTER = 22
 PENDING_CHAPTERS = [19]
 
 CHAPTERS_DIR = './chapters/'
