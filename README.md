@@ -34,7 +34,6 @@ Bạn có thể đóng góp bằng cách dịch một chương mới hoặc sử
 | 18     | [Tập phát triển Eyeball và Blackbox nên lớn như thế nào?](chapters/ch18.md)                                           | [#156](http://bit.ly/348mZhW) |  hoàn thành                        |                               |             |
 | 19     | [chưa có tên](chapters/ch19.md)                                                                                       | [#169](http://bit.ly/2WhQkUc) |             |                               |             |
 | 20     | [Độ chệch và Phương sai: Hai nguồn lớn của lỗi](chapters/ch20.md)                                                     | [#172](http://bit.ly/2MSAigt) | hoàn thành  |                               |             |
-
 | 21     | [Những ví dụ về Độ chệch và Phương sai](chapters/ch21.md)                                                             | [#173](http://bit.ly/2MSzFn7) | hoàn thành  |                               |             |
 | 22     | [chưa có tên](chapters/ch22.md)                                                                                       | [#175](http://bit.ly/2BNdPeH) |             |                               |             |
 | 23     | [chưa có tên](chapters/ch23.md)                                                                                       |                               |             |                               |             |
