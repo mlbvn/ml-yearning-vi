@@ -31,9 +31,10 @@ Bạn có thể đóng góp bằng cách dịch một chương mới hoặc sử
 | 15     | [Đánh giá song song các ý tưởng trong quá trình phân tích lỗi](chapters/ch15.md)                                      | [#161](http://bit.ly/36g8aMf) | hoàn thành  |                               |             |
 | 16     | [Dọn dẹp những mẫu bị gán nhãn nhầm trong tập phát triển và tập kiểm tra](chapters/ch16.md)                           | [#164](http://bit.ly/2MRrGqB) | hoàn thành  |                               |             |
 | 17     | [Nếu bạn có một tập phát triển lớn, chia nó thành hai tập con và chỉ phân tích trên một tập](chapters/ch17.md)        | [#168](http://bit.ly/2JoQ5RZ) | hoàn thành  |                               |             |
-| 18     | [chưa có tên](chapters/ch18.md)                                                                                       | [#156](http://bit.ly/348mZhW) |             |                               |             |
+| 18     | [Tập phát triển Eyeball và Blackbox nên lớn như thế nào?](chapters/ch18.md)                                           | [#156](http://bit.ly/348mZhW) |  hoàn thành                        |                               |             |
 | 19     | [chưa có tên](chapters/ch19.md)                                                                                       | [#169](http://bit.ly/2WhQkUc) |             |                               |             |
-| 20     | [chưa có tên](chapters/ch20.md)                                                                                       | [#172](http://bit.ly/2MSAigt) |             |                               |             |
+| 20     | [Độ chệch và Phương sai: Hai nguồn lớn của lỗi](chapters/ch20.md)                                                     | [#172](http://bit.ly/2MSAigt) | hoàn thành  |                               |             |
+
 | 21     | [Những ví dụ về Độ chệch và Phương sai](chapters/ch21.md)                                                             | [#173](http://bit.ly/2MSzFn7) | hoàn thành  |                               |             |
 | 22     | [chưa có tên](chapters/ch22.md)                                                                                       | [#175](http://bit.ly/2BNdPeH) |             |                               |             |
 | 23     | [chưa có tên](chapters/ch23.md)                                                                                       |                               |             |                               |             |
