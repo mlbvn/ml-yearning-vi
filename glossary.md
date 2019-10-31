@@ -27,6 +27,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | cross validation                  | kiểm định chéo                                                 |                                                            |
 | deep learning                     | deep learning                                                  |                                                            |
 | development set                   | tập phát triển                                                 |                                                            |
+| dev set                           | tập phát triển                                                 |                                                            |
 | distribution                      | phân phối                                                      |                                                            |
 | early stopping                    | dừng sớm                                                       |                                                            |
 | error analysis                    | phân tích lỗi                                                  |                                                            |
@@ -44,6 +45,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | gradient descent                  | hạ dốc                                                         | [#87](http://bit.ly/2BvfPYA)                               |
 | heuristic                         | thực nghiệm                                                    |                                                            |
 | hidden unit                       | nút ẩn                                                         |                                                            |
+| hyperameter                       | siêu tham số                                                   |                                                            |
 | layer                             | tầng                                                           |                                                            |
 | learning curve                    | đồ thị quá trình học                                           | [#87](http://bit.ly/2BvfPYA)                               |
 | learning algorithm                | thuật toán học                                                 |                                                            |
