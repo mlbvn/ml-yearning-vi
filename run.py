@@ -11,7 +11,7 @@ import os
 
 NUM_CHAPTERS = 58
 MAX_CHAPTER = 21
-PENDING_CHAPTERS = [18, 19, 20]
+PENDING_CHAPTERS = [19, 20]
 
 CHAPTERS_DIR = './chapters/'
 ALL_CHAPTERS_FILENAME = 'all_chapters.md'
