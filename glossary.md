@@ -41,12 +41,12 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | false positive                    | dương tính giả                                                 |                                                            |
 | feature                           | đặc trưng                                                      |                                                            |
 | fit                               | fit                                                            |                                                            |
-| hand-engineering                  | thiết kế thủ công                                              |                                                            |
-| iteration                         | vòng lặp                                                       |                                                            |
 | gradient descent                  | hạ dốc                                                         | [#87](http://bit.ly/2BvfPYA)                               |
+| hand-engineering                  | thiết kế thủ công                                              |                                                            |
 | heuristic                         | thực nghiệm                                                    |                                                            |
 | hidden unit                       | nút ẩn                                                         |                                                            |
 | hyperparameter                    | siêu tham số                                                    |                                                            |
+| iteration                         | vòng lặp                                                       |                                                            |
 | layer                             | tầng                                                           |                                                            |
 | learning curve                    | đồ thị quá trình học                                           | [#87](http://bit.ly/2BvfPYA)                               |
 | learning algorithm                | thuật toán học                                                 |                                                            |
