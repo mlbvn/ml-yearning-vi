@@ -46,7 +46,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | gradient descent                  | hạ dốc                                                         | [#87](http://bit.ly/2BvfPYA)                               |
 | heuristic                         | thực nghiệm                                                    |                                                            |
 | hidden unit                       | nút ẩn                                                         |                                                            |
-| hyperameter                       | siêu tham số                                                   |                                                            |
+| hyperparameter                    | siêu tham số                                                    |                                                            |
 | layer                             | tầng                                                           |                                                            |
 | learning curve                    | đồ thị quá trình học                                           | [#87](http://bit.ly/2BvfPYA)                               |
 | learning algorithm                | thuật toán học                                                 |                                                            |
