@@ -65,7 +65,7 @@ Nhóm bạn có thể đưa ra rất nhiều ý tưởng như:
  
 > * Try a bigger neural network, with more layers/hidden units/parameters.
 
-* Thử nghiệm mạng neural lớn hơn với nhiều lớp/nút ẩn/tham số hơn.
+* Thử nghiệm mạng neural lớn hơn với nhiều tầng/nút ẩn/tham số hơn.
 
 > * Try a smaller neural network.
 
@@ -972,7 +972,7 @@ Thứ hai, hiệu quả của thuật toán trên tập phát triển (hoặc ki
 
 Some changes to a learning algorithm can address the first component of error -- **bias** -- and improve its performance on the training set. Some changes address the second component -- **variance** -- and help it generalize better from the training set to the dev/test sets [7]. To select the most promising changes, it is incredibly useful to understand which of these two components of error is more pressing to address.
 
-Một số thay đổi trong thuật toán học có thể giải quyết thành phần thứ nhất của lỗi -- **độ chệch** -- và cải thiện hiệu quả của nó trên tập huấn luyện. Một số thay đổi giải quyết thành phần thứ hai -- **phương sai** -- và giúp thuật toán tổng quát hóa tốt hơn từ tập huấn luyện tới tập phát triển/kiểm tra [7]. Để lựa chọn thay đổi tiềm năng nhất, sẽ rất hữu ích khi hiểu thành nào trong hai thành phần lỗi là đáng để giải quyết hơn.
+Một số thay đổi trong thuật toán học có thể giải quyết thành phần thứ nhất của lỗi -- **độ chệch** -- và cải thiện hiệu quả của nó trên tập huấn luyện. Một số thay đổi giải quyết thành phần thứ hai -- **phương sai** -- và giúp thuật toán tổng quát hóa tốt hơn từ tập huấn luyện tới tập phát triển/kiểm tra [7]. Để lựa chọn thay đổi tiềm năng nhất, sẽ rất hữu ích khi hiểu thành phần nào trong hai thành phần lỗi là đáng để giải quyết hơn.
 
 Developing good intuition about Bias and Variance will help you choose effective changes for your algorithm.
 
