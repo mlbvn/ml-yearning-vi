@@ -10,7 +10,7 @@ import os
 
 NUM_CHAPTERS = 58
 MAX_CHAPTER = 22
-PENDING_CHAPTERS = [19]
+PENDING_CHAPTERS = []
 
 CHAPTERS_DIR = './chapters/'
 ALL_CHAPTERS_FILENAME = 'all_chapters.md'
@@ -97,7 +97,5 @@ def reformat():
 
 
 if __name__ == '__main__':
-    # main()
-    reformat()
-
-
+    main()
+    # reformat()
