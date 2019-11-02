@@ -9,8 +9,8 @@ import os
 # sys.setdefaultencoding('utf8') 
 
 NUM_CHAPTERS = 58
-MAX_CHAPTER = 22
-PENDING_CHAPTERS = []
+MAX_CHAPTER = 27
+PENDING_CHAPTERS = [23, 24, 25, 26]
 
 CHAPTERS_DIR = './chapters/'
 ALL_CHAPTERS_FILENAME = 'all_chapters.md'
