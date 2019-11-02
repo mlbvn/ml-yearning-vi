@@ -31,8 +31,8 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | distribution                      | phân phối                                                      |                                                            |
 | dropout                           |                                                                |                                                            | 
 | early stopping                    | dừng sớm                                                       |                                                            |
-| error analysis                    | phân tích lỗi                                                  |                                                            |
-| error rate                        | tỉ lệ lỗi                                                      |                                                            |
+| error analysis                    | phân tích sai số                                                  |                                                            |
+| error rate                        | tỉ lệ sai số                                                      |                                                            |
 | evaluation metric                 | phép đánh giá                                                  |                                                            |
 | example                           | mẫu                                                            |                                                            |
 | Eyeball dev set                   | Tập phát triển Eyeball                                         | [#162](http://bit.ly/2MVHcl7)                              |
