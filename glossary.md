@@ -29,7 +29,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | development set                   | tập phát triển                                                 |                                                            |
 | dev set                           | tập phát triển                                                 |                                                            |
 | distribution                      | phân phối                                                      |                                                            |
-| dropout                           |                                                                |                                                            |
+| dropout                           |                                                                |                                                            | 
 | early stopping                    | dừng sớm                                                       |                                                            |
 | error analysis                    | phân tích lỗi                                                  |                                                            |
 | error rate                        | tỉ lệ lỗi                                                      |                                                            |
