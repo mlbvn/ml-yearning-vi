@@ -48,6 +48,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | human-level performance           | hiệu quả cấp con người                                         |                                                            |
 | hyperparameter                    | siêu tham số                                                   |                                                            |
 | iteration                         | vòng lặp                                                       |                                                            |
+| junior doctor                     | bác sĩ trẻ mới ra trường                                                      |                                                            |
 | layer                             | tầng                                                           |                                                            |
 | learning curve                    | đồ thị quá trình học                                           | [#87](http://bit.ly/2BvfPYA)                               |
 | learning algorithm                | thuật toán học                                                 |                                                            |
