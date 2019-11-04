@@ -29,6 +29,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | development set                   | tập phát triển                                                 |                                                            |
 | dev set                           | tập phát triển                                                 |                                                            |
 | distribution                      | phân phối                                                      |                                                            |
+| domain adaptation                 | thích ứng miền giá trị                                         |                                                            |
 | dropout                           |                                                                |                                                            |
 | early stopping                    | dừng sớm                                                       |                                                            |
 | error analysis                    | phân tích lỗi                                                  |                                                            |
@@ -59,6 +60,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | mislabeled                        | bị gán nhãn nhầm                                               |                                                            |
 | model                             | mô hình                                                        |                                                            |
 | multiple-number evaluation metric | phép đo đa trị                                                 |                                                            |
+| multitask learning                | học đa nhiệm                                                   |                                                            |
 | negative sample/example           | mẫu âm                                                         |                                                            |
 | neural network                    | mạng neural                                                    | [#87](http://bit.ly/2BvfPYA) [#115](http://bit.ly/2MAkizG) |
 | optimizing metric                 | phép đo để tối ưu                                              | [#87](http://bit.ly/2BvfPYA)                               |
