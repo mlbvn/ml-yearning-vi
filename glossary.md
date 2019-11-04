@@ -29,7 +29,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | development set                   | tập phát triển                                                 |                                                            |
 | dev set                           | tập phát triển                                                 |                                                            |
 | distribution                      | phân phối                                                      |                                                            |
-| dropout                           |                                                                |                                                            | 
+| dropout                           |                                                                |                                                            |
 | early stopping                    | dừng sớm                                                       |                                                            |
 | error analysis                    | phân tích lỗi                                                  |                                                            |
 | error rate                        | tỉ lệ lỗi                                                      |                                                            |
@@ -41,12 +41,13 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | false positive                    | dương tính giả                                                 |                                                            |
 | feature                           | đặc trưng                                                      |                                                            |
 | fit                               | fit                                                            |                                                            |
-| hand-engineering                  | thiết kế thủ công                                              |                                                            |
-| iteration                         | vòng lặp                                                       |                                                            |
 | gradient descent                  | hạ dốc                                                         | [#87](http://bit.ly/2BvfPYA)                               |
+| hand-engineering                  | thiết kế thủ công                                              |                                                            |
 | heuristic                         | thực nghiệm                                                    |                                                            |
 | hidden unit                       | nút ẩn                                                         |                                                            |
-| hyperameter                       | siêu tham số                                                   |                                                            |
+| human-level performance           | hiệu quả cấp con người                                         |                                                            |
+| hyperparameter                    | siêu tham số                                                   |                                                            |
+| iteration                         | vòng lặp                                                       |                                                            |
 | layer                             | tầng                                                           |                                                            |
 | learning curve                    | đồ thị quá trình học                                           | [#87](http://bit.ly/2BvfPYA)                               |
 | learning algorithm                | thuật toán học                                                 |                                                            |
@@ -77,5 +78,6 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | true negative                     | âm tính thật                                                   |                                                            |
 | true positive                     | dương tính thật                                                |                                                            |
 | tune parameters                   | điều chỉnh tham số                                             |                                                            |
+| unavoidable bias                  | độ chệch không tránh được                                      |                                                            |
 | underfit                          | underfit                                                       | [#87](http://bit.ly/2BvfPYA)                               |
 | variance (bias as variance)       | phương sai                                                     | [#125](http://bit.ly/32HJI3S)                              |
