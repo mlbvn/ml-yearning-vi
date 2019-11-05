@@ -29,7 +29,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | development set                   | tập phát triển                                                 |                                                            |
 | dev set                           | tập phát triển                                                 |                                                            |
 | distribution                      | phân phối                                                      |                                                            |
-| domain adaptation                 | thích ứng miền giá trị                                         |                                                            |
+| domain adaptation                 | sự thích nghi lĩnh vực                                         |                                                            |
 | dropout                           |                                                                |                                                            |
 | early stopping                    | dừng sớm                                                       |                                                            |
 | error analysis                    | phân tích lỗi                                                  |                                                            |
