@@ -69,6 +69,8 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | recognition                       | nhận dạng                                                      |                                                            |
 | regularization                    | regularization                                                 |                                                            |
 | running time                      | thời gian chạy                                                 |                                                            |
+| sampling with replacement       | lấy mẫu có hoàn lại                | [#251](http://bit.ly/34wQuKr)                         |
+| sampling without replacement   | lấy mẫu không hoàn lại              | [#251](http://bit.ly/34wQuKr)                         |
 | satisficing metric                | phép đo thỏa mãn                                               | [#87](http://bit.ly/2BvfPYA)                               |
 | single-number evaluation metric   | phép đo đơn trị                                                |                                                            |
 | spam email                        | email rác                                                      |                                                            |
@@ -82,7 +84,4 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | underfit                          | underfit                                                       | [#87](http://bit.ly/2BvfPYA)                               |
 | variance (bias as variance)       | phương sai                                                     | [#125](http://bit.ly/32HJI3S)
                           |
-| sampling with replacement       | lấy mẫu có hoàn lại                                              | [#251](http://bit.ly/34wQuKr)    
-                               |
-| sampling without replacement       | lấy mẫu không hoàn lại                                        | [#251](http://bit.ly/34wQuKr) 
-                               |
+
