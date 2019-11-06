@@ -82,6 +82,4 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | tune parameters                   | điều chỉnh tham số                                             |                                                            |
 | unavoidable bias                  | độ chệch không tránh được                                      |                                                            |
 | underfit                          | underfit                                                       | [#87](http://bit.ly/2BvfPYA)                               |
-| variance (bias as variance)       | phương sai                                                     | [#125](http://bit.ly/32HJI3S)
-                          |
-
+| variance (bias as variance)       | phương sai                                                     | [#125](http://bit.ly/32HJI3S)   |
