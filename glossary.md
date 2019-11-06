@@ -81,8 +81,8 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | unavoidable bias                  | độ chệch không tránh được                                      |                                                            |
 | underfit                          | underfit                                                       | [#87](http://bit.ly/2BvfPYA)                               |
 | variance (bias as variance)       | phương sai                                                     | [#125](http://bit.ly/32HJI3S)     
-                          |
+                               |
 | sampling with replacement       | lấy mẫu có hoàn lại                                              | [#251](http://bit.ly/34wQuKr)    
-                          |
+                               |
 | sampling without replacement       | lấy mẫu không hoàn lại                                        | [#251](http://bit.ly/34wQuKr) 
-                          |
+                               |
