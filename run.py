@@ -9,7 +9,7 @@ import os
 # sys.setdefaultencoding('utf8') 
 
 NUM_CHAPTERS = 58
-MAX_CHAPTER = 27
+MAX_CHAPTER = 29
 PENDING_CHAPTERS = []
 
 CHAPTERS_DIR = './chapters/'
