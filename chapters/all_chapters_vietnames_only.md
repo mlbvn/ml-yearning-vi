@@ -29,6 +29,8 @@
 * [27. Các kỹ thuật làm giảm phương sai](#27-các-kỹ-thuật-làm-giảm-phương-sai)
 * [28. Chẩn đoán độ chệch và phương sai: Đồ thị quá trình học](#28-chẩn-đoán-độ-chệch-và-phương-sai-đồ-thị-quá-trình-học)
 * [29. Vẽ đồ thị sai số huấn luyện](#29-vẽ-đồ-thị-sai-số-huấn-luyện)
+* [30. Diễn giải đồ thị quá trình học: Độ chệch cao](#30-diễn-giải-đồ-thị-quá-trình-học-độ-chệch-cao)
+* [31. Giải nghĩa các đồ thị quá trình học: Những trường hợp khác](#31-giải-nghĩa-các-đồ-thị-quá-trình-học-những-trường-hợp-khác)
 ------------------
 
 # 1. Tại sao cần chiến lược Machine Learning 
@@ -1126,4 +1128,70 @@ Bạn có thể thấy rằng đồ thị sai số huấn luyện (training erro
 
 
 Tiếp theo chúng ta sẽ thảo luận làm thế nào để diễn giải những đồ thị này.
+
+------------------
+
+# 30. Diễn giải đồ thị quá trình học: Độ chệch cao
+
+
+Giả sử đường cong sai số trên tập phát triển có dạng như sau:
+
+![img](../imgs/C30_01.png)
+
+
+Như chúng ta đã thảo luận, nếu đường cong sai số trên tập phát triển đi vào trạng thái phẳng và ổn định, việc chỉ thêm dữ liệu sẽ khó có thể đem về hiệu suất ta mong muốn.
+
+
+Tuy nhiên, sẽ thật khó để biết chính xác ngoại suy đường cong thể hiện sai số trên tập phát triển (màu đỏ) sẽ trông như thế nào. Trong trường hợp tập phát triển nhỏ, việc dự đoán chính xác sẽ càng trở nên khó khăn bởi khi đó đường cong này sẽ có khả năng bị nhiễu.
+
+
+Giả sử chúng ta thêm đường cong sai số tập huấn luyện vào biểu đồ như hình dưới:
+
+![img](../imgs/C30_02.png)
+
+
+Lúc này, bạn có thể hoàn toàn chắc chắn việc chỉ thêm dữ liệu là không đủ. Tại sao vậy? Hãy nhớ hai nhận định sau:
+
+
+Khi chúng ta thêm dữ liệu huấn luyện, sai số huấn luyện chỉ có thể tăng lên. Vì vậy, đường cong chỉ sai số huấn luyện (màu xanh dương) chỉ có thể giữ nguyên hoặc hướng cao lên. Bởi vậy, đường cong đó chỉ có thể cách xa hơn hiệu suất mong đợi (được thể hiện bởi màu xanh lục).
+
+
+Đường cong thể hiện sai số tập phát triển (màu đỏ) thường cao hơn so với đường cong thể hiện sai số tập huấn luyện (màu xanh). Vì vậy, việc lấy thêm dữ liệu không thể nào giảm đường cong sai số tập phát triển (màu đỏ) xuống mức hiệu xuất mong muốn khi ngay cả sai số trên tập huấn luyện vẫn còn lớn hơn mức đó.
+
+
+Đánh giá cả đường cong sai số trên tập phát triển lẫn đường cong sai số trên tập huấn luyện trên cùng một biểu đồ giúp những ngoại suy về đường cong sai số tập phát triển có độ tin cậy cao hơn.
+
+
+Cho mục đích thảo luận, giả sử hiệu suất mong muốn chính là ước lượng của tỉ lệ lỗi tối ưu. Đồ thị trên trở thành ví dụ chuẩn "sách giáo khoa" về hình dáng của một đồ thị quá trình học với độ chệch có thể tránh cao: Khi tập huấn luyện có kích cỡ lớn nhất - tương ứng với tất cả dữ liệu trong tập huấn luyện - có một khoảng cách lớn giữa sai số huấn luyện và hiệu suất mong muốn. Đây chính là dấu hiệu của độ chệch có thể tránh cao. Ngược lại, lúc này, khoảng cách nhỏ giữa đường cong của tập huấn luyện và đường cong của tập phát triển tương ứng với phương sai nhỏ.
+
+
+Trước đó, chúng ta chỉ đo sai số tập huấn luyện và sai số tập phát triển tại điểm ngoài cùng bên phải của đồ thị, tương ứng với việc sử dụng tất cả dữ liệu trong tập huấn luyện. Biểu diễn đầy đủ đồ thị quá trình học sẽ cho chúng ta một bức tranh tổng thể hơn về hiệu quả của những thuật toán trên các kích cỡ tập huấn luyện khác nhau.
+
+------------------
+
+# 31. Giải nghĩa các đồ thị quá trình học: Những trường hợp khác
+
+
+
+Hãy xem xét đồ thị quá trình học này:
+
+
+![img](../imgs/C31_01.png)
+
+
+Đồ thị này thể hiện độ chệch lớn, phương sai lớn hay cả hai?
+
+
+
+Đường cong lỗi huấn luyện màu xanh lam tương đối thấp và đường cong lỗi phát triển màu đỏ cao hơn nhiều so với lỗi huấn luyện màu xanh lam. Do đó, độ chệch nhỏ, nhưng phương sai lớn. Thêm dữ liệu huấn luyện (nhiều khả năng) sẽ giúp thu hẹp khoảng cách giữa lỗi phát triển và lỗi huấn luyện.
+
+
+
+Bây giờ, hãy xem xét đồ thị này:
+
+
+![img](../imgs/C31_02.png)
+
+
+Lần này, lỗi huấn luyện lớn, vì nó cao hơn nhiều so với mức hiệu quả mong muốn. Lỗi phát triển cũng lớn hơn nhiều so với lỗi huấn luyện. Vì vậy, bạn có độ chệch đáng kể và phương sai cũng đáng kể. Bạn sẽ phải tìm cách giảm cả độ chệch và phương sai trong thuật toán của mình.
 
