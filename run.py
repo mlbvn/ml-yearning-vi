@@ -4,6 +4,7 @@ import csv
 import re
 import sys
 import os
+from collections import OrderedDict
 
 # reload(sys)
 # sys.setdefaultencoding('utf8') 
@@ -15,7 +16,7 @@ PENDING_CHAPTERS = []
 CHAPTERS_DIR = './chapters/'
 ALL_CHAPTERS_FILENAME = 'all_chapters.md'
 ALL_CHAPTERS_VN_FILENAME = 'all_chapters_vietnames_only.md'
-HEADER_TO_LINK_MAP = {' ': '-', '#-': '#'}
+HEADER_TO_LINK_MAP = OrderedDict([(' ', '-'), ('#-', '#')])
 HEADER_TO_LINK_MAP.update({a: '' for a in '.:?/'})
 
 TRANSLATE_INDICATOR_STR = '--> _replace THIS LINE by your translation for the above line_'
