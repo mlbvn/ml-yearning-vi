@@ -17,6 +17,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | English                           | Tiếng Việt (Nếu bạn bổ sung thì KHÔNG căn chỉnh các dòng khác) | Thảo luận tại                                              |
 |-----------------------------------|----------------------------------------------------------------|------------------------------------------------------------|
 | accuracy                          | độ chính xác                                                   |                                                            |
+| activation function               | hàm kích hoạt                                                  |                                                            |
 | background noise                  | nhiễu nền                                                      | [193](http://bit.ly/31ObyKI)                               |
 | benchmark                         | đánh giá xếp hạng                                              | [#87](http://bit.ly/2BvfPYA)                               |
 | bias (bias as variance)           | độ chệch                                                       | [#125](http://bit.ly/32HJI3S)                              |
@@ -29,7 +30,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | development set                   | tập phát triển                                                 |                                                            |
 | dev set                           | tập phát triển                                                 |                                                            |
 | distribution                      | phân phối                                                      |                                                            |
-| dropout                           |                                                                |                                                            | 
+| dropout                           |                                                                |                                                            |
 | early stopping                    | dừng sớm                                                       |                                                            |
 | error analysis                    | phân tích lỗi                                                  |                                                            |
 | error rate                        | tỉ lệ lỗi                                                      |                                                            |
@@ -45,7 +46,8 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | hand-engineering                  | thiết kế thủ công                                              |                                                            |
 | heuristic                         | thực nghiệm                                                    |                                                            |
 | hidden unit                       | nút ẩn                                                         |                                                            |
-| hyperparameter                    | siêu tham số                                                    |                                                            |
+| human-level performance           | hiệu quả cấp con người                                         |                                                            |
+| hyperparameter                    | siêu tham số                                                   |                                                            |
 | iteration                         | vòng lặp                                                       |                                                            |
 | layer                             | tầng                                                           |                                                            |
 | learning curve                    | đồ thị quá trình học                                           | [#87](http://bit.ly/2BvfPYA)                               |
@@ -68,6 +70,8 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | recognition                       | nhận dạng                                                      |                                                            |
 | regularization                    | regularization                                                 |                                                            |
 | running time                      | thời gian chạy                                                 |                                                            |
+| sampling with replacement         | lấy mẫu có hoàn lại                                            | [#251](http://bit.ly/34wQuKr)                              |
+| sampling without replacement      | lấy mẫu không hoàn lại                                         | [#251](http://bit.ly/34wQuKr)                              |
 | satisficing metric                | phép đo thỏa mãn                                               | [#87](http://bit.ly/2BvfPYA)                               |
 | single-number evaluation metric   | phép đo đơn trị                                                |                                                            |
 | spam email                        | email rác                                                      |                                                            |
@@ -77,5 +81,6 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | true negative                     | âm tính thật                                                   |                                                            |
 | true positive                     | dương tính thật                                                |                                                            |
 | tune parameters                   | điều chỉnh tham số                                             |                                                            |
+| unavoidable bias                  | độ chệch không tránh được                                      |                                                            |
 | underfit                          | underfit                                                       | [#87](http://bit.ly/2BvfPYA)                               |
 | variance (bias as variance)       | phương sai                                                     | [#125](http://bit.ly/32HJI3S)                              |
