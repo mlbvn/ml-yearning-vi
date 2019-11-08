@@ -14,7 +14,7 @@ PENDING_CHAPTERS = []
 
 CHAPTERS_DIR = './chapters/'
 ALL_CHAPTERS_FILENAME = 'all_chapters.md'
-
+ALL_CHAPTERS_VN_FILENAME = 'all_chapters_vietnames_only.md'
 HEADER_TO_LINK_MAP = {' ': '-', '#-': '#'}
 HEADER_TO_LINK_MAP.update({a: '' for a in '.:?/'})
 
@@ -27,8 +27,12 @@ def _create_header_link(line):
     return line.lower()
 
 
-def main():
-    with codecs.open(os.path.join(CHAPTERS_DIR, ALL_CHAPTERS_FILENAME), 'w', encoding='utf-8') as all_file:
+def main(vn_only=True):
+    if vn_only:
+        output_filename = os.path.join(CHAPTERS_DIR, ALL_CHAPTERS_VN_FILENAME)
+    else:
+        output_filename = os.path.join(CHAPTERS_DIR, ALL_CHAPTERS_FILENAME)
+    with codecs.open(output_filename, 'w', encoding='utf-8') as all_file:
         # table of content
         all_file.write("**MỤC LỤC**\n\n")
         for i in range(1, MAX_CHAPTER + 1):
@@ -58,6 +62,8 @@ def main():
             chapter_path = os.path.join(CHAPTERS_DIR, 'ch{:02d}.md'.format(i))
             with codecs.open(chapter_path, 'r', encoding='utf-8') as one_file:
                 for line in one_file:
+                    if vn_only and line.startswith('>'):
+                        continue
                     try:
                         all_file.write(line)
                     except UnicodeDecodeError as e:
@@ -97,5 +103,6 @@ def reformat():
 
 
 if __name__ == '__main__':
-    main()
+    main(vn_only=False)
+    main(vn_only=True)
     # reformat()
