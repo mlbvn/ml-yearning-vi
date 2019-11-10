@@ -296,7 +296,7 @@ Ngược lại, Precision và Recall[3] không phải là một phép đo đơn 
 
 
 
-Ở đây, không bộ phân loại nào tốt hơn một cách rõ ràng, vì vậy dựa vào chất lượng trên ta không thể ngay lập tức chọn ra một bộ phân loại tốt hơn.
+Ở đây, không bộ phân loại nào tốt hơn một cách rõ ràng, vì vậy dựa vào kết quả trên ta không thể ngay lập tức chọn ra một bộ phân loại tốt hơn.
 
 | Bộ Phân Loại  | Precision | Recall |
 | ----- | -------: | -------: |
