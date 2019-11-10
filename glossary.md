@@ -18,6 +18,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 |-----------------------------------|----------------------------------------------------------------|------------------------------------------------------------|
 | accuracy                          | độ chính xác                                                   |                                                            |
 | activation function               | hàm kích hoạt                                                  |                                                            |
+| algorithm's performance           | chất lượng của thuật toán                                      |                                                            |
 | background noise                  | nhiễu nền                                                      | [193](http://bit.ly/31ObyKI)                               |
 | benchmark                         | đánh giá xếp hạng                                              | [#87](http://bit.ly/2BvfPYA)                               |
 | bias (bias as variance)           | độ chệch                                                       | [#125](http://bit.ly/32HJI3S)                              |
@@ -29,6 +30,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | deep learning                     | deep learning                                                  |                                                            |
 | development set                   | tập phát triển                                                 |                                                            |
 | dev set                           | tập phát triển                                                 |                                                            |
+| dev set performance               | chất lượng trên tập phát triển                                 |                                                            |
 | distribution                      | phân phối                                                      |                                                            |
 | dropout                           |                                                                |                                                            |
 | early stopping                    | dừng sớm                                                       |                                                            |
@@ -78,7 +80,9 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | spam email                        | email rác                                                      |                                                            |
 | supervised learning               | học có giám sát                                                |                                                            |
 | test set                          | tập kiểm tra                                                   |                                                            |
+| test set performance              | chất lượng trên tập kiểm tra                                   |                                                            |
 | training set                      | tập huấn luyện                                                 |                                                            |
+| training set performance          | chất lượng trên tập huấn luyện                                 |                                                            |
 | true negative                     | âm tính thật                                                   |                                                            |
 | true positive                     | dương tính thật                                                |                                                            |
 | tune parameters                   | điều chỉnh tham số                                             |                                                            |
