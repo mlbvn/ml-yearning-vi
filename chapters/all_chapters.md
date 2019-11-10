@@ -190,7 +190,7 @@ Nếu bạn huấn luyện một mạng neural nhỏ cho cùng một tác vụ h
 
 > Thus, you obtain the best performance when you (i) Train a very large neural network, so that you are on the green curve above; (ii) Have a huge amount of data.
 
-Vì thế bạn có thể đạt được kết quả tốt nhất khi (i) huấn luyện mạng neural rất lớn - tương ứng với đường chất lượng màu xanh lục và (ii) có lượng dữ liệu lớn. 
+Vì thế bạn có thể đạt được chất lượng tốt nhất khi (i) huấn luyện mạng neural rất lớn - tương ứng với đường chất lượng màu xanh lục và (ii) có lượng dữ liệu lớn. 
 
 > Many other details such as neural network architecture are also important, and there has been much innovation here. But one of the more reliable ways to improve an algorithm’s performance today is still to (i) train a bigger network and (ii) get more data.
 
@@ -222,7 +222,7 @@ Nhóm của bạn có một tập dữ liệu lớn bằng cách tải các bứ
 
 > But when you deploy this classifier into the mobile app, you find that the performance is really poor!
 
-Tuy nhiên, khi triển khai bộ nhận dạng mèo này lên một ứng dụng di động, bạn lại thấy rằng kết quả rất tệ!
+Tuy nhiên, khi triển khai bộ nhận dạng mèo này lên một ứng dụng di động, bạn lại thấy rằng chất lượng rất tệ!
 
 ![img](../imgs/C05_01.png)
 
@@ -375,7 +375,7 @@ Ngược lại, Precision và Recall[3] không phải là một phép đo đơn 
 
 > Here, neither classifier is obviously superior, so it doesn’t immediately guide you toward picking one.
 
-Ở đây, không bộ phân loại nào tốt hơn một cách rõ ràng, vì vậy dựa vào kết quả trên ta không thể ngay lập tức chọn ra một bộ phân loại tốt hơn.
+Ở đây, không bộ phân loại nào tốt hơn một cách rõ ràng, vì vậy dựa vào chất lượng trên ta không thể ngay lập tức chọn ra một bộ phân loại tốt hơn.
 
 | Bộ Phân Loại  | Precision | Recall |
 | ----- | -------: | -------: |
@@ -385,7 +385,7 @@ Ngược lại, Precision và Recall[3] không phải là một phép đo đơn 
 
 > During development, your team will try a lot of ideas about algorithm architecture, model parameters, choice of features, etc. Having a **single-number evaluation metric** such as accuracy allows you to sort all your models according to their performance on this metric, and quickly decide what is working best.
 
-Trong quá trình phát triển, nhóm bạn sẽ thử rất nhiều ý tưởng liên quan đến cấu trúc thuật toán, tham số mô hình, lựa chọn các đặc trưng, v.v.. Việc có một **phép đo đơn trị** như độ chính xác sẽ giúp xếp hạng các mô mình dựa theo những kết quả trả về qua phép đo đó, từ đó nhanh chóng quyết định mô hình nào hoạt động tốt nhất.
+Trong quá trình phát triển, nhóm bạn sẽ thử rất nhiều ý tưởng liên quan đến cấu trúc thuật toán, tham số mô hình, lựa chọn các đặc trưng, v.v.. Việc có một **phép đo đơn trị** như độ chính xác sẽ giúp xếp hạng các mô mình dựa theo những chất lượng trả về qua phép đo đó, từ đó nhanh chóng quyết định mô hình nào hoạt động tốt nhất.
 
 > If you really care about both Precision and Recall, I recommend using one of the standard ways to combine them into a single number. For example, one could take the average of precision and recall, to end up with a single number. Alternatively, you can compute the “F1 score,” which is a modified way of computing their average, and works better than simply taking the mean.[4]
 
@@ -794,7 +794,7 @@ Vậy bạn có nên sửa lại những nhãn sai trong tập phát triển kh�
 
 > Suppose you keep improving the cat classifier and reach the following performance:
 
-Giả sử bạn tiếp tục cải thiện bộ nhận dạng mèo và đạt kết quả:
+Giả sử bạn tiếp tục cải thiện bộ nhận dạng mèo và đạt chất lượng:
 
 > * Overall accuracy on dev set.................... 98.0% (2.0% overall error.)
 
