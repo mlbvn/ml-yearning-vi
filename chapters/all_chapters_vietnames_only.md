@@ -991,7 +991,7 @@ Nếu thuật toán học của bạn gặp vấn đề với *độ chệch có
 Một phương pháp không hữu ích:
 
 
-* **Thêm dữ liệu huấn luyện**: Kĩ thuật này có ích với các vấn đề về phương sai, nhưng nó thường không có chất lượng gì đáng kể với độ chệch.
+* **Thêm dữ liệu huấn luyện**: Kĩ thuật này có ích với các vấn đề về phương sai, nhưng nó thường không có tác động đáng kể đến độ chệch.
 
 ------------------
 
