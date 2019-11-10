@@ -46,7 +46,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | hand-engineering                  | thiết kế thủ công                                              |                                                            |
 | heuristic                         | thực nghiệm                                                    |                                                            |
 | hidden unit                       | nút ẩn                                                         |                                                            |
-| human-level performance           | hiệu quả cấp con người                                         |                                                            |
+| human-level performance           | chất lượng cấp con người                                       | [#259](http://bit.ly/36IzQcB)                              |
 | hyperparameter                    | siêu tham số                                                   |                                                            |
 | iteration                         | vòng lặp                                                       |                                                            |
 | layer                             | tầng                                                           |                                                            |
@@ -64,7 +64,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | neural network                    | mạng neural                                                    | [#87](http://bit.ly/2BvfPYA) [#115](http://bit.ly/2MAkizG) |
 | optimizing metric                 | phép đo để tối ưu                                              | [#87](http://bit.ly/2BvfPYA)                               |
 | overfit                           | overfit                                                        | [#87](http://bit.ly/2BvfPYA)                               |
-| performance                       | chất lượng                                                     | [#259](http://bit.ly/36IzQcB)                                                           
+| performance                       | chất lượng                                                     | [#259](http://bit.ly/36IzQcB)                              |
 | positive sample/example           | mẫu dương                                                      |                                                            |
 | precision                         | precision                                                      |                                                            |
 | recall                            | recall                                                         |                                                            |
