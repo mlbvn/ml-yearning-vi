@@ -14,10 +14,10 @@ Bạn có thể đóng góp bằng cách dịch một chương mới hoặc sử
 
 | Chương | Tên chương                                                                                                            | Dịch giai đoạn 1              | Giai đoạn 1 | Dịch giai đoạn 2              | Giai đoạn 2 |
 |--------|-----------------------------------------------------------------------------------------------------------------------|-------------------------------|-------------|-------------------------------|-------------|
-| 1      | [Tại sao cần chiến lược Machine Learning](chapters/ch01.md)                                                           | [#40](http://bit.ly/2qt2j5I)  | hoàn thành  | [#143](http://bit.ly/2paL9t5) |             |
+| 1      | [Tại sao cần chiến lược Học Máy](chapters/ch01.md)                                                           | [#40](http://bit.ly/2qt2j5I)  | hoàn thành  | [#143](http://bit.ly/2paL9t5) |             |
 | 2      | [Cách sử dụng cuốn sách khi làm việc nhóm](chapters/ch02.md)                                                          | [#54](http://bit.ly/2P3wMRW)  | hoàn thành  |                               |             |
 | 3      | [Điều kiện tiên quyết và Ký hiệu](chapters/ch03.md)                                                                   | [#90](http://bit.ly/2pG1Yfi)  | hoàn thành  |                               |             |
-| 4      | [Quy mô thúc đẩy quá trình phát triển machine learning](chapters/ch04.md)                                             | [#83](http://bit.ly/2Bqursa)  | hoàn thành  |                               |             |
+| 4      | [Quy mô thúc đẩy quá trình phát triển học máy](chapters/ch04.md)                                             | [#83](http://bit.ly/2Bqursa)  | hoàn thành  |                               |             |
 | 5      | [Tập phát triển và tập kiểm tra](chapters/ch05.md)                                                                    | [#82](http://bit.ly/2Mt4jmV)  | hoàn thành  |                               |             |
 | 6      | [Tập phát triển và tập kiểm tra nên có cùng phân phối](chapters/ch06.md)                                              | [#91](http://bit.ly/2MxIAKE)  | hoàn thành  |                               |             |
 | 7      | [Tập phát triển/kiểm tra cần lớn đến mức nào?](chapters/ch07.md)                                                      | [#70](http://bit.ly/35Jetrj)  | hoàn thành  |                               |             |
