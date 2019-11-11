@@ -21,14 +21,14 @@ Một vài lưu ý:
 ```
 Machine learning is the foundation of countless important applications, including web search, email anti-spam, speech recognition, product recommendations, and more. I assume that you or your team is working on a machine learning application, and that you want to make rapid progress. This book will help you do so.
 ->
-Machine learning là nền tảng cho nhiều ững dụng quan trọng, ...
+Học máy là nền tảng cho nhiều ững dụng quan trọng, ...
 ```
 
 2. Định dạng của bản gốc cần được giữ nguyên. Ví dụ:
 ```
 # 1. Why Machine Learning Strategy
 ->
-# 1. Tại sao cần chiến lược Machine Learning
+# 1. Tại sao cần chiến lược Học Máy
 
 **supervised learning**
 ->
