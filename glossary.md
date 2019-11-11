@@ -17,6 +17,8 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | English                           | Tiếng Việt (Nếu bạn bổ sung thì KHÔNG căn chỉnh các dòng khác) | Thảo luận tại                                              |
 |-----------------------------------|----------------------------------------------------------------|------------------------------------------------------------|
 | accuracy                          | độ chính xác                                                   |                                                            |
+| activation function               | hàm kích hoạt                                                  |                                                            |
+| algorithm's performance           | chất lượng của thuật toán                                      |                                                            |
 | background noise                  | nhiễu nền                                                      | [193](http://bit.ly/31ObyKI)                               |
 | benchmark                         | đánh giá xếp hạng                                              | [#87](http://bit.ly/2BvfPYA)                               |
 | bias (bias as variance)           | độ chệch                                                       | [#125](http://bit.ly/32HJI3S)                              |
@@ -25,10 +27,12 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | classifier                        | bộ phân loại                                                   |                                                            |
 | constrain                         | ràng buộc                                                      |                                                            |
 | cross validation                  | kiểm định chéo                                                 |                                                            |
-| deep learning                     | deep learning                                                  |                                                            |
+| deep learning                     | học sâu                                                        |                                                            |
 | development set                   | tập phát triển                                                 |                                                            |
 | dev set                           | tập phát triển                                                 |                                                            |
+| dev set performance               | chất lượng trên tập phát triển                                 |                                                            |
 | distribution                      | phân phối                                                      |                                                            |
+| domain adaptation                 | thích ứng miền                                                 |                                                            |
 | dropout                           |                                                                |                                                            |
 | early stopping                    | dừng sớm                                                       |                                                            |
 | error analysis                    | phân tích lỗi                                                  |                                                            |
@@ -45,7 +49,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | hand-engineering                  | thiết kế thủ công                                              |                                                            |
 | heuristic                         | thực nghiệm                                                    |                                                            |
 | hidden unit                       | nút ẩn                                                         |                                                            |
-| human-level performance           | hiệu quả cấp con người                                         |                                                            |
+| human-level performance           | chất lượng cấp con người                                       | [#259](http://bit.ly/36IzQcB)                              |
 | hyperparameter                    | siêu tham số                                                   |                                                            |
 | iteration                         | vòng lặp                                                       |                                                            |
 | layer                             | tầng                                                           |                                                            |
@@ -53,29 +57,35 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | learning algorithm                | thuật toán học                                                 |                                                            |
 | linear regression                 | hồi quy tuyến tính                                             |                                                            |
 | logistic regression               | hồi quy logistic                                               |                                                            |
-| machine learning                  | machine learning                                               |                                                            |
+| machine learning                  | học máy                                                        |                                                            |
 | metric                            | phép đo                                                        |                                                            |
 | misclassified                     | bị phân loại nhầm                                              |                                                            |
 | mislabeled                        | bị gán nhãn nhầm                                               |                                                            |
 | model                             | mô hình                                                        |                                                            |
 | multiple-number evaluation metric | phép đo đa trị                                                 |                                                            |
+| multitask learning                | học đa nhiệm                                                   |                                                            |
 | negative sample/example           | mẫu âm                                                         |                                                            |
 | neural network                    | mạng neural                                                    | [#87](http://bit.ly/2BvfPYA) [#115](http://bit.ly/2MAkizG) |
 | optimizing metric                 | phép đo để tối ưu                                              | [#87](http://bit.ly/2BvfPYA)                               |
 | overfit                           | overfit                                                        | [#87](http://bit.ly/2BvfPYA)                               |
 | plateaus                          | trạng thái ổn định và phẳng                                    |                                                            |
+| performance                       | chất lượng                                                     | [#259](http://bit.ly/36IzQcB)                              |
 | positive sample/example           | mẫu dương                                                      |                                                            |
 | precision                         | precision                                                      |                                                            |
 | recall                            | recall                                                         |                                                            |
 | recognition                       | nhận dạng                                                      |                                                            |
 | regularization                    | regularization                                                 |                                                            |
 | running time                      | thời gian chạy                                                 |                                                            |
+| sampling with replacement         | lấy mẫu có hoàn lại                                            | [#251](http://bit.ly/34wQuKr)                              |
+| sampling without replacement      | lấy mẫu không hoàn lại                                         | [#251](http://bit.ly/34wQuKr)                              |
 | satisficing metric                | phép đo thỏa mãn                                               | [#87](http://bit.ly/2BvfPYA)                               |
 | single-number evaluation metric   | phép đo đơn trị                                                |                                                            |
 | spam email                        | email rác                                                      |                                                            |
 | supervised learning               | học có giám sát                                                |                                                            |
 | test set                          | tập kiểm tra                                                   |                                                            |
+| test set performance              | chất lượng trên tập kiểm tra                                   |                                                            |
 | training set                      | tập huấn luyện                                                 |                                                            |
+| training set performance          | chất lượng trên tập huấn luyện                                 |                                                            |
 | true negative                     | âm tính thật                                                   |                                                            |
 | true positive                     | dương tính thật                                                |                                                            |
 | tune parameters                   | điều chỉnh tham số                                             |                                                            |
