@@ -27,7 +27,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | classifier                        | bộ phân loại                                                   |                                                            |
 | constrain                         | ràng buộc                                                      |                                                            |
 | cross validation                  | kiểm định chéo                                                 |                                                            |
-| deep learning                     | deep learning                                                  |                                                            |
+| deep learning                     | học sâu                                                        |                                                            |
 | development set                   | tập phát triển                                                 |                                                            |
 | dev set                           | tập phát triển                                                 |                                                            |
 | dev set performance               | chất lượng trên tập phát triển                                 |                                                            |
@@ -56,7 +56,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | learning algorithm                | thuật toán học                                                 |                                                            |
 | linear regression                 | hồi quy tuyến tính                                             |                                                            |
 | logistic regression               | hồi quy logistic                                               |                                                            |
-| machine learning                  | machine learning                                               |                                                            |
+| machine learning                  | học máy                                                        |                                                            |
 | metric                            | phép đo                                                        |                                                            |
 | misclassified                     | bị phân loại nhầm                                              |                                                            |
 | mislabeled                        | bị gán nhãn nhầm                                               |                                                            |
