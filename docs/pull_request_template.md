@@ -10,6 +10,8 @@
 
 * [ ] Tất cả các thuật ngữ trong chương này đã có trong [Bảng thuật ngữ](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/blob/master/glossary.md) chưa? Nếu chưa, bạn có thể tạo một issue hoặc pull request mới để bổ sung nghĩa của từ đó vào Bảng thuật ngữ.
 
+* [ ] Chọn milestone cho chương này ở cột bên phải.
+
 * [ ] Pull request này đã sẵn sàng cho việc review chưa? Nếu đã sẵn sàng, bạn vui lòng gán label 'review wanted' cho pull request này. Nếu chưa, bạn vui lòng thêm cụm "[WIP]" (work in progress) vào trước tiêu đề của pull request.
 
 ## Lưu ý 
