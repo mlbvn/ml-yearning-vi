@@ -10,7 +10,7 @@ from collections import OrderedDict
 # sys.setdefaultencoding('utf8') 
 
 NUM_CHAPTERS = 58
-MAX_CHAPTER = 34
+MAX_CHAPTER = 36
 PENDING_CHAPTERS = []
 
 CHAPTERS_DIR = './chapters/'
