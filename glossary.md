@@ -19,8 +19,8 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | accuracy                          | độ chính xác                                                   |                                                              |
 | activation function               | hàm kích hoạt                                                  |                                                              |
 | algorithm's performance           | chất lượng của thuật toán                                      |                                                              |
-| avoidable bias                     | độ chệch tránh được                                           |                                                                                 |
-| artificial data synthesis           | tổng hợp dữ liệu nhân tạo                                      |                                                              |
+| avoidable bias                    | độ chệch tránh được                                            |                                                              |
+| artificial data synthesis         | tổng hợp dữ liệu nhân tạo                                      |                                                              |
 | background noise                  | nhiễu nền                                                      | [193](http://bit.ly/31ObyKI)                                 |
 | benchmark                         | đánh giá xếp hạng                                              | [#87](http://bit.ly/2BvfPYA)                                 |
 | bias (bias as variance)           | độ chệch                                                       | [#125](http://bit.ly/32HJI3S)                                |
