@@ -29,6 +29,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | classifier                        | bộ phân loại                                                   |                                                              |
 | constrain                         | ràng buộc                                                      |                                                              |
 | cross validation                  | kiểm định chéo                                                 |                                                              |
+| data mismatch                     | dữ liệu không khớp                                             |                                                              |
 | deep learning                     | học sâu                                                        |                                                              |
 | development set                   | tập phát triển                                                 |                                                              |
 | dev set                           | tập phát triển                                                 |                                                              |
@@ -86,6 +87,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | test set                          | tập kiểm tra                                                   |                                                              |
 | test set performance              | chất lượng trên tập kiểm tra                                   |                                                              |
 | training set                      | tập huấn luyện                                                 |                                                              |
+| training dev set                  | tập phát triển huấn luyện                                      |                                                              |
 | training set performance          | chất lượng trên tập huấn luyện                                 |                                                              |
 | true negative                     | âm tính thật                                                   |                                                              |
 | true positive                     | dương tính thật                                                |                                                              |
