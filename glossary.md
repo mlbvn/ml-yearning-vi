@@ -29,7 +29,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | classifier                        | bộ phân loại                                                   |                                                              |
 | constrain                         | ràng buộc                                                      |                                                              |
 | cross validation                  | kiểm định chéo                                                 |                                                              |
-| data mismatch                     | dữ liệu không khớp                                             |                                                              |
+| data mismatch                     | dữ liệu không tương đồng                                       |                                                              |
 | deep learning                     | học sâu                                                        |                                                              |
 | development set                   | tập phát triển                                                 |                                                              |
 | dev set                           | tập phát triển                                                 |                                                              |
