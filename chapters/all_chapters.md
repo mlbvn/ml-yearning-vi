@@ -36,8 +36,8 @@
 * [34. Cách xác định chất lượng mức con người](#34-cách-xác-định-chất-lượng-mức-con-người)
 * [35. Vượt qua chất lượng mức con người](#35-vượt-qua-chất-lượng-mức-con-người)
 * [36. Khi nào bạn nên huấn luyện và kiểm tra trên những phân phối khác nhau](#36-khi-nào-bạn-nên-huấn-luyện-và-kiểm-tra-trên-những-phân-phối-khác-nhau)
-* [37. Làm sao để quyết định có nên sử dụng toàn bộ dữ liệu của bạn hay không?](#37-làm-sao-để-quyết-định-có-nên-sử-dụng-toàn-bộ-dữ-liệu-của-bạn-hay-không)
-* [38. Cách quyết định có nên bao gồm dữ liệu không nhất quán không](#38-cách-quyết-định-có-nên-bao-gồm-dữ-liệu-không-nhất-quán-không)
+* [37. Làm sao để quyết định có nên sử dụng toàn bộ dữ liệu?](#37-làm-sao-để-quyết-định-có-nên-sử-dụng-toàn-bộ-dữ-liệu)
+* [38. Làm thế nào để quyết định có nên bao gồm dữ liệu không nhất quán](#38-làm-thế-nào-để-quyết-định-có-nên-bao-gồm-dữ-liệu-không-nhất-quán)
 * [39. Đánh trọng số dữ liệu](#39-đánh-trọng-số-dữ-liệu)
 * [40. Tổng quát hóa từ tập huấn luyện đến tập phát triển](#40-tổng-quát-hóa-từ-tập-huấn-luyện-đến-tập-phát-triển)
 ------------------
@@ -1754,7 +1754,7 @@ Chúng ta sẽ tiếp tục giả định rằng dữ liệu phát triển và d
 ------------------
 > # 37. How to decide whether to use all your data
 
-# 37. Làm sao để quyết định có nên sử dụng toàn bộ dữ liệu của bạn hay không?
+# 37. Làm sao để quyết định có nên sử dụng toàn bộ dữ liệu?
 
 > Suppose your cat detector’s training set includes 10,000 user-uploaded images. This data comes from the same distribution as a separate dev/test set, and represents the distribution you care about doing well on. You also have an additional 20,000 images downloaded from the internet. Should you provide all 20,000+10,000=30,000 images to your learning algorithm as its training set, or discard the 20,000 internet images for fear of it biasing your learning algorithm?
 
@@ -1828,7 +1828,7 @@ Những tài liệu này không có gì giống như một con mèo. Chúng cũn
 ------------------
 > # 38. How to decide whether to include inconsistent data
 
-# 38. Cách quyết định có nên bao gồm dữ liệu không nhất quán không
+# 38. Làm thế nào để quyết định có nên bao gồm dữ liệu không nhất quán
 
 > Suppose you want to learn to predict housing prices in New York City. Given the size of a house (input feature x), you want to predict the price (target label y).
 

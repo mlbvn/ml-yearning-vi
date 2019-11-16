@@ -36,8 +36,8 @@
 * [34. Cách xác định chất lượng mức con người](#34-cách-xác-định-chất-lượng-mức-con-người)
 * [35. Vượt qua chất lượng mức con người](#35-vượt-qua-chất-lượng-mức-con-người)
 * [36. Khi nào bạn nên huấn luyện và kiểm tra trên những phân phối khác nhau](#36-khi-nào-bạn-nên-huấn-luyện-và-kiểm-tra-trên-những-phân-phối-khác-nhau)
-* [37. Làm sao để quyết định có nên sử dụng toàn bộ dữ liệu của bạn hay không?](#37-làm-sao-để-quyết-định-có-nên-sử-dụng-toàn-bộ-dữ-liệu-của-bạn-hay-không)
-* [38. Cách quyết định có nên bao gồm dữ liệu không nhất quán không](#38-cách-quyết-định-có-nên-bao-gồm-dữ-liệu-không-nhất-quán-không)
+* [37. Làm sao để quyết định có nên sử dụng toàn bộ dữ liệu?](#37-làm-sao-để-quyết-định-có-nên-sử-dụng-toàn-bộ-dữ-liệu)
+* [38. Làm thế nào để quyết định có nên bao gồm dữ liệu không nhất quán](#38-làm-thế-nào-để-quyết-định-có-nên-bao-gồm-dữ-liệu-không-nhất-quán)
 * [39. Đánh trọng số dữ liệu](#39-đánh-trọng-số-dữ-liệu)
 * [40. Tổng quát hóa từ tập huấn luyện đến tập phát triển](#40-tổng-quát-hóa-từ-tập-huấn-luyện-đến-tập-phát-triển)
 ------------------
@@ -1364,7 +1364,7 @@ Chúng ta sẽ tiếp tục giả định rằng dữ liệu phát triển và d
 
 ------------------
 
-# 37. Làm sao để quyết định có nên sử dụng toàn bộ dữ liệu của bạn hay không?
+# 37. Làm sao để quyết định có nên sử dụng toàn bộ dữ liệu?
 
 
 Giả sử tập huấn luyện của bộ nhận diện mèo của bạn bao gồm 10.000 hình ảnh do người dùng tải lên. Dữ liệu này đến từ cùng một phân phối chia ra một tập phát triển/kiểm tra riêng biệt, và đại diện cho phân phối mà bạn muốn làm tốt trên đó. Bạn cũng có thêm 20.000 hình ảnh được tải xuống từ internet. Bạn có nên cung cấp tất cả 20.000 + 10.000 = 30.000 ảnh cho thuật toán học dưới dạng tập huấn luyện, hay nên loại bỏ 20.000 ảnh từ internet để tránh làm chệch đi thuật toán học của bạn?
@@ -1423,7 +1423,7 @@ Những tài liệu này không có gì giống như một con mèo. Chúng cũn
 
 ------------------
 
-# 38. Cách quyết định có nên bao gồm dữ liệu không nhất quán không
+# 38. Làm thế nào để quyết định có nên bao gồm dữ liệu không nhất quán
 
 
 Giả sử bạn muốn tìm hiểu để dự đoán giá nhà ở Thành phố New York. Với kích thước của một ngôi nhà (đặc trưng đầu vào x), bạn muốn dự đoán mức giá (nhãn mục tiêu y).
