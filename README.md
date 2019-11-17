@@ -24,7 +24,7 @@ Bạn có thể đóng góp bằng cách dịch một chương mới hoặc sử
 | [9. Phép đo tối ưu và phép đo thỏa mãn](./chapters/ch09.md) | [#77](http://tinyurl.com/s95vvzs) |
 | [10. Xây dựng một tập phát triển và một phép đo sẽ tăng tốc quá trình làm việc](./chapters/ch10.md) | [#117](http://tinyurl.com/u4u4fdm) |
 | [11. Khi nào cần thay đổi tập phát triển/kiểm tra và các phép đo](./chapters/ch11.md) | [#150](http://tinyurl.com/vqpvcyo) |
-| [12. Điều cần nhớ: Thiết lập các tập phát triển và kiểm tra](./chapters/ch12.md) |  |
+| [12. Điều cần nhớ: Thiết lập các tập phát triển và kiểm tra](./chapters/ch12.md) | [#113](http://tinyurl.com/t8vegqq) |
 | [13. Bạn mong muốn xây dựng một hệ thống phòng chống email rác mới. Nhóm của bạn có rất nhiều ý tưởng:](./chapters/ch13.md) | [#160](http://tinyurl.com/to6e8x5) |
 | [14. Phân tích lỗi: đánh giá ý tưởng dựa trên tập phát triển](./chapters/ch14.md) | [#140](http://tinyurl.com/vll654u) |
 | [15. Đánh giá song song các ý tưởng trong quá trình phân tích lỗi](./chapters/ch15.md) | [#161](http://tinyurl.com/wg2jjvv) |
