@@ -42,6 +42,7 @@
 * [40. Tổng quát hóa từ tập huấn luyện đến tập phát triển](#40-tổng-quát-hóa-từ-tập-huấn-luyện-đến-tập-phát-triển)
 * [41. Xác định những lỗi về độ chệch, phương sai, và dữ liệu không tương đồng](#41-xác-định-những-lỗi-về-độ-chệch,-phương-sai,-và-dữ-liệu-không-tương-đồng)
 * [42. Xử lý dữ liệu không tương đồng](#42-xử-lý-dữ-liệu-không-tương-đồng)
+* [44. Bài kiểm tra xác minh tối ưu](#44-bài-kiểm-tra-xác-minh-tối-ưu)
 ------------------
 
 # 1. Tại sao cần chiến lược Học Máy 
@@ -1638,3 +1639,57 @@ Thật không may, không có một sự bảo đảm nào trong quá trình nà
 **GHI CHÚ**
 
 [14] Cũng có một số nghiên cứu về "thích ứng miền" -- làm sao để huấn luyện một thuật toán trên một phân phối và để nó tổng quát hóa trên một phân phối khác. Những phương pháp này thường chỉ ứng dụng được với một số loại bài toán đặc biệt, và ít được sử dụng hơn nhiều so với những ý tưởng đã được trình bày trong chương này.
+------------------
+
+# 44. Bài kiểm tra xác minh tối ưu
+
+
+Giả sử bạn đang xây dựng một hệ thống nhận dạng giọng nói. Hệ thống của bạn hoạt động bằng cách nhập một đoạn âm thanh *A*, và tính toán một số Điểm<sub>A</sub>(*S*) cho mỗi câu đầu ra khả dĩ *S*. Ví dụ: bạn có thể thử ước tính Điểm<sub>A</sub>(*S*) = P(*S*|*A*), xác suất bản phiên âm đầu ra chính xác là câu *S*, với điều kiện âm thanh đầu vào là *A*.
+
+
+Có cách tính Điểm<sub>A</sub>(*S*), bạn vẫn phải tìm câu tiếng Anh *S* để tối đa hóa nó:
+
+![img](../imgs/C44_01.png)
+
+
+Làm thế nào để bạn tính toán được "arg max" ở trên? Nếu tiếng Anh có 50.000 từ thì sẽ có (50.000) <sup>N</sup> các câu khả dĩ có độ dài *N* -- quá nhiều để liệt kê ra một cách triệt để.
+
+
+Vì vậy, bạn cần áp dụng thuật toán tìm kiếm gần đúng, để cố gắng tìm giá trị của *S* để tối ưu hóa (tối đa hóa) Điểm<sub>A</sub>(*S*). Ví dụ với thuật toán tìm kiếm chùm tia (beam search), thuật toán này chỉ giữ các ứng viên hàng đầu *K* trong quá trình tìm kiếm. (Đối với mục đích của chương này, bạn không cần phải hiểu chi tiết về tìm kiếm chùm tia.) Các thuật toán như thế này không đảm bảo được việc tìm giá trị của *S* mà tối đa hóa Điểm<sub>A</sub>(*S*).
+
+
+Giả sử rằng một đoạn âm thanh *A* ghi lại một người nào đó nói rằng "Tôi yêu thích học máy". Tuy nhiên, thay vì xuất ra bản phiên âm chính xác, hệ thống của bạn lại đưa ra một phiên bản không chính xác "Tôi yêu thích người máy". Có hai khả năng giải thích cho việc sai này:
+
+
+1. **Bài toán về thuật toán tìm kiếm**. Thuật toán tìm kiếm gần đúng (tìm kiếm chùm tia) không thể tìm thấy giá trị của *S* thỏa mãn việc tối đa hóa Điểm<sub>A</sub>(*S*).
+
+
+2. **Bài toán mục tiêu (hàm tính điểm).** [cái này em chưa tìm được từ ngữ thích hợp để diễn tả] Ước lượng của chúng ta về Điểm<sub>A</sub>(*S*) = P(*S*|*A*) không chính xác. Cụ thể, Điểm<sub>A</sub>(*S*) của chúng ta thất bại trong việc xác định "Tôi yêu thích học máy" là bản phiên âm chính xác.
+
+
+Tùy thuộc vào nguyên nhân nào dẫn đến thất bại mà bạn ưu tiên tập trung vào hướng giải quyết khác nhau. Nếu #1 là vấn đề, bạn nên cải thiện thuật toán tìm kiếm. Nếu #2 là vấn đề, bạn nên làm việc với thuật toán học ước lượng Điểm<sub>A</sub>(*S*).
+
+
+Đối mặt với tình huống này, một số nhà nghiên cứu ngẫu nhiên sẽ quyết định làm việc trên thuật toán tìm kiếm; những người khác sẽ ngẫu nhiên làm việc theo cách tốt hơn để tìm hiểu các giá trị cho Điểm<sub>A</sub>(*S*). Nhưng nếu bạn không biết nguyên nhân nào trong số này là nguyên nhân cơ bản tạo nên lỗi, nỗ lực của bạn có thể trở nên lãng phí. Làm thế nào bạn có thể quyết định nên làm gì một cách có hệ thống hơn?
+
+
+Đặt S<sub>out</sub> là bản phiên âm đầu ra ("Tôi yêu thích người máy"). Đặt S<sup>\*</sup> là bản phiên âm chính xác ("Tôi yêu thích học máy"). Để hiểu vấn đề #1 hay #2 ở trên là nguyên nhân, bạn có thể thực hiện **Bài kiểm tra xác minh tối ưu**: Đầu tiên, tính Điểm<sub>A</sub>(*S*<sup>\*</sup>) và Điểm<sub>A</sub>(*S*<sub>out</sub>). Sau đó kiểm tra xem Điểm<sub>A</sub>(*S*<sup>\*</sup>) > Điểm<sub>A</sub>(*S*<sub>out</sub>) có đúng hay không. Có hai khả năng:
+
+
+Trường hợp 1: Điểm <sub>A</sub>(*S*<sup>\*</sup>) > Điểm <sub>A</sub>(*S*<sub>out</sub>)
+
+
+Trong trường hợp này, thuật toán học của bạn đã đưa S<sup>\*</sup> cao hơn S<sub>out</sub>. Tuy nhiên, thuật toán tìm kiếm gần đúng của chúng ta đã chọn S<sub>out</sub> thay vì S<sup>\*</sup>. Điều này cho bạn biết rằng thuật toán tìm kiếm gần đúng của bạn thất bại trong việc chọn giá trị S tối đa hóa Điểm<sub>A</sub>(*S*). Trong trường hợp này, Bài kiểm tra xác minh tối ưu cho bạn biết rằng bạn có vấn đề về thuật toán tìm kiếm và nên tập trung vào đó. Ví dụ, bạn có thể thử tăng độ rộng chùm tia của tìm kiếm chùm tia.
+
+
+Trường hợp 2: Điểm <sub>A</sub>(*S*<sup>\*</sup>) ≤ Điểm <sub>A</sub>(*S*<sub>out</sub>)
+
+
+Trong trường hợp này, bạn biết việc bạn tính toán Điểm<sub>A</sub>(.) có lỗi: Không thể cho điểm cao hơn hẳn cho đầu ra chính xác *S*<sup>\*</sup> so với S<sub>out</sub> không chính xác. Bài kiểm tra xác minh tối ưu cho bạn biết rằng bạn có vấn đề về hàm mục tiêu (tính điểm). Vì vậy, bạn nên tập trung vào việc cải thiện cách bạn học hoặc tính gần đúng Điểm<sub>A</sub>(*S*) cho các câu khác nhau *S*. Vì vậy, bạn nên tập trung vào việc cải thiện thuật toán học hoặc cách xấp xỉ ĐiểmA(S) cho các câu khác nhau S.
+
+
+Thảo luận của chúng ta đã tập trung vào một ví dụ duy nhất. Để áp dụng Bài kiểm tra xác minh tối ưu trong thực tế, bạn nên kiểm tra các lỗi trong tập phát triển của mình. Đối với mỗi lỗi, bạn sẽ kiểm tra xem Điểm<sub>A</sub>(*S*<sup>\*</sup>) > Điểm<sub>A</sub>(*S*<sub>out</sub>) không. Mỗi ví dụ trong tập phát triển mà bất đẳng thức này giữ sẽ nhận được A. A được đánh dấu là lỗi gây ra bởi thuật toán tối ưu hóa. Mỗi ví dụ không thỏa mãn (Điểm<sub>A</sub>(S<sup>\*</sup>) ≤ Điểm<sub>A</sub>(S<sub>out</sub>)) được tính là một lỗi do cách bạn tính toán Điểm<sub>A</sub>(.).
+
+
+Ví dụ, giả sử bạn tìm ra rằng 95% các lỗi là do hàm tính điểm Điểm<sub>A</sub>(.), và chỉ 5% có nguyên do từ phía thuật toán tối ưu. Giờ bạn biết rằng dù có cải thiện quá trình tối ưu thế nào thì bạn cũng chỉ có thể loại bỏ được khoảng 5% lỗi. Thay vào đó, bạn nên tạp trung cải thiện cách bạn ước lượng Điểm<sub>A</sub>(.).
+
