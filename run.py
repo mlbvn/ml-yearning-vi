@@ -11,8 +11,9 @@ import urllib.request
 # sys.setdefaultencoding('utf8') 
 
 NUM_CHAPTERS = 58
-MAX_CHAPTER = 42
-PENDING_CHAPTERS = []
+# TODO: get rid of max chapter, auto infer from CONTRIBUTIONS
+MAX_CHAPTER = 44
+PENDING_CHAPTERS = [43]
 
 CHAPTERS_DIR = './chapters/'
 ALL_CHAPTERS_FILENAME = 'all_chapters.md'
@@ -88,7 +89,7 @@ def main(vn_only=True):
             chapter_title = _get_chapter_title(i)
             link = _create_header_link(chapter_title)
             full_link = "[{display_text}]({link_to_chapter})".format(
-                display_text=chapter_title[len('# '):],
+                display_text=_remove_sharp(chapter_title),
                 link_to_chapter=link
             )
             all_file.write('* ' + full_link + '\n')
@@ -109,6 +110,11 @@ def main(vn_only=True):
                         print('Line with decode error:')
                         print(e)
             all_file.write('\n')
+
+
+def _remove_sharp(title):
+    assert title.startswith('# ')
+    return title[len('# '):]
 
 
 def reformat():
@@ -149,7 +155,7 @@ def _get_chapter_title(chapter_number):
             if line.startswith('# '):
                 line = line.strip()
                 return line
-    return 'chưa có tên'
+    return '# {:02d}. chưa có tên'.format(chapter_number)
 
 
 def _chapter_path_from_chapter_number(chapter_number):
@@ -179,7 +185,7 @@ def _gen_progress_table():
         prs = CONTRIBUTIONS.get(chapter_number, [])
         title = _get_chapter_title(chapter_number)
         pr_links = ', '.join(_get_markdown_link_to_pr(pr) for pr in sorted(prs))
-        markdown_table_row = '| [{}]({}) | {} |\n'.format(title, chapter_path, pr_links)
+        markdown_table_row = '| [{}]({}) | {} |\n'.format(_remove_sharp(title), chapter_path, pr_links)
         res += markdown_table_row
 
     return res
