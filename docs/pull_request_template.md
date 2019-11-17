@@ -10,6 +10,10 @@
 
 * [ ] Tất cả các thuật ngữ trong chương này đã có trong [Bảng thuật ngữ](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/blob/master/glossary.md) chưa? Nếu chưa, bạn có thể tạo một issue hoặc pull request mới để bổ sung nghĩa của từ đó vào Bảng thuật ngữ.
 
+* [ ] Bạn đã xóa cả dấu `-->` trong các dòng `--> _replace THIS LINE by your translation for the above line_` chưa?
+
+* [ ] Bản dịch của bạn có theo format của bản gốc không (`#` và số cho tiêu đề, **in đậm**, *in nghiêng*)?
+ 
 * [ ] Pull request này đã sẵn sàng cho việc review chưa?
 
 ## Lưu ý 

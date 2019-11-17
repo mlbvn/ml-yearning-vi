@@ -27,11 +27,11 @@ Học máy là nền tảng cho nhiều ững dụng quan trọng, ...
 2. Định dạng của bản gốc cần được giữ nguyên. Ví dụ:
 ```
 # 1. Why Machine Learning Strategy
-->
+
 # 1. Tại sao cần chiến lược Học Máy
 
 **supervised learning**
-->
+
 **học có giám sát**
 ```
 

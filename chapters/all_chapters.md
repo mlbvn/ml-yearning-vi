@@ -36,10 +36,13 @@
 * [34. Cách xác định chất lượng mức con người](#34-cách-xác-định-chất-lượng-mức-con-người)
 * [35. Vượt qua chất lượng mức con người](#35-vượt-qua-chất-lượng-mức-con-người)
 * [36. Khi nào bạn nên huấn luyện và kiểm tra trên những phân phối khác nhau](#36-khi-nào-bạn-nên-huấn-luyện-và-kiểm-tra-trên-những-phân-phối-khác-nhau)
-* [37. Làm sao để quyết định có nên sử dụng toàn bộ dữ liệu của bạn hay không?](#37-làm-sao-để-quyết-định-có-nên-sử-dụng-toàn-bộ-dữ-liệu-của-bạn-hay-không)
-* [38. Cách quyết định có nên bao gồm dữ liệu không nhất quán không](#38-cách-quyết-định-có-nên-bao-gồm-dữ-liệu-không-nhất-quán-không)
+* [37. Làm sao để quyết định có nên sử dụng toàn bộ dữ liệu?](#37-làm-sao-để-quyết-định-có-nên-sử-dụng-toàn-bộ-dữ-liệu)
+* [38. Làm thế nào để quyết định có nên bao gồm dữ liệu không nhất quán](#38-làm-thế-nào-để-quyết-định-có-nên-bao-gồm-dữ-liệu-không-nhất-quán)
 * [39. Đánh trọng số dữ liệu](#39-đánh-trọng-số-dữ-liệu)
 * [40. Tổng quát hóa từ tập huấn luyện đến tập phát triển](#40-tổng-quát-hóa-từ-tập-huấn-luyện-đến-tập-phát-triển)
+* [41. Xác định những lỗi về độ chệch, phương sai, và dữ liệu không tương đồng](#41-xác-định-những-lỗi-về-độ-chệch,-phương-sai,-và-dữ-liệu-không-tương-đồng)
+* [42. Xử lý dữ liệu không tương đồng](#42-xử-lý-dữ-liệu-không-tương-đồng)
+* [44. Bài kiểm tra xác minh tối ưu](#44-bài-kiểm-tra-xác-minh-tối-ưu)
 ------------------
 > # 1. Why Machine Learning Strategy
 
@@ -1754,7 +1757,7 @@ Chúng ta sẽ tiếp tục giả định rằng dữ liệu phát triển và d
 ------------------
 > # 37. How to decide whether to use all your data
 
-# 37. Làm sao để quyết định có nên sử dụng toàn bộ dữ liệu của bạn hay không?
+# 37. Làm sao để quyết định có nên sử dụng toàn bộ dữ liệu?
 
 > Suppose your cat detector’s training set includes 10,000 user-uploaded images. This data comes from the same distribution as a separate dev/test set, and represents the distribution you care about doing well on. You also have an additional 20,000 images downloaded from the internet. Should you provide all 20,000+10,000=30,000 images to your learning algorithm as its training set, or discard the 20,000 internet images for fear of it biasing your learning algorithm?
 
@@ -1828,7 +1831,7 @@ Những tài liệu này không có gì giống như một con mèo. Chúng cũn
 ------------------
 > # 38. How to decide whether to include inconsistent data
 
-# 38. Cách quyết định có nên bao gồm dữ liệu không nhất quán không
+# 38. Làm thế nào để quyết định có nên bao gồm dữ liệu không nhất quán
 
 > Suppose you want to learn to predict housing prices in New York City. Given the size of a house (input feature x), you want to predict the price (target label y).
 
@@ -1915,7 +1918,7 @@ Giả sử bạn đang áp dụng học máy cho một ứng dụng mà phân ph
 
 > 3. It generalizes well to new data drawn from the same distribution as the training set, but not to data drawn from the dev/test set distribution. We call this problem **data mismatch**, since it is because the training set data is a poor match for the dev/test set data.
 
-3. Thuật toán tổng quát hóa tốt với dữ liệu mới trích xuất từ cùng phân phối với tập huấn luyện, nhưng không tốt với dữ liệu trích xuất từ phân phối của tập phát triển/kiểm tra. Chúng ta gọi vấn đề này là **dữ liệu không khớp** bởi dữ liệu của tập huấn luyện khớp kém so với dữ liệu của tập phát triển/kiểm tra.
+3. Thuật toán tổng quát hóa tốt với dữ liệu mới trích xuất từ cùng phân phối với tập huấn luyện, nhưng không tốt với dữ liệu trích xuất từ phân phối của tập phát triển/kiểm tra. Chúng ta gọi vấn đề này là **dữ liệu không tương đồng** bởi dữ liệu của tập huấn luyện khớp kém so với dữ liệu của tập phát triển/kiểm tra.
 
 > For example, suppose that humans achieve near perfect performance on the cat recognition task. Your algorithm achieves this:
 
@@ -1935,11 +1938,11 @@ Ví dụ, giả sử con người đạt chất lượng hoàn hảo trong việ
 
 > In this case, you clearly have a data mismatch problem. To address this, you might try to make the training data more similar to the dev/test data. We discuss some techniques for this later.
 
-Trường hợp này bạn rõ ràng có vấn đề về dữ liệu không khớp. Để khắc phục, bạn có thể cố gắng xử lý dữ liệu huấn luyện sao cho giống hơn với dữ liệu trên tập phát triển/kiểm tra. Chúng ta sẽ bàn luận các kỹ thuật xử lý vấn đề này về sau.
+Trường hợp này bạn rõ ràng có vấn đề về dữ liệu không tương đồng. Để khắc phục, bạn có thể cố gắng xử lý dữ liệu huấn luyện sao cho giống hơn với dữ liệu trên tập phát triển/kiểm tra. Chúng ta sẽ bàn luận các kỹ thuật xử lý vấn đề này về sau.
 
 > In order to diagnose to what extent an algorithm suffers from each of the problems 1-3 above, it will be useful to have another dataset. Specifically, rather than giving the algorithm all the available training data, you can split it into two subsets: The actual training set which the algorithm will train on, and a separate set, which we will call the "Training dev" set, that we will not train on.
 
-Để chẩn đoán mức độ tác động tới thuật toán từ mỗi vần đề 1-3 ở trên, sẽ rất hữu ích khi bạn có một bộ dữ liệu khác. Cụ thể, thay vì áp dụng thuật toán với toàn bộ dữ liệu huấn luyện, bạn có thể chia nó thành hai tập con: Tập huấn luyện thực tế mà thuật toán sẽ huấn luyện và một tập riêng, ở đây chúng tôi gọi là tập "huấn luyện phát triển" và nó sẽ không được dùng cho việc huấn luyện.
+Để chẩn đoán mức độ tác động tới thuật toán từ mỗi vần đề 1-3 ở trên, sẽ rất hữu ích khi bạn có một bộ dữ liệu khác. Cụ thể, thay vì áp dụng thuật toán với toàn bộ dữ liệu huấn luyện, bạn có thể chia nó thành hai tập con: Tập huấn luyện thực tế mà thuật toán sẽ huấn luyện và một tập riêng, ở đây chúng tôi gọi là tập "phát triển huấn luyện" và nó sẽ không được dùng cho việc huấn luyện.
 
 > You now have four subsets of data:
 
@@ -1952,7 +1955,7 @@ Tập huấn luyện: Đây là dữ liệu mà thuật toán sẽ học từ n�
 
 > * Training dev set: This data is drawn from the same distribution as the training set (e.g., Internet images + Mobile images). This is usually smaller than the training set; it only needs to be large enough to evaluate and track the progress of our learning algorithm.
 
-Tập huấn luyện phát triển: Đây là dữ liệu trích xuất từ cùng phân phối với tập huấn luyện (ví dụ: ảnh Internet + ảnh Điện Thoại). Nó thông thường nhỏ hơn tập huấn luyện và chỉ cần đủ lớn để có thể đánh giá và theo dõi quá trình học của thuật toán.
+Tập phát triển huấn luyện: Đây là dữ liệu trích xuất từ cùng phân phối với tập huấn luyện (ví dụ: ảnh Internet + ảnh Điện Thoại). Nó thông thường nhỏ hơn tập huấn luyện và chỉ cần đủ lớn để có thể đánh giá và theo dõi quá trình học của thuật toán.
 
 > * Dev set: This is drawn from the same distribution as the test set, and it reflects the distribution of data that we ultimately care about doing well on. (E.g., mobile images.)
 
@@ -1972,7 +1975,7 @@ Tập huấn luyện phát triển: Đây là dữ liệu trích xuất từ cù
 
 > * The algorithm’s ability to generalize to new data drawn from the training set distribution, by evaluating on the training dev set.
 
-* Khả năng tổng quát hóa của thuật toán đối với dữ liệu mới trích xuất từ cùng phân phối với tập huấn luyện, bằng cách đánh giá tập huấn luyện phát triển.
+* Khả năng tổng quát hóa của thuật toán đối với dữ liệu mới trích xuất từ cùng phân phối với tập huấn luyện, bằng cách đánh giá tập phát triển huấn luyện.
 
 > * The algorithm’s performance on the task you care about, by evaluating on the dev and/or test sets.
 
@@ -1980,5 +1983,199 @@ Tập huấn luyện phát triển: Đây là dữ liệu trích xuất từ cù
 
 > Most of the guidelines in Chapters 5-7 for picking the size of the dev set also apply to the training dev set.
 
-Phần lớn những hướng dẫn ở Chương 5-7 về lựa chọn kích cỡ của tập phát triển có thể áp dụng được với tập huấn luyện phát triển.
+Phần lớn những hướng dẫn ở Chương 5-7 về lựa chọn kích cỡ của tập phát triển có thể áp dụng được với tập phát triển huấn luyện.
+
+------------------
+> # 41. Identifying Bias, Variance, and Data Mismatch Errors
+
+# 41. Xác định những lỗi về độ chệch, phương sai, và dữ liệu không tương đồng
+
+> Suppose humans achieve almost perfect performance (≈0% error) on the cat detection task, and thus the optimal error rate is about 0%. Suppose you have:
+
+Giả sử con người đạt được chất lượng gần như hoàn hảo (lỗi ≈0%) trong việc phát hiện mèo, và do vậy tỷ lệ lỗi tối ưu là khoảng 0%. Giả sử bạn có:
+
+> * 1% error on the training set.
+
+* 1% lỗi trên tập huấn luyện.
+
+> * 5% error on training dev set.
+
+* 5% lỗi trên tập phát triển huấn luyện.
+
+> * 5% error on the dev set.
+
+* 5% lỗi trên tập phát triển.
+
+> What does this tell you? Here, you know that you have high variance. The variance reduction techniques described earlier should allow you to make progress.
+
+Như vậy nói lên được điều gì? Ở đây, bạn biết rằng bạn đang có phương sai cao. Bạn có thể cải tiến thêm với các kỹ thuật giảm phương sai được mô tả trước đây.
+
+> Now, suppose your algorithm achieves:
+
+Bây giờ, giả sử thuật toán của bạn đạt được:
+
+> * 10% error on the training set.
+
+* 10% lỗi trên tập huấn luyện.
+
+> * 11% error on training dev set.
+
+* 11% lỗi trên tập phát triển huấn luyện.
+
+> * 12% error on the dev set.
+
+* 12% lỗi trên tập phát triển.
+
+> This tells you that you have high avoidable bias on the training set. I.e., the algorithm is doing poorly on the training set. Bias reduction techniques should help.
+
+Điều này cho bạn biết rằng bạn có độ chệch có thể tránh được cao trên tập huấn luyện. Tức là, thuật toán đang hoạt động kém trên tập huấn luyện. Kỹ thuật giảm độ chệch sẽ có ích trong trường hợp này.
+
+> In the two examples above, the algorithm suffered from only high avoidable bias or high variance. It is possible for an algorithm to suffer from any subset of high avoidable bias, high variance, and data mismatch. For example:
+
+Trong hai ví dụ trên, thuật toán chỉ có vấn đề về độ chệch có thể tránh được cao, hoặc về phương sai cao. Một thuật toán có thể mắc phải một hoặc nhiều vấn đề về độ chệch tránh được cao, phương sai cao hoặc dữ liệu không tương đồng. Ví dụ như:
+
+> * 10% error on the training set.
+
+* 10% lỗi trên tập huấn luyện.
+
+> * 11% error on training dev set.
+
+* 11% lỗi trên tập phát triển huấn luyện.
+
+> * 20% error on the dev set.
+
+* 20% lỗi trên tập phát triển.
+
+> This algorithm suffers from high avoidable bias and from data mismatch. It does not, however, suffer from high variance on the training set distribution.
+
+Thuật toán này có độ chệch có thể tránh được cao và lỗi dữ liệu không tương đồng. Tuy nhiên, nó không có vấn đề phương sai cao trong phân phối tập huấn luyện.
+
+> It might be easier to understand how the different types of errors relate to each other by drawing them as entries in a table:
+
+Mối quan hệ giữa các loại lỗi có thể sẽ dễ hiểu hơn bằng cách vẽ chúng trong bảng:
+
+![img](../imgs/C41_01.png)
+
+> Continuing with the example of the cat image detector, you can see that there are two different distributions of data on the x-axis. On the y-axis, we have three types of error: human level error, error on examples the algorithm has trained on, and error on examples the algorithm has not trained on. We can fill in the boxes with the different types of errors we identified in the previous chapter.
+
+Tiếp tục với ví dụ về bộ phát hiện hình ảnh mèo, bạn có thể thấy rằng có hai phân phối dữ liệu khác nhau trên trục x. Trên trục y, chúng ta có ba loại lỗi: lỗi ở mức con người, lỗi trên các mẫu mà thuật toán đã được học và lỗi trên các mẫu mà thuật toán chưa được học. Chúng ta có thể điền vào các ô với các loại lỗi khác nhau mà chúng ta đã xác định được trong chương trước.
+
+> If you wish, you can also fill in the remaining two boxes in this table: You can fill in the upper-right box (Human level performance on Mobile Images) by asking some humans to label your mobile cat images data and measure their error. You can fill in the next box by taking the mobile cat images (Distribution B) and putting a small fraction of into the training set so that the neural network learns on it too. Then you measure the learned model’s error on that subset of data. Filling in these two additional entries may sometimes give additional insight about what the algorithm is doing on the two different distributions (Distribution A and B) of data.
+
+Nếu muốn, bạn cũng có thể điền vào hai ô còn lại: Bạn có thể điền vào ô phía trên bên phải (Chất lượng mức con người trên Hình ảnh từ điện thoại) bằng cách yêu cầu một vài người dán nhãn dữ liệu ảnh mèo được tải lên từ điện thoại và đo lỗi của họ. Bạn có thể điền vào ô tiếp theo bằng cách lấy một phần nhỏ những tấm ảnh mèo chụp từ điện thoại (Phân phối B) vào tập huấn luyện để mạng neural cũng có thể học theo. Sau đó, bạn đo lỗi mô hình đã học trên tập dữ liệu con đó. Việc điền thêm vào hai mục này đôi khi có thể cung cấp thêm cái nhìn sâu sắc về những gì thuật toán đang thực hiện trên những phân phối khác nhau (Phân phối A và B) của dữ liệu.
+
+> By understanding which types of error the algorithm suffers from the most, you will be better positioned to decide whether to focus on reducing bias, reducing variance, or reducing data mismatch.
+
+Bằng cách hiểu được loại lỗi mà thuật toán đang gặp nhiều vấn đề nhất, bạn sẽ ở trong vị thế tốt hơn để quyết định xem nên tập trung vào việc giảm độ chệch, giảm phương sai hay giảm độ không tương đồng của dữ liệu.
+
+------------------
+> # 42. Addressing data mismatch
+
+# 42. Xử lý dữ liệu không tương đồng
+
+> Suppose you have developed a speech recognition system that does very well on the training set and on the training dev set. However, it does poorly on your dev set: You have a data mismatch problem. What can you do?
+
+Giả sử bạn đã phát triển một hệ thống nhận dạng giọng nói hoạt động rất tốt trên tập huấn luyện và trên tập phát triển huấn luyện. Tuy nhiên, hệ thống đó lại hoạt động kém trên tập phát triển: Bạn có vấn đề về dữ liệu không tương đồng. Bạn có thể làm gì?
+
+
+> I recommend that you: (i) Try to understand what properties of the data differ between the training and the dev set distributions. (ii) Try to find more training data that better matches the dev set examples that your algorithm has trouble with. [14]
+
+Tôi đề xuất bạn nên: (i) Cố gắng hiểu những thuộc tính nào của dữ liệu là khác nhau giữa phân phối của tập huấn luyện và tập phát triển. (ii) Cố gắng tìm thêm dữ liệu huấn luyện tương đồng hơn với những mẫu trong tập phát triển mà thuật toán của bạn đang gặp vấn đề.
+
+
+> For example, suppose you carry out an error analysis on the speech recognition dev set: You manually go through 100 examples, and try to understand where the algorithm is making mistakes. You find that your system does poorly because most of the audio clips in the dev set are taken within a car, whereas most of the training examples were recorded against a quiet background. The engine and road noise dramatically worsen the performance of your speech system. In this case, you might try to acquire more training data comprising audio clips that were taken in a car. The purpose of the error analysis is to understand the significant differences between the training and the dev set, which is what leads to the data mismatch.
+
+Ví dụ, giả sử bạn thực hiện phân tích lỗi nhận dạng giọng nói trên tập phát triển: Bạn duyệt qua 100 mẫu một cách thủ công và cố gắng hiểu xem thuật toán đang mắc lỗi ở những đâu. Bạn phát hiện rằng hệ thống của bạn hoạt động kém vì hầu hết những đoạn âm thanh trong tập phát triển được thu trong xe hơi, trong khi hầu hết các ví dụ để huấn luyện được thu trong môi trường yên tĩnh. Tiếng ồn từ động cơ và đường phố làm ảnh hưởng nghiêm trọng đến chất lượng của hệ thống của bạn. Trong trường hợp này, bạn có thể cố gắng thu thập thêm dữ liệu huấn luyện bao gồm những đoạn âm thanh được thu trong xe hơi. Mục đích của việc phân tích lỗi là để hiểu những khác biệt đáng kể giữa tập huấn luyện và tập phát triển, vốn là nguyên nhân dẫn đến dữ liệu không tương đồng.
+
+
+
+> If your training and training dev sets include audio recorded within a car, you should also double-check your system’s performance on this subset of data. If it is doing well on the car data in the training set but not on car data in the training dev set, then this further validates the hypothesis that getting more car data would help. This is why we discussed the possibility of including in your training set some data drawn from the same distribution as your dev/test set in the previous chapter. Doing so allows you to compare your performance on the car data in the training set vs. the dev/test set.
+
+Nếu tập huấn luyện và tập phát triển huấn luyện của bạn chứa những đoạn âm thanh thu trong xe hơi, bạn nên kiểm tra kĩ lưỡng chất lượng của hệ thống của bạn trên tập con dữ liệu này. Nếu hệ thống hoạt động tốt với dữ liệu xe hơi trong tập huấn luyện nhưng không tốt với dữ liệu xe hơi trong tập phát triển huấn luyện, điều đó càng khẳng định giả thuyết rằng thu thập thêm dữ liệu xe hơi sẽ có ích. Đó là lí do tại sao chúng ta thảo luận trong chương trước về khả năng thêm một số dữ liệu lấy từ tập phát triển/tập kiểm tra với cùng phân phối vào trong dữ liệu huấn luyện của bạn. Làm như vậy cho phép bạn so sánh chất lượng [hệ thống] trên tập huấn luyện so với trên tập phát triển/kiểm tra.
+
+
+> Unfortunately, there are no guarantees in this process. For example, if you don't have any way to get more training data that better match the dev set data, you might not have a clear path towards improving performance.
+
+Thật không may, không có một sự bảo đảm nào trong quá trình này. Ví dụ, nếu ban không có cách nào để có thể có thêm dữ liệu huấn luyện tương đồng với dữ liệu trong tập phát triển, bạn có thể không có được một lộ trình rõ ràng nào hướng đến việc cải thiện chất lượng hệ thống.
+
+
+> **FOOTNOTE:**
+
+--> _replace THIS LINE by your translation for the above line_
+
+> [14] There is also some research on "domain adaptation"—how to train an algorithm on one distribution and have it generalize to a different distribution. These methods are typically applicable only in special types of problems and are much less widely used than the ideas described in this chapter.
+
+**GHI CHÚ**
+
+[14] Cũng có một số nghiên cứu về "thích ứng miền" -- làm sao để huấn luyện một thuật toán trên một phân phối và để nó tổng quát hóa trên một phân phối khác. Những phương pháp này thường chỉ ứng dụng được với một số loại bài toán đặc biệt, và ít được sử dụng hơn nhiều so với những ý tưởng đã được trình bày trong chương này.
+------------------
+> # 44. The Optimization Verification test
+
+# 44. Bài kiểm tra xác minh tối ưu
+
+> Suppose you are building a speech recognition system. Your system works by inputting an audio clip *A*, and computing some Score<sub>A</sub>(*S*) for each possible output sentence *S*. For example, you might try to estimate Score<sub>A</sub>(*S*) = P(*S*|*A*), the probability that the correct output transcription is the sentence *S*, given that the input audio was *A*.
+
+Giả sử bạn đang xây dựng một hệ thống nhận dạng giọng nói. Hệ thống của bạn hoạt động bằng cách nhập một đoạn âm thanh *A*, và tính toán một số Điểm<sub>A</sub>(*S*) cho mỗi câu đầu ra khả dĩ *S*. Ví dụ: bạn có thể thử ước tính Điểm<sub>A</sub>(*S*) = P(*S*|*A*), xác suất bản phiên âm đầu ra chính xác là câu *S*, với điều kiện âm thanh đầu vào là *A*.
+
+> Given a way to compute Score<sub>A</sub>(*S*), you still have to find the English sentence *S* that maximizes it:
+
+Có cách tính Điểm<sub>A</sub>(*S*), bạn vẫn phải tìm câu tiếng Anh *S* để tối đa hóa nó:
+
+![img](../imgs/C44_01.png)
+
+> How do you compute the "arg max" above? If the English language has 50,000 words, then there are (50,000)<sup>N</sup> possible sentences of length *N* -- far too many to exhaustively enumerate.
+
+Làm thế nào để bạn tính toán được "arg max" ở trên? Nếu tiếng Anh có 50.000 từ thì sẽ có (50.000) <sup>N</sup> các câu khả dĩ có độ dài *N* -- quá nhiều để liệt kê ra một cách triệt để.
+
+> So, you need to apply an approximate search algorithm, to try to find the value of *S* that optimizes (maximizes) Score<sub>A</sub>(*S*). One example search algorithm is "beam search," which keeps only *K* top candidates during the search process. (For the purposes of this chapter, you don’t need to understand the details of beam search.) Algorithms like this are not guaranteed to find the value of *S* that maximizes Score<sub>A</sub>(*S*).
+
+Vì vậy, bạn cần áp dụng thuật toán tìm kiếm gần đúng, để cố gắng tìm giá trị của *S* để tối ưu hóa (tối đa hóa) Điểm<sub>A</sub>(*S*). Ví dụ với thuật toán tìm kiếm chùm tia (beam search), thuật toán này chỉ giữ các ứng viên hàng đầu *K* trong quá trình tìm kiếm. (Đối với mục đích của chương này, bạn không cần phải hiểu chi tiết về tìm kiếm chùm tia.) Các thuật toán như thế này không đảm bảo được việc tìm giá trị của *S* mà tối đa hóa Điểm<sub>A</sub>(*S*).
+
+> Suppose that an audio clip *A* records someone saying "I love machine learning." But instead of outputting the correct transcription, your system outputs the incorrect "I love robots." There are now two possibilities for what went wrong:
+
+Giả sử rằng một đoạn âm thanh *A* ghi lại một người nào đó nói rằng "Tôi yêu thích học máy". Tuy nhiên, thay vì xuất ra bản phiên âm chính xác, hệ thống của bạn lại đưa ra một phiên bản không chính xác "Tôi yêu thích người máy". Có hai khả năng giải thích cho việc sai này:
+
+> 1. **Search algorithm problem**. The approximate search algorithm (beam search) failed to find the value of *S* that maximizes Score<sub>A</sub>(*S*).
+
+1. **Bài toán về thuật toán tìm kiếm**. Thuật toán tìm kiếm gần đúng (tìm kiếm chùm tia) không thể tìm thấy giá trị của *S* thỏa mãn việc tối đa hóa Điểm<sub>A</sub>(*S*).
+
+> 2. **Objective (scoring function) problem.** Our estimates for Score<sub>A</sub>(*S*) = P(*S*|*A*) were inaccurate. In particular, our choice of Score<sub>A</sub>(*S*) failed to recognize that "I love machine learning" is the correct transcription.
+
+2. **Bài toán mục tiêu (hàm tính điểm).** [cái này em chưa tìm được từ ngữ thích hợp để diễn tả] Ước lượng của chúng ta về Điểm<sub>A</sub>(*S*) = P(*S*|*A*) không chính xác. Cụ thể, Điểm<sub>A</sub>(*S*) của chúng ta thất bại trong việc xác định "Tôi yêu thích học máy" là bản phiên âm chính xác.
+
+> Depending on which of these was the cause of the failure, you should prioritize your efforts very differently. If #1 was the problem, you should work on improving the search algorithm. If #2 was the problem, you should work on the learning algorithm that estimates Score<sub>A</sub>(*S*).
+
+Tùy thuộc vào nguyên nhân nào dẫn đến thất bại mà bạn ưu tiên tập trung vào hướng giải quyết khác nhau. Nếu #1 là vấn đề, bạn nên cải thiện thuật toán tìm kiếm. Nếu #2 là vấn đề, bạn nên làm việc với thuật toán học ước lượng Điểm<sub>A</sub>(*S*).
+
+> Facing this situation, some researchers will randomly decide to work on the search algorithm; others will randomly work on a better way to learn values for Score<sub>A</sub>(*S*). But unless you know which of these is the underlying cause of the error, your efforts could be wasted. How can you decide more systematically what to work on?
+
+Đối mặt với tình huống này, một số nhà nghiên cứu ngẫu nhiên sẽ quyết định làm việc trên thuật toán tìm kiếm; những người khác sẽ ngẫu nhiên làm việc theo cách tốt hơn để tìm hiểu các giá trị cho Điểm<sub>A</sub>(*S*). Nhưng nếu bạn không biết nguyên nhân nào trong số này là nguyên nhân cơ bản tạo nên lỗi, nỗ lực của bạn có thể trở nên lãng phí. Làm thế nào bạn có thể quyết định nên làm gì một cách có hệ thống hơn?
+
+> Let S<sub>out</sub> be the output transcription ("I love robots"). Let S<sup>\*</sup> be the correct transcription ("I love machine learning"). In order to understand whether #1 or #2 above is the problem, you can perform the **Optimization Verification test**: First, compute Score<sub>A</sub>(*S*<sup>\*</sup>) and Score<sub>A</sub>(*S*<sub>out</sub>). Then check whether Score<sub>A</sub>(*S*<sup>*</sup>) > Score<sub>A</sub>(*S*<sub>out</sub>). There are two possibilities:
+
+Đặt S<sub>out</sub> là bản phiên âm đầu ra ("Tôi yêu thích người máy"). Đặt S<sup>\*</sup> là bản phiên âm chính xác ("Tôi yêu thích học máy"). Để hiểu vấn đề #1 hay #2 ở trên là nguyên nhân, bạn có thể thực hiện **Bài kiểm tra xác minh tối ưu**: Đầu tiên, tính Điểm<sub>A</sub>(*S*<sup>\*</sup>) và Điểm<sub>A</sub>(*S*<sub>out</sub>). Sau đó kiểm tra xem Điểm<sub>A</sub>(*S*<sup>\*</sup>) > Điểm<sub>A</sub>(*S*<sub>out</sub>) có đúng hay không. Có hai khả năng:
+
+> Case 1: Score<sub>A</sub>(*S*<sup>*</sup>) > Score<sub>A</sub>(*S*<sub>out</sub>)
+
+Trường hợp 1: Điểm <sub>A</sub>(*S*<sup>\*</sup>) > Điểm <sub>A</sub>(*S*<sub>out</sub>)
+
+> In this case, your learning algorithm has correctly given S<sup>\*</sup> a higher score than S<sub>out</sub>. Nevertheless, our approximate search algorithm chose S<sub>out</sub> rather than S<sup>\*</sup>. This tells you that out your approximate search algorithm is failing to choose the value of S that maximizes Score<sub>A</sub>(*S*). In this case, the Optimization Verification test tells you that you have a search algorithm problem and should focus on that. For example, you could try increasing the beam width of beam search.
+
+Trong trường hợp này, thuật toán học của bạn đã đưa S<sup>\*</sup> cao hơn S<sub>out</sub>. Tuy nhiên, thuật toán tìm kiếm gần đúng của chúng ta đã chọn S<sub>out</sub> thay vì S<sup>\*</sup>. Điều này cho bạn biết rằng thuật toán tìm kiếm gần đúng của bạn thất bại trong việc chọn giá trị S tối đa hóa Điểm<sub>A</sub>(*S*). Trong trường hợp này, Bài kiểm tra xác minh tối ưu cho bạn biết rằng bạn có vấn đề về thuật toán tìm kiếm và nên tập trung vào đó. Ví dụ, bạn có thể thử tăng độ rộng chùm tia của tìm kiếm chùm tia.
+
+> Case 2: Score<sub>A</sub>(*S*<sup>\*</sup>) ≤ Score<sub>A</sub>(*S*<sub>out</sub>)
+
+Trường hợp 2: Điểm <sub>A</sub>(*S*<sup>\*</sup>) ≤ Điểm <sub>A</sub>(*S*<sub>out</sub>)
+
+> In this case, you know that the way you’re computing Score<sub>A</sub>(.) is at fault: It is failing to give a strictly higher score to the correct output *S*<sup>\*</sup> than the incorrect S<sub>out</sub>. The Optimization Verification test tells you that you have an objective (scoring) function problem. Thus, you should focus on improving how you learn or approximate Score<sub>A</sub>(*S*) for different sentences *S*.
+
+Trong trường hợp này, bạn biết việc bạn tính toán Điểm<sub>A</sub>(.) có lỗi: Không thể cho điểm cao hơn hẳn cho đầu ra chính xác *S*<sup>\*</sup> so với S<sub>out</sub> không chính xác. Bài kiểm tra xác minh tối ưu cho bạn biết rằng bạn có vấn đề về hàm mục tiêu (tính điểm). Vì vậy, bạn nên tập trung vào việc cải thiện cách bạn học hoặc tính gần đúng Điểm<sub>A</sub>(*S*) cho các câu khác nhau *S*. Vì vậy, bạn nên tập trung vào việc cải thiện thuật toán học hoặc cách xấp xỉ ĐiểmA(S) cho các câu khác nhau S.
+
+> Our discussion has focused on a single example. To apply the Optimization Verification test in practice, you should examine the errors in your dev set. For each error, you would test whether Score<sub>A</sub>(*S*<sup>\*</sup>) > Score<sub>A</sub>(*S*<sub>out</sub>). Each dev example for which this inequality holds will get A A out marked as an error caused by the optimization algorithm. Each example for which this does not hold (Score<sub>A</sub>(S<sup>\*</sup>) ≤ Score<sub>A</sub>(S<sub>out</sub>)) gets counted as a mistake due to the way you’re computing Score<sub>A</sub>(.).
+
+Thảo luận của chúng ta đã tập trung vào một ví dụ duy nhất. Để áp dụng Bài kiểm tra xác minh tối ưu trong thực tế, bạn nên kiểm tra các lỗi trong tập phát triển của mình. Đối với mỗi lỗi, bạn sẽ kiểm tra xem Điểm<sub>A</sub>(*S*<sup>\*</sup>) > Điểm<sub>A</sub>(*S*<sub>out</sub>) không. Mỗi ví dụ trong tập phát triển mà bất đẳng thức này giữ sẽ nhận được A. A được đánh dấu là lỗi gây ra bởi thuật toán tối ưu hóa. Mỗi ví dụ không thỏa mãn (Điểm<sub>A</sub>(S<sup>\*</sup>) ≤ Điểm<sub>A</sub>(S<sub>out</sub>)) được tính là một lỗi do cách bạn tính toán Điểm<sub>A</sub>(.).
+
+> For example, suppose you find that 95% of the errors were due to the scoring function Score<sub>A</sub>(.), and only 5% due to the optimization algorithm. Now you know that no matter how much you improve your optimization procedure, you would realistically eliminate only 5% of our errors. Thus, you should instead focus on improving how you estimate Score<sub>A</sub>(.).
+
+Ví dụ, giả sử bạn tìm ra rằng 95% các lỗi là do hàm tính điểm Điểm<sub>A</sub>(.), và chỉ 5% có nguyên do từ phía thuật toán tối ưu. Giờ bạn biết rằng dù có cải thiện quá trình tối ưu thế nào thì bạn cũng chỉ có thể loại bỏ được khoảng 5% lỗi. Thay vào đó, bạn nên tạp trung cải thiện cách bạn ước lượng Điểm<sub>A</sub>(.).
 
