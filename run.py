@@ -13,7 +13,7 @@ import urllib.request
 NUM_CHAPTERS = 58
 # TODO: get rid of max chapter, auto infer from CONTRIBUTIONS
 MAX_CHAPTER = 44
-PENDING_CHAPTERS = [43]
+PENDING_CHAPTERS = []
 
 CHAPTERS_DIR = './chapters/'
 ALL_CHAPTERS_FILENAME = 'all_chapters.md'
