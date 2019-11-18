@@ -55,7 +55,7 @@ Bạn có thể đóng góp bằng cách dịch một chương mới hoặc sử
 | [40. Tổng quát hóa từ tập huấn luyện đến tập phát triển](./chapters/ch40.md) | [#282](http://tinyurl.com/w677y7q) |
 | [41. Xác định những lỗi về độ chệch, phương sai, và dữ liệu không tương đồng](./chapters/ch41.md) | [#278](http://tinyurl.com/syy5q4l) |
 | [42. Xử lý dữ liệu không tương đồng](./chapters/ch42.md) | [#298](http://tinyurl.com/yxxlkgyr) |
-| [43. chưa có tên](./chapters/ch43.md) | [#296](http://tinyurl.com/vwbseyy) |
+| [43. Tổng hợp dữ liệu nhân tạo](./chapters/ch43.md) | [#296](http://tinyurl.com/vwbseyy) |
 | [44. Bài kiểm tra xác minh tối ưu](./chapters/ch44.md) | [#301](http://tinyurl.com/vzjamd5), [#312](http://tinyurl.com/qsd3n4l) |
 | [45. chưa có tên](./chapters/ch45.md) | [#304](http://tinyurl.com/ttpb9wf) |
 | [46. chưa có tên](./chapters/ch46.md) |  |
