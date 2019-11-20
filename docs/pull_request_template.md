@@ -2,7 +2,7 @@
 
 * [x] Đánh dấu [x] (không có dấu cách quanh x) thể hiện dấu tick vào các câu dưới đây cho các câu trả lời 'Có' hoặc 'Đúng'
 
-* [ ] Pull Request này được link tới một issue? Đánh số issue đó *ngay sau* dấu #
+* [ ] Pull Request này được link tới một issue? Đánh số issue đó *ngay sau* dấu `#`: close #
 
 * [ ] Bạn có kiến thức về Học Máy không? Chúng tôi ưu tiên những người có trước kiến thức về Học Máy để việc review được thuận tiện hơn.
 
@@ -10,7 +10,11 @@
 
 * [ ] Tất cả các thuật ngữ trong chương này đã có trong [Bảng thuật ngữ](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/blob/master/glossary.md) chưa? Nếu chưa, bạn có thể tạo một issue hoặc pull request mới để bổ sung nghĩa của từ đó vào Bảng thuật ngữ.
 
-* [ ] Pull request này đã sẵn sàng cho việc review chưa? Nếu đã sẵn sàng, bạn vui lòng gán label 'review wanted' cho pull request này. Nếu chưa, bạn vui lòng thêm cụm "[WIP]" (work in progress) vào trước tiêu đề của pull request.
+* [ ] Bạn đã xóa cả dấu `-->` trong các dòng `--> _replace THIS LINE by your translation for the above line_` chưa?
+
+* [ ] Bản dịch của bạn có theo format của bản gốc không (`#` và số cho tiêu đề, **in đậm**, *in nghiêng*)?
+ 
+* [ ] Pull request này đã sẵn sàng cho việc review chưa?
 
 ## Lưu ý 
 **Chỉ bắt đầu review khi mọi mục trên đây đều đã được tick.**
