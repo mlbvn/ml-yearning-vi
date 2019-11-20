@@ -72,6 +72,8 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | optimizing metric                 | phép đo để tối ưu                                              | [#87](http://bit.ly/2BvfPYA)                                 |
 | overfit                           | overfit                                                        | [#87](http://bit.ly/2BvfPYA)                                 |
 | performance                       | chất lượng                                                     | [#259](http://bit.ly/36IzQcB)                                |
+| plateaus (danh từ)                | vùng nằm ngang                                                 |                                                              |
+| plateaus (động từ)                | nằm ngang                                                      |                                                              |
 | positive sample/example           | mẫu dương                                                      |                                                              |
 | precision                         | precision                                                      |                                                              |
 | recall                            | recall                                                         |                                                              |
