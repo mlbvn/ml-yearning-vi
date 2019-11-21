@@ -44,6 +44,7 @@
 * [42. Xử lý dữ liệu không tương đồng](#42-xử-lý-dữ-liệu-không-tương-đồng)
 * [43. Tổng hợp dữ liệu nhân tạo](#43-tổng-hợp-dữ-liệu-nhân-tạo)
 * [44. Bài kiểm tra xác minh tối ưu](#44-bài-kiểm-tra-xác-minh-tối-ưu)
+* [45. Dạng chung của bài kiểm tra xác minh tối ưu](#45-dạng-chung-của-bài-kiểm-tra-xác-minh-tối-ưu)
 ------------------
 > # 1. Why Machine Learning Strategy
 
@@ -2211,4 +2212,40 @@ Thảo luận của chúng ta đã tập trung vào một ví dụ duy nhất. �
 > For example, suppose you find that 95% of the errors were due to the scoring function Score<sub>A</sub>(.), and only 5% due to the optimization algorithm. Now you know that no matter how much you improve your optimization procedure, you would realistically eliminate only 5% of our errors. Thus, you should instead focus on improving how you estimate Score<sub>A</sub>(.).
 
 Ví dụ, giả sử bạn tìm ra rằng 95% các lỗi là do hàm tính điểm Điểm<sub>A</sub>(.), và chỉ 5% có nguyên do từ phía thuật toán tối ưu. Giờ bạn biết rằng dù có cải thiện quá trình tối ưu thế nào thì bạn cũng chỉ có thể loại bỏ được khoảng 5% lỗi. Thay vào đó, bạn nên tập trung cải thiện cách ước lượng Điểm<sub>A</sub>(.).
+
+------------------
+> # 45. General form of Optimization Verification test
+
+# 45. Dạng chung của bài kiểm tra xác minh tối ưu
+
+> You can apply the Optimization Verification test when, given some input *x*, you know how to compute Score<sub>\*</sub>(*y*) that indicates how good a response *y* is to an input *x*. Furthermore, you are using an approximate algorithm to try to find arg max<sub>y</sub> Score<sub>\*</sub>(*y*), but suspect that the search algorithm is sometimes failing to find the maximum. In our previous speech recognition example, *x=A* was an audio clip, and *y=S* was the output transcript.
+
+Bạn có thể áp dụng bài kiểm tra xác minh tối ưu khi, với một số đầu vào *x*, bạn biết cách tính Điểm<sub>\*</sub> (*y*) dùng để thể hiện mức độ phản hồi *y* tốt như thế nào với *x*. Hơn nữa, bạn đang sử dụng thuật toán gần đúng để cố gắng tìm arg max <sub>y</sub>Điểm<sub>\*</sub>(*y*), nhưng nghi ngờ rằng thuật toán tìm kiếm đôi khi không tìm thấy giá trị lớn nhất. Trong ví dụ nhận dạng giọng nói trước đây của chúng tôi, *x=A* là một đoạn âm thanh và *y=S* là bản ghi đầu ra.
+
+
+> Suppose y\* is the "correct" output but the algorithm instead outputs y<sub>out</sub>. Then the key test is to measure whether Score<sub>\*</sub>(y*) > Score<sub>\*</sub>(y<sub>out</sub>). If this inequality holds, then we blame the optimization algorithm for the mistake. Refer to the previous chapter to make sure you understand the logic behind this. Otherwise, we blame the computation of Score​<sub>\*</sub>(y).
+
+Giả sử y\* là đầu ra "chính xác" nhưng thuật toán thay vào đó tìm ra y<sub>out</sub>. Thì bài kiểm tra chính là đo xem liệu Điểm<sub>\*</sub>(y\*) > Điểm<sub>\*</sub>(y<sub>out</sub>) có đúng hay không. Nếu bất đẳng thức này đúng, thì chúng ta coi lỗi là do thuật toán tối ưu. Tham khảo chương trước để đảm bảo bạn hiểu logic đằng sau điều này. Ngược lại, chúng ta coi lỗi thuộc về cách tính Điểm<sub>\*</sub>(y).
+
+> Let’s look at one more example. Suppose you are building a Chinese-to-English machine translation system. Your system works by inputting a Chinese sentence *C*, and computing some Score<sub>C</sub>(*E*) for each possible translation E. For example, you might use Score<sub>C</sub>(*E*) = P(*E*|*C*), the probability of the translation being E given that the input sentence was *C*.
+
+Xem xét một ví dụ nữa. Giả sử bạn đang xây dựng một hệ thống dịch máy từ tiếng Trung sang tiếng Anh. Hệ thống của bạn nhận một câu tiếng Trung *C* và tính gía trị Điểm<sub>C</sub>(*E*) cho mỗi bản dịch khả dĩ E. Ví dụ, bạn có thể sử dụng Điểm<sub>C</sub>(*E*) = P(*E*|*C*), xác suất dịch ra E với câu đầu vào *C*.
+
+> Your algorithm translates sentences by trying to compute:
+
+Thuật toán của bạn dịch các câu bằng cách cố gắng tính:
+
+![img](../imgs/C45_01.png)
+
+> However, the set of all possible English sentences *E* is too large, so you rely on a heuristic search algorithm.
+
+Tuy nhiên, tập hợp các câu tiếng Anh có thể *E* quá lớn nên bạn dựa vào thuật toán tìm kiếm thực nghiệm.
+
+> Suppose your algorithm outputs an incorrect translation ​*E​*<sub>out</sub> rather than some correct translation ​E​*. Then the Optimization Verification test would ask you to compute whether Score​<sub>C</sub>(*E*\*) > Score​<sub>C</sub>(*E*<sub>out</sub>). If this inequality holds, then the Score​<sub>C</sub>(.) correctly recognized E\* as a superior output to *E​*<sub>out</sub>; thus, you would attribute this error to the approximate search algorithm. Otherwise, you attribute this error to the computation of Score​<sub>C</sub>(.).
+
+Giả sử thuật toán của bạn dịch ra một bản không chính xác *E*<sub>out</sub> thay vì một bản dịch chính xác E\* nào đó. Thì bài kiểm tra xác minh tối ưu sẽ yêu cầu bạn tính toán xem liệu Điểm<sub>C</sub>(*E\**) > Điểm<sub>C</sub>(*E*<sub>out</sub>) có đúng hay không. Nếu bất đẳng thức này đúng thì cách tính Điểm<sub>C</sub>(.) đã nhận dạng chính xác E\* tốt hơn so với *E*<sub>out</sub>; do đó, bạn sẽ coi lỗi này là do thuật toán tìm kiếm gần đúng. Ngược lại, bạn coi lỗi này thuộc về cách tính Điểm<sub>C</sub>(.)
+
+> It is a very common "design pattern" in AI to first learn an approximate scoring function Score<sub>\*</sub>(.), then use an approximate maximization algorithm. If you are able to spot this pattern, you will be able to use the Optimization Verification test to understand your source of errors.
+
+Đây là một “mẫu thiết kế” rất phổ biến trong AI khi lần đầu học một hàm tính điểm gần đúng Điểm<sub>\*</sub>(.), sau đó sử dụng một thuật toán tối đa xấp xỉ. Nếu bạn có thể phát hiện ra kiểu mẫu này, bạn sẽ có thể sử dụng bài kiểm tra xác minh tối ưu để hiểu nguồn gốc lỗi của mình.
 
