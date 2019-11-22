@@ -88,6 +88,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | sampling without replacement      | lấy mẫu không hoàn lại                                         | [#251](http://bit.ly/34wQuKr)                                |
 | satisficing metric                | phép đo thỏa mãn                                               | [#87](http://bit.ly/2BvfPYA)                                 |
 | scroing function                  | hàm tính điểm                                                  |                                                              |
+| sentiment classification          | phân loại cảm xúc                                            |                                                              |
 | single-number evaluation metric   | phép đo đơn trị                                                |                                                              |
 | spam email                        | email rác                                                      |                                                              |
 | supervised learning               | học có giám sát                                                |                                                              |
