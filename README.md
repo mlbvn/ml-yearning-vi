@@ -57,10 +57,10 @@ Bạn có thể đóng góp bằng cách dịch một chương mới hoặc sử
 | [42. Xử lý dữ liệu không tương đồng](./chapters/ch42.md) | [#298](http://tinyurl.com/yxxlkgyr) |
 | [43. Tổng hợp dữ liệu nhân tạo](./chapters/ch43.md) | [#296](http://tinyurl.com/vwbseyy) |
 | [44. Bài kiểm tra xác minh tối ưu](./chapters/ch44.md) | [#301](http://tinyurl.com/vzjamd5), [#312](http://tinyurl.com/qsd3n4l) |
-| [45. chưa có tên](./chapters/ch45.md) | [#304](http://tinyurl.com/ttpb9wf) |
-| [46. chưa có tên](./chapters/ch46.md) |  |
-| [47. chưa có tên](./chapters/ch47.md) |  |
-| [48. chưa có tên](./chapters/ch48.md) |  |
+| [45. Dạng chung của bài kiểm tra xác minh tối ưu](./chapters/ch45.md) | [#304](http://tinyurl.com/ttpb9wf) |
+| [46. Ví dụ về Học tăng cường](./chapters/ch46.md) | [#329](http://tinyurl.com/vf5vmgu) |
+| [47. chưa có tên](./chapters/ch47.md) | [#333](http://tinyurl.com/rsx35j4), [#336](http://tinyurl.com/qmaat9c) |
+| [48. chưa có tên](./chapters/ch48.md) | [#331](http://tinyurl.com/t6frute) |
 | [49. chưa có tên](./chapters/ch49.md) |  |
 | [50. chưa có tên](./chapters/ch50.md) |  |
 | [51. chưa có tên](./chapters/ch51.md) |  |

@@ -38,6 +38,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | domain adaptation                 | thích ứng miền                                                 |                                                              |
 | dropout                           |                                                                |                                                              |
 | early stopping                    | dừng sớm                                                       |                                                              |
+| end-to-end                        | đầu-cuối                                                       | [#334](http://bit.ly/2OyYuEf)                                |
 | error analysis                    | phân tích lỗi                                                  |                                                              |
 | error rate                        | tỉ lệ lỗi                                                      |                                                              |
 | evaluation metric                 | phép đánh giá                                                  |                                                              |
@@ -72,6 +73,9 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | optimizing metric                 | phép đo để tối ưu                                              | [#87](http://bit.ly/2BvfPYA)                                 |
 | overfit                           | overfit                                                        | [#87](http://bit.ly/2BvfPYA)                                 |
 | performance                       | chất lượng                                                     | [#259](http://bit.ly/36IzQcB)                                |
+| plateau (danh từ)                 | vùng nằm ngang                                                 |                                                              |
+| plateau (động từ)                 | nằm ngang                                                      |                                                              |
+| pipeline                          | pipeline                                                       | [#334](http://bit.ly/2OyYuEf)                                |
 | positive sample/example           | mẫu dương                                                      |                                                              |
 | precision                         | precision                                                      |                                                              |
 | recall                            | recall                                                         |                                                              |
@@ -83,7 +87,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | sampling with replacement         | lấy mẫu có hoàn lại                                            | [#251](http://bit.ly/34wQuKr)                                |
 | sampling without replacement      | lấy mẫu không hoàn lại                                         | [#251](http://bit.ly/34wQuKr)                                |
 | satisficing metric                | phép đo thỏa mãn                                               | [#87](http://bit.ly/2BvfPYA)                                 |
-| scroing function                  | hàm tính điểm                                                   |                                                              |
+| scroing function                  | hàm tính điểm                                                  |                                                              |
 | single-number evaluation metric   | phép đo đơn trị                                                |                                                              |
 | spam email                        | email rác                                                      |                                                              |
 | supervised learning               | học có giám sát                                                |                                                              |
