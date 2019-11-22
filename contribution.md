@@ -16,21 +16,15 @@ Lưu ý khi tạo một PR:
 Đây là giai đoạn dịch từ bản tiếng Anh sang bản tiếng Việt lần đầu tiên. Bản dịch này phải đảm bảo ý nghĩa của bản dịch sát với bản gốc, việc trau chuốt ngôn từ sẽ được làm kỹ hơn ở giai đoạn 2. Nếu trong quá trình dịch, bạn gặp một thuật ngữ chưa có trong bảng thuật ngữ, bạn có thể tạo một PR riêng cho việc thêm thuật ngữ mới vào bảng. Bản dịch thô chỉ được chấp nhận nếu tất cả các thuật ngữ đã có trong Bảng thuật ngữ.
 
 Một vài lưu ý:
-1. Bản dịch tiếng Việt phải bắt đầu từ dòng **ngay** dưới dấu `->`. Việc này để đảm bảo khi hiển thị những thay đổi trong mỗi PR, github cũng hiển thị phần nghĩa gốc tiếng Anh ngay trên dấu `->`, giúp cho quá trình review thuận tiện hơn. Chẳng hạn:
-
-```
-Machine learning is the foundation of countless important applications, including web search, email anti-spam, speech recognition, product recommendations, and more. I assume that you or your team is working on a machine learning application, and that you want to make rapid progress. This book will help you do so.
-->
-Học máy là nền tảng cho nhiều ững dụng quan trọng, ...
-```
+1. Bản dịch tiếng Việt bắt đầu từ dòng `--> _replace THIS LINE by your translation for the above line_`. Lưu ý xóa cả dấu `-->` trong bản gốc.
 
 2. Định dạng của bản gốc cần được giữ nguyên. Ví dụ:
 ```
-# 1. Why Machine Learning Strategy
+> # 1. Why Machine Learning Strategy
 
 # 1. Tại sao cần chiến lược Học Máy
 
-**supervised learning**
+> **supervised learning**
 
 **học có giám sát**
 ```
