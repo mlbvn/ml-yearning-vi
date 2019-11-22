@@ -12,7 +12,7 @@ import urllib.request
 
 NUM_CHAPTERS = 58
 # TODO: get rid of max chapter, auto infer from CONTRIBUTIONS
-MAX_CHAPTER = 44
+MAX_CHAPTER = 45
 PENDING_CHAPTERS = []
 
 CHAPTERS_DIR = './chapters/'
