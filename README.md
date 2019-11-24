@@ -60,13 +60,13 @@ Bạn có thể đóng góp bằng cách dịch một chương mới hoặc sử
 | [45. Dạng chung của bài kiểm tra xác minh tối ưu](./chapters/ch45.md) | [#304](http://tinyurl.com/ttpb9wf) |
 | [46. Ví dụ về Học tăng cường](./chapters/ch46.md) | [#329](http://tinyurl.com/vf5vmgu) |
 | [47. Sự trỗi dậy của học đầu-cuối](./chapters/ch47.md) | [#333](http://tinyurl.com/rsx35j4), [#336](http://tinyurl.com/qmaat9c) |
-| [48. chưa có tên](./chapters/ch48.md) | [#331](http://tinyurl.com/t6frute) |
-| [49. chưa có tên](./chapters/ch49.md) |  |
-| [50. chưa có tên](./chapters/ch50.md) |  |
-| [51. chưa có tên](./chapters/ch51.md) |  |
+| [48. chưa có tên](./chapters/ch48.md) |  |
+| [49. chưa có tên](./chapters/ch49.md) | [#340](http://tinyurl.com/rjppzme) |
+| [50. chưa có tên](./chapters/ch50.md) | [#342](http://tinyurl.com/wjd78jk) |
+| [51. chưa có tên](./chapters/ch51.md) | [#349](http://tinyurl.com/w5mhy63) |
 | [52. chưa có tên](./chapters/ch52.md) |  |
-| [53. chưa có tên](./chapters/ch53.md) |  |
-| [54. chưa có tên](./chapters/ch54.md) |  |
+| [53. chưa có tên](./chapters/ch53.md) | [#355](http://tinyurl.com/sxgfq2v) |
+| [54. chưa có tên](./chapters/ch54.md) | [#352](http://tinyurl.com/yxx3ugx4) |
 | [55. chưa có tên](./chapters/ch55.md) |  |
 | [56. chưa có tên](./chapters/ch56.md) |  |
 | [57. chưa có tên](./chapters/ch57.md) |  |
