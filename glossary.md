@@ -26,7 +26,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | bias (bias as variance)           | độ chệch                                                       | [#125](http://bit.ly/32HJI3S)                                |
 | big data                          | big data                                                       |                                                              |
 | Blackbox dev set                  | tập phát triển Blackbox                                        | [#162](http://bit.ly/2MVHcl7)                                |
-| bounding box | khung chứa |[#353](http://bit.ly/2sbhDVj) |
+| bounding box                      | khung chứa                                                     | [#353](http://bit.ly/2sbhDVj)                                |
 | classifier                        | bộ phân loại                                                   |                                                              |
 | constrain                         | ràng buộc                                                      |                                                              |
 | cross validation                  | kiểm định chéo                                                 |                                                              |
@@ -89,7 +89,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | sampling without replacement      | lấy mẫu không hoàn lại                                         | [#251](http://bit.ly/34wQuKr)                                |
 | satisficing metric                | phép đo thỏa mãn                                               | [#87](http://bit.ly/2BvfPYA)                                 |
 | scroing function                  | hàm tính điểm                                                  |                                                              |
-| sentiment classification          | phân loại cảm xúc                                            |                                                              |
+| sentiment classification          | phân loại cảm xúc                                              |                                                              |
 | single-number evaluation metric   | phép đo đơn trị                                                |                                                              |
 | spam email                        | email rác                                                      |                                                              |
 | supervised learning               | học có giám sát                                                |                                                              |
