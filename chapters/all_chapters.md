@@ -1609,7 +1609,7 @@ Hơn nữa, có rất nhiều lý do khiến việc xây dựng một hệ thố
 
 > 2. **Error analysis can draw on human intuition**. Suppose a speech recognition algorithm is doing worse than human-level recognition. Say it incorrectly transcribes an audio clip as "This recipe calls for a *pear* of apples," mistaking "pair" for "pear." You can draw on human intuition and try to understand what information a person uses to get the correct transcription, and use this knowledge to modify the learning algorithm.
 
-2. **Phân tích lỗi có thể dựa vào trực giác của con người**. Giả sử rằng một thuật toán nhận dạng giọng nói làm tệ hơn so với con người. Giả dụ nó ghi nhầm một đoạn âm thanh thành "This recipe calls for a *pear* of apples," (dịch là "công thức nấu ăn này cần một quả lê của táo") gây ra lỗi tại từ "pair" trở thành "pear". Bạn có thể dựa vào trực giác và cố gắng hiểu thông tin nào một người sử dụng để thu được bản ghi chuẩn, và dùng thông tin này để điều chỉnh thuật toán.
+2. **Phân tích lỗi có thể dựa vào trực giác của con người**. Giả sử rằng một thuật toán nhận dạng giọng nói làm tệ hơn so với con người. Giả dụ nó ghi nhầm một đoạn âm thanh thành "This recipe calls for a *pear* of apples," (dịch là "công thức nấu ăn này cần một quả lê của táo") gây ra lỗi tại từ "pair" trở thành "pear". Bạn có thể dựa vào trực giác và cố gắng hiểu thông tin nào một người sử dụng để thu được bản ghi thoại chuẩn, và dùng thông tin này để điều chỉnh thuật toán.
 
 > 3. **Use human-level performance to estimate the optimal error rate and also set a "desired error rate."** Suppose your algorithm achieves 10% error on a task, but a person achieves 2% error. Then we know that the optimal error rate is 2% or lower and the avoidable bias is at least 8%. Thus, you should try bias-reducing techniques.
 
@@ -1680,7 +1680,7 @@ Bạn đang làm về nhận dạng giọng nói và bạn có một tập dữ 
 
 > If you can identify a subset of data in which humans significantly surpass your system, then you can still use those techniques to drive rapid progress. For example, suppose your system is much better than people at recognizing speech in noisy audio, but humans are still better at transcribing very rapidly spoken speech.
 
-Nếu bạn có thể xác định một tập dữ liệu con mà con người vượt qua được hệ thống của bạn một cách đáng kể, thì bạn vẫn có thể sử dụng các kỹ thuật đó để thúc đẩy tiến trình nhanh chóng. Ví dụ, giả sử hệ thống của bạn tốt hơn nhiều so với con người trong việc nhận dạng giọng nói trong âm thanh nhiễu, nhưng con người vẫn làm tốt hơn trong việc phiên âm lời nói rất nhanh.
+Nếu bạn có thể xác định một tập dữ liệu con mà con người vượt qua được hệ thống của bạn một cách đáng kể, thì bạn vẫn có thể sử dụng các kỹ thuật đó để thúc đẩy tiến trình nhanh chóng. Ví dụ, giả sử hệ thống của bạn tốt hơn nhiều so với con người trong việc nhận dạng giọng nói trong âm thanh nhiễu, nhưng con người vẫn làm tốt hơn trong việc ghi lại lời nói rất nhanh.
 
 > For the subset of data with rapidly spoken speech:
 
@@ -1688,7 +1688,7 @@ Nếu bạn có thể xác định một tập dữ liệu con mà con người 
 
 > 1. You can still obtain transcripts from humans that are higher quality than your algorithm’s output.
 
-1. Bạn vẫn có thể lấy được bản ghi từ con người với chất lượng cao hơn so với đầu ra thuật toán của bạn.
+1. Bạn vẫn có thể lấy được bản ghi thoại từ con người với chất lượng cao hơn so với đầu ra thuật toán của bạn.
 
 > 2. You can draw on human intuition to understand why they correctly heard a rapidly spoken utterance when your system didn’t.
 
@@ -2150,7 +2150,7 @@ Khi làm việc về tổng hợp dữ liệu, các nhóm của tôi đôi khi p
 
 > Suppose you are building a speech recognition system. Your system works by inputting an audio clip *A*, and computing some Score<sub>A</sub>(*S*) for each possible output sentence *S*. For example, you might try to estimate Score<sub>A</sub>(*S*) = P(*S*|*A*), the probability that the correct output transcription is the sentence *S*, given that the input audio was *A*.
 
-Giả sử bạn đang xây dựng một hệ thống nhận dạng giọng nói. Hệ thống của bạn hoạt động bằng cách nhập một đoạn âm thanh *A*, và tính toán một giá trị Điểm<sub>A</sub>(*S*) cho mỗi câu đầu ra khả dĩ *S*. Ví dụ: bạn có thể thử ước tính Điểm<sub>A</sub>(*S*) = P(*S*|*A*), tức xác suất bản phiên âm đầu ra chính xác là câu *S* với điều kiện âm thanh đầu vào là *A*.
+Giả sử bạn đang xây dựng một hệ thống nhận dạng giọng nói. Hệ thống của bạn hoạt động bằng cách nhập một đoạn âm thanh *A*, và tính toán một giá trị Điểm<sub>A</sub>(*S*) cho mỗi câu đầu ra khả dĩ *S*. Ví dụ: bạn có thể thử ước tính Điểm<sub>A</sub>(*S*) = P(*S*|*A*), tức xác suất bản ghi thoại đầu ra chính xác là câu *S* với điều kiện âm thanh đầu vào là *A*.
 
 > Given a way to compute Score<sub>A</sub>(*S*), you still have to find the English sentence *S* that maximizes it:
 
@@ -2168,7 +2168,7 @@ Vì vậy, bạn cần áp dụng thuật toán tìm kiếm gần đúng, để 
 
 > Suppose that an audio clip *A* records someone saying "I love machine learning." But instead of outputting the correct transcription, your system outputs the incorrect "I love robots." There are now two possibilities for what went wrong:
 
-Giả sử rằng một đoạn âm thanh *A* ghi lại một người nào đó nói rằng "Tôi yêu thích học máy". Tuy nhiên, thay vì xuất ra bản phiên âm chính xác, hệ thống của bạn lại đưa ra một phiên bản không chính xác "Tôi yêu thích người máy". Có hai khả năng giải thích cho việc thiếu chính xác này:
+Giả sử rằng một đoạn âm thanh *A* ghi lại một người nào đó nói rằng "Tôi yêu thích học máy". Tuy nhiên, thay vì xuất ra bản ghi thoại chính xác, hệ thống của bạn lại đưa ra một phiên bản không chính xác "Tôi yêu thích người máy". Có hai khả năng giải thích cho việc thiếu chính xác này:
 
 > 1. **Search algorithm problem**. The approximate search algorithm (beam search) failed to find the value of *S* that maximizes Score<sub>A</sub>(*S*).
 
@@ -2176,7 +2176,7 @@ Giả sử rằng một đoạn âm thanh *A* ghi lại một người nào đó
 
 > 2. **Objective (scoring function) problem.** Our estimates for Score<sub>A</sub>(*S*) = P(*S*|*A*) were inaccurate. In particular, our choice of Score<sub>A</sub>(*S*) failed to recognize that "I love machine learning" is the correct transcription.
 
-2. **Vấn đề về hàm mục tiêu (hàm tính điểm).** Ước lượng của chúng ta về Điểm<sub>A</sub>(*S*) = P(*S*|*A*) không chính xác. Cụ thể, việc chọn cách tính Điểm<sub>A</sub>(*S*) thất bại trong việc xác định "Tôi yêu thích học máy" là bản phiên âm chính xác.
+2. **Vấn đề về hàm mục tiêu (hàm tính điểm).** Ước lượng của chúng ta về Điểm<sub>A</sub>(*S*) = P(*S*|*A*) không chính xác. Cụ thể, việc chọn cách tính Điểm<sub>A</sub>(*S*) thất bại trong việc xác định "Tôi yêu thích học máy" là bản ghi thoại chính xác.
 
 > Depending on which of these was the cause of the failure, you should prioritize your efforts very differently. If #1 was the problem, you should work on improving the search algorithm. If #2 was the problem, you should work on the learning algorithm that estimates Score<sub>A</sub>(*S*).
 
@@ -2188,7 +2188,7 @@ Tùy thuộc vào nguyên nhân nào dẫn đến thất bại mà bạn ưu ti�
 
 > Let S<sub>out</sub> be the output transcription ("I love robots"). Let S<sup>\*</sup> be the correct transcription ("I love machine learning"). In order to understand whether #1 or #2 above is the problem, you can perform the **Optimization Verification test**: First, compute Score<sub>A</sub>(*S*<sup>\*</sup>) and Score<sub>A</sub>(*S*<sub>out</sub>). Then check whether Score<sub>A</sub>(*S*<sup>\*</sup>) > Score<sub>A</sub>(*S*<sub>out</sub>). There are two possibilities:
 
-Đặt S<sub>out</sub> là bản phiên âm đầu ra ("Tôi yêu thích người máy"). Đặt S<sup>\*</sup> là bản phiên âm chính xác ("Tôi yêu thích học máy"). Để hiểu vấn đề #1 hay #2 ở trên là nguyên nhân, bạn có thể thực hiện **Bài kiểm tra xác minh tối ưu**: Đầu tiên, tính Điểm<sub>A</sub>(*S*<sup>\*</sup>) và Điểm<sub>A</sub>(*S*<sub>out</sub>). Sau đó kiểm tra xem Điểm<sub>A</sub>(*S*<sup>\*</sup>) > Điểm<sub>A</sub>(*S*<sub>out</sub>) có đúng hay không. Có hai khả năng:
+Đặt S<sub>out</sub> là bản ghi thoại đầu ra ("Tôi yêu thích người máy"). Đặt S<sup>\*</sup> là bản ghi thoại chính xác ("Tôi yêu thích học máy"). Để hiểu vấn đề #1 hay #2 ở trên là nguyên nhân, bạn có thể thực hiện **Bài kiểm tra xác minh tối ưu**: Đầu tiên, tính Điểm<sub>A</sub>(*S*<sup>\*</sup>) và Điểm<sub>A</sub>(*S*<sub>out</sub>). Sau đó kiểm tra xem Điểm<sub>A</sub>(*S*<sup>\*</sup>) > Điểm<sub>A</sub>(*S*<sub>out</sub>) có đúng hay không. Có hai khả năng:
 
 > Case 1: Score<sub>A</sub>(*S*<sup>\*</sup>) > Score<sub>A</sub>(*S*<sub>out</sub>)
 
@@ -2221,7 +2221,7 @@ Ví dụ, giả sử bạn tìm ra rằng 95% các lỗi là do hàm tính đi�
 
 > You can apply the Optimization Verification test when, given some input *x*, you know how to compute Score<sub>\*</sub>(*y*) that indicates how good a response *y* is to an input *x*. Furthermore, you are using an approximate algorithm to try to find arg max<sub>y</sub> Score<sub>\*</sub>(*y*), but suspect that the search algorithm is sometimes failing to find the maximum. In our previous speech recognition example, *x=A* was an audio clip, and *y=S* was the output transcript.
 
-Bạn có thể áp dụng bài kiểm tra xác minh tối ưu khi, với một số đầu vào *x*, bạn biết cách tính Điểm<sub>\*</sub> (*y*) dùng để thể hiện mức độ phản hồi *y* tốt như thế nào với *x*. Hơn nữa, bạn đang sử dụng thuật toán gần đúng để cố gắng tìm arg max <sub>y</sub>Điểm<sub>\*</sub>(*y*), nhưng nghi ngờ rằng thuật toán tìm kiếm đôi khi không tìm thấy giá trị lớn nhất. Trong ví dụ nhận dạng giọng nói trước đây của chúng tôi, *x=A* là một đoạn âm thanh và *y=S* là bản ghi đầu ra.
+Bạn có thể áp dụng bài kiểm tra xác minh tối ưu khi, với một số đầu vào *x*, bạn biết cách tính Điểm<sub>\*</sub> (*y*) dùng để thể hiện mức độ phản hồi *y* tốt như thế nào với *x*. Hơn nữa, bạn đang sử dụng thuật toán gần đúng để cố gắng tìm arg max <sub>y</sub>Điểm<sub>\*</sub>(*y*), nhưng nghi ngờ rằng thuật toán tìm kiếm đôi khi không tìm thấy giá trị lớn nhất. Trong ví dụ nhận dạng giọng nói trước đây của chúng tôi, *x=A* là một đoạn âm thanh và *y=S* là bản ghi thoại đầu ra.
 
 
 > Suppose y\* is the "correct" output but the algorithm instead outputs y<sub>out</sub>. Then the key test is to measure whether Score<sub>\*</sub>(y*) > Score<sub>\*</sub>(y<sub>out</sub>). If this inequality holds, then we blame the optimization algorithm for the mistake. Refer to the previous chapter to make sure you understand the logic behind this. Otherwise, we blame the computation of Score​<sub>\*</sub>(y).
