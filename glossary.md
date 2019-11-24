@@ -26,6 +26,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | bias (bias as variance)           | độ chệch                                                       | [#125](http://bit.ly/32HJI3S)                                |
 | big data                          | big data                                                       |                                                              |
 | Blackbox dev set                  | tập phát triển Blackbox                                        | [#162](http://bit.ly/2MVHcl7)                                |
+| bounding box | khung chứa |[#353](http://bit.ly/2sbhDVj) |
 | classifier                        | bộ phân loại                                                   |                                                              |
 | constrain                         | ràng buộc                                                      |                                                              |
 | cross validation                  | kiểm định chéo                                                 |                                                              |
