@@ -45,6 +45,8 @@
 * [43. Tổng hợp dữ liệu nhân tạo](#43-tổng-hợp-dữ-liệu-nhân-tạo)
 * [44. Bài kiểm tra xác minh tối ưu](#44-bài-kiểm-tra-xác-minh-tối-ưu)
 * [45. Dạng chung của bài kiểm tra xác minh tối ưu](#45-dạng-chung-của-bài-kiểm-tra-xác-minh-tối-ưu)
+* [46. Ví dụ về Học tăng cường](#46-ví-dụ-về-học-tăng-cường)
+* [47. Sự trỗi dậy của học đầu-cuối](#47-sự-trỗi-dậy-của-học-đầu-cuối)
 ------------------
 > # 1. Why Machine Learning Strategy
 
@@ -2249,4 +2251,123 @@ Giả sử thuật toán của bạn dịch ra một bản không chính xác *E
 > It is a very common "design pattern" in AI to first learn an approximate scoring function Score<sub>\*</sub>(.), then use an approximate maximization algorithm. If you are able to spot this pattern, you will be able to use the Optimization Verification test to understand your source of errors.
 
 Đây là một “mẫu thiết kế” rất phổ biến trong AI khi lần đầu học một hàm tính điểm gần đúng Điểm<sub>\*</sub>(.), sau đó sử dụng một thuật toán tối đa xấp xỉ. Nếu bạn có thể phát hiện ra kiểu mẫu này, bạn sẽ có thể sử dụng bài kiểm tra xác minh tối ưu để hiểu nguồn gốc lỗi của mình.
+
+------------------
+> # 46. Reinforcement learning example
+
+# 46. Ví dụ về Học tăng cường
+
+![img](../imgs/C46_01.png)
+
+> Suppose you are using machine learning to teach a helicopter to fly complex maneuvers. Here is a time-lapse photo of a computer-controller helicopter executing a landing with the engine turned off.
+
+Giả sử như bạn đang sử dụng học máy để dạy trực thăng bay theo những chuyển động phức tạp. Đây là một tấm ảnh time-lapse của một chiếc trực thăng được máy tính điều khiển thực hiện việc hạ cánh khi động cơ đã tắt.
+
+> This is called an "autorotation" maneuver. It allows helicopters to land even if their engine unexpectedly fails. Human pilots practice this maneuver as part of their training. Your goal is to use a learning algorithm to fly the helicopter through a trajectory *T* that ends in a safe landing.
+
+Đây được gọi là kĩ thuật "quay tự động". Nó cho phép trực thăng hạ cánh ngay cả khi động cơ bị hỏng ngoài dự kiến. Phi công thực hành kĩ thuật bay này như một phần trong công tác huấn luyện bay. Nhiệm vụ của bạn là sử dụng một thuật toán học tập để lái chiếc trực thăng qua một quỹ đạo *T* và kết thúc với một pha hạ cánh an toàn.
+
+> To apply reinforcement learning, you have to develop a "Reward function" *R*(.) that gives a score measuring how good each possible trajectory *T* is. For example, if *T* results in the helicopter crashing, then perhaps the reward is *R(T)* = -1,000—a huge negative reward. A trajectory *T* resulting in a safe landing might result in a positive *R(T)* w ith the exact value depending on how smooth the landing was. The reward function *R*(.) is typically chosen by hand to quantify how desirable different trajectories *T* are. It has to trade off how bumpy the landing was, whether the helicopter landed in exactly the desired spot, how rough the ride down was for passengers, and so on. It is not easy to design good reward functions.
+
+Để áp dụng học tăng cường, bạn phải phát triển một "hàm điểm thưởng" *R*(.) trả về một chỉ số đánh giá mức độ tốt của mỗi quỹ đạo *T*. Lấy ví dụ, nếu *T* kết thúc bằng việc trực thăng bị rơi, thì có thể nhận điểm thưởng *R(T)* = -1.000-một điểm thưởng âm rất lớn. Một quỹ đạo *T* kết thúc bằng việc trực thăng hạ cánh an toàn có thể sẽ cho *R(T)* dương với giá trị chính xác phụ thuộc vào việc hạ cánh êm ái như thế nào. Hàm điểm thưởng *R*(.) thường được chọn thủ công để định lượng mức độ mong muốn của những quỹ đạo *T* khác nhau. Nó phải đánh đổi giữa những đặc tính như mức độ xóc khi hạ cánh, trực thăng có hạ cánh đúng vị trí mong muốn không, quá trình hạ độ cao có nhiều biến động đối với hành khách không, và vân vân. Thiết kế để có được những hàm điểm thưởng tốt không hề dễ dàng.
+
+> Given a reward function *R(T)*, the job of the reinforcement learning algorithm is to control the helicopter so that it achieves max<sub>*T*</sub>*R(T)*. However, reinforcement learning algorithms make many approximations and may not succeed in achieving this maximization.
+
+Với một hàm điểm thưởng *R(T)* cho trước, công việc của thuật toán học tăng cường là điều khiển trực thăng sao cho nó đạt được điểm thưởng cao nhất max<sub>*T*</sub>*R(T)*. Tuy nhiên, thuật toán học tăng cường có nhiều phép xấp xỉ và có thể sẽ không thành công trong việc tối ưu này.
+
+> Suppose you have picked some reward *R(.)* and have run your learning algorithm. However,
+> its performance appears far worse than your human pilot—the landings are bumpier and
+> seem less safe than what a human pilot achieves. How can you tell if the fault is with the
+> reinforcement learning algorithm—which is trying to carry out a trajectory that achieves
+> max<sub>*T*</sub>*R(T)*— or if the fault is with the reward function—which is trying to measure as well as specify the ideal tradeoff between ride bumpiness and accuracy of landing spot?
+
+Giả sử bạn đã có một hàm điểm thưởng *R(.)* nào đó và đã chạy thuật toán học của bạn. Tuy nhiên chất lượng của nó còn thua xa chất lượng của người lái (ví dụ: hạ cánh xóc hơn và có vẻ kém an toàn hơn so với chất lượng của phi công). Làm sao để bạn biết được liệu đó có phải là lỗi của thuật toán học tăng cường - được dùng để tính toán một quỹ đạo để tối đa max<sub>*T*</sub>*R(T)*, hay là lỗi của hàm điểm thưởng - được dùng để đo cũng như xác định mức đánh đổi lý tưởng giữa độ xóc của chuyến bay và độ chính xác của vị trí hạ cánh?
+
+> To apply the Optimization Verification test, let *T*<sub>human</sub> be the trajectory achieved by the human pilot, and let *T*<sub>out</sub> be the trajectory achieved by the algorithm. According to our description above, *T*<sub>human</sub> is a superior trajectory to *T*<sub>out</sub>. Thus, the key test is the following:
+> Does it hold true that *R*(*T*<sub>human</sub>) > *R*(*T*<sub>out</sub>)?
+
+Để áp dụng bài kiểm tra xác minh tố ưu, cho *T*<sub>người</sub> là quỹ đạo bay của phi công, và cho *T*<sub>ra</sub> là quỹ đạo đạt được của thuật toán. Dựa theo mô tả ở phía trên của chúng ta, *T*<sub>người</sub> là quỹ đạo tốt hơn so với *T*<sub>ra</sub>. Do vậy, bài kiểm tra chính là:
+Liệu có đúng không khi *R*(*T*<sub>người</sub>) > *R*(*T*<sub>ra</sub>)?
+
+> Case 1: If this inequality holds, then the reward function *R(.)* is correctly rating *T*<sub>human</sub> as superior to *T*<sub>out</sub>. But our reinforcement learning algorithm is finding the inferior *T*<sub>out</sub>. This suggests that working on improving our reinforcement learning algorithm is worthwhile.
+
+Trường hợp 1: Nếu bất đẳng thức này đúng, thì hàm điểm thưởng *R(.)* đang đánh giá đúng rằng *T*<sub>người</sub> vượt trội hơn so với *T*<sub>ra</sub>. Nhưng vậy thì thuật toán học tăng cường của chúng ta đang tìm *T*<sub>ra</sub> kém hơn. Điều này gợi ý rằng bỏ công sức cải thiện thuật toán học tăng cường của chúng ta là xứng đáng.
+
+> Case 2: The inequality does not hold: *R*(*T*<sub>human</sub>) ≤ *R*(*T*<sub>out</sub>). This mean *R(.)* assigns a worse score to *T*<sub>human</sub> even though it is the superior trajectory. You should work on improving *R(.)* to better capture the tradeoffs that correspond to a good landing.
+
+Trường hợp 2: Bất đẳng thức trên không đúng: *R*(*T*<sub>người</sub>) ≤ *R*(*T*<sub>ra</sub>). Tức là *R(.)* đang gán cho *T*<sub>người</sub> một điểm số tệ hơn dù cho nó là quỹ đạo tốt hơn. Bạn nên cải thiện *R(.)* để có thể nắm bắt việc đánh đổi giữa các tiêu chí tương đương với một cú hạ cánh tốt.
+
+> Many machine learning applications have this "pattern" of optimizing an approximate
+> scoring function Score<sub>x</sub>(.) using an approximate search algorithm. Sometimes, there is no specified input *x*, so this reduces to just Score(.). In our example above, the scoring function was the reward function Score(*T*) = R(*T*) , and the optimization algorithm was the reinforcement learning algorithm trying to execute a good trajectory *T*.
+
+Nhiều ứng dụng machine learning có chung "khuôn mẫu" là tối ưu xấp xỉ một hàm tính điểm Điểm<sub>x</sub>(.) sử dụng một thuật toán tìm kiếm xấp xỉ. Đôi khi cũng không tồn tại một đầu vào *x* được chỉ định trước, vậy nên nó suy giảm thành Điểm(.). Trong ví dụ trên của chúng ta, hàm tính điểm chính là hàm điểm thưởng Điểm(*T*) = R(*T*), và thuật toán tối ưu là thuật toán học tăng cường đang cố thực thi một quỹ đạo bay *T* tốt.
+
+> One difference between this and earlier examples is that, rather than comparing to an "optimal" output, you were instead comparing to human-level performance *T*<sub>human</sub>. We assumed *T*<sub>human</sub> is pretty good, even if not optimal. In general, so long as you have some y* (in this example, *T*<sub>human</sub>) that is a superior output to the performance of your current learning algorithm—even if it is not the "optimal" output—then the Optimization Verification test can indicate whether it is more promising to improve the optimization algorithm or the scoring function.
+
+Một điểm khác biệt so với những ví dụ trước là, thay vì so sánh với một kết quả "tối ưu", bạn so sánh với chất lượng mức con người *T*<sub>người</sub>. Chúng ta giả sử *T*<sub>người</sub> khá là tốt, hoặc thậm chí là tối ưu. Nhìn chung, miễn là bạn có kết quả y* (trong ví dụ này, *T*<sub>người</sub>) tốt hơn so với thuật toán học của bạn hiện thời-mặc dù có thể nó không phải là kết quả "tối ưu"-thì Bài kiểm tra xác minh tối ưu có thể chỉ ra xem liệu cải thiện thuật toán tối ưu hay cải thiện hàm tính điểm sẽ hứa hẹn hơn.
+
+------------------
+> # 47. The rise of end-to-end learning
+
+# 47. Sự trỗi dậy của học đầu-cuối
+
+> Suppose you want to build a system to examine online product reviews and automatically tell you if the writer liked or disliked that product. For example, you hope to recognize the following review as highly positive:
+
+Giả sử bạn muốn xây dựng một hệ thống kiểm tra đánh giá các phản hồi sản phẩm trực tuyến và tự động cho biết liệu người viết có thích sản phẩm đó hay không. Ví dụ, bạn hi vọng có thể nhận ra phản hồi dưới đây là tích cực:
+
+> This is a great mop!
+
+Cây lau nhà này thật tuyệt!
+
+> and the following as highly negative:
+
+và đoạn dưới đây với kết quả là tiêu cực:
+
+> This mop is low quality--I regret buying it.
+
+Cây lau nhà này thật kém chất lượng--Tôi hối hận vì đã mua nó.
+
+> The problem of recognizing positive vs. negative opinions is called "sentiment classification." To build this system, you might build a "pipeline" of two components:
+
+Bài toán về nhận dạng các quan điểm tích cực và tiêu cực được gọi là "phân loại cảm xúc". Để xây dựng hệ thống này, bạn có thể tạo một "pipeline" bao gồm hai thành phần:
+
+> 1. Parser: A system that annotates the text with information identifying the most important words.[15] For example, you might use the parser to label all the adjectives and nouns. You would therefore get the following annotated text:
+
+1. Bộ phân tích cú pháp: Một hệ thống tạo chú thích văn bản trích xuất thông tin từ những từ quan trọng nhất. [15] Ví dụ, bạn có thể sử dụng bộ phân tích cú pháp để tạo nhãn tất cả tính từ và danh từ. Từ đó có được đoạn chú thích như sau:
+
+> This is a great<sub>Adjective</sub> mop<sub>Noun</sub>!
+
+Cây lau nhà<sub>Danh Từ</sub> này thật tuyệt<sub>Tính từ</sub>!
+
+> 2. Sentiment classifier: A learning algorithm that takes as input the annotated text and predicts the overall sentiment. The parser’s annotation could help this learning algorithm greatly: By giving adjectives a higher weight, your algorithm will be able to quickly hone in on the important words such as "great," and ignore less important words such as "this."
+
+2. Bộ phân loại cảm xúc: Một thuật toán học sử dụng đầu vào là văn bản đã chú thích để dự đoán cảm xúc tổng thể. Khả năng chú thích của bộ phân tích cú pháp có thể giúp ích rất nhiều thuật toán học: Bằng việc tập trung hơn vào các tính từ, thuật toán của bạn có thể nhanh chóng xác định các từ quan trọng như "tuyệt", và lờ đi những từ ít quan trọng hơn như "này".
+
+> We can visualize your "pipeline" of two components as follows:
+
+Chúng ta có thể hình dung "pipeline" của hai thành phần này như sau:
+
+![img](../imgs/C47_01.png)
+
+> There has been a recent trend toward replacing pipeline systems with a single learning algorithm. An **end-to-end learning algorithm** for this task would simply take as input the raw, original text "This is a great mop!", and try to directly recognize the sentiment:
+
+Xu hướng gần đây là thay đổi hệ thống pipeline với một thuật toán duy nhất. Một **thuật toán đầu-cuối** cho tác vụ này sẽ đơn giản là thu thập văn bản gốc "Cây lau nhà này thật tuyệt!", và cố gắng trực tiếp nhận ra cảm xúc từ nó:
+
+![img](../imgs/C47_02.png)
+
+> Neural networks are commonly used in end-to-end learning systems. The term "end-to-end" refers to the fact that we are asking the learning algorithm to go directly from the input to the desired output. I.e., the learning algorithm directly connects the "input end" of the system to the "output end."
+
+Mạng neural được sử dụng phổ biến trong các hệ thống đầu-cuối. Thuật ngữ "đầu-cuối" phản ánh thực tế là chúng ta yêu cầu thuật toán chạy trực tiếp từ đầu vào cho đến đầu ra mong muốn. Tức là, thuật toán học kết nối trực tiếp "đầu vào" cho đến "đầu ra" của hệ thống.
+
+> In problems where data is abundant, end-to-end systems have been remarkably successful. But they are not always a good choice. The next few chapters will give more examples of end-to-end systems as well as give advice on when you should and should not use them.
+
+Đối với các vấn đề khi mà dữ diệu rất phong phú, hệ thống đầu-cuối hoạt động khá hiệu quả. Tuy nhiên không phải lúc nào nó cũng là một lựa chọn tốt. Các chương tiếp theo sẽ cung cấp thêm một số ví dụ về hệ thống đầu-cuối cũng như lời khuyên để bạn biết thời điểm nào nên hoặc không nên sử dụng chúng.
+
+> **FOOTNOTE:**
+
+**GHI CHÚ**
+
+> [15]  parser gives a much richer annotation of the text than this, but this simplified description will suffice for explaining end-to-end deep learning.
+
+[15] Bộ phân tích cú pháp có thể cung cấp nhiều hơn các chú thích từ văn bản, tuy nhiên định nghĩa tối giản này là đủ để giải thích cho hệ thống học sâu đầu-cuối.
 
