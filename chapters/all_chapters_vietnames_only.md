@@ -45,6 +45,8 @@
 * [43. Tổng hợp dữ liệu nhân tạo](#43-tổng-hợp-dữ-liệu-nhân-tạo)
 * [44. Bài kiểm tra xác minh tối ưu](#44-bài-kiểm-tra-xác-minh-tối-ưu)
 * [45. Dạng chung của bài kiểm tra xác minh tối ưu](#45-dạng-chung-của-bài-kiểm-tra-xác-minh-tối-ưu)
+* [46. Ví dụ về Học tăng cường](#46-ví-dụ-về-học-tăng-cường)
+* [47. Sự trỗi dậy của học đầu-cuối](#47-sự-trỗi-dậy-của-học-đầu-cuối)
 ------------------
 
 # 1. Tại sao cần chiến lược Học Máy 
@@ -1746,4 +1748,91 @@ Giả sử thuật toán của bạn dịch ra một bản không chính xác *E
 
 
 Đây là một “mẫu thiết kế” rất phổ biến trong AI khi lần đầu học một hàm tính điểm gần đúng Điểm<sub>\*</sub>(.), sau đó sử dụng một thuật toán tối đa xấp xỉ. Nếu bạn có thể phát hiện ra kiểu mẫu này, bạn sẽ có thể sử dụng bài kiểm tra xác minh tối ưu để hiểu nguồn gốc lỗi của mình.
+
+------------------
+
+# 46. Ví dụ về Học tăng cường
+
+![img](../imgs/C46_01.png)
+
+
+Giả sử như bạn đang sử dụng học máy để dạy trực thăng bay theo những chuyển động phức tạp. Đây là một tấm ảnh time-lapse của một chiếc trực thăng được máy tính điều khiển thực hiện việc hạ cánh khi động cơ đã tắt.
+
+
+Đây được gọi là kĩ thuật "quay tự động". Nó cho phép trực thăng hạ cánh ngay cả khi động cơ bị hỏng ngoài dự kiến. Phi công thực hành kĩ thuật bay này như một phần trong công tác huấn luyện bay. Nhiệm vụ của bạn là sử dụng một thuật toán học tập để lái chiếc trực thăng qua một quỹ đạo *T* và kết thúc với một pha hạ cánh an toàn.
+
+
+Để áp dụng học tăng cường, bạn phải phát triển một "hàm điểm thưởng" *R*(.) trả về một chỉ số đánh giá mức độ tốt của mỗi quỹ đạo *T*. Lấy ví dụ, nếu *T* kết thúc bằng việc trực thăng bị rơi, thì có thể nhận điểm thưởng *R(T)* = -1.000-một điểm thưởng âm rất lớn. Một quỹ đạo *T* kết thúc bằng việc trực thăng hạ cánh an toàn có thể sẽ cho *R(T)* dương với giá trị chính xác phụ thuộc vào việc hạ cánh êm ái như thế nào. Hàm điểm thưởng *R*(.) thường được chọn thủ công để định lượng mức độ mong muốn của những quỹ đạo *T* khác nhau. Nó phải đánh đổi giữa những đặc tính như mức độ xóc khi hạ cánh, trực thăng có hạ cánh đúng vị trí mong muốn không, quá trình hạ độ cao có nhiều biến động đối với hành khách không, và vân vân. Thiết kế để có được những hàm điểm thưởng tốt không hề dễ dàng.
+
+
+Với một hàm điểm thưởng *R(T)* cho trước, công việc của thuật toán học tăng cường là điều khiển trực thăng sao cho nó đạt được điểm thưởng cao nhất max<sub>*T*</sub>*R(T)*. Tuy nhiên, thuật toán học tăng cường có nhiều phép xấp xỉ và có thể sẽ không thành công trong việc tối ưu này.
+
+
+Giả sử bạn đã có một hàm điểm thưởng *R(.)* nào đó và đã chạy thuật toán học của bạn. Tuy nhiên chất lượng của nó còn thua xa chất lượng của người lái (ví dụ: hạ cánh xóc hơn và có vẻ kém an toàn hơn so với chất lượng của phi công). Làm sao để bạn biết được liệu đó có phải là lỗi của thuật toán học tăng cường - được dùng để tính toán một quỹ đạo để tối đa max<sub>*T*</sub>*R(T)*, hay là lỗi của hàm điểm thưởng - được dùng để đo cũng như xác định mức đánh đổi lý tưởng giữa độ xóc của chuyến bay và độ chính xác của vị trí hạ cánh?
+
+
+Để áp dụng bài kiểm tra xác minh tố ưu, cho *T*<sub>người</sub> là quỹ đạo bay của phi công, và cho *T*<sub>ra</sub> là quỹ đạo đạt được của thuật toán. Dựa theo mô tả ở phía trên của chúng ta, *T*<sub>người</sub> là quỹ đạo tốt hơn so với *T*<sub>ra</sub>. Do vậy, bài kiểm tra chính là:
+Liệu có đúng không khi *R*(*T*<sub>người</sub>) > *R*(*T*<sub>ra</sub>)?
+
+
+Trường hợp 1: Nếu bất đẳng thức này đúng, thì hàm điểm thưởng *R(.)* đang đánh giá đúng rằng *T*<sub>người</sub> vượt trội hơn so với *T*<sub>ra</sub>. Nhưng vậy thì thuật toán học tăng cường của chúng ta đang tìm *T*<sub>ra</sub> kém hơn. Điều này gợi ý rằng bỏ công sức cải thiện thuật toán học tăng cường của chúng ta là xứng đáng.
+
+
+Trường hợp 2: Bất đẳng thức trên không đúng: *R*(*T*<sub>người</sub>) ≤ *R*(*T*<sub>ra</sub>). Tức là *R(.)* đang gán cho *T*<sub>người</sub> một điểm số tệ hơn dù cho nó là quỹ đạo tốt hơn. Bạn nên cải thiện *R(.)* để có thể nắm bắt việc đánh đổi giữa các tiêu chí tương đương với một cú hạ cánh tốt.
+
+
+Nhiều ứng dụng machine learning có chung "khuôn mẫu" là tối ưu xấp xỉ một hàm tính điểm Điểm<sub>x</sub>(.) sử dụng một thuật toán tìm kiếm xấp xỉ. Đôi khi cũng không tồn tại một đầu vào *x* được chỉ định trước, vậy nên nó suy giảm thành Điểm(.). Trong ví dụ trên của chúng ta, hàm tính điểm chính là hàm điểm thưởng Điểm(*T*) = R(*T*), và thuật toán tối ưu là thuật toán học tăng cường đang cố thực thi một quỹ đạo bay *T* tốt.
+
+
+Một điểm khác biệt so với những ví dụ trước là, thay vì so sánh với một kết quả "tối ưu", bạn so sánh với chất lượng mức con người *T*<sub>người</sub>. Chúng ta giả sử *T*<sub>người</sub> khá là tốt, hoặc thậm chí là tối ưu. Nhìn chung, miễn là bạn có kết quả y* (trong ví dụ này, *T*<sub>người</sub>) tốt hơn so với thuật toán học của bạn hiện thời-mặc dù có thể nó không phải là kết quả "tối ưu"-thì Bài kiểm tra xác minh tối ưu có thể chỉ ra xem liệu cải thiện thuật toán tối ưu hay cải thiện hàm tính điểm sẽ hứa hẹn hơn.
+
+------------------
+
+# 47. Sự trỗi dậy của học đầu-cuối
+
+
+Giả sử bạn muốn xây dựng một hệ thống kiểm tra đánh giá các phản hồi sản phẩm trực tuyến và tự động cho biết liệu người viết có thích sản phẩm đó hay không. Ví dụ, bạn hi vọng có thể nhận ra phản hồi dưới đây là tích cực:
+
+
+Cây lau nhà này thật tuyệt!
+
+
+và đoạn dưới đây với kết quả là tiêu cực:
+
+
+Cây lau nhà này thật kém chất lượng--Tôi hối hận vì đã mua nó.
+
+
+Bài toán về nhận dạng các quan điểm tích cực và tiêu cực được gọi là "phân loại cảm xúc". Để xây dựng hệ thống này, bạn có thể tạo một "pipeline" bao gồm hai thành phần:
+
+
+1. Bộ phân tích cú pháp: Một hệ thống tạo chú thích văn bản trích xuất thông tin từ những từ quan trọng nhất. [15] Ví dụ, bạn có thể sử dụng bộ phân tích cú pháp để tạo nhãn tất cả tính từ và danh từ. Từ đó có được đoạn chú thích như sau:
+
+
+Cây lau nhà<sub>Danh Từ</sub> này thật tuyệt<sub>Tính từ</sub>!
+
+
+2. Bộ phân loại cảm xúc: Một thuật toán học sử dụng đầu vào là văn bản đã chú thích để dự đoán cảm xúc tổng thể. Khả năng chú thích của bộ phân tích cú pháp có thể giúp ích rất nhiều thuật toán học: Bằng việc tập trung hơn vào các tính từ, thuật toán của bạn có thể nhanh chóng xác định các từ quan trọng như "tuyệt", và lờ đi những từ ít quan trọng hơn như "này".
+
+
+Chúng ta có thể hình dung "pipeline" của hai thành phần này như sau:
+
+![img](../imgs/C47_01.png)
+
+
+Xu hướng gần đây là thay đổi hệ thống pipeline với một thuật toán duy nhất. Một **thuật toán đầu-cuối** cho tác vụ này sẽ đơn giản là thu thập văn bản gốc "Cây lau nhà này thật tuyệt!", và cố gắng trực tiếp nhận ra cảm xúc từ nó:
+
+![img](../imgs/C47_02.png)
+
+
+Mạng neural được sử dụng phổ biến trong các hệ thống đầu-cuối. Thuật ngữ "đầu-cuối" phản ánh thực tế là chúng ta yêu cầu thuật toán chạy trực tiếp từ đầu vào cho đến đầu ra mong muốn. Tức là, thuật toán học kết nối trực tiếp "đầu vào" cho đến "đầu ra" của hệ thống.
+
+
+Đối với các vấn đề khi mà dữ diệu rất phong phú, hệ thống đầu-cuối hoạt động khá hiệu quả. Tuy nhiên không phải lúc nào nó cũng là một lựa chọn tốt. Các chương tiếp theo sẽ cung cấp thêm một số ví dụ về hệ thống đầu-cuối cũng như lời khuyên để bạn biết thời điểm nào nên hoặc không nên sử dụng chúng.
+
+
+**GHI CHÚ**
+
+
+[15] Bộ phân tích cú pháp có thể cung cấp nhiều hơn các chú thích từ văn bản, tuy nhiên định nghĩa tối giản này là đủ để giải thích cho hệ thống học sâu đầu-cuối.
 
