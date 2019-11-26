@@ -12,7 +12,7 @@ import urllib.request
 
 NUM_CHAPTERS = 58
 # TODO: get rid of max chapter, auto infer from CONTRIBUTIONS
-MAX_CHAPTER = 50
+MAX_CHAPTER = 51
 PENDING_CHAPTERS = []
 
 CHAPTERS_DIR = './chapters/'
@@ -26,7 +26,7 @@ PR_PREFIX = 'https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Tran
 TRANSLATE_INDICATOR_STR = '--> _replace THIS LINE by your translation for the above line_'
 
 PARTS = [
-    {'path': '', 'range': [1, 4]},
+    {'path': './chapters/p00_01_04.md', 'range': [1, 4]},
     {'path': './chapters/p01_05_12.md', 'range': [5, 12]},
     {'path': './chapters/p02_13_19.md', 'range': [13, 19]},
     {'path': './chapters/p03_20_27.md', 'range': [20, 27]},
@@ -127,8 +127,38 @@ def toc_insert_chapter(all_file_handler, chapter_path):
         display_text=_remove_sharp(part_title),
         link_to_chapter=link
     )
-    all_file_handler.write('* ' + full_link + '\n')
+    all_file_handler.write('\t* ' + full_link + '\n')
 
+
+def content_insert_part(all_file_handler, part_path, vn_only):
+    with codecs.open(part_path, 'r', encoding='utf-8') as one_file:
+        for line in one_file:
+            if vn_only and line.startswith('>'):
+                continue
+            try:
+                all_file_handler.write(line)
+            except UnicodeDecodeError as e:
+                print('Line with decode error:')
+                print(e)
+    all_file_handler.write('\n')
+
+
+def content_insert_chapter(all_file_handler, chapter_path, vn_only):
+    with codecs.open(chapter_path, 'r', encoding='utf-8') as one_file:
+        for line in one_file:
+            if vn_only and line.startswith('>'):
+                continue
+            try:
+                if line.startswith('# '):
+                    line = '#' + line
+                elif line.startswith('> # '):
+                    line = '> ## ' + line[len('> # '):]
+                
+                all_file_handler.write(line)
+            except UnicodeDecodeError as e:
+                print('Line with decode error:')
+                print(e)
+    all_file_handler.write('\n')
 
 
 def main(vn_only=True):
@@ -140,25 +170,25 @@ def main(vn_only=True):
         # table of content
         all_file.write("**MỤC LỤC**\n\n")
         for p, part in enumerate(PARTS):
-            if p > 0:
-                part_path = part['path']
-                toc_insert_part(all_file, part_path)
+            part_path = part['path']
+            toc_insert_part(all_file, part_path)
             start_chapter, end_chatper = part['range']
             for i in range(start_chapter, end_chatper + 1):
-                if i in PENDING_CHAPTERS:
+                if i in PENDING_CHAPTERS or i > MAX_CHAPTER:
                     continue
-                # chapter_path = _chapter_path_from_chapter_number(i)
-                # chapter_title = _get_chapter_title(i)
                 chapter_path = _chapter_path_from_chapter_number(i)
                 toc_insert_chapter(all_file, chapter_path)
-                # link = _create_header_link(chapter_title)
-                # full_link = "[{display_text}]({link_to_chapter})".format(
-                #     display_text=_remove_sharp(chapter_title),
-                #     link_to_chapter=link
-                # )
-                # all_file.write('* ' + full_link + '\n')
 
-        # # main content
+        # main content
+        for p, part in enumerate(PARTS):
+            part_path = part['path']
+            content_insert_part(all_file, part_path, vn_only)
+            start_chapter, end_chatper = part['range']
+            for i in range(start_chapter, end_chatper + 1):
+                if i in PENDING_CHAPTERS or i > MAX_CHAPTER:
+                    continue
+                chapter_path = _chapter_path_from_chapter_number(i)
+                content_insert_chapter(all_file, chapter_path, vn_only)
         # for i in range(1, MAX_CHAPTER + 1):
         #     if i in PENDING_CHAPTERS:
         #         continue
@@ -265,5 +295,5 @@ def gen_readme():
 
 if __name__ == '__main__':
     main(vn_only=False)
-    # main(vn_only=True)
-    # gen_readme()
+    main(vn_only=True)
+    gen_readme()

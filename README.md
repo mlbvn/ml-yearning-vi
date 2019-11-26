@@ -74,7 +74,7 @@ Chi tiết hơn về việc đóng góp có thể tìm thấy [tại đây](http
 | [48. Thêm những ví dụ về học đầu-cuối.](./chapters/ch48.md) | [#360](http://tinyurl.com/rus2xdz) |
 | [49. Ưu nhược điểm của học đầu-cuối](./chapters/ch49.md) | [#340](http://tinyurl.com/rjppzme) |
 | [50. Lựa chọn các thành phần cho pipeline: Tính sẵn có của dữ liệu](./chapters/ch50.md) | [#342](http://tinyurl.com/wjd78jk) |
-| [51. chưa có tên](./chapters/ch51.md) | [#349](http://tinyurl.com/w5mhy63) |
+| [51. Lựa chọn các thành phần cho pipeline: tính đơn giản của tác vụ](./chapters/ch51.md) | [#349](http://tinyurl.com/w5mhy63) |
 | [52. chưa có tên](./chapters/ch52.md) | [#363](http://tinyurl.com/vffydte) |
 | [53. chưa có tên](./chapters/ch53.md) | [#355](http://tinyurl.com/sxgfq2v) |
 | [54. Quy lỗi cho một thành phần](./chapters/ch54.md) | [#352](http://tinyurl.com/yxx3ugx4) |
