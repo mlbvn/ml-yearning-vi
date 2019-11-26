@@ -17,7 +17,7 @@ PENDING_CHAPTERS = [52, 53, 55, 56, 57]
 
 CHAPTERS_DIR = './chapters/'
 ALL_CHAPTERS_FILENAME = 'all_chapters.md'
-ALL_CHAPTERS_VN_FILENAME = 'all_chapters_vietnames_only.md'
+ALL_CHAPTERS_VN_FILENAME = 'all_chapters_vietnamese_only.md'
 HEADER_TO_LINK_MAP = OrderedDict([(' ', '-'), ('#-', '#')])
 HEADER_TO_LINK_MAP.update({a: '' for a in '.:?/'})
 README_PREFIX = './readme_prefix.md'
