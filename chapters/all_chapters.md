@@ -61,7 +61,9 @@
 	* [50. Lựa chọn các thành phần cho pipeline: Tính sẵn có của dữ liệu](#50-lựa-chọn-các-thành-phần-cho-pipeline-tính-sẵn-có-của-dữ-liệu)
 	* [51. Lựa chọn các thành phần cho pipeline: tính đơn giản của tác vụ](#51-lựa-chọn-các-thành-phần-cho-pipeline-tính-đơn-giản-của-tác-vụ)
 * [Phần 9: Phân tích lỗi từng phần](#phần-9-phân-tích-lỗi-từng-phần)
+	* [54. Quy lỗi cho một thành phần](#54-quy-lỗi-cho-một-thành-phần)
 * [Phần 10: Tổng kết](#phần-10-tổng-kết)
+	* [58. Xây dựng một biệt đội siêu anh hùng - Hãy để đồng đội của bạn đọc điều này](#58-xây-dựng-một-biệt-đội-siêu-anh-hùng---hãy-để-đồng-đội-của-bạn-đọc-điều-này)
 > # Introduction
 
 # Giới thiệu
@@ -2623,6 +2625,80 @@ Tóm lại, khi lựa chọn các thành phần cho một pipeline, hãy cố g�
 > # Part 9: Error analysis by parts
 
 # Phần 9: Phân tích lỗi từng phần
+> ## 54. Attributing error to one part
+
+## 54. Quy lỗi cho một thành phần
+
+> Let’s continue to use this example:
+
+Cùng tiếp tục với ví dụ này:
+
+![img](../imgs/C54_01.png)
+
+> Suppose the cat detector outputted this bounding box:
+
+Giả sử bộ phát hiện mèo cho kết quả khung chứa như sau:
+
+![img](../imgs/C54_02.png)
+
+> The cat breed classifier is thus given this cropped image, whereupon it incorrectly outputs y=0, or that there is no cat in the picture.
+
+Khi đó bộ phân loại giống mèo nhận một ảnh bị cắt, và cho kết quả không chính xác là y=0, tức là không có con mèo nào trong hình.
+
+![img](../imgs/C54_03.png)
+
+> The cat detector did its job poorly. However, a highly skilled human could arguably still recognize the Siamese cat from the poorly cropped image. So do we attribute this error to the cat detector, or the cat breed classifier, or both? It is ambiguous.
+
+Bộ phát hiện mèo đã hoạt động không tốt. Tuy nhiên, một người có kỹ năng vẫn có thể nhận dạng mèo Siamese từ bức ảnh bị cắt lệch. Trường hợp này chúng ta nên quy lỗi cho bộ phát hiện mèo, bộ phân loại giống mèo, hay là cả hai? Có sự không rõ ràng ở đây.
+
+> If the number of ambiguous cases like these is small, you can make whatever decision you want and get a similar result. But here is a more formal test that lets you more definitively attribute the error to exactly one part:
+
+Nếu số lượng các trường hợp không rõ ràng là nhỏ, thì bất kỳ quyết định nào mà bạn lựa chọn đều sẽ đạt kết quả tương đương. Tuy nhiên một bài kiểm tra chính thức hơn sẽ giúp bạn quy lỗi chính xác cho một thành phần:
+
+> 1. Replace the cat detector output with a hand-labeled bounding box.
+
+1. Thay đầu ra của bộ phát hiện mèo bằng một khung chứa thủ công:
+
+![img](../imgs/C54_04.png)
+
+> 2. Run the corresponding cropped image through the cat breed classifier. If the cat breed classifier still misclassifies it, attribute the error to the cat breed classifier. Otherwise, attribute the error to the cat detector.
+
+2. Nạp ảnh bị cắt tương ứng vào bộ phân loại giống mèo. Nếu bộ phân loại giống mèo vẫn phân loại sai thì quy lỗi cho bộ phân loại giống mèo. Ngược lại thì quy lỗi cho bộ phát hiện mèo.
+
+> In other words, run an experiment in which you give the cat breed classifier a "perfect" input. There are two cases:
+
+Nói cách khác, thực hiện thử nghiệm mà ở đó bạn cung cấp cho bộ phân loại giống mèo một đầu vào "hoàn hảo". Hai trường hợp có thể xảy ra:
+
+> * Case 1: Even given a "perfect" bounding box, the cat breed classifier still incorrectly outputs y=0. In this case, clearly the cat breed classifier is at fault.
+
+* Trường hợp 1: Kể cả với một khung chứa "hoàn hảo", bộ phân loại giống mèo vẫn đưa ra kết quả không chính xác y=0. Trong trường hợp này rõ ràng là bộ phân loại giống mèo có lỗi.
+
+> * Case 2: Given a "perfect" bounding box, the breed classifier now correctly outputs y=1. This shows that if only the cat detector had given a more perfect bounding box, then the overall system’s output would have been correct. Thus, attribute the error to the cat detector.
+
+* Trường hợp 2: Với một khung chứa "hoàn hảo", bộ phân loại giống mèo đưa ra kết quả chính xác y=1. Điều này cho thấy nếu bộ phát hiện mèo có thể đưa ra khung chứa chính xác hơn, thì kết quả tổng thể của toàn hệ thống sẽ được cải thiện. Trong trường hợp này bộ phát hiện mèo có lỗi.
+
+> By carrying out this analysis on the misclassified dev set images, you can now unambiguously attribute each error to one component. This allows you to estimate the fraction of errors due to each component of the pipeline, and therefore decide where to focus your attention.
+
+Bằng cách phân tích các ảnh bị phân loại sai trên tập phát triển, bạn có thể quy lỗi chính xác cho một thành phần. Điều này cho phép bạn ước tính tỉ lệ lỗi cho từng thành phần của pipeline, từ đó quyết định thành phần cần tập trung khắc phục.
+
 > # Part 10: Conclusion
 
 # Phần 10: Tổng kết
+> ## 58. Building a superhero team - Get your teammates to read this
+
+## 58. Xây dựng một biệt đội siêu anh hùng - Hãy để đồng đội của bạn đọc điều này
+
+> Congratulations on finishing this book!
+
+Chúc mừng bạn đã hoàn thành quyển sách này!
+
+> In Chapter 2, we talked about how this book can help you become the superhero of your team.
+
+Trong chương 2, chúng ta đã nói về việc quyển sách này có thể giúp bạn trở thành siêu anh hùng trong nhóm của bạn.
+
+![img](../imgs/C58_01.png)
+
+> The only thing better than being a superhero is being part of a superhero team. I hope you’ll give copies of this book to your friends and teammates and help create other superheroes!
+
+Điều duy nhất tuyệt vời hơn trở thành một siêu anh hùng là trở thành một phần của một biệt đội siêu anh hùng. Tôi hi vọng bạn sẽ giới thiệu bản sao của quyển sách này cho bạn bè và đồng đội của bạn và tạo ra những siêu anh hùng khác.
+
