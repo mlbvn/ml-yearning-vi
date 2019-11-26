@@ -72,7 +72,7 @@ Chi tiết hơn về việc đóng góp có thể tìm thấy [tại đây](http
 | [46. Ví dụ về Học tăng cường](./chapters/ch46.md) | [#329](http://tinyurl.com/vf5vmgu) |
 | [47. Sự trỗi dậy của học đầu-cuối](./chapters/ch47.md) | [#333](http://tinyurl.com/rsx35j4), [#336](http://tinyurl.com/qmaat9c) |
 | [48. Thêm những ví dụ về học đầu-cuối.](./chapters/ch48.md) | [#360](http://tinyurl.com/rus2xdz) |
-| [Ưu nhược điểm của học đầu-cuối](./chapters/ch49.md) | [#340](http://tinyurl.com/rjppzme) |
+| [49. Ưu nhược điểm của học đầu-cuối](./chapters/ch49.md) | [#340](http://tinyurl.com/rjppzme) |
 | [50. Lựa chọn các thành phần cho pipeline: Tính sẵn có của dữ liệu](./chapters/ch50.md) | [#342](http://tinyurl.com/wjd78jk) |
 | [51. chưa có tên](./chapters/ch51.md) | [#349](http://tinyurl.com/w5mhy63) |
 | [52. chưa có tên](./chapters/ch52.md) | [#363](http://tinyurl.com/vffydte) |

@@ -48,7 +48,7 @@
 * [46. Ví dụ về Học tăng cường](#46-ví-dụ-về-học-tăng-cường)
 * [47. Sự trỗi dậy của học đầu-cuối](#47-sự-trỗi-dậy-của-học-đầu-cuối)
 * [48. Thêm những ví dụ về học đầu-cuối.](#48-thêm-những-ví-dụ-về-học-đầu-cuối)
-* [Ưu nhược điểm của học đầu-cuối](#ưu-nhược-điểm-của-học-đầu-cuối)
+* [49. Ưu nhược điểm của học đầu-cuối](#49-ưu-nhược-điểm-của-học-đầu-cuối)
 * [50. Lựa chọn các thành phần cho pipeline: Tính sẵn có của dữ liệu](#50-lựa-chọn-các-thành-phần-cho-pipeline-tính-sẵn-có-của-dữ-liệu)
 ------------------
 
@@ -1886,7 +1886,7 @@ Mặc dù phương pháp học đầu-cuối đã đạt được nhiều kết 
 
 ------------------
 
-# Ưu nhược điểm của học đầu-cuối
+# 49. Ưu nhược điểm của học đầu-cuối
 
 
 Xét một ví dụ về pipeline nhận dạng tiếng nói như trong các chương trước:
