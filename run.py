@@ -101,6 +101,36 @@ CONTRIBUTIONS = {
 }
 
 
+def _get_title_from_file_path(part_path):
+    with codecs.open(part_path, 'r', encoding='utf-8') as one_file:
+        for line in one_file:
+            if line.startswith('# '):
+                line = line.strip()
+                return line
+    assert False, part_path
+
+
+def toc_insert_part(all_file_handler, part_path):
+    part_title = _get_title_from_file_path(part_path)
+    link = _create_header_link(part_title)
+    full_link = "[{display_text}]({link_to_chapter})".format(
+        display_text=_remove_sharp(part_title),
+        link_to_chapter=link
+    )
+    all_file_handler.write('* ' + full_link + '\n')
+
+
+def toc_insert_chapter(all_file_handler, chapter_path):
+    part_title = _get_title_from_file_path(chapter_path)
+    link = _create_header_link(part_title)
+    full_link = "[{display_text}]({link_to_chapter})".format(
+        display_text=_remove_sharp(part_title),
+        link_to_chapter=link
+    )
+    all_file_handler.write('* ' + full_link + '\n')
+
+
+
 def main(vn_only=True):
     if vn_only:
         output_filename = os.path.join(CHAPTERS_DIR, ALL_CHAPTERS_VN_FILENAME)
@@ -109,34 +139,41 @@ def main(vn_only=True):
     with codecs.open(output_filename, 'w', encoding='utf-8') as all_file:
         # table of content
         all_file.write("**MỤC LỤC**\n\n")
-        for i in range(1, MAX_CHAPTER + 1):
-            if i in PENDING_CHAPTERS:
-                continue
-            chapter_path = _chapter_path_from_chapter_number(i)
-            chapter_title = _get_chapter_title(i)
-            link = _create_header_link(chapter_title)
-            full_link = "[{display_text}]({link_to_chapter})".format(
-                display_text=_remove_sharp(chapter_title),
-                link_to_chapter=link
-            )
-            all_file.write('* ' + full_link + '\n')
+        for p, part in enumerate(PARTS):
+            if p > 0:
+                part_path = part['path']
+                toc_insert_part(all_file, part_path)
+            start_chapter, end_chatper = part['range']
+            for i in range(start_chapter, end_chatper + 1):
+                if i in PENDING_CHAPTERS:
+                    continue
+                # chapter_path = _chapter_path_from_chapter_number(i)
+                # chapter_title = _get_chapter_title(i)
+                chapter_path = _chapter_path_from_chapter_number(i)
+                toc_insert_chapter(all_file, chapter_path)
+                # link = _create_header_link(chapter_title)
+                # full_link = "[{display_text}]({link_to_chapter})".format(
+                #     display_text=_remove_sharp(chapter_title),
+                #     link_to_chapter=link
+                # )
+                # all_file.write('* ' + full_link + '\n')
 
-        # main content
-        for i in range(1, MAX_CHAPTER + 1):
-            if i in PENDING_CHAPTERS:
-                continue
-            all_file.write('------------------\n')
-            chapter_path = os.path.join(CHAPTERS_DIR, 'ch{:02d}.md'.format(i))
-            with codecs.open(chapter_path, 'r', encoding='utf-8') as one_file:
-                for line in one_file:
-                    if vn_only and line.startswith('>'):
-                        continue
-                    try:
-                        all_file.write(line)
-                    except UnicodeDecodeError as e:
-                        print('Line with decode error:')
-                        print(e)
-            all_file.write('\n')
+        # # main content
+        # for i in range(1, MAX_CHAPTER + 1):
+        #     if i in PENDING_CHAPTERS:
+        #         continue
+        #     all_file.write('------------------\n')
+        #     chapter_path = os.path.join(CHAPTERS_DIR, 'ch{:02d}.md'.format(i))
+        #     with codecs.open(chapter_path, 'r', encoding='utf-8') as one_file:
+        #         for line in one_file:
+        #             if vn_only and line.startswith('>'):
+        #                 continue
+        #             try:
+        #                 all_file.write(line)
+        #             except UnicodeDecodeError as e:
+        #                 print('Line with decode error:')
+        #                 print(e)
+        #     all_file.write('\n')
 
 
 def _remove_sharp(title):
@@ -228,5 +265,5 @@ def gen_readme():
 
 if __name__ == '__main__':
     main(vn_only=False)
-    main(vn_only=True)
-    gen_readme()
+    # main(vn_only=True)
+    # gen_readme()

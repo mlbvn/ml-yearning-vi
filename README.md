@@ -77,7 +77,7 @@ Chi tiết hơn về việc đóng góp có thể tìm thấy [tại đây](http
 | [51. chưa có tên](./chapters/ch51.md) | [#349](http://tinyurl.com/w5mhy63) |
 | [52. chưa có tên](./chapters/ch52.md) | [#363](http://tinyurl.com/vffydte) |
 | [53. chưa có tên](./chapters/ch53.md) | [#355](http://tinyurl.com/sxgfq2v) |
-| [54. chưa có tên](./chapters/ch54.md) | [#352](http://tinyurl.com/yxx3ugx4) |
+| [54. Quy lỗi cho một thành phần](./chapters/ch54.md) | [#352](http://tinyurl.com/yxx3ugx4) |
 | [55. chưa có tên](./chapters/ch55.md) | [#364](http://tinyurl.com/wk5w9h3) |
 | [56. chưa có tên](./chapters/ch56.md) | [#362](http://tinyurl.com/yxxtmguk) |
 | [57. chưa có tên](./chapters/ch57.md) |  |
