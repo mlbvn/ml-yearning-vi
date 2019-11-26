@@ -120,14 +120,14 @@ def main(vn_only=True):
                 _insert_to_toc(all_file_writer, chapter_path, level=1)
 
         # main content
-        for p, part in enumerate(PARTS):
+        for part in PARTS:
             part_path = part['path']
             _insert_content(all_file_writer, part_path, vn_only, heading=1)
             start_chapter, end_chatper = part['range']
-            for i in range(start_chapter, end_chatper + 1):
-                if i in PENDING_CHAPTERS or i > MAX_CHAPTER:
+            for chapter_number in range(start_chapter, end_chatper + 1):
+                if chapter_number in PENDING_CHAPTERS or chapter_number > MAX_CHAPTER:
                     continue
-                chapter_path = _chapter_path_from_chapter_number(i)
+                chapter_path = _chapter_path_from_chapter_number(chapter_number)
                 _insert_content(all_file_writer, chapter_path, vn_only, heading=2)
 
 
