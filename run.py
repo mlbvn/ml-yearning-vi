@@ -101,56 +101,6 @@ CONTRIBUTIONS = {
 }
 
 
-def _get_title_from_file_path(part_path):
-    with codecs.open(part_path, 'r', encoding='utf-8') as one_file:
-        for line in one_file:
-            if line.startswith('# '):
-                line = line.strip()
-                return line
-    assert False, part_path
-
-
-def toc_insert_heading_from_file(all_file_writer, part_path, level):
-    part_title = _get_title_from_file_path(part_path)
-    link = _create_header_link(part_title)
-    full_link = "[{display_text}]({link_to_chapter})".format(
-        display_text=_remove_sharp(part_title),
-        link_to_chapter=link
-    )
-    all_file_writer.write('\t'*level + '* ' + full_link + '\n')
-
-
-def content_insert_part(all_file_writer, part_path, vn_only):
-    with codecs.open(part_path, 'r', encoding='utf-8') as one_file:
-        for line in one_file:
-            if vn_only and line.startswith('>'):
-                continue
-            try:
-                all_file_writer.write(line)
-            except UnicodeDecodeError as e:
-                print('Line with decode error:')
-                print(e)
-    all_file_writer.write('\n')
-
-
-def content_insert_chapter(all_file_writer, chapter_path, vn_only):
-    with codecs.open(chapter_path, 'r', encoding='utf-8') as one_file:
-        for line in one_file:
-            if vn_only and line.startswith('>'):
-                continue
-            try:
-                if line.startswith('# '):
-                    line = '#' + line
-                elif line.startswith('> # '):
-                    line = '> ## ' + line[len('> # '):]
-                
-                all_file_writer.write(line)
-            except UnicodeDecodeError as e:
-                print('Line with decode error:')
-                print(e)
-    all_file_writer.write('\n')
-
-
 def main(vn_only=True):
     if vn_only:
         output_filename = os.path.join(CHAPTERS_DIR, ALL_CHAPTERS_VN_FILENAME)
@@ -161,29 +111,65 @@ def main(vn_only=True):
         all_file_writer.write("**MỤC LỤC**\n\n")
         for part in PARTS:
             part_path = part['path']
-            toc_insert_heading_from_file(all_file_writer, part_path, level=0)
+            _insert_to_toc(all_file_writer, part_path, level=0)
             start_chapter, end_chatper = part['range']
             for chapter_number in range(start_chapter, end_chatper + 1):
                 if chapter_number in PENDING_CHAPTERS or chapter_number > MAX_CHAPTER:
                     continue
                 chapter_path = _chapter_path_from_chapter_number(chapter_number)
-                toc_insert_heading_from_file(all_file_writer, chapter_path, level=1)
+                _insert_to_toc(all_file_writer, chapter_path, level=1)
 
         # main content
         for p, part in enumerate(PARTS):
             part_path = part['path']
-            content_insert_part(all_file_writer, part_path, vn_only)
+            _insert_content(all_file_writer, part_path, vn_only, heading=1)
             start_chapter, end_chatper = part['range']
             for i in range(start_chapter, end_chatper + 1):
                 if i in PENDING_CHAPTERS or i > MAX_CHAPTER:
                     continue
                 chapter_path = _chapter_path_from_chapter_number(i)
-                content_insert_chapter(all_file_writer, chapter_path, vn_only)
+                _insert_content(all_file_writer, chapter_path, vn_only, heading=2)
 
 
 def _remove_sharp(title):
     assert title.startswith('# ')
     return title[len('# '):]
+
+
+def _get_title_from_file_path(part_path):
+    with codecs.open(part_path, 'r', encoding='utf-8') as one_file:
+        for line in one_file:
+            if line.startswith('# '):
+                line = line.strip()
+                return line
+    assert False, part_path
+
+
+def _insert_to_toc(all_file_writer, part_path, level):
+    part_title = _get_title_from_file_path(part_path)
+    link = _create_header_link(part_title)
+    full_link = "[{display_text}]({link_to_chapter})".format(
+        display_text=_remove_sharp(part_title),
+        link_to_chapter=link
+    )
+    all_file_writer.write('\t'*level + '* ' + full_link + '\n')
+
+
+def _insert_content(all_file_writer, chapter_path, vn_only, heading):
+    with codecs.open(chapter_path, 'r', encoding='utf-8') as one_file:
+        for line in one_file:
+            if vn_only and line.startswith('>'):
+                continue
+            try:
+                if line.startswith('# '):
+                    line = '#'*heading + ' ' + line[len('# '):]
+                elif line.startswith('> # '):
+                    line = '> ' + '#'*heading + ' ' + line[len('> # '):]
+                all_file_writer.write(line)
+            except UnicodeDecodeError as e:
+                print('Line with decode error:')
+                print(e)
+    all_file_writer.write('\n')
 
 
 def reformat():
@@ -270,5 +256,5 @@ def gen_readme():
 
 if __name__ == '__main__':
     main(vn_only=False)
-    # main(vn_only=True)
-    # gen_readme()
+    main(vn_only=True)
+    gen_readme()
