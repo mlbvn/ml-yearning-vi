@@ -159,7 +159,7 @@ def main(vn_only=True):
     with codecs.open(output_filename, 'w', encoding='utf-8') as all_file_writer:
         # table of content
         all_file_writer.write("**MỤC LỤC**\n\n")
-        for p, part in enumerate(PARTS):
+        for part in PARTS:
             part_path = part['path']
             toc_insert_heading_from_file(all_file_writer, part_path, level=0)
             start_chapter, end_chatper = part['range']
