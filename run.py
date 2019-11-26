@@ -110,24 +110,14 @@ def _get_title_from_file_path(part_path):
     assert False, part_path
 
 
-def toc_insert_part(all_file_handler, part_path):
+def toc_insert_heading_from_file(all_file_handler, part_path, level):
     part_title = _get_title_from_file_path(part_path)
     link = _create_header_link(part_title)
     full_link = "[{display_text}]({link_to_chapter})".format(
         display_text=_remove_sharp(part_title),
         link_to_chapter=link
     )
-    all_file_handler.write('* ' + full_link + '\n')
-
-
-def toc_insert_chapter(all_file_handler, chapter_path):
-    part_title = _get_title_from_file_path(chapter_path)
-    link = _create_header_link(part_title)
-    full_link = "[{display_text}]({link_to_chapter})".format(
-        display_text=_remove_sharp(part_title),
-        link_to_chapter=link
-    )
-    all_file_handler.write('\t* ' + full_link + '\n')
+    all_file_handler.write('\t'*level + '* ' + full_link + '\n')
 
 
 def content_insert_part(all_file_handler, part_path, vn_only):
@@ -171,13 +161,13 @@ def main(vn_only=True):
         all_file.write("**MỤC LỤC**\n\n")
         for p, part in enumerate(PARTS):
             part_path = part['path']
-            toc_insert_part(all_file, part_path)
+            toc_insert_heading_from_file(all_file, part_path, level=0)
             start_chapter, end_chatper = part['range']
             for i in range(start_chapter, end_chatper + 1):
                 if i in PENDING_CHAPTERS or i > MAX_CHAPTER:
                     continue
                 chapter_path = _chapter_path_from_chapter_number(i)
-                toc_insert_chapter(all_file, chapter_path)
+                toc_insert_heading_from_file(all_file, chapter_path, level=1)
 
         # main content
         for p, part in enumerate(PARTS):
@@ -280,5 +270,5 @@ def gen_readme():
 
 if __name__ == '__main__':
     main(vn_only=False)
-    main(vn_only=True)
-    gen_readme()
+    # main(vn_only=True)
+    # gen_readme()
