@@ -25,6 +25,21 @@ README = './README.md'
 PR_PREFIX = 'https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/'
 TRANSLATE_INDICATOR_STR = '--> _replace THIS LINE by your translation for the above line_'
 
+PARTS = [
+    {'path': '', 'range': [1, 4]},
+    {'path': './chapters/p01_05_12.md', 'range': [5, 12]},
+    {'path': './chapters/p02_13_19.md', 'range': [13, 19]},
+    {'path': './chapters/p03_20_27.md', 'range': [20, 27]},
+    {'path': './chapters/p04_28_32.md', 'range': [28, 32]},
+    {'path': './chapters/p05_33_35.md', 'range': [33, 35]},
+    {'path': './chapters/p06_36_43.md', 'range': [36, 43]},
+    {'path': './chapters/p07_44_46.md', 'range': [44, 46]},
+    {'path': './chapters/p08_47_52.md', 'range': [47, 52]},
+    {'path': './chapters/p09_53_57.md', 'range': [53, 57]},
+    {'path': './chapters/p10_58.md', 'range': [58, 58]},
+]
+
+
 CONTRIBUTIONS = {
     1: [40],
     2: [54],
