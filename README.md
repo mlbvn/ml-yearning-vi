@@ -68,17 +68,17 @@ Chi tiết hơn về việc đóng góp có thể tìm thấy [tại đây](http
 | [42. Xử lý dữ liệu không tương đồng](./chapters/ch42.md) | [#298](http://tinyurl.com/yxxlkgyr) |
 | [43. Tổng hợp dữ liệu nhân tạo](./chapters/ch43.md) | [#296](http://tinyurl.com/vwbseyy) |
 | [44. Bài kiểm tra xác minh tối ưu](./chapters/ch44.md) | [#301](http://tinyurl.com/vzjamd5), [#312](http://tinyurl.com/qsd3n4l) |
-| [45. Dạng chung của bài kiểm tra xác minh tối ưu](./chapters/ch45.md) | [#304](http://tinyurl.com/ttpb9wf) |
+| [45. Dạng tổng quát của bài kiểm tra xác minh tối ưu](./chapters/ch45.md) | [#304](http://tinyurl.com/ttpb9wf) |
 | [46. Ví dụ về Học tăng cường](./chapters/ch46.md) | [#329](http://tinyurl.com/vf5vmgu) |
 | [47. Sự trỗi dậy của học đầu-cuối](./chapters/ch47.md) | [#333](http://tinyurl.com/rsx35j4), [#336](http://tinyurl.com/qmaat9c) |
-| [48. chưa có tên](./chapters/ch48.md) |  |
-| [49. chưa có tên](./chapters/ch49.md) | [#340](http://tinyurl.com/rjppzme) |
-| [50. chưa có tên](./chapters/ch50.md) | [#342](http://tinyurl.com/wjd78jk) |
+| [48. Thêm những ví dụ về học đầu-cuối.](./chapters/ch48.md) | [#360](http://tinyurl.com/rus2xdz) |
+| [Ưu nhược điểm của học đầu-cuối](./chapters/ch49.md) | [#340](http://tinyurl.com/rjppzme) |
+| [50. Lựa chọn các thành phần cho pipeline: Tính sẵn có của dữ liệu](./chapters/ch50.md) | [#342](http://tinyurl.com/wjd78jk) |
 | [51. chưa có tên](./chapters/ch51.md) | [#349](http://tinyurl.com/w5mhy63) |
-| [52. chưa có tên](./chapters/ch52.md) |  |
+| [52. chưa có tên](./chapters/ch52.md) | [#363](http://tinyurl.com/vffydte) |
 | [53. chưa có tên](./chapters/ch53.md) | [#355](http://tinyurl.com/sxgfq2v) |
 | [54. chưa có tên](./chapters/ch54.md) | [#352](http://tinyurl.com/yxx3ugx4) |
-| [55. chưa có tên](./chapters/ch55.md) |  |
-| [56. chưa có tên](./chapters/ch56.md) |  |
+| [55. chưa có tên](./chapters/ch55.md) | [#364](http://tinyurl.com/wk5w9h3) |
+| [56. chưa có tên](./chapters/ch56.md) | [#362](http://tinyurl.com/yxxtmguk) |
 | [57. chưa có tên](./chapters/ch57.md) |  |
 | [58. Xây dựng một biệt đội siêu anh hùng - Hãy để đồng đội của bạn đọc điều này](./chapters/ch58.md) | [#317](http://tinyurl.com/twb7dec) |
