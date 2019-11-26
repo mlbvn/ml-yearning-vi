@@ -7,8 +7,8 @@ Tất cả các thuật ngữ cần được dịch theo chuẩn trong file [glo
 
 ## Bản đầy đủ các chương đã dịch xong
 
-### [Song ngữ Anh-Việt]('./chapters/all_chapters.md')
-### [Tiếng Việt]('./chapters/all_chapters_vietnamese_only.md')
+### [Song ngữ Anh-Việt](./chapters/all_chapters.md)
+### [Tiếng Việt](./chapters/all_chapters_vietnamese_only.md)
 
 ## Đóng góp vào dự án
 
