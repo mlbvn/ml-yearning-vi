@@ -163,10 +163,10 @@ def main(vn_only=True):
             part_path = part['path']
             toc_insert_heading_from_file(all_file_writer, part_path, level=0)
             start_chapter, end_chatper = part['range']
-            for i in range(start_chapter, end_chatper + 1):
-                if i in PENDING_CHAPTERS or i > MAX_CHAPTER:
+            for chapter_number in range(start_chapter, end_chatper + 1):
+                if chapter_number in PENDING_CHAPTERS or chapter_number > MAX_CHAPTER:
                     continue
-                chapter_path = _chapter_path_from_chapter_number(i)
+                chapter_path = _chapter_path_from_chapter_number(chapter_number)
                 toc_insert_heading_from_file(all_file_writer, chapter_path, level=1)
 
         # main content
