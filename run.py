@@ -110,30 +110,30 @@ def _get_title_from_file_path(part_path):
     assert False, part_path
 
 
-def toc_insert_heading_from_file(all_file_handler, part_path, level):
+def toc_insert_heading_from_file(all_file_writer, part_path, level):
     part_title = _get_title_from_file_path(part_path)
     link = _create_header_link(part_title)
     full_link = "[{display_text}]({link_to_chapter})".format(
         display_text=_remove_sharp(part_title),
         link_to_chapter=link
     )
-    all_file_handler.write('\t'*level + '* ' + full_link + '\n')
+    all_file_writer.write('\t'*level + '* ' + full_link + '\n')
 
 
-def content_insert_part(all_file_handler, part_path, vn_only):
+def content_insert_part(all_file_writer, part_path, vn_only):
     with codecs.open(part_path, 'r', encoding='utf-8') as one_file:
         for line in one_file:
             if vn_only and line.startswith('>'):
                 continue
             try:
-                all_file_handler.write(line)
+                all_file_writer.write(line)
             except UnicodeDecodeError as e:
                 print('Line with decode error:')
                 print(e)
-    all_file_handler.write('\n')
+    all_file_writer.write('\n')
 
 
-def content_insert_chapter(all_file_handler, chapter_path, vn_only):
+def content_insert_chapter(all_file_writer, chapter_path, vn_only):
     with codecs.open(chapter_path, 'r', encoding='utf-8') as one_file:
         for line in one_file:
             if vn_only and line.startswith('>'):
@@ -144,11 +144,11 @@ def content_insert_chapter(all_file_handler, chapter_path, vn_only):
                 elif line.startswith('> # '):
                     line = '> ## ' + line[len('> # '):]
                 
-                all_file_handler.write(line)
+                all_file_writer.write(line)
             except UnicodeDecodeError as e:
                 print('Line with decode error:')
                 print(e)
-    all_file_handler.write('\n')
+    all_file_writer.write('\n')
 
 
 def main(vn_only=True):
