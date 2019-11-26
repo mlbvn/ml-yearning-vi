@@ -156,29 +156,29 @@ def main(vn_only=True):
         output_filename = os.path.join(CHAPTERS_DIR, ALL_CHAPTERS_VN_FILENAME)
     else:
         output_filename = os.path.join(CHAPTERS_DIR, ALL_CHAPTERS_FILENAME)
-    with codecs.open(output_filename, 'w', encoding='utf-8') as all_file:
+    with codecs.open(output_filename, 'w', encoding='utf-8') as all_file_writer:
         # table of content
-        all_file.write("**MỤC LỤC**\n\n")
+        all_file_writer.write("**MỤC LỤC**\n\n")
         for p, part in enumerate(PARTS):
             part_path = part['path']
-            toc_insert_heading_from_file(all_file, part_path, level=0)
+            toc_insert_heading_from_file(all_file_writer, part_path, level=0)
             start_chapter, end_chatper = part['range']
             for i in range(start_chapter, end_chatper + 1):
                 if i in PENDING_CHAPTERS or i > MAX_CHAPTER:
                     continue
                 chapter_path = _chapter_path_from_chapter_number(i)
-                toc_insert_heading_from_file(all_file, chapter_path, level=1)
+                toc_insert_heading_from_file(all_file_writer, chapter_path, level=1)
 
         # main content
         for p, part in enumerate(PARTS):
             part_path = part['path']
-            content_insert_part(all_file, part_path, vn_only)
+            content_insert_part(all_file_writer, part_path, vn_only)
             start_chapter, end_chatper = part['range']
             for i in range(start_chapter, end_chatper + 1):
                 if i in PENDING_CHAPTERS or i > MAX_CHAPTER:
                     continue
                 chapter_path = _chapter_path_from_chapter_number(i)
-                content_insert_chapter(all_file, chapter_path, vn_only)
+                content_insert_chapter(all_file_writer, chapter_path, vn_only)
 
 
 def _remove_sharp(title):
