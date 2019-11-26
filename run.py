@@ -189,21 +189,6 @@ def main(vn_only=True):
                     continue
                 chapter_path = _chapter_path_from_chapter_number(i)
                 content_insert_chapter(all_file, chapter_path, vn_only)
-        # for i in range(1, MAX_CHAPTER + 1):
-        #     if i in PENDING_CHAPTERS:
-        #         continue
-        #     all_file.write('------------------\n')
-        #     chapter_path = os.path.join(CHAPTERS_DIR, 'ch{:02d}.md'.format(i))
-        #     with codecs.open(chapter_path, 'r', encoding='utf-8') as one_file:
-        #         for line in one_file:
-        #             if vn_only and line.startswith('>'):
-        #                 continue
-        #             try:
-        #                 all_file.write(line)
-        #             except UnicodeDecodeError as e:
-        #                 print('Line with decode error:')
-        #                 print(e)
-        #     all_file.write('\n')
 
 
 def _remove_sharp(title):
