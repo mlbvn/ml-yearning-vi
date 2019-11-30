@@ -79,6 +79,6 @@ Chi tiết hơn về việc đóng góp có thể tìm thấy [tại đây](http
 | [53. Phân tích lỗi từng phần](./chapters/ch53.md) | [#355](http://tinyurl.com/sxgfq2v) |
 | [54. Quy lỗi cho một thành phần](./chapters/ch54.md) | [#352](http://tinyurl.com/yxx3ugx4) |
 | [55. Trường hợp tổng quát của việc quy lỗi](./chapters/ch55.md) | [#364](http://tinyurl.com/wk5w9h3) |
-| [56. chưa có tên](./chapters/ch56.md) | [#362](http://tinyurl.com/yxxtmguk) |
+| [56. Phân tích lỗi từng phần và so sánh với chất lượng mức con người](./chapters/ch56.md) | [#362](http://tinyurl.com/yxxtmguk) |
 | [57. Phát hiện một pipeline học máy bị lỗi](./chapters/ch57.md) | [#392](http://tinyurl.com/tvrdwyh) |
 | [58. Xây dựng một biệt đội siêu anh hùng - Hãy để đồng đội của bạn đọc điều này](./chapters/ch58.md) | [#317](http://tinyurl.com/twb7dec) |
