@@ -120,8 +120,10 @@ def main(vn_only=True):
                 _insert_to_toc(all_file_writer, chapter_path, level=1)
 
         # main content
+        all_file_writer.write('\n')
         for part in PARTS:
             all_file_writer.write(HTML_NEW_PAGE)
+            all_file_writer.write('\n')
             part_path = part['path']
 
             _insert_content(all_file_writer, part_path, vn_only, heading=1)
