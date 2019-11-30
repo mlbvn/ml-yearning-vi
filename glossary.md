@@ -50,7 +50,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | false positive                    | dương tính giả                                                 |                                                              |
 | feature                           | đặc trưng                                                      |                                                              |
 | fit                               | fit                                                            |                                                              |
-| gradient descent                  | hạ dốc                                                         | [#87](http://bit.ly/2BvfPYA)                                 |
+| gradient descent                  | hạ gradient                                                         | [#87](http://bit.ly/2BvfPYA), [#389](http://bit.ly/2rCiYEz)                                 |
 | hand-engineering                  | thiết kế thủ công                                              |                                                              |
 | heuristic                         | thực nghiệm                                                    |                                                              |
 | hidden unit                       | nút ẩn                                                         |                                                              |
