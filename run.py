@@ -24,6 +24,7 @@ README_PREFIX = './readme_prefix.md'
 README = './README.md'
 PR_PREFIX = 'https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/'
 TRANSLATE_INDICATOR_STR = '--> _replace THIS LINE by your translation for the above line_'
+HTML_NEW_PAGE = '<div style="page-break-after: always;"></div>\n'
 
 PARTS = [
     {'path': './chapters/p00_01_04.md', 'range': [1, 4]},
@@ -115,19 +116,18 @@ def main(vn_only=True):
             _insert_to_toc(all_file_writer, part_path, level=0)
             start_chapter, end_chatper = part['range']
             for chapter_number in range(start_chapter, end_chatper + 1):
-                if chapter_number in PENDING_CHAPTERS or chapter_number > MAX_CHAPTER:
-                    continue
                 chapter_path = _chapter_path_from_chapter_number(chapter_number)
                 _insert_to_toc(all_file_writer, chapter_path, level=1)
 
         # main content
         for part in PARTS:
+            all_file_writer.write(HTML_NEW_PAGE)
             part_path = part['path']
+
             _insert_content(all_file_writer, part_path, vn_only, heading=1)
             start_chapter, end_chatper = part['range']
             for chapter_number in range(start_chapter, end_chatper + 1):
-                if chapter_number in PENDING_CHAPTERS or chapter_number > MAX_CHAPTER:
-                    continue
+                all_file_writer.write(HTML_NEW_PAGE)
                 chapter_path = _chapter_path_from_chapter_number(chapter_number)
                 _insert_content(all_file_writer, chapter_path, vn_only, heading=2)
 
