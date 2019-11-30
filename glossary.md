@@ -81,7 +81,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | precision                         | precision                                                      |                                                              |
 | recall                            | recall                                                         |                                                              |
 | recognition                       | nhận dạng                                                      |                                                              |
-| regularization                    | regularization                                                 |                                                              |
+| regularization                    | ràng buộc                                                      |                                                              |
 | reinforcement learning            | học tăng cường                                                 |                                                              |
 | reward function                   | hàm điểm thưởng                                                |                                                              |
 | running time                      | thời gian chạy                                                 |                                                              |
