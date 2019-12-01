@@ -26,8 +26,8 @@ Chi tiết hơn về việc đóng góp có thể tìm thấy [tại đây](http
 | --- | --- |
 | [1. Tại sao cần chiến lược Học Máy](./chapters/ch01.md) | [#40](http://tinyurl.com/v3s2sxq) |
 | [2. Cách sử dụng cuốn sách khi làm việc nhóm](./chapters/ch02.md) | [#54](http://tinyurl.com/wcx6h8b) |
-| [3. Điều kiện tiên quyết và Ký hiệu](./chapters/ch03.md) | [#90](http://tinyurl.com/sbvug2x) |
-| [4. Quy mô thúc đẩy quá trình phát triển học máy](./chapters/ch04.md) | [#83](http://tinyurl.com/r3qqqrf) |
+| [3. Kiến thức tiền đề và Ký hiệu](./chapters/ch03.md) | [#90](http://tinyurl.com/sbvug2x) |
+| [4. Quy mô là động lực phát triển học máy](./chapters/ch04.md) | [#83](http://tinyurl.com/r3qqqrf) |
 | [5. Tập phát triển và tập kiểm tra](./chapters/ch05.md) | [#82](http://tinyurl.com/qtvf6kn) |
 | [6. Tập phát triển và tập kiểm tra nên có cùng phân phối](./chapters/ch06.md) | [#91](http://tinyurl.com/vtzttht) |
 | [7. Tập phát triển/kiểm tra cần lớn đến mức nào?](./chapters/ch07.md) | [#70](http://tinyurl.com/woxabbu) |
