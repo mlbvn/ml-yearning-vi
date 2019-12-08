@@ -34,7 +34,7 @@ Thông tin chi tiết đóng góp các thành viên cho dự án "Machine Learni
 | [13. ](./chapters/ch13.md) | [#160](http://tinyurl.com/to6e8x5) | duythanhvn 	| 1612628, naml3i, william-vu, thhung|
 | [14. ](./chapters/ch14.md) | [#140](http://tinyurl.com/vll654u) | william-vu  | tiepvupsu, ngcthuong |
 | [15. ](./chapters/ch15.md) | [#161](http://tinyurl.com/wg2jjvv) | quangnhat185| duythanhvn, william-vu, 1612628, SumoBBQ, thhung|
-| [16. ](./chapters/ch16.md) | [#164](http://tinyurl.com/uqbgx5u) | roontonchair| william-vu, naml3i, tiepvupsu, 1612628, SumoBBQ | 
+| [16. ](./chapters/ch16.md) | [#164](http://tinyurl.com/uqbgx5u) | rootonchair| william-vu, naml3i, tiepvupsu, 1612628, SumoBBQ | 
 | [17. ](./chapters/ch17.md) | [#168](http://tinyurl.com/rtazeaa) | khoapip 	| william-vu, 1612628, ngcthuong, tiepvupsu |
 | [18. ](./chapters/ch18.md) | [#156](http://tinyurl.com/qsxqc9h) | phamdinhkhanh| tiepvupsu, khoapip, thhung, william-vu|
 | [19. ](./chapters/ch19.md) | [#169](http://tinyurl.com/yx2qboe8)| seanphan 	| tiepvupsu, william-vu, ngcthuong |
@@ -54,24 +54,24 @@ Thông tin chi tiết đóng góp các thành viên cho dự án "Machine Learni
 | [33. ](./chapters/ch33.md) | [#247](http://tinyurl.com/rujwwhp) | honghanhh    | tiepvupsu, 1612628, naml3i, phamdinhkhanh |
 | [34. ](./chapters/ch34.md) | [#254](http://tinyurl.com/u7ysnq3) | seanphan 	| tiepvupsu, thhung, naml3i, lkhphuc, ngcthuong |
 | [35. ](./chapters/ch35.md) | [#276](http://tinyurl.com/vyg95k4) | duythanhvn  | lkhphuc, ngcthuong, hungvminh |
-| [36. ](./chapters/ch36.md) | [#273](http://tinyurl.com/ukpzv6k) | roontonchair| lkhphuc, tiepvupsu, william-vu |
+| [36. ](./chapters/ch36.md) | [#273](http://tinyurl.com/ukpzv6k) | rootonchair| lkhphuc, tiepvupsu, william-vu |
 | [37. ](./chapters/ch37.md) | [#279](http://tinyurl.com/yx42q9ln) | seanphan    | quangnhat185, sonvx, 1612628, ngcthuong | 
 | [38. ](./chapters/ch38.md) | [#302](http://tinyurl.com/seotxz5) | honghanhh    | tiepvupsu, phamdinhkhanh|
 | [39. ](./chapters/ch39.md) | [#258](http://tinyurl.com/r6jpbak) | honghanhh    | naml3i, lkhphuc, tiena2cva, tiepvupsu|
-| [40. ](./chapters/ch40.md) | [#282](http://tinyurl.com/w677y7q) | quangnhat185| seanphan, roontonchair, ngcthuong, honghanhh, tiepvupsu|
+| [40. ](./chapters/ch40.md) | [#282](http://tinyurl.com/w677y7q) | quangnhat185| seanphan, rootonchair, ngcthuong, honghanhh, tiepvupsu|
 | [41. ](./chapters/ch41.md) | [#278](http://tinyurl.com/syy5q4l) | lkhphuc     | sonvx, ngcthuong, tiepvupsu|
 | [42. ](./chapters/ch42.md) | [#298](http://tinyurl.com/yxxlkgyr) | naml3i      | tiepvupsu|
-| [43. ](./chapters/ch43.md) | [#296](http://tinyurl.com/vwbseyy) | seanphan 	| tiepvupsu, ngcthuong, roontonchair|
+| [43. ](./chapters/ch43.md) | [#296](http://tinyurl.com/vwbseyy) | seanphan 	| tiepvupsu, ngcthuong, rootonchair|
 | [44. ](./chapters/ch44.md) | [#301](http://tinyurl.com/vzjamd5), [#312](http://tinyurl.com/qsd3n4l) | honghanhh, tiepvupsu | tiepvupsu| 
-| [45. ](./chapters/ch45.md) | [#304](http://tinyurl.com/ttpb9wf) | tiena2cva   | roontonchair, tiepvupsu, ngcthuong, 1612628, lkhphuc|
+| [45. ](./chapters/ch45.md) | [#304](http://tinyurl.com/ttpb9wf) | tiena2cva   | rootonchair, tiepvupsu, ngcthuong, 1612628, lkhphuc|
 | [46. ](./chapters/ch46.md) | [#329](http://tinyurl.com/vf5vmgu) | lkhphuc     | sonvx, ngcthuong, tiepvupsu |
-| [47. ](./chapters/ch47.md) | [#333](http://tinyurl.com/rsx35j4), [#336](http://tinyurl.com/qmaat9c) | roontonchair, quangnhat185| tiepvupsu |
+| [47. ](./chapters/ch47.md) | [#333](http://tinyurl.com/rsx35j4), [#336](http://tinyurl.com/qmaat9c) | rootonchair, quangnhat185| tiepvupsu |
 | [48. ](./chapters/ch48.md) | [#360](http://tinyurl.com/rus2xdz) | nerophung   | lkhphuc, tiepvupsu |
-| [49. ](./chapters/ch49.md) | [#340](http://tinyurl.com/rjppzme) | tiepvupsu   | lkhphuc, roontonchair|
-| [50. ](./chapters/ch50.md) | [#342](http://tinyurl.com/wjd78jk) | tiepvupsu   | william-vu, lkhphuc, roontonchair, 1612628 |
+| [49. ](./chapters/ch49.md) | [#340](http://tinyurl.com/rjppzme) | tiepvupsu   | lkhphuc, rootonchair|
+| [50. ](./chapters/ch50.md) | [#342](http://tinyurl.com/wjd78jk) | tiepvupsu   | william-vu, lkhphuc, rootonchair, 1612628 |
 | [51. ](./chapters/ch51.md) | [#349](http://tinyurl.com/w5mhy63) | tiepvupsu   | william-vu, lkhphuc, ngcthuong, nmdang |
 | [52. ](./chapters/ch52.md) | [#363](http://tinyurl.com/vffydte) | khoapip     | tiepvupsu, lkhphuc, thhung |
-| [53. ](./chapters/ch53.md) | [#355](http://tinyurl.com/sxgfq2v) | lkhphuc     | tiepvupsu, roontonchair|
+| [53. ](./chapters/ch53.md) | [#355](http://tinyurl.com/sxgfq2v) | lkhphuc     | tiepvupsu, rootonchair|
 | [54. ](./chapters/ch54.md) | [#352](http://tinyurl.com/yxx3ugx4) | quangnhat185| tiepvupsu |
 | [55. ](./chapters/ch55.md) | [#364](http://tinyurl.com/wk5w9h3) | goldenretriever2015| tiepvupsu, lkhphuc, nmdang, ngcthuong |
 | [56. ](./chapters/ch56.md) | [#362](http://tinyurl.com/yxxtmguk) | ffyyytt     | van-tienhoang, ngdthanhcs, tiepvupsu |
@@ -97,7 +97,7 @@ Trong giai đoạn này, các chương sẽ được trau chuốt hơn về mặ
 | [9 - 12](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/409) |  lkhphuc 	| tiepvupsu, ngcthuong |
 | [13 - 16](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/413) |  nmdang 	    | tiepvupsu |
 | [17 - 19](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/408) |  thhung 		| tiepvupsu |
-| [20 - 23](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/415) |  roontonchair| tiepvupsu, ngcthuong |
+| [20 - 23](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/415) |  rootonchair| tiepvupsu, ngcthuong |
 | [24 - 27](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |  ngcthuong   |  |
 | [28 - 32](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
 | [33 - 35](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
@@ -117,7 +117,7 @@ Ngoài các đóng góp về bài dịch, phản biện, cũng như hiệu đín
 | --- |  ---     | ---  |
 |    | Định dạng thư mục, tệp hướng dẫn	|  tiepvupsu, xuantubk 				|
 |    | Sao chép và định dạng bản dịch	|  duythanhvn, tiepvupsu, ngcthuong |
-|    | Sao chép và chỉnh sửa hình vẽ	|  samthehai, quangnhat185, roontonchair|
+|    | Sao chép và chỉnh sửa hình vẽ	|  samthehai, quangnhat185, rootonchair|
 |    | Sao chép và chỉnh sửa bảng biểu	|  tiena2cva  					|
 |    | Tạo tệp pdf cho bản đầy đủ    	|  quangnhat185  				|
 
@@ -132,7 +132,7 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | ngcthuong        	| Nguyễn Cảnh Thướng   	|
 | lkhphuc          	| Lê Khắc Hồng Phúc		|
 | sonvx      		| Vũ Xuân Sơn    		|
-| roontonchair    	| 						|
+| rootonchair    	| Phạm Hồng Vinh 		|
 | 1612628    	   	|						|
 | william-vu       	| Vũ Đình Quyền			|
 | SumoBBQ    		|						|
@@ -141,7 +141,7 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | quangnhat185    	|						|
 | seanphan    		|						|
 | phamdinhkhanh    	|						|
-| duythanhvn    	| Đoàn Duy Thanh (Thành)|
+| duythanhvn    	| Đoàn Vox Duy Thanh    |
 | nmdang    		|						|
 | khoapip    		|						|
 | honghanhh    		| Trần Thị Hồng Hạnh	|
