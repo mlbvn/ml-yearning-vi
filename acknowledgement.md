@@ -123,25 +123,25 @@ Ngoài các đóng góp về bài dịch, phản biện, cũng như hiệu đín
 
 
 ### Tên các thành viên đóng góp cho đề tài 
-
 Chi tiết tên và tài khoản github các thành viên có đóng góp cho đề tài.  
+(Mình sẽ update lại theo thứ tự tên bảng chữ cái sau khi hoàn thiện).
 
 |   Github 		   	|	 Họ & Tên 			|	 
 |   ---    		   	|  ---         			|
 | tiepvupsu        	| Vũ Hữu Tiệp  			|
 | ngcthuong        	| Nguyễn Cảnh Thướng   	|
+| lkhphuc          	| Lê Khắc Hồng Phúc		|
+| sonvx      		| Vũ Xuân Sơn    		|
+| roontonchair    	| 						|
 | 1612628    	   	|						|
-| william-vu       	|						|
-| lkhphuc          	|						|
-| sonvx      		|						|
+| william-vu       	| Vũ Đình Quyền			|
 | SumoBBQ    		|						|
-| roontonchair    	|						|
 | thhung    		|						|
 | naml3i    		|						|
 | quangnhat185    	|						|
 | seanphan    		|						|
 | phamdinhkhanh    	|						|
-| duythanhvn    	|						|
+| duythanhvn    	| Đoàn Duy Thanh (Thành)|
 | nmdang    		|						|
 | khoapip    		|						|
 | honghanhh    		|						|
