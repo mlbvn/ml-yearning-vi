@@ -90,22 +90,22 @@ Trung bình mỗi chương có ba phản biện với 176 phản biện trên t�
 ### Giai đoạn 2
 Trong giai đoạn này, các chương sẽ được trau chuốt hơn về mặt ngôn từ, cách diễn đạt. 
 
-| Chương | Thảo luận | Dịch | Phản biện |
-| ---    |  ---      | ---  | ---       |
-| 1 - 4  | (https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |  nmdang 		| tiepvupsu, ngcthuong, sonvx |
-| 5 - 8  | (https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/414) |  ngdthanhcs 	| tiepvupsu, ngcthuong |
-| 9 - 12 | (https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/409) |  lkhphuc 	| tiepvupsu, ngcthuong |
-| 13 - 16| (https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/413) |  nmdang 	    | tiepvupsu |
-| 17 - 19| (https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/408) |  thhung 		| tiepvupsu |
-| 20 - 23| (https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/415) |  roontonchair| tiepvupsu, ngcthuong |
-| 24 - 27| (https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |  ngcthuong   |  |
-| 28 - 32| (https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
-| 33 - 35| (https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
-| 36 - 39| (https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
-| 40 - 43| (https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
-| 44 - 46| (https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
-| 47 - 52| (https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
-| 53 - 58| (https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
+| Chương | Dịch | Phản biện |
+| ---    | ---  | ---       |
+| [1 - 4](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |  nmdang 		| tiepvupsu, ngcthuong, sonvx |
+| [5 - 8](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/414) |  ngdthanhcs 	| tiepvupsu, ngcthuong |
+| [9 - 12](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/409) |  lkhphuc 	| tiepvupsu, ngcthuong |
+| [13 - 16](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/413) |  nmdang 	    | tiepvupsu |
+| [17 - 19](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/408) |  thhung 		| tiepvupsu |
+| [20 - 23](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/415) |  roontonchair| tiepvupsu, ngcthuong |
+| [24 - 27](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |  ngcthuong   |  |
+| [28 - 32](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
+| [33 - 35](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
+| [36 - 39](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
+| [40 - 43](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
+| [44 - 46](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
+| [47 - 52](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
+| [53 - 58](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
 
 ### Thuật ngữ
 Các thuật ngữ tiếng Anh xuất hiện trong sách nếu chưa có trong [Bảng thuật ngữ](glossary.md). 
