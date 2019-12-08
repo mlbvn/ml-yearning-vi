@@ -122,4 +122,38 @@ Ngoài các đóng góp về bài dịch, phản biện, cũng như hiệu đín
 |    | Tạo tệp pdf cho bản đầy đủ    	|  quangnhat185  				|
 
 
+### Tên các thành viên đóng góp cho đề tài 
+
+Chi tiết tên và tài khoản github các thành viên có đóng góp cho đề tài.  
+
+|   Github 		   	|	 Họ & Tên 			|	 
+|   ---    		   	|  ---         			|
+| tiepvupsu        	| Vũ Hữu Tiệp  			|
+| ngcthuong        	| Nguyễn Cảnh Thướng   	|
+| 1612628    	   	|						|
+| william-vu       	|						|
+| lkhphuc          	|						|
+| sonvx      		|						|
+| SumoBBQ    		|						|
+| roontonchair    	|						|
+| thhung    		|						|
+| naml3i    		|						|
+| quangnhat185    	|						|
+| seanphan    		|						|
+| phamdinhkhanh    	|						|
+| duythanhvn    	|						|
+| nmdang    		|						|
+| khoapip    		|						|
+| honghanhh    		|						|
+| tiena2cva    		|						|
+| vudaoanhtuan    	|						|
+| ngdthanhcs    	|						|
+| damminhtien    	|						|
+| van-tienhoang    	|						|
+| kiemrong08    	|						|
+| freeloneman     	|						|
+| xuantubk    		|						|
+
+
+
 **Mọi đóng góp của các bạn đều được lưu lại trong lịch sử của repo này.**
