@@ -32,7 +32,7 @@ Chi tiết hơn về việc đóng góp có thể tìm thấy [tại đây](http
 | [6. Tập phát triển và tập kiểm tra nên có cùng phân phối](./chapters/ch06.md) | [#91](http://tinyurl.com/vtzttht) |
 | [7. Tập phát triển/kiểm tra cần lớn đến mức nào?](./chapters/ch07.md) | [#70](http://tinyurl.com/woxabbu) |
 | [8. Thiết lập một phép đo đơn trị làm mục tiêu tối ưu](./chapters/ch08.md) | [#80](http://tinyurl.com/s53zss8) |
-| [9. Phép đo tối ưu và phép đo thỏa mãn](./chapters/ch09.md) | [#77](http://tinyurl.com/s95vvzs) |
+| [9. Phép đo để tối ưu và phép đo thỏa mãn](./chapters/ch09.md) | [#77](http://tinyurl.com/s95vvzs) |
 | [10. Xây dựng một tập phát triển và một phép đo sẽ tăng tốc quá trình làm việc](./chapters/ch10.md) | [#117](http://tinyurl.com/u4u4fdm) |
 | [11. Khi nào cần thay đổi tập phát triển/kiểm tra và các phép đo](./chapters/ch11.md) | [#150](http://tinyurl.com/vqpvcyo) |
 | [12. Điều cần nhớ: Thiết lập các tập phát triển và kiểm tra](./chapters/ch12.md) | [#113](http://tinyurl.com/t8vegqq) |
