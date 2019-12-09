@@ -138,7 +138,7 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | SumoBBQ    		|						|
 | thhung    		|						|
 | naml3i    		|						|
-| quangnhat185    	|						|
+| quangnhat185    	| Nguyễn Lê Quang Nhật						|
 | seanphan    		|						|
 | phamdinhkhanh    	|						|
 | duythanhvn    	| Đoàn Võ Duy Thanh    |
