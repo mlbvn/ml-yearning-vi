@@ -152,7 +152,7 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | van-tienhoang    	|						|
 | kiemrong08    	|						|
 | freeloneman     	|						|
-| xuantubk    		|						|
+| xuantubk    		| Nguyễn Xuân Tú						|
 
 
 
