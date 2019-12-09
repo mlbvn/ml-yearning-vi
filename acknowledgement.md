@@ -141,7 +141,7 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | quangnhat185    	| Nguyễn Lê Quang Nhật						|
 | seanphan    		|						|
 | phamdinhkhanh    	|						|
-| duythanhvn    	| Đoàn Võ Duy Thanh    |
+| duythanhvn    	| Đoàn Võ Duy Thanh     |
 | nmdang    		|						|
 | khoapip    		|						|
 | honghanhh    		| Trần Thị Hồng Hạnh	|
