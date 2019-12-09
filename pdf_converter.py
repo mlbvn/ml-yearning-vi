@@ -36,6 +36,7 @@ for i in range(1,59):
     else:
         no_chapter_list.append("%i"%i)
         
+# extract list of all part titles and chapter titles
 part_list = []
 chapter_list = []
 
@@ -52,13 +53,19 @@ def _convert_title_to_link(title):
 
 for part in PARTS:
     part_path = part['path']
+    # extract the original parth title
     part_title = _get_title_from_file_path(part_path)
+    
+    # convert to the html link syntax
     part_list.append(_convert_title_to_link(part_title))
     
     start_chapter, end_chatper = part['range']
     for chapter_number in range(start_chapter, end_chatper + 1):
         chapter_path = _chapter_path_from_chapter_number(chapter_number)
+        
+        # extract the original chapter title
         chapter_title = _get_title_from_file_path(chapter_path)
+        # convert to html link syntax
         chapter_list.append(_convert_title_to_link(chapter_title))
   
 
@@ -71,25 +78,31 @@ def main(vn_only=True):
     else:
         path = all_chapters
         
+    # export mardown file to html file
     os.system("grip %s.md --export %s.html"%(path,path))
+    
     f = codecs.open("%s.html"%all_chapters,"r","utf-8","html.parser")
 
     filedata = f.read()
     f.close()
      
-    
+    # Add an html code for papge break above each part
     for part_name in no_part_list:
         filedata=filedata.replace('<p><a name="user-content-%s"></a></p>'%part_name,'<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>'%part_name)                            
     
+    # Add an html code for page break avobe each chapter 
     for chapter_name in no_chapter_list:
         filedata=filedata.replace('<p><a name="user-content-%s"></a></p>'%chapter_name,'<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>'%chapter_name)     
-        
+    
+    # Replace the correct link subsection of each part
     for order,part_name in enumerate(no_part_list):
         filedata=filedata.replace('#%s'%part_name,'%s'%part_list[order])
-        
+    
+    # Replace the correct link subsection of each chapter
     for order,chapter_name in enumerate(no_chapter_list):
         filedata=filedata.replace('#%s'%chapter_name,'%s'%chapter_list[order]) 
         
+    # Remove the ".md" title bar at begining 
     filedata = filedata.replace('<h3>\r\n                  <span class="octicon octicon-book"></span>\r\n                  %s.md\r\n                </h3>'%path[11:],"")
       
     f = codecs.open("%s.html"%path,"w","utf-8","html.parser")
@@ -98,6 +111,7 @@ def main(vn_only=True):
     
     f.close()
     
+    # convert html to pdf file
     pdfkit.from_file('%s.html'%path, '%s.pdf'%path[11:],configuration=config)
     
 
@@ -105,6 +119,8 @@ def main(vn_only=True):
 if __name__ == '__main__':
     main(vn_only=False)
     main(vn_only=True)
+    
+    # remove the created html file and __pycache folder  
     os.remove("./chapters/all_chapters_vietnamese_only.html")
     os.remove("./chapters/all_chapters.html")
     shutil.rmtree("__pycache__")

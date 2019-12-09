@@ -147,17 +147,27 @@ def _get_title_from_file_path(part_path):
     assert False, part_path
 
 
+def is_part(path_name):
+    assert path_name[1] in ['p', 'c'], path_name
+    return path_name[1]=="p"
+
+
 def _insert_to_toc(all_file_writer, part_path, level):
     part_title = _get_title_from_file_path(part_path)
-    
-    # Convert a fullink (#no-chapter-name) to (#no)
     full_link = _create_header_link(part_title)
+    
+    # extract the the path name of each file. For example, ./chapters/ch01.md 
+    # will be trimmed to ch01.md; ./chapters/p00_01_04.md will be trimmed to p00_01_04.md
     path_name = part_path[part_path.index("s")+1:]
     
-    if path_name[1]=="p":
+    
+    # If it is a chapter, created a link syntax with only 2 digits (e.g: #01). 
+    # If it is a part, keep "p" + 2 digit (e.g: #p01)   
+    if is_part(path_name):
         link = "#" + path_name[1:4]
     else:
         link = "#" + path_name[3:5]
+    
     
     full_link = "[{display_text}]({link_to_chapter})".format(
         display_text=_remove_sharp(part_title),
@@ -176,7 +186,7 @@ def _insert_content(all_file_writer, file_path, vn_only, heading):
     # Create subsection link with number instead of vietnamese
     path_name = file_path[file_path.index("s")+1:]
     
-    if path_name[1]=="p":
+    if is_part(path_name):
         all_file_writer.write('<a name="%s"></a>\n'%path_name[1:4])
     else:
         all_file_writer.write('<a name="%s"></a>\n'%path_name[3:5])
@@ -277,14 +287,17 @@ def gen_readme():
                 readme.write(line)
         readme.write(_gen_progress_table())
 
+def create_pdf():
+    pdf.main(vn_only=False)
+    pdf.main(vn_only=True)
+    
+    # remove the created html file and __pycache folder  
+    os.remove("./chapters/all_chapters_vietnamese_only.html")
+    os.remove("./chapters/all_chapters.html")
+    shutil.rmtree("__pycache__")
 
 if __name__ == '__main__':
     main(vn_only=False)
     main(vn_only=True)
-    pdf.main(vn_only=False)
-    pdf.main(vn_only=True)
-    
-    os.remove("./chapters/all_chapters_vietnamese_only.html")
-    os.remove("./chapters/all_chapters.html")
-    shutil.rmtree("__pycache__")
+    create_pdf()
     gen_readme()
