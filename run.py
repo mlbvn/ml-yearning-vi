@@ -175,7 +175,6 @@ def _insert_to_toc(all_file_writer, part_path, level):
     )
     all_file_writer.write('\t'*level + '* ' + full_link + '\n')
 
-    
 
 def _insert_content(all_file_writer, file_path, vn_only, heading):
     all_file_writer.write('<!-- ============================ Insert {} =================================== -->\n'.format(file_path))
