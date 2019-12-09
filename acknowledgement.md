@@ -153,7 +153,7 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | seanphan      | Phan Duy Khánh       |
 | phamdinhkhanh |                      |
 | duythanhvn    | Đoàn Võ Duy Thanh    |
-| nmdang        |                      |
+| nmdang        | Đặng Ngọc Minh                     |
 | khoapip       | Ngô Thế Anh Khoa     |
 | honghanhh     | Trần Thị Hồng Hạnh   |
 | tiena2cva     |                      |
