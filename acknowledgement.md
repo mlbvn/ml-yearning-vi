@@ -102,7 +102,7 @@ Trong giai đoạn này, các chương sẽ được trau chuốt hơn về mặ
 | [13 - 16](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/413) |  nmdang 	    | tiepvupsu |
 | [17 - 19](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/408) |  thhung 		| tiepvupsu |
 | [20 - 23](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/415) |  rootonchair| tiepvupsu, ngcthuong |
-| [24 - 27](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |  ngcthuong   |  |
+| [24 - 27](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/431) |  ngcthuong   |  |
 | [28 - 32](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
 | [33 - 35](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
 | [36 - 39](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
@@ -150,7 +150,7 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | thhung        |                      |
 | naml3i        |                      |
 | quangnhat185  | Nguyễn Lê Quang Nhật |
-| seanphan      |                      |
+| seanphan      | Phan Duy Khánh       |
 | phamdinhkhanh |                      |
 | duythanhvn    | Đoàn Võ Duy Thanh    |
 | nmdang        |                      |
