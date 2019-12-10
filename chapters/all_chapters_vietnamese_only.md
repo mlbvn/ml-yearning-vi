@@ -3,8 +3,8 @@
 * [Giới thiệu](#giới-thiệu)
 	* [1. Tại sao cần chiến lược Học Máy](#1-tại-sao-cần-chiến-lược-học-máy)
 	* [2. Cách sử dụng cuốn sách khi làm việc nhóm](#2-cách-sử-dụng-cuốn-sách-khi-làm-việc-nhóm)
-	* [3. Điều kiện tiên quyết và Ký hiệu](#3-điều-kiện-tiên-quyết-và-ký-hiệu)
-	* [4. Quy mô thúc đẩy quá trình phát triển học máy](#4-quy-mô-thúc-đẩy-quá-trình-phát-triển-học-máy)
+	* [3. Kiến thức tiền đề và Ký hiệu](#3-kiến-thức-tiền-đề-và-ký-hiệu)
+	* [4. Quy mô là động lực phát triển học máy](#4-quy-mô-là-động-lực-phát-triển-học-máy)
 * [Phần 1: Chuẩn bị tập phát triển và tập kiểm tra](#phần-1-chuẩn-bị-tập-phát-triển-và-tập-kiểm-tra)
 	* [5. Tập phát triển và tập kiểm tra](#5-tập-phát-triển-và-tập-kiểm-tra)
 	* [6. Tập phát triển và tập kiểm tra nên có cùng phân phối](#6-tập-phát-triển-và-tập-kiểm-tra-nên-có-cùng-phân-phối)
@@ -60,8 +60,13 @@
 	* [49. Ưu nhược điểm của học đầu-cuối](#49-ưu-nhược-điểm-của-học-đầu-cuối)
 	* [50. Lựa chọn các thành phần cho pipeline: Tính sẵn có của dữ liệu](#50-lựa-chọn-các-thành-phần-cho-pipeline-tính-sẵn-có-của-dữ-liệu)
 	* [51. Lựa chọn các thành phần cho pipeline: tính đơn giản của tác vụ](#51-lựa-chọn-các-thành-phần-cho-pipeline-tính-đơn-giản-của-tác-vụ)
+	* [52. Trực tiếp học những đầu ra phức tạp](#52-trực-tiếp-học-những-đầu-ra-phức-tạp)
 * [Phần 9: Phân tích lỗi từng phần](#phần-9-phân-tích-lỗi-từng-phần)
+	* [53. Phân tích lỗi từng phần](#53-phân-tích-lỗi-từng-phần)
 	* [54. Quy lỗi cho một thành phần](#54-quy-lỗi-cho-một-thành-phần)
+	* [55. Trường hợp tổng quát của việc quy lỗi](#55-trường-hợp-tổng-quát-của-việc-quy-lỗi)
+	* [56. Phân tích lỗi từng phần và so sánh với chất lượng mức con người](#56-phân-tích-lỗi-từng-phần-và-so-sánh-với-chất-lượng-mức-con-người)
+	* [57. Phát hiện một pipeline học máy bị lỗi](#57-phát-hiện-một-pipeline-học-máy-bị-lỗi)
 * [Phần 10: Tổng kết](#phần-10-tổng-kết)
 	* [58. Xây dựng một biệt đội siêu anh hùng - Hãy để đồng đội của bạn đọc điều này](#58-xây-dựng-một-biệt-đội-siêu-anh-hùng---hãy-để-đồng-đội-của-bạn-đọc-điều-này)
 <!-- ============================ Insert ./chapters/p00_01_04.md =================================== -->
@@ -87,7 +92,7 @@ Giả sử bạn xây dựng công ty khởi nghiệp cung cấp không giới h
 ![img](../imgs/C01_01.png)
 
 
-Bạn dùng mạng nơ-ron cho hệ thống thị giác máy nhận biết ảnh có hình mèo. Nhưng dở một cái là thuật toán bạn dùng chưa đủ độ chính xác. Bạn đang chịu rất nhiều áp lực để tăng chất lượng dự đoán tìm ảnh mèo. Bạn sẽ làm thế nào?
+Bạn dùng mạng nơ-ron cho hệ thống thị giác máy nhằm phát hiện mèo trong ảnh. Nhưng dở một cái là thuật toán bạn dùng chưa đủ độ chính xác. Bạn đang chịu rất nhiều áp lực để tăng chất lượng bộ phát hiện mèo. Bạn sẽ làm thế nào?
 
 
 
@@ -100,7 +105,7 @@ Nhóm bạn có thể đưa ra rất nhiều ý tưởng như:
 * Lấy tập huấn luyện đa dạng hơn. Ví dụ như: ảnh mèo ở vị trí độc lạ, ảnh mèo với màu sắc khác thường, ảnh mèo được chụp với cấu hình máy ảnh khác nhau .v.v.
 
 
-* Huấn luyện thuật toán lâu hơn bằng cách chạy nhiều vòng lặp gradient descent hơn. 
+* Huấn luyện thuật toán lâu hơn bằng cách chạy thêm nhiều vòng lặp hạ gradient.
  
 
 * Thử nghiệm mạng nơ-ron lớn hơn với nhiều tầng/nút ẩn/tham số hơn.
@@ -112,7 +117,7 @@ Nhóm bạn có thể đưa ra rất nhiều ý tưởng như:
 *  Thử nghiệm kỹ thuật regularization (ví dụ như L2 regularization)
 
 
-*  Thay đổi kiến trúc mạng nơ-ron (ví dụ: hàm activation, số lượng nút ẩn, .v.v)
+*  Thay đổi kiến trúc mạng nơ-ron (ví dụ: hàm kích hoạt, số lượng nút ẩn, .v.v)
 
 * ...
 
@@ -131,10 +136,10 @@ Cuốn sách này sẽ giúp bạn trả lời câu hỏi đó. Phần lớn cá
 Sau khi đọc xong cuốn sách này, bạn sẽ hiểu sâu hơn về cách lựa chọn hướng giải quyết kỹ thuật cho đề tài học máy. 
 
 
-Nhưng có thể cộng sự của bạn không hiểu tại sao bạn lại chọn hướng đi như vậy. Có thể bạn muốn cả đội xác định và dùng một phép đo đơn trị, nhưng liệu tất cả thành viên đều đồng tình với quyết định đó? Và bạn sẽ làm gì để thuyết phục họ?
+Nhưng có thể cộng sự chưa rõ tại sao bạn lại chọn hướng đi như vậy. Ví dụ bạn muốn cả đội xác định và dùng một phép đo đơn trị, nhưng nếu mọi người không đồng tình, thì bạn sẽ làm gì để thuyết phục họ?
 
 
-Đó là lý do tại sao tôi chủ tâm viết những chương rất ngắn. Bạn có thể dễ dàng thuyết phục quý đồng nghiệp bằng cách chia sẻ 1-2 trang bản in của chương liên quan.
+Đó là lý do tôi chủ tâm viết những chương rất ngắn. Bạn có thể dễ dàng thuyết phục quý đồng nghiệp bằng cách chia sẻ 1-2 trang của chương liên quan.
 
 
 Chỉ với một vài thay đổi nhỏ về thứ tự ưu tiên có thể tác động lớn tới năng suất công việc của cả nhóm. Và bằng những thay đổi đó, tôi hi vọng bạn sẽ sớm trở thành siêu nhân Học Máy của cả đội!
@@ -144,10 +149,10 @@ Chỉ với một vài thay đổi nhỏ về thứ tự ưu tiên có thể tá
 <!-- ============================ Insert ./chapters/ch03.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch03.md instead -->
 
-## 3. Điều kiện tiên quyết và Ký hiệu
+## 3. Kiến thức tiền đề và Ký hiệu
 
 
-Nếu bạn đã từng học một lớp về Học Máy ví dụ như lớp MOOC của tôi trên Coursera, hoặc bạn có kinh nghiệm áp dụng học có giám sát thì cuốn sách này sẽ dễ hiểu đối với bạn.
+Nếu bạn đã từng học một lớp về Học Máy, ví dụ như lớp MOOC của tôi trên Coursera, hoặc bạn có kinh nghiệm áp dụng học có giám sát thì cuốn sách này sẽ dễ hiểu đối với bạn.
 
 
 Tôi giả định rằng bạn đã quen thuộc với **học có giám sát**: học một hàm ánh xạ từ x tới y, sử dụng các cặp dữ liệu có nhãn (x,y). Các thuật toán học có giám sát bao gồm hồi quy tuyến tính, hồi quy logistic và mạng nơ-ron. Học Máy có rất nhiều dạng tuy nhiên phần lớn các giá trị thực tiễn của nó hiện nay đến từ học có giám sát.
@@ -164,30 +169,30 @@ Nếu những khái niệm nêu trên còn mới với bạn thì bạn hãy xem
 <!-- ============================ Insert ./chapters/ch04.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch04.md instead -->
 
-## 4. Quy mô thúc đẩy quá trình phát triển học máy
+## 4. Quy mô là động lực phát triển học máy
 
 
 Rất nhiều những ý tưởng của học sâu (mạng nơ-ron) đã xuất hiện từ hàng thập kỷ trước. Vậy tại sao tới bây giờ chúng mới bùng nổ như vậy?
 
 
-Hai nguyên nhân lớn nhất dẫn tới những phát triển gần đây của học sâu là:
+Hai nguyên nhân chính là:
 
 
-* **Dữ liệu sẵn có**. Ngày nay, mọi người dành nhiều thời gian hơn bên những thiết bị số như máy tính xách tay, thiết bị di động, .v.v. Chính những thiết bị số này tạo ra nguồn dữ liệu cực lớn dùng cho những thuật toán học ngày nay.
+* **Sự sẵn có của dữ liệu.** Ngày nay, mọi người dành nhiều thời gian hơn bên những thiết bị số như máy tính xách tay, thiết bị di động, .v.v. Việc này tạo ra nguồn dữ liệu cực lớn dùng cho những thuật toán học máy.
 
 
-* **Quy mô năng lực tính toán**. Cho tới một vài năm gần đây chúng ta mới có thể huấn luyện mạng nơ-ron đủ lớn để tận dụng những bộ dữ liệu khổng lồ này.
+* **Quy mô năng lực tính toán.** Chỉ tới một vài năm gần đây ta mới có thể huấn luyện mạng nơ-ron đủ lớn để tận dụng những bộ dữ liệu khổng lồ này.
 
 
-Cho dù có thêm nhiều nhiều dữ liệu nữa, thường thi chất lượng của các thuật toán học máy cổ điển, như quy logistic, cũng không tăng. Nghĩa là đồ thị quá trình học chững lại và thuật toán ngừng cải thiện ngay cả khi có thêm dữ liệu:
+Cho dù có thêm nhiều nhiều dữ liệu nữa, thường thì chất lượng của các thuật toán học máy cổ điển, như hồi quy logistic, cũng không tốt hơn. Nghĩa là đồ thị quá trình học chững lại và thuật toán ngừng cải thiện ngay cả khi có thêm dữ liệu:
 
 ![img](../imgs/C04_01.png)
 
 
-Như thể thuật toán cổ điển không biết xử lý thế nào với tất cả lượng dữ liệu chúng ta đang có.
+Như thể thuật toán cổ điển không biết xử lý thế nào với tất cả lượng dữ liệu ta đang có.
 
 
-Nếu bạn huấn luyện một mạng nơ-ron nhỏ cho cùng một tác vụ học có giám sát thì bạn có thể đạt chất lượng cao hơn một chút:
+Nếu bạn huấn luyện một mạng nơ-ron nhỏ cho cùng một tác vụ học có giám sát, bạn có thể đạt chất lượng cao hơn một chút:
 
 ![img](../imgs/C04_02.png)
 
@@ -197,19 +202,19 @@ Nếu bạn huấn luyện một mạng nơ-ron nhỏ cho cùng một tác vụ 
 ![img](../imgs/C04_03.png)
 
 
-Vì thế bạn có thể đạt được chất lượng tốt nhất khi (i) huấn luyện mạng nơ-ron rất lớn -- tương ứng với đường chất lượng màu xanh lục và (ii) có lượng dữ liệu lớn.
+Như vậy bạn đạt được chất lượng tốt nhất khi (i) huấn luyện mạng nơ-ron rất lớn -- tương ứng với đường chất lượng màu xanh lục và (ii) có lượng dữ liệu lớn.
 
 
-Nhiều chi tiết khác như kiến trúc mạng nơ-ron cũng rất quan trọng, và có nhiều sáng tạo trong lĩnh vực này. Tuy nhiên, một trong những cách đáng tin cậy hơn để tăng chất lượng thuật toán vẫn là (i) huấn luyện mạng lớn hơn và (ii) lấy thêm dữ liệu.
+Nhiều chi tiết khác như kiến trúc mạng nơ-ron cũng rất quan trọng, và có nhiều phát kiến trong lĩnh vực này. Tuy nhiên, một trong những cách đáng tin cậy hơn để tăng chất lượng thuật toán vẫn là (i) huấn luyện mạng lớn hơn và (ii) lấy thêm dữ liệu.
 
 
 **CHÚ THÍCH:**
 
 
-[1] Mặc dù hình vẽ thể hiện mạng nơ-ron cho kết quả tốt hơn với tập dữ liệu nhỏ, nhưng hiện tượng này ít nhất quán hơn so với việc mạng nơ-ron hoạt động tốt với dữ liệu lớn. Với dữ liệu nhỏ, chất lượng thuật toán cổ điển có thể hoặc không tốt hơn mạng nơ-ron và phụ thuộc vào cách tạo đặc trưng thủ công. Nếu ta chỉ có 20 mẫu huấn luyện thì việc dùng hồi quy logistic hay mạng nơ-ron không khác biệt nhiều; việc xây dựng đặc trưng thủ công như thế nào sẽ mang lại sự khác biệt nhiều hơn so với việc chọn thuật toán. Còn nếu có một triệu mẫu, thì tôi sẽ chọn dùng mạng nơ-ron.
+[1] Mặc dù hình vẽ thể hiện mạng nơ-ron cho kết quả tốt hơn với tập dữ liệu nhỏ, hiện tượng này ít nhất quán so với việc mạng nơ-ron hoạt động tốt với dữ liệu lớn. Với dữ liệu nhỏ, chất lượng thuật toán cổ điển có thể tốt hoặc kém hơn mạng nơ-ron và phụ thuộc vào các đặc trưng thủ công. Nếu ta chỉ có 20 mẫu huấn luyện thì việc dùng hồi quy logistic hay mạng nơ-ron không khác biệt nhiều; chọn khéo các đặc trưng thủ công sẽ giúp ích nhiều hơn so với việc chọn thuật toán. Còn nếu có một triệu mẫu, thì tôi sẽ chọn dùng mạng nơ-ron.
 
 
-Quá trình đạt được (i) huấn luyện mạng lớn và (ii) tập dữ liệu lớn có thể phức tạp hơn bạn tưởng. Vấn đề này sẽ được thảo luận đầy đủ và chi tiết trong cuốn sách này. Chúng ta sẽ bắt đầu với các chiến lược chung, hữu ích cho cả thuật toán truyền thống lẫn mạng nơ-ron, và từ từ hình thành chiến lược mới nhất cho việc xây dựng các hệ thống học sâu.
+Để đạt được (i) và (ii) là một quá trình đặc biệt phức tạp. Vấn đề này sẽ được thảo luận đầy đủ và chi tiết trong cuốn sách này. Ta sẽ bắt đầu với các chiến lược thông thường và hữu ích cho cả thuật toán truyền thống lẫn mạng nơ-ron, từ đó hình thành các chiến lược tân tiến nhất để xây dựng các hệ thống học sâu.
 
 <!-- ============================ Insert ./chapters/p01_05_12.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p01_05_12.md instead -->
@@ -2145,10 +2150,107 @@ Tóm lại, khi lựa chọn các thành phần cho một pipeline, hãy cố g�
 
 [17] Nếu bạn quen với các thuật toán thực tế về phát hiện vật thể, bạn sẽ nhận ra rằng chúng không chỉ học với ảnh có nhãn 0/1, và thay vào đó được huấn luyện với các khung chứa từ dữ liệu huấn luyện. Thảo luận về vấn đề này nằm ngoài phạm vi của chương này. Tham khảo khóa "Deep Learning specialization" trên Coursera (http://deeplearning.ai) nếu bạn muốn học thêm về thuật toán này.
 
+<!-- ============================ Insert ./chapters/ch52.md =================================== -->
+<!-- Please do not edit this file directly, edit in ./chapters/ch52.md instead -->
+
+## 52. Trực tiếp học những đầu ra phức tạp
+
+
+Một thuật toán phân loại sẽ nhận đầu vào là một ảnh x rồi trả về một số nguyên thể hiện nhãn phân loại của đồ vật trong ảnh đó. Thay vào đó, liệu một thuật toán có thể đưa ra một câu mô tả hoàn chỉnh cho bức ảnh đó? 
+
+
+Ví dụ:
+
+*x* = 
+![img](../imgs/C52_01.png)
+
+
+*y* = "Một chiếc xe buýt màu vàng đang đi xuống một con đường với nền xanh của cây cỏ."
+
+
+Những ứng dụng truyền thống của các thuật toán học có giám sát học một hàm *h: X→Y*, trong đó đầu ra y thường là một số nguyên hoặc một số thực. Ví dụ:
+
+
+
+| Bài toán                 | X                                    | Y                         |
+| :----------------------- | :----------------------              | :------------------       |
+| Phân loại email rác      | Email                                | email rác/ không rác(0/1) |
+| Nhận dạng ảnh            | Ảnh                                  | Nhãn số nguyên            |
+| Dự đoán giá nhà đất      | Đặc trưng của căn nhà                | Giá theo Đô-la            |
+| Gợi ý sản phẩm           | Đặc trưng của sản phẩm và người dùng | Xác suất mua sản phẩm     |
+
+Một trong những hướng phát triển thú vị nhất của học sâu đầu-cuối là nó cho phép chúng ta trực tiếp học những kết quả phức tạp hơn rất nhiều so với đầu ra của việc học truyền thống. Trong ví dụ chú thích hình ảnh ở trên, bạn có thể cho hình ảnh (*x*) vào một mạng nơ-ron và trực tiếp thu về một câu chú thích miêu tả hình ảnh đó (*y*)
+
+
+Dưới đây là một số ví dụ khác:
+
+
+| Bài toán               | X                      | Y                  | Trích dẫn ví dụ           |
+| :------------------    | :--------------------  | :------------      | :------------------------ |
+| Chú thích hình ảnh     | Ảnh                    | Văn bản            | Mao et al., 2014          |
+| Dịch máy               | Văn bản tiếng Anh      | Văn bản tiếng Pháp | Suskever et al., 2014     |
+| Hỏi đáp                | Cặp (Văn bản, Câu hỏi) | Văn bản trả lời    | Bordes et al., 2015       |
+| Nhận dạng giọng nói    | Âm thanh               | Bản ghi thoại      | Hannun et al., 2015       |
+| Văn bản sang giọng nói | Đặc trưng văn bản      | Âm thanh           | van der Oord et al., 2016 |
+
+
+Đây là một xu hướng đang ngày càng phát triển trong học sâu. Với các cặp có nhãn (đầu vào, đầu ra) phù hợp, đôi khi bạn có thể học đầu cuối ngay cả khi đầu ra là một câu, hình ảnh, âm thanh hoặc các đầu ra khác phức tạp hơn nhiều thay vì chỉ một số.
+
 <!-- ============================ Insert ./chapters/p09_53_57.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p09_53_57.md instead -->
 
 # Phần 9: Phân tích lỗi từng phần
+<!-- ============================ Insert ./chapters/ch53.md =================================== -->
+<!-- Please do not edit this file directly, edit in ./chapters/ch53.md instead -->
+
+## 53. Phân tích lỗi từng phần
+
+
+Giả sử hệ thống của bạn được xây dựng dựa trên một pipeline học máy phức tạp và bạn muốn cải thiện chất lượng của nó. Bạn nên cải thiện phần nào trong pipeline này? Bạn có thể sắp xếp thứ tự ưu tiên công việc bằng cách quy lỗi cụ thể cho từng phần trong pipeline.
+
+
+Hãy sử dụng ví dụ bộ phân loại mèo Xiêm của chúng ta:
+
+![img](../imgs/C53_01.png)
+
+
+Phần đầu tiên, bộ phát hiện mèo, xác định vị trí của mèo và cắt chúng ra khỏi tấm ảnh. Phần thứ hai, bộ phân loại giống mèo, xác định xem đó có phải là một con mèo Xiêm hay không. Việc cải thiện bất kì bộ phận nào trong pipeline này cũng có thể tốn tới hàng năm trời. Làm sao để bạn quyết định được (những) bộ phận nào cần tập trung cải thiện?
+
+
+Bằng việc thực hiện **phân tích lỗi từng phần**, bạn có thể cố quy trách nhiệm cho một (hoặc đôi khi là cả hai) phần trong pipeline trên từng dự đoán sai của thuật toán. Ví dụ, thuật toán phân loại sai tấm ảnh này không có một con mèo Xiêm ở trong đó (y=0) mặc dù nhãn chính xác là y=1.
+
+![img](../imgs/C53_02.png)
+
+
+Hãy kiểm chứng một cách thủ công xem hai bước của thuật toán đã làm gì. Giả sử bộ phát hiện mèo Xiêm đã phát hiện ra một chú mèo như dưới đây: 
+
+![img](../imgs/C53_03.png)
+
+
+Tức là bộ phận loại giống mèo được đưa cho tấm hình sau:
+
+![img](../imgs/C53_04.png)
+
+
+Bộ phân loại giống mèo sau đó xác định chính xác rằng tấm hình này không có mèo Xiêm. Vậy nên, bộ phân loại giống mèo không có lỗi: Nó được đưa cho cho xem một đống đá và trả ra nhãn y=0 rất hợp lý. Thực tế, nếu một người mà phải phân loại tấm ảnh được cắt ra toàn đá ở trên thì cũng sẽ dự đoán y=0 mà thôi. Do vậy, bạn rõ ràng có thể quy lỗi này cho bộ phát hiện mèo.
+
+
+Mặt khác, nếu giả sử bộ phát hiện mèo có cho ra kết quả khung chứa như dưới đây:
+
+![img](../imgs/C53_05.png)
+
+
+thì bạn sẽ kết luận rằng bộ phát hiện mèo đã hoàn thành công việc của nó, và lỗi là do bộ phân loại giống mèo mà ra.
+
+
+Giả sử bạn kiểm chứng 100 tấm ảnh bị phân loại nhầm trong tập phát triển và nhận ra rằng 90 trong số đó là do lỗi của bộ phát hiện mèo, chỉ có 10 tấm là do lỗi của bộ phân loại giống mèo. Bạn có thể an toàn kết luận rằng bạn nên tập trung nhiều hơn vào việc cải thiện bộ phát hiện mèo.   
+
+
+Ngoài ra, tiện đây bạn cũng đã tìm ra 90 mẫu mà bộ phát hiện mèo trả về khung chứa chưa chính xác. Bạn có thể sử dụng 90 mẫu này để thực hiện việc phân tích lỗi kĩ hơn trên bộ phát hiện mèo và tìm cách cải thiện nó.
+
+
+Việc làm thế nào để quy lỗi cho một phần của pipeline vẫn đang được mô tả một cách phi chính thống: bạn nhìn vào đầu ra của mỗi phần để xem liệu có thể quyết định phần nào gây ra lỗi. Phương pháp phi chính thống này có thể là đủ với bạn. Tuy nhiên trong chương sau, bạn sẽ thấy một cách chính thống hơn trong việc quy lỗi.
+
 <!-- ============================ Insert ./chapters/ch54.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch54.md instead -->
 
@@ -2195,6 +2297,146 @@ Nói cách khác, thực hiện thử nghiệm mà ở đó bạn cung cấp cho
 
 Bằng cách phân tích các ảnh bị phân loại sai trên tập phát triển, bạn có thể quy lỗi chính xác cho một thành phần. Điều này cho phép bạn ước tính tỉ lệ lỗi cho từng thành phần của pipeline, từ đó quyết định thành phần cần tập trung khắc phục.
 
+<!-- ============================ Insert ./chapters/ch55.md =================================== -->
+<!-- Please do not edit this file directly, edit in ./chapters/ch55.md instead -->
+
+## 55. Trường hợp tổng quát của việc quy lỗi
+
+
+Đây là những bước tổng quát cho việc quy lỗi. Giả sử một thiết kế pipeline có ba thành phần  A, B, C trong đó A cung cấp thông tin trực tiếp cho B, và B cung cấp thông tin trực tiếp cho C.
+
+![img](../imgs/C55_01.png)
+
+
+Với từng lỗi của hệ thống trên tập phát triển: 
+
+
+1. Thử điều chỉnh thủ công kết quả đầu ra ở A cho "hoàn hảo" (ví dụ, một khung chứa hình mèo "hoàn hảo"), và sau đó tiến hành chạy thuật toán cho pipeline gồm có B và C với đầu ra này. Nếu thuật toán trả về kết quả cuối cùng chính xác, điều đó chỉ ra rằng, thuật toán sẽ cho ra kết quả chính xác nếu A trả về kết quả tốt hơn. Vậy ta có thể quy lỗi cho A. Nếu không, ta sẽ kiểm chứng thêm ở bước 2.  
+
+
+2. Thử điều chỉnh thủ công kết quả đầu ra ở công đoạn B cho "hoàn hảo". Nếu thuật toán cho ra kết quả đầu ra cuối cùng chính xác, ta có thể quy lỗi cho B. Ngược lại, ta tiến hành bước 3.
+
+
+3. Quy lỗi cho thành phần C. 
+
+
+Chúng ta hãy cùng tìm hiểu một ví dụ phức tạp hơn sau đây:
+
+![img](../imgs/C55_02.png)
+
+
+Xe tự lái của bạn sử dụng pipeline như trên. Bạn sẽ sử dụng kỹ thuật phân tích lỗi từng phần như thế nào để quyết định (những) thành phần nào cần tập trung cải thiện?
+
+
+Bạn có thể gọi tên ba thành phần trong hệ thống là A, B, C tương ứng với các chức năng như sau:<br/>
+A: phát hiện xe hơi<br/>
+B: phát hiện người đi bộ <br/>
+C: hoạch định đường đi cho xe
+
+
+Với hệ thống xe tự lái mô tả như trên, giả sử bạn kiểm tra xe của bạn trên một cung đường kín và xác định trường hợp nào xe chọn hướng bẻ lái giật nhiều hơn so với một người lái xe kinh nghiệm điều khiển. Trong lĩnh vực lái xe tự động, một trường hợp như thế thường được gọi là "tình huống". Bạn cần thực hiện:
+
+
+1. Thử điều chỉnh thủ công kết quả đầu ra của thành phần A (phát hiện xe hơi) sao cho "hoàn hảo" (ví dụ, cho xe biết vị trí của những chiếc xe khác). Sau đó tiếp tục chạy phần còn lại của pipeline gồm có B, C, nhưng cho phép C (hoạch định đường đi) sử dụng đầu ra đã hoàn hảo của A. Nếu thuật toán hoạch định đường đi cho xe tốt hơn, điều đó cho thấy rằng, kết quả cuối cùng của thuật toán tự lái sẽ được cải thiện nếu mà A trả về kết quả tốt hơn.  Như vậy, bạn có thể quy lỗi cho A. Nếu không, ta tiếp tục bước 2. 
+
+
+2. Thử điều chỉnh thủ công kết quả đầu ra ở công đoạn B (phát hiện người đi bộ) cho "hoàn hảo". Nếu thuật toán cho ra kết quả đầu ra cuối cùng chính xác, ta có thể quy lỗi cho B. Ngược lại, ta tiến hành bước 3.
+
+3. Quy lỗi cho thành phần C. 
+
+
+Các thành phần của một mô hình học máy dạng pipeline nên được sắp xếp theo đồ thị có hướng không chu trình (DAG), nghĩa là bạn có thể tính toán chúng theo thứ tự cố định từ trái sang phải nào đó, và các thành phần sau chỉ nên phụ thuộc vào đầu ra của các thành phần trước đó. Miễn là việc xâu chuỗi các thành phần theo thứ tự A->B->C tuân thủ theo quy tắc DAG, việc phân tích lỗi sẽ tốt. Bạn có thể nhận được các kết quả hơi khác nhau nếu hoán chuyển vị trí của A và B cho nhau như sau:
+
+
+A: Nhận dạng người đi bộ (trước đây là "Nhận dạng xe")
+
+
+B: Nhận dạng xe (trước đây là "Nhận dạng người đi bộ")
+
+
+C: Hoạch định đường đi cho xe
+
+
+Nhưng các kết quả của việc phân tích lỗi thì sẽ vẫn hợp lệ và cho ta định hướng tốt thành phần nào cần cải thiện.
+
+<!-- ============================ Insert ./chapters/ch56.md =================================== -->
+<!-- Please do not edit this file directly, edit in ./chapters/ch56.md instead -->
+
+## 56. Phân tích lỗi từng phần và so sánh với chất lượng mức con người
+
+
+Thực hiện phân tích lỗi của thuật toán học giống với việc sử dụng khoa học dữ liệu phân tích lỗi của hệ thống học máy để biết chính xác những việc cần làm kế tiếp. Cơ bản nhất, phân tích lỗi từng phần sẽ cho ta biết được chất lượng của (những) phần nào cần được cải thiện.
+
+
+Giả sử bạn có bộ dữ liệu về khách hàng mua đồ trên một trang mạng. Một nhà khoa học dữ liệu có thể có rất nhiều cách khác nhau để phân tích dữ liệu đó. Người đó có thể đưa ra nhiều kết luận khác nhau như có nên tăng giá, giá trị vòng đời khách hàng đạt được thông qua các chiến dịch tiếp thị khác nhau, v.v. Không có một việc phân tích dữ liệu "chuẩn mực" nào, và có thể có rất nhiều kết luận hữu ích có thể rút ra. Tương tự, không chỉ có một cách "chuẩn mực" cho việc thực hiện phân tích lỗi. Thông qua các chương này bạn đã học được những cách phổ biến nhất để rút ra những nhận định chính xác về hệ thống học máy của bạn, nhưng bạn cũng nên thử nghiệm những phương pháp phân tích lỗi khác.
+
+
+Chúng ta hãy quay trở lại ứng dụng xe tự lái, trong đó thuật toán phát hiện xe đưa ra vị trí (có thể có thêm vận tốc) của những chiếc xe gần đó, thuật toán phát hiện người đi bộ đưa ra vị trí của người đi bộ gần đó, và hai đầu ra này cuối cùng được sử dụng để hoạch định đường đi cho xe.
+
+![img](../imgs/C56_01.png)
+
+
+Để kiểm tra lỗi pipeline này, thay vì tuân thủ nghiêm ngặt quy trình đã thấy trong chương trước, bạn nên đặt những câu hỏi như:
+
+
+1. Cách biệt về khả năng xác định xe giữa thuật toán và con người là bao xa?
+
+
+2. Cách biệt về khả năng phát hiện người đi bộ giữa thuật toán và con người là bao xa?
+
+
+3. Cách biệt giữa khả năng của toàn hệ thống và con người tới cỡ nào? Ở đây, chất lượng của con người được giả sử là cách con người tính đường đi cho xe chỉ dựa vào kết quả đầu ra từ hai thành phần trước đó trong pipeline (thay vì dựa vào hình ảnh camera). Nói cách khác, với cùng thông tin đầu vào, khả năng ước lượng đường đi của thuật toán so với con người sẽ như thế nào?
+
+
+Nếu bạn thấy rằng một trong những thành phần này thua xa chất lượng mức con người, thì bây giờ bạn biết phần nào cần được cải thiện. Hãy tập trung vào việc cải thiện chất lượng của phần đó.
+
+
+Nhiều quy trình phân tích lỗi hoạt động tốt nhất khi chúng ta cố gắng tự động hóa một thứ gì đó mà con người có thể làm, do đó có thể so sánh với con người. Hầu hết các ví dụ trước của chúng ta ngầm giả định điều này. Nếu bạn đang xây dựng một hệ thống học máy trong đó đầu ra hoặc một số thành phần trung gian đang làm những việc mà thậm chí con người không thể làm tốt, thì một trong số những quy trình này sẽ không được áp dụng.
+
+
+Đây là một thuận lợi của việc giải quyết các vấn đề mà con người có thể giải quyết--bạn có các công cụ mạnh mẽ để phân tích lỗi, do đó bạn có thể ưu tiên các công việc trong nhóm một cách hiệu quả hơn.
+
+<!-- ============================ Insert ./chapters/ch57.md =================================== -->
+<!-- Please do not edit this file directly, edit in ./chapters/ch57.md instead -->
+
+## 57. Phát hiện một pipeline học máy bị lỗi
+
+
+Nếu mỗi thành phần đơn lẻ trong pipeline học máy của bạn đều hoạt động ở chất lượng mức con người hoặc gần mức con người, nhưng pipeline tổng thể lại kém xa mức con người thì sao? Điều này thường có nghĩa là pipeline có lỗi và cần được thiết kế lại. Việc phân tích lỗi có thể giúp bạn nhận định liệu bạn có cần thiết kế lại pipeline của mình.
+
+![img](../imgs/C57_01.png)
+
+
+Trong chương trước, chúng ta đã đặt câu hỏi liệu mỗi trong số ba thành phần có ở chất lượng mức con người. Giả sử câu trả lời cho cả ba câu hỏi là có. Điều đó có nghĩa là:
+
+
+1. Thành phần Phát hiện xe hơi đạt chất lượng (xấp xỉ) mức con người trong việc phát hiện xe hơi từ ảnh camera.
+
+
+2. Thành phần Phát hiện người đi bộ đạt chất lượng (xấp xỉ) mức con người trong việc phát hiện xe hơi từ ảnh camera.
+
+
+3. *So sánh với một người phải lập kế hoạch đường đi cho xe khi chỉ dựa trên đầu ra của hai thành phần pipeline trước đó (thay vì được tiếp cận với hình ảnh từ camera)*, thành phần Lập kế hoạch có chất lượng ở mức tương đương.
+
+
+Tuy nhiên, chiếc xe tự lái tổng thể của bạn lại hoạt động kém hơn chất lượng mức con người một cách rõ rệt. Có nghĩa là, con người được tiếp cận hình ảnh từ camera có thể dự tính những đường đi tốt hơn nhiều cho xe. Bạn có thể rút ra kết luận gì?
+
+
+Kết luận khả dĩ duy nhất là pipeline học máy đã bị lỗi. Trong trường hợp này, thành phần Lên kế hoạch đã hoạt động ở mức tốt nhất có thể *với những đầu vào của nó*, nhưng đầu vào không chứa đủ thông tin. Bạn nên tự hỏi liệu những thông tin nào khác, ngoài đầu ra của hai thành phần pipeline trước, là cần thiết cho việc lên kế hoạch đường đi thật tốt cho xe tự lái. Nói cách khác, những thông tin nào mà một người lái xe có kinh nghiệm cần đến?
+
+
+Ví dụ, giả sử bạn nhận ra rằng người lái xe cũng cần biết vị trí của chỉ dấu làn đường. Điều này gợi ý rằng bạn nên thiết kế lại pipeline như sau:
+
+![img](../imgs/C57_02.png)
+
+
+Cuối cùng, nếu bạn không nghĩ rằng pipeline như một chỉnh thể sẽ đạt chất lượng mức con người, ngay cả khi mỗi thành phần đơn lẻ đạt chất lượng mức con người (nhớ rằng bạn đang so sánh với một người được cung cấp cùng một đầu vào như các thành phần), có nghĩa là pipeline có lỗi và cần được thiết kế lại.
+
+
+**GHI CHÚ:**
+
+
+[18] Trong ví dụ về xe tự lái ở trên, theo lý thuyết ta có thể giải quyết vấn đề bằng cách cũng cho hình ảnh thô từ camera vào thành phần lên kế hoạch. Tuy nhiên, điều đó sẽ vi phạm nguyên tắc thiết kế "Tính đơn giản của tác vụ" đã được trình bày ở Chương 51, vì thành phần lên kế hoạch đường đi giờ đây cần có đầu vào là ảnh thô và có một tác vụ rất phức tạp để giải quyết. Thế nên thêm một thành phần Phát hiện chỉ dấu làn đường là một lựa chọn tốt hơn -- nó giúp lấy thêm những thông tin quan trọng vốn thiếu về làn đường cho khối lên kế hoạch đường đi, đồng thời bạn cũng tránh được việc làm bất cứ module nào trở nên quá phức tạp để xây dựng/huấn luyện.
 <!-- ============================ Insert ./chapters/p10_58.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p10_58.md instead -->
 

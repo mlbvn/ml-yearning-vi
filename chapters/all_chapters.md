@@ -3,8 +3,8 @@
 * [Giới thiệu](#giới-thiệu)
 	* [1. Tại sao cần chiến lược Học Máy](#1-tại-sao-cần-chiến-lược-học-máy)
 	* [2. Cách sử dụng cuốn sách khi làm việc nhóm](#2-cách-sử-dụng-cuốn-sách-khi-làm-việc-nhóm)
-	* [3. Điều kiện tiên quyết và Ký hiệu](#3-điều-kiện-tiên-quyết-và-ký-hiệu)
-	* [4. Quy mô thúc đẩy quá trình phát triển học máy](#4-quy-mô-thúc-đẩy-quá-trình-phát-triển-học-máy)
+	* [3. Kiến thức tiền đề và Ký hiệu](#3-kiến-thức-tiền-đề-và-ký-hiệu)
+	* [4. Quy mô là động lực phát triển học máy](#4-quy-mô-là-động-lực-phát-triển-học-máy)
 * [Phần 1: Chuẩn bị tập phát triển và tập kiểm tra](#phần-1-chuẩn-bị-tập-phát-triển-và-tập-kiểm-tra)
 	* [5. Tập phát triển và tập kiểm tra](#5-tập-phát-triển-và-tập-kiểm-tra)
 	* [6. Tập phát triển và tập kiểm tra nên có cùng phân phối](#6-tập-phát-triển-và-tập-kiểm-tra-nên-có-cùng-phân-phối)
@@ -60,8 +60,13 @@
 	* [49. Ưu nhược điểm của học đầu-cuối](#49-ưu-nhược-điểm-của-học-đầu-cuối)
 	* [50. Lựa chọn các thành phần cho pipeline: Tính sẵn có của dữ liệu](#50-lựa-chọn-các-thành-phần-cho-pipeline-tính-sẵn-có-của-dữ-liệu)
 	* [51. Lựa chọn các thành phần cho pipeline: tính đơn giản của tác vụ](#51-lựa-chọn-các-thành-phần-cho-pipeline-tính-đơn-giản-của-tác-vụ)
+	* [52. Trực tiếp học những đầu ra phức tạp](#52-trực-tiếp-học-những-đầu-ra-phức-tạp)
 * [Phần 9: Phân tích lỗi từng phần](#phần-9-phân-tích-lỗi-từng-phần)
+	* [53. Phân tích lỗi từng phần](#53-phân-tích-lỗi-từng-phần)
 	* [54. Quy lỗi cho một thành phần](#54-quy-lỗi-cho-một-thành-phần)
+	* [55. Trường hợp tổng quát của việc quy lỗi](#55-trường-hợp-tổng-quát-của-việc-quy-lỗi)
+	* [56. Phân tích lỗi từng phần và so sánh với chất lượng mức con người](#56-phân-tích-lỗi-từng-phần-và-so-sánh-với-chất-lượng-mức-con-người)
+	* [57. Phát hiện một pipeline học máy bị lỗi](#57-phát-hiện-một-pipeline-học-máy-bị-lỗi)
 * [Phần 10: Tổng kết](#phần-10-tổng-kết)
 	* [58. Xây dựng một biệt đội siêu anh hùng - Hãy để đồng đội của bạn đọc điều này](#58-xây-dựng-một-biệt-đội-siêu-anh-hùng---hãy-để-đồng-đội-của-bạn-đọc-điều-này)
 <!-- ============================ Insert ./chapters/p00_01_04.md =================================== -->
@@ -93,7 +98,7 @@ Giả sử bạn xây dựng công ty khởi nghiệp cung cấp không giới h
 
 > You use a neural network to build a computer vision system for detecting cats in pictures. But tragically, your learning algorithm’s accuracy is not yet good enough. You are under tremendous pressure to improve your cat detector. What do you do?
 
-Bạn dùng mạng nơ-ron cho hệ thống thị giác máy nhận biết ảnh có hình mèo. Nhưng dở một cái là thuật toán bạn dùng chưa đủ độ chính xác. Bạn đang chịu rất nhiều áp lực để tăng chất lượng dự đoán tìm ảnh mèo. Bạn sẽ làm thế nào?
+Bạn dùng mạng nơ-ron cho hệ thống thị giác máy nhằm phát hiện mèo trong ảnh. Nhưng dở một cái là thuật toán bạn dùng chưa đủ độ chính xác. Bạn đang chịu rất nhiều áp lực để tăng chất lượng bộ phát hiện mèo. Bạn sẽ làm thế nào?
 
 
 > Your team has a lot of ideas, such as:
@@ -110,7 +115,7 @@ Nhóm bạn có thể đưa ra rất nhiều ý tưởng như:
 
 > * Train the algorithm longer, by running more gradient descent iterations.
 
-* Huấn luyện thuật toán lâu hơn bằng cách chạy nhiều vòng lặp gradient descent hơn. 
+* Huấn luyện thuật toán lâu hơn bằng cách chạy thêm nhiều vòng lặp hạ gradient.
  
 > * Try a bigger neural network, with more layers/hidden units/parameters.
 
@@ -126,7 +131,7 @@ Nhóm bạn có thể đưa ra rất nhiều ý tưởng như:
 
 > * Change the neural network architecture (activation function, number of hidden units, etc.)
 
-*  Thay đổi kiến trúc mạng nơ-ron (ví dụ: hàm activation, số lượng nút ẩn, .v.v)
+*  Thay đổi kiến trúc mạng nơ-ron (ví dụ: hàm kích hoạt, số lượng nút ẩn, .v.v)
 
 * ...
 
@@ -150,11 +155,11 @@ Sau khi đọc xong cuốn sách này, bạn sẽ hiểu sâu hơn về cách l�
 
 > But your teammates might not understand why you’re recommending a particular direction. Perhaps you want your team to define a single-number evaluation metric, but they aren’t convinced. How do you persuade them?
 
-Nhưng có thể cộng sự của bạn không hiểu tại sao bạn lại chọn hướng đi như vậy. Có thể bạn muốn cả đội xác định và dùng một phép đo đơn trị, nhưng liệu tất cả thành viên đều đồng tình với quyết định đó? Và bạn sẽ làm gì để thuyết phục họ?
+Nhưng có thể cộng sự chưa rõ tại sao bạn lại chọn hướng đi như vậy. Ví dụ bạn muốn cả đội xác định và dùng một phép đo đơn trị, nhưng nếu mọi người không đồng tình, thì bạn sẽ làm gì để thuyết phục họ?
 
 > That’s why I made the chapters short: So that you can print them out and get your teammates to read just the 1-2 pages you need them to know.
 
-Đó là lý do tại sao tôi chủ tâm viết những chương rất ngắn. Bạn có thể dễ dàng thuyết phục quý đồng nghiệp bằng cách chia sẻ 1-2 trang bản in của chương liên quan.
+Đó là lý do tôi chủ tâm viết những chương rất ngắn. Bạn có thể dễ dàng thuyết phục quý đồng nghiệp bằng cách chia sẻ 1-2 trang của chương liên quan.
 
 > A few changes in prioritization can have a huge effect on your team’s productivity. By helping your team with a few such changes, I hope that you can become the superhero of your team!
 
@@ -166,11 +171,11 @@ Chỉ với một vài thay đổi nhỏ về thứ tự ưu tiên có thể tá
 <!-- Please do not edit this file directly, edit in ./chapters/ch03.md instead -->
 ># 3. Prerequisites and Notation
 
-## 3. Điều kiện tiên quyết và Ký hiệu
+## 3. Kiến thức tiền đề và Ký hiệu
 
 > If you have taken a Machine Learning course such as my machine learning MOOC on Coursera, or if you have experience applying supervised learning, you will be able to understand this text.
 
-Nếu bạn đã từng học một lớp về Học Máy ví dụ như lớp MOOC của tôi trên Coursera, hoặc bạn có kinh nghiệm áp dụng học có giám sát thì cuốn sách này sẽ dễ hiểu đối với bạn.
+Nếu bạn đã từng học một lớp về Học Máy, ví dụ như lớp MOOC của tôi trên Coursera, hoặc bạn có kinh nghiệm áp dụng học có giám sát thì cuốn sách này sẽ dễ hiểu đối với bạn.
 
 > I assume you are familiar with **supervised learning**: learning a function that maps from x to y, using labeled training examples (x,y). Supervised learning algorithms include linear regression, logistic regression, and neural networks. There are many forms of machine learning, but the majority of Machine Learning’s practical value today comes from supervised learning.
 
@@ -191,7 +196,7 @@ Nếu những khái niệm nêu trên còn mới với bạn thì bạn hãy xem
 <!-- Please do not edit this file directly, edit in ./chapters/ch04.md instead -->
 > ## 4. Scale drives machine learning progress
 
-## 4. Quy mô thúc đẩy quá trình phát triển học máy
+## 4. Quy mô là động lực phát triển học máy
 
 > Many of the ideas of deep learning (neural networks) have been around for decades. Why are these ideas taking off now?
 
@@ -199,29 +204,29 @@ Rất nhiều những ý tưởng của học sâu (mạng nơ-ron) đã xuất 
 
 > Two of the biggest drivers of recent progress have been:
 
-Hai nguyên nhân lớn nhất dẫn tới những phát triển gần đây của học sâu là:
+Hai nguyên nhân chính là:
 
 > * **Data availability.** People are now spending more time on digital devices (laptops, mobile devices). Their digital activities generate huge amounts of data that we can feed to our learning algorithms.
 
-* **Dữ liệu sẵn có**. Ngày nay, mọi người dành nhiều thời gian hơn bên những thiết bị số như máy tính xách tay, thiết bị di động, .v.v. Chính những thiết bị số này tạo ra nguồn dữ liệu cực lớn dùng cho những thuật toán học ngày nay.
+* **Sự sẵn có của dữ liệu.** Ngày nay, mọi người dành nhiều thời gian hơn bên những thiết bị số như máy tính xách tay, thiết bị di động, .v.v. Việc này tạo ra nguồn dữ liệu cực lớn dùng cho những thuật toán học máy.
 
 > * **Computational scale.** We started just a few years ago to be able to train neural networks that are big enough to take advantage of the huge datasets we now have.
 
-* **Quy mô năng lực tính toán**. Cho tới một vài năm gần đây chúng ta mới có thể huấn luyện mạng nơ-ron đủ lớn để tận dụng những bộ dữ liệu khổng lồ này.
+* **Quy mô năng lực tính toán.** Chỉ tới một vài năm gần đây ta mới có thể huấn luyện mạng nơ-ron đủ lớn để tận dụng những bộ dữ liệu khổng lồ này.
 
 > In detail, even as you accumulate more data, usually the performance of older learning algorithms, such as logistic regression, "plateaus". This means its learning curve "flattens out," and the algorithm stops improving even as you give it more data:
 
-Cho dù có thêm nhiều nhiều dữ liệu nữa, thường thi chất lượng của các thuật toán học máy cổ điển, như quy logistic, cũng không tăng. Nghĩa là đồ thị quá trình học chững lại và thuật toán ngừng cải thiện ngay cả khi có thêm dữ liệu:
+Cho dù có thêm nhiều nhiều dữ liệu nữa, thường thì chất lượng của các thuật toán học máy cổ điển, như hồi quy logistic, cũng không tốt hơn. Nghĩa là đồ thị quá trình học chững lại và thuật toán ngừng cải thiện ngay cả khi có thêm dữ liệu:
 
 ![img](../imgs/C04_01.png)
 
 > It was as if the older algorithms didn’t know what to do with all the data we now have.
 
-Như thể thuật toán cổ điển không biết xử lý thế nào với tất cả lượng dữ liệu chúng ta đang có.
+Như thể thuật toán cổ điển không biết xử lý thế nào với tất cả lượng dữ liệu ta đang có.
 
 > If you train a small neutral network (NN) on the same supervised learning task, you might get slightly better performance:
 
-Nếu bạn huấn luyện một mạng nơ-ron nhỏ cho cùng một tác vụ học có giám sát thì bạn có thể đạt chất lượng cao hơn một chút:
+Nếu bạn huấn luyện một mạng nơ-ron nhỏ cho cùng một tác vụ học có giám sát, bạn có thể đạt chất lượng cao hơn một chút:
 
 ![img](../imgs/C04_02.png)
 
@@ -233,11 +238,11 @@ Nếu bạn huấn luyện một mạng nơ-ron nhỏ cho cùng một tác vụ 
 
 > Thus, you obtain the best performance when you (i) Train a very large neural network, so that you are on the green curve above; (ii) Have a huge amount of data.
 
-Vì thế bạn có thể đạt được chất lượng tốt nhất khi (i) huấn luyện mạng nơ-ron rất lớn -- tương ứng với đường chất lượng màu xanh lục và (ii) có lượng dữ liệu lớn.
+Như vậy bạn đạt được chất lượng tốt nhất khi (i) huấn luyện mạng nơ-ron rất lớn -- tương ứng với đường chất lượng màu xanh lục và (ii) có lượng dữ liệu lớn.
 
 > Many other details such as neural network architecture are also important, and there has been much innovation here. But one of the more reliable ways to improve an algorithm’s performance today is still to (i) train a bigger network and (ii) get more data.
 
-Nhiều chi tiết khác như kiến trúc mạng nơ-ron cũng rất quan trọng, và có nhiều sáng tạo trong lĩnh vực này. Tuy nhiên, một trong những cách đáng tin cậy hơn để tăng chất lượng thuật toán vẫn là (i) huấn luyện mạng lớn hơn và (ii) lấy thêm dữ liệu.
+Nhiều chi tiết khác như kiến trúc mạng nơ-ron cũng rất quan trọng, và có nhiều phát kiến trong lĩnh vực này. Tuy nhiên, một trong những cách đáng tin cậy hơn để tăng chất lượng thuật toán vẫn là (i) huấn luyện mạng lớn hơn và (ii) lấy thêm dữ liệu.
 
 > **FOOTNOTE:**
 
@@ -245,11 +250,11 @@ Nhiều chi tiết khác như kiến trúc mạng nơ-ron cũng rất quan trọ
 
 > [1] This diagram shows NNs doing better in the regime of small datasets. This effect is less consistent than the effect of NNs doing well in the regime of huge datasets. In the small data regime, depending on how the features are hand-engineered, traditional algorithms may or may not do better. For example, if you have 20 training examples, it might not matter much whether you use logistic regression or a neural network; the hand-engineering of features will have a bigger effect than the choice of algorithm. But if you have 1 million examples, I would favor the neural network.
 
-[1] Mặc dù hình vẽ thể hiện mạng nơ-ron cho kết quả tốt hơn với tập dữ liệu nhỏ, nhưng hiện tượng này ít nhất quán hơn so với việc mạng nơ-ron hoạt động tốt với dữ liệu lớn. Với dữ liệu nhỏ, chất lượng thuật toán cổ điển có thể hoặc không tốt hơn mạng nơ-ron và phụ thuộc vào cách tạo đặc trưng thủ công. Nếu ta chỉ có 20 mẫu huấn luyện thì việc dùng hồi quy logistic hay mạng nơ-ron không khác biệt nhiều; việc xây dựng đặc trưng thủ công như thế nào sẽ mang lại sự khác biệt nhiều hơn so với việc chọn thuật toán. Còn nếu có một triệu mẫu, thì tôi sẽ chọn dùng mạng nơ-ron.
+[1] Mặc dù hình vẽ thể hiện mạng nơ-ron cho kết quả tốt hơn với tập dữ liệu nhỏ, hiện tượng này ít nhất quán so với việc mạng nơ-ron hoạt động tốt với dữ liệu lớn. Với dữ liệu nhỏ, chất lượng thuật toán cổ điển có thể tốt hoặc kém hơn mạng nơ-ron và phụ thuộc vào các đặc trưng thủ công. Nếu ta chỉ có 20 mẫu huấn luyện thì việc dùng hồi quy logistic hay mạng nơ-ron không khác biệt nhiều; chọn khéo các đặc trưng thủ công sẽ giúp ích nhiều hơn so với việc chọn thuật toán. Còn nếu có một triệu mẫu, thì tôi sẽ chọn dùng mạng nơ-ron.
 
 > The process of how to accomplish (i) and (ii) are surprisingly complex. This book will discuss the details at length. We will start with general strategies that are useful for both traditional learning algorithms and neural networks, and build up to the most modern strategies for building deep learning systems.
 
-Quá trình đạt được (i) huấn luyện mạng lớn và (ii) tập dữ liệu lớn có thể phức tạp hơn bạn tưởng. Vấn đề này sẽ được thảo luận đầy đủ và chi tiết trong cuốn sách này. Chúng ta sẽ bắt đầu với các chiến lược chung, hữu ích cho cả thuật toán truyền thống lẫn mạng nơ-ron, và từ từ hình thành chiến lược mới nhất cho việc xây dựng các hệ thống học sâu.
+Để đạt được (i) và (ii) là một quá trình đặc biệt phức tạp. Vấn đề này sẽ được thảo luận đầy đủ và chi tiết trong cuốn sách này. Ta sẽ bắt đầu với các chiến lược thông thường và hữu ích cho cả thuật toán truyền thống lẫn mạng nơ-ron, từ đó hình thành các chiến lược tân tiến nhất để xây dựng các hệ thống học sâu.
 
 <!-- ============================ Insert ./chapters/p01_05_12.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p01_05_12.md instead -->
@@ -2742,11 +2747,142 @@ Tóm lại, khi lựa chọn các thành phần cho một pipeline, hãy cố g�
 
 [17] Nếu bạn quen với các thuật toán thực tế về phát hiện vật thể, bạn sẽ nhận ra rằng chúng không chỉ học với ảnh có nhãn 0/1, và thay vào đó được huấn luyện với các khung chứa từ dữ liệu huấn luyện. Thảo luận về vấn đề này nằm ngoài phạm vi của chương này. Tham khảo khóa "Deep Learning specialization" trên Coursera (http://deeplearning.ai) nếu bạn muốn học thêm về thuật toán này.
 
+<!-- ============================ Insert ./chapters/ch52.md =================================== -->
+<!-- Please do not edit this file directly, edit in ./chapters/ch52.md instead -->
+> ## 52. Directly learning rich outputs
+
+## 52. Trực tiếp học những đầu ra phức tạp
+
+> An image classification algorithm will input an image x, and output an integer indicating the object category. Can an algorithm instead output an entire sentence describing the image?
+
+Một thuật toán phân loại sẽ nhận đầu vào là một ảnh x rồi trả về một số nguyên thể hiện nhãn phân loại của đồ vật trong ảnh đó. Thay vào đó, liệu một thuật toán có thể đưa ra một câu mô tả hoàn chỉnh cho bức ảnh đó? 
+
+> For example:
+
+Ví dụ:
+
+*x* = 
+![img](../imgs/C52_01.png)
+
+> *y* = "A yellow bus driving down a road with green trees and green grass in the background."
+
+*y* = "Một chiếc xe buýt màu vàng đang đi xuống một con đường với nền xanh của cây cỏ."
+
+> Traditional applications of supervised learning learned a function *h: X→Y*, where the output y was usually an integer or a real number. For example:
+
+Những ứng dụng truyền thống của các thuật toán học có giám sát học một hàm *h: X→Y*, trong đó đầu ra y thường là một số nguyên hoặc một số thực. Ví dụ:
+
+> |        Problem           |           X             |           Y         |
+> | :----------------------- | :---------------------- | :------------------ |
+> | Spam classification      | Email                   | Spam/Not spam (0/1) |
+> | Image recognition        | Image                   | Integer label       |
+> | Housing price prediction | Features of house       | Price in dollars    |
+> | Product recommendation   | Product & user features | Chance of purchase  |
+
+> One of the most exciting developments in end-to-end deep learning is that it is letting us directly learn *y* that are much more complex than a number. In the image-captioning example above, you can have a neural network input an image (*x*) and directly output a caption (*y*).
+
+| Bài toán                 | X                                    | Y                         |
+| :----------------------- | :----------------------              | :------------------       |
+| Phân loại email rác      | Email                                | email rác/ không rác(0/1) |
+| Nhận dạng ảnh            | Ảnh                                  | Nhãn số nguyên            |
+| Dự đoán giá nhà đất      | Đặc trưng của căn nhà                | Giá theo Đô-la            |
+| Gợi ý sản phẩm           | Đặc trưng của sản phẩm và người dùng | Xác suất mua sản phẩm     |
+
+Một trong những hướng phát triển thú vị nhất của học sâu đầu-cuối là nó cho phép chúng ta trực tiếp học những kết quả phức tạp hơn rất nhiều so với đầu ra của việc học truyền thống. Trong ví dụ chú thích hình ảnh ở trên, bạn có thể cho hình ảnh (*x*) vào một mạng nơ-ron và trực tiếp thu về một câu chú thích miêu tả hình ảnh đó (*y*)
+
+> Here are more examples:
+
+Dưới đây là một số ví dụ khác:
+
+> |       Problem       |           X           |       Y       |      Example Citation     |
+> | :------------------ | :-------------------- | :------------ | :------------------------ |
+> | Image captioning    | Image                 | Text          | Mao et al., 2014          |
+> | Machine translation | English text          | French text   | Suskever et al., 2014     |
+> | Question answering  | (Text, Question) pair | Answer text   | Bordes et al., 2015       |
+> | Speech recognition  | Audio                 | Transcription | Hannun et al., 2015       |
+> | TTS                 | Text features         | Audio         | van der Oord et al., 2016 |
+
+| Bài toán               | X                      | Y                  | Trích dẫn ví dụ           |
+| :------------------    | :--------------------  | :------------      | :------------------------ |
+| Chú thích hình ảnh     | Ảnh                    | Văn bản            | Mao et al., 2014          |
+| Dịch máy               | Văn bản tiếng Anh      | Văn bản tiếng Pháp | Suskever et al., 2014     |
+| Hỏi đáp                | Cặp (Văn bản, Câu hỏi) | Văn bản trả lời    | Bordes et al., 2015       |
+| Nhận dạng giọng nói    | Âm thanh               | Bản ghi thoại      | Hannun et al., 2015       |
+| Văn bản sang giọng nói | Đặc trưng văn bản      | Âm thanh           | van der Oord et al., 2016 |
+
+> This is an accelerating trend in deep learning: When you have the right (input,output) labeled pairs, you can sometimes learn end-to-end even when the output is a sentence, an image, audio, or other outputs that are richer than a single number.
+
+Đây là một xu hướng đang ngày càng phát triển trong học sâu. Với các cặp có nhãn (đầu vào, đầu ra) phù hợp, đôi khi bạn có thể học đầu cuối ngay cả khi đầu ra là một câu, hình ảnh, âm thanh hoặc các đầu ra khác phức tạp hơn nhiều thay vì chỉ một số.
+
 <!-- ============================ Insert ./chapters/p09_53_57.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p09_53_57.md instead -->
 > # Part 9: Error analysis by parts
 
 # Phần 9: Phân tích lỗi từng phần
+<!-- ============================ Insert ./chapters/ch53.md =================================== -->
+<!-- Please do not edit this file directly, edit in ./chapters/ch53.md instead -->
+> ## 53. Error analysis by parts
+
+## 53. Phân tích lỗi từng phần
+
+> Suppose your system is built using a complex machine learning pipeline, and you would like to improve the system’s performance. Which part of the pipeline should you work on improving? By attributing errors to specific parts of the pipeline, you can decide how to prioritize your work.
+
+Giả sử hệ thống của bạn được xây dựng dựa trên một pipeline học máy phức tạp và bạn muốn cải thiện chất lượng của nó. Bạn nên cải thiện phần nào trong pipeline này? Bạn có thể sắp xếp thứ tự ưu tiên công việc bằng cách quy lỗi cụ thể cho từng phần trong pipeline.
+
+> Let’s use our Siamese cat classifier example:
+
+Hãy sử dụng ví dụ bộ phân loại mèo Xiêm của chúng ta:
+
+![img](../imgs/C53_01.png)
+
+> The first part, the cat detector, detects cats and crops them out of the image. The second part, the cat breed classifier, decides if it is a Siamese cat. It is possible to spend years working on improving either of these two pipeline components. How do you decide which component(s) to focus on?
+
+Phần đầu tiên, bộ phát hiện mèo, xác định vị trí của mèo và cắt chúng ra khỏi tấm ảnh. Phần thứ hai, bộ phân loại giống mèo, xác định xem đó có phải là một con mèo Xiêm hay không. Việc cải thiện bất kì bộ phận nào trong pipeline này cũng có thể tốn tới hàng năm trời. Làm sao để bạn quyết định được (những) bộ phận nào cần tập trung cải thiện?
+
+> By carrying out **error analysis by parts**, you can try to attribute each mistake the algorithm makes to one (or sometimes both) of the two parts of the pipeline. For example, the algorithm misclassifies this image as not containing a Siamese cat (y=0) even though the correct label is y=1.
+
+Bằng việc thực hiện **phân tích lỗi từng phần**, bạn có thể cố quy trách nhiệm cho một (hoặc đôi khi là cả hai) phần trong pipeline trên từng dự đoán sai của thuật toán. Ví dụ, thuật toán phân loại sai tấm ảnh này không có một con mèo Xiêm ở trong đó (y=0) mặc dù nhãn chính xác là y=1.
+
+![img](../imgs/C53_02.png)
+
+> Let’s manually examine what the two steps of the algorithm did. Suppose the Siamese cat detector had detected a cat as follows:
+
+Hãy kiểm chứng một cách thủ công xem hai bước của thuật toán đã làm gì. Giả sử bộ phát hiện mèo Xiêm đã phát hiện ra một chú mèo như dưới đây: 
+
+![img](../imgs/C53_03.png)
+
+> This means that the cat breed classifier is given the following image:
+
+Tức là bộ phận loại giống mèo được đưa cho tấm hình sau:
+
+![img](../imgs/C53_04.png)
+
+> The cat breed classifier then correctly classifies this image as not containing a Siamese cat. Thus, the cat breed classifier is blameless: It was given of a pile of rocks and outputted a very reasonable label y=0. Indeed, a human classifying the cropped image above would also have predicted y=0. Thus, you can clearly attribute this error to the cat detector.
+
+Bộ phân loại giống mèo sau đó xác định chính xác rằng tấm hình này không có mèo Xiêm. Vậy nên, bộ phân loại giống mèo không có lỗi: Nó được đưa cho cho xem một đống đá và trả ra nhãn y=0 rất hợp lý. Thực tế, nếu một người mà phải phân loại tấm ảnh được cắt ra toàn đá ở trên thì cũng sẽ dự đoán y=0 mà thôi. Do vậy, bạn rõ ràng có thể quy lỗi này cho bộ phát hiện mèo.
+
+> If, on the other hand, the cat detector had outputted the following bounding box:
+
+Mặt khác, nếu giả sử bộ phát hiện mèo có cho ra kết quả khung chứa như dưới đây:
+
+![img](../imgs/C53_05.png)
+
+> then you would conclude that the cat detector had done its job, and that it was the cat breed classifier that is at fault.
+
+thì bạn sẽ kết luận rằng bộ phát hiện mèo đã hoàn thành công việc của nó, và lỗi là do bộ phân loại giống mèo mà ra.
+
+> Say you go through 100 misclassified dev set images and find that 90 of the errors are attributable to the cat detector, and only 10 errors are attributable to the cat breed classifier. You can safely conclude that you should focus more attention on improving the cat detector.
+
+Giả sử bạn kiểm chứng 100 tấm ảnh bị phân loại nhầm trong tập phát triển và nhận ra rằng 90 trong số đó là do lỗi của bộ phát hiện mèo, chỉ có 10 tấm là do lỗi của bộ phân loại giống mèo. Bạn có thể an toàn kết luận rằng bạn nên tập trung nhiều hơn vào việc cải thiện bộ phát hiện mèo.   
+
+> Further, you have now also conveniently found 90 examples where the cat detector outputted incorrect bounding boxes. You can use these 90 examples to carry out a deeper level of error analysis on the cat detector to see how to improve that.
+
+Ngoài ra, tiện đây bạn cũng đã tìm ra 90 mẫu mà bộ phát hiện mèo trả về khung chứa chưa chính xác. Bạn có thể sử dụng 90 mẫu này để thực hiện việc phân tích lỗi kĩ hơn trên bộ phát hiện mèo và tìm cách cải thiện nó.
+
+> Our description of how you attribute error to one part of the pipeline has been informal so far: you look at the output of each of the parts and see if you can decide which one made a mistake. This informal method could be all you need. But in the next chapter, you’ll also see a more formal way of attributing error.
+
+Việc làm thế nào để quy lỗi cho một phần của pipeline vẫn đang được mô tả một cách phi chính thống: bạn nhìn vào đầu ra của mỗi phần để xem liệu có thể quyết định phần nào gây ra lỗi. Phương pháp phi chính thống này có thể là đủ với bạn. Tuy nhiên trong chương sau, bạn sẽ thấy một cách chính thống hơn trong việc quy lỗi.
+
 <!-- ============================ Insert ./chapters/ch54.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch54.md instead -->
 > ## 54. Attributing error to one part
@@ -2805,6 +2941,190 @@ Nói cách khác, thực hiện thử nghiệm mà ở đó bạn cung cấp cho
 
 Bằng cách phân tích các ảnh bị phân loại sai trên tập phát triển, bạn có thể quy lỗi chính xác cho một thành phần. Điều này cho phép bạn ước tính tỉ lệ lỗi cho từng thành phần của pipeline, từ đó quyết định thành phần cần tập trung khắc phục.
 
+<!-- ============================ Insert ./chapters/ch55.md =================================== -->
+<!-- Please do not edit this file directly, edit in ./chapters/ch55.md instead -->
+> ## 55. General case of error attribution
+
+## 55. Trường hợp tổng quát của việc quy lỗi
+
+> Here are the general steps for error attribution. Suppose the pipeline has three steps A, B and C, where A feeds directly into B, and B feeds directly into C.
+
+Đây là những bước tổng quát cho việc quy lỗi. Giả sử một thiết kế pipeline có ba thành phần  A, B, C trong đó A cung cấp thông tin trực tiếp cho B, và B cung cấp thông tin trực tiếp cho C.
+
+![img](../imgs/C55_01.png)
+
+> For each mistake the system makes on the dev set:
+
+Với từng lỗi của hệ thống trên tập phát triển: 
+
+> 1. Try manually modifying A’s output to be a "perfect" output (e.g., the "perfect" bounding box for the cat), and run the rest of the pipeline B, C on this output. If the algorithm now gives a correct output, then this shows that, if only A had given a better output, the overall algorithm’s output would have been correct; thus, you can attribute this error to component A. Otherwise, go on to Step 2.
+
+1. Thử điều chỉnh thủ công kết quả đầu ra ở A cho "hoàn hảo" (ví dụ, một khung chứa hình mèo "hoàn hảo"), và sau đó tiến hành chạy thuật toán cho pipeline gồm có B và C với đầu ra này. Nếu thuật toán trả về kết quả cuối cùng chính xác, điều đó chỉ ra rằng, thuật toán sẽ cho ra kết quả chính xác nếu A trả về kết quả tốt hơn. Vậy ta có thể quy lỗi cho A. Nếu không, ta sẽ kiểm chứng thêm ở bước 2.  
+
+> 2. Try manually modifying B’s output to be the "perfect" output for B. If the algorithm now gives a correct output, then attribute the error to component B. Otherwise, go on to Step 3.
+
+2. Thử điều chỉnh thủ công kết quả đầu ra ở công đoạn B cho "hoàn hảo". Nếu thuật toán cho ra kết quả đầu ra cuối cùng chính xác, ta có thể quy lỗi cho B. Ngược lại, ta tiến hành bước 3.
+
+> 3. Attribute the error to component C.
+
+3. Quy lỗi cho thành phần C. 
+
+> Let’s look at a more complex example:
+
+Chúng ta hãy cùng tìm hiểu một ví dụ phức tạp hơn sau đây:
+
+![img](../imgs/C55_02.png)
+
+> Your self-driving car uses this pipeline. How do you use error analysis by parts to decide which component(s) to focus on?
+
+Xe tự lái của bạn sử dụng pipeline như trên. Bạn sẽ sử dụng kỹ thuật phân tích lỗi từng phần như thế nào để quyết định (những) thành phần nào cần tập trung cải thiện?
+
+> You can map the three components to A, B, C as follows:<br/>
+> A: Detect cars<br/>
+> B: Detect pedestrians <br/>
+> C: Plan path for car
+
+Bạn có thể gọi tên ba thành phần trong hệ thống là A, B, C tương ứng với các chức năng như sau:<br/>
+A: phát hiện xe hơi<br/>
+B: phát hiện người đi bộ <br/>
+C: hoạch định đường đi cho xe
+
+> Following the procedure described above, suppose you test out your car on a closed track and find a case where the car chooses a more jarring steering direction than a skilled driver would. In the self-driving world, such a case is usually called a **scenario**. You would then:
+
+Với hệ thống xe tự lái mô tả như trên, giả sử bạn kiểm tra xe của bạn trên một cung đường kín và xác định trường hợp nào xe chọn hướng bẻ lái giật nhiều hơn so với một người lái xe kinh nghiệm điều khiển. Trong lĩnh vực lái xe tự động, một trường hợp như thế thường được gọi là "tình huống". Bạn cần thực hiện:
+
+> 1. Try manually modifying A (detecting cars)’s output to be a "perfect" output (e.g., manually go in and tell it where the other cars are). Run the rest of the pipeline B, C as before, but allow C (plan path) to use A’s now perfect output. If the algorithm now plans a much better path for the car, then this shows that, if only A had given a better output, the overall algorithm’s output would have been better; Thus, you can attribute this error to component A. Otherwise, go on to Step 2.
+
+1. Thử điều chỉnh thủ công kết quả đầu ra của thành phần A (phát hiện xe hơi) sao cho "hoàn hảo" (ví dụ, cho xe biết vị trí của những chiếc xe khác). Sau đó tiếp tục chạy phần còn lại của pipeline gồm có B, C, nhưng cho phép C (hoạch định đường đi) sử dụng đầu ra đã hoàn hảo của A. Nếu thuật toán hoạch định đường đi cho xe tốt hơn, điều đó cho thấy rằng, kết quả cuối cùng của thuật toán tự lái sẽ được cải thiện nếu mà A trả về kết quả tốt hơn.  Như vậy, bạn có thể quy lỗi cho A. Nếu không, ta tiếp tục bước 2. 
+
+> 2. Try manually modifying B (detect pedestrian)’s output to be the "perfect" output for B. If the algorithm now gives a correct output, then attribute the error to component B. Otherwise, go on to Step 3.
+
+2. Thử điều chỉnh thủ công kết quả đầu ra ở công đoạn B (phát hiện người đi bộ) cho "hoàn hảo". Nếu thuật toán cho ra kết quả đầu ra cuối cùng chính xác, ta có thể quy lỗi cho B. Ngược lại, ta tiến hành bước 3.
+> 3. Attribute the error to component C.
+
+3. Quy lỗi cho thành phần C. 
+
+> The components of an ML pipeline should be ordered according to a Directed Acyclic Graph (DAG), meaning that you should be able to compute them in some fixed left-to-right order, and later components should depend only on earlier components’ outputs. So long as the mapping of the components to the A->B->C order follows the DAG ordering, then the error analysis will be fine. You might get slightly different results if you swap A and B:
+
+Các thành phần của một mô hình học máy dạng pipeline nên được sắp xếp theo đồ thị có hướng không chu trình (DAG), nghĩa là bạn có thể tính toán chúng theo thứ tự cố định từ trái sang phải nào đó, và các thành phần sau chỉ nên phụ thuộc vào đầu ra của các thành phần trước đó. Miễn là việc xâu chuỗi các thành phần theo thứ tự A->B->C tuân thủ theo quy tắc DAG, việc phân tích lỗi sẽ tốt. Bạn có thể nhận được các kết quả hơi khác nhau nếu hoán chuyển vị trí của A và B cho nhau như sau:
+
+> A: Detect pedestrians (was previously *Detect cars*)
+
+A: Nhận dạng người đi bộ (trước đây là "Nhận dạng xe")
+
+> B: Detect cars (was previously *Detect pedestrians*)
+
+B: Nhận dạng xe (trước đây là "Nhận dạng người đi bộ")
+
+> C: Plan path for car
+
+C: Hoạch định đường đi cho xe
+
+> But the results of this analysis would still be valid and give good guidance for where to focus your attention.
+
+Nhưng các kết quả của việc phân tích lỗi thì sẽ vẫn hợp lệ và cho ta định hướng tốt thành phần nào cần cải thiện.
+
+<!-- ============================ Insert ./chapters/ch56.md =================================== -->
+<!-- Please do not edit this file directly, edit in ./chapters/ch56.md instead -->
+> ## 56. Error analysis by parts and comparison to human-level performance
+
+## 56. Phân tích lỗi từng phần và so sánh với chất lượng mức con người
+
+> Carrying out error analysis on a learning algorithm is like using data science to analyze an ML system’s mistakes in order to derive insights about what to do next. At its most basic, error analysis by parts tells us what component(s) performance is (are) worth the greatest effort to improve.
+
+Thực hiện phân tích lỗi của thuật toán học giống với việc sử dụng khoa học dữ liệu phân tích lỗi của hệ thống học máy để biết chính xác những việc cần làm kế tiếp. Cơ bản nhất, phân tích lỗi từng phần sẽ cho ta biết được chất lượng của (những) phần nào cần được cải thiện.
+
+> Say you have a dataset about customers buying things on a website. A data scientist may have many different ways of analyzing the data. She may draw many different conclusions about whether the website should raise prices, about the lifetime value of customers acquired through different marketing campaigns, and so on. There is no one "right" way to analyze a dataset, and there are many possible useful insights one could draw. Similarly, there is no one "right" way to carry out error analysis. Through these chapters you have learned many of the most common design patterns for drawing useful insights about your ML system, but you should feel free to experiment with other ways of analyzing errors as well.
+
+Giả sử bạn có bộ dữ liệu về khách hàng mua đồ trên một trang mạng. Một nhà khoa học dữ liệu có thể có rất nhiều cách khác nhau để phân tích dữ liệu đó. Người đó có thể đưa ra nhiều kết luận khác nhau như có nên tăng giá, giá trị vòng đời khách hàng đạt được thông qua các chiến dịch tiếp thị khác nhau, v.v. Không có một việc phân tích dữ liệu "chuẩn mực" nào, và có thể có rất nhiều kết luận hữu ích có thể rút ra. Tương tự, không chỉ có một cách "chuẩn mực" cho việc thực hiện phân tích lỗi. Thông qua các chương này bạn đã học được những cách phổ biến nhất để rút ra những nhận định chính xác về hệ thống học máy của bạn, nhưng bạn cũng nên thử nghiệm những phương pháp phân tích lỗi khác.
+
+> Let’s return to the self-driving application, where a car detection algorithm outputs the location (and perhaps velocity) of the nearby cars, a pedestrian detection algorithm outputs the location of the nearby pedestrians, and these two outputs are finally used to plan a path for the car.
+
+Chúng ta hãy quay trở lại ứng dụng xe tự lái, trong đó thuật toán phát hiện xe đưa ra vị trí (có thể có thêm vận tốc) của những chiếc xe gần đó, thuật toán phát hiện người đi bộ đưa ra vị trí của người đi bộ gần đó, và hai đầu ra này cuối cùng được sử dụng để hoạch định đường đi cho xe.
+
+![img](../imgs/C56_01.png)
+
+> To debug this pipeline, rather than rigorously following the procedure you saw in the previous chapter, you could more informally ask:
+
+Để kiểm tra lỗi pipeline này, thay vì tuân thủ nghiêm ngặt quy trình đã thấy trong chương trước, bạn nên đặt những câu hỏi như:
+
+> 1. How far is the Detect cars component from human-level performance at detecting cars?
+
+1. Cách biệt về khả năng xác định xe giữa thuật toán và con người là bao xa?
+
+> 2. How far is the Detect pedestrians component from human-level performance?
+
+2. Cách biệt về khả năng phát hiện người đi bộ giữa thuật toán và con người là bao xa?
+
+> 3. How far is the overall system’s performance from human-level performance? Here, human-level performance assumes the human has to plan a path for the car given only the outputs from the previous two pipeline components (rather than access to the camera images). In other words, how does the Plan path component’s performance compare to that of a human’s, when the human is given only the same input?
+
+3. Cách biệt giữa khả năng của toàn hệ thống và con người tới cỡ nào? Ở đây, chất lượng của con người được giả sử là cách con người tính đường đi cho xe chỉ dựa vào kết quả đầu ra từ hai thành phần trước đó trong pipeline (thay vì dựa vào hình ảnh camera). Nói cách khác, với cùng thông tin đầu vào, khả năng ước lượng đường đi của thuật toán so với con người sẽ như thế nào?
+
+> If you find that one of the components is far from human-level performance, you now have a good case to focus on improving the performance of that component.
+
+Nếu bạn thấy rằng một trong những thành phần này thua xa chất lượng mức con người, thì bây giờ bạn biết phần nào cần được cải thiện. Hãy tập trung vào việc cải thiện chất lượng của phần đó.
+
+> Many error analysis processes work best when we are trying to automate something humans can do and can thus benchmark against human-level performance. Most of our preceding examples had this implicit assumption. If you are building an ML system where the final output or some of the intermediate components are doing things that even humans cannot do well, then some of these procedures will not apply.
+
+Nhiều quy trình phân tích lỗi hoạt động tốt nhất khi chúng ta cố gắng tự động hóa một thứ gì đó mà con người có thể làm, do đó có thể so sánh với con người. Hầu hết các ví dụ trước của chúng ta ngầm giả định điều này. Nếu bạn đang xây dựng một hệ thống học máy trong đó đầu ra hoặc một số thành phần trung gian đang làm những việc mà thậm chí con người không thể làm tốt, thì một trong số những quy trình này sẽ không được áp dụng.
+
+> This is another advantage of working on problems that humans can solve--you have more powerful error analysis tools, and thus you can prioritize your team’s work more efficiently.
+
+Đây là một thuận lợi của việc giải quyết các vấn đề mà con người có thể giải quyết--bạn có các công cụ mạnh mẽ để phân tích lỗi, do đó bạn có thể ưu tiên các công việc trong nhóm một cách hiệu quả hơn.
+
+<!-- ============================ Insert ./chapters/ch57.md =================================== -->
+<!-- Please do not edit this file directly, edit in ./chapters/ch57.md instead -->
+> ## 57. Spotting a flawed ML pipeline
+
+## 57. Phát hiện một pipeline học máy bị lỗi
+
+> What if each individual component of your ML pipeline is performing at human-level performance or near-human-level performance, but the overall pipeline falls far short of human-level? This usually means that the pipeline is flawed and needs to be redesigned. Error analysis can also help you understand if you need to redesign your pipeline.
+
+Nếu mỗi thành phần đơn lẻ trong pipeline học máy của bạn đều hoạt động ở chất lượng mức con người hoặc gần mức con người, nhưng pipeline tổng thể lại kém xa mức con người thì sao? Điều này thường có nghĩa là pipeline có lỗi và cần được thiết kế lại. Việc phân tích lỗi có thể giúp bạn nhận định liệu bạn có cần thiết kế lại pipeline của mình.
+
+![img](../imgs/C57_01.png)
+
+> In the previous chapter, we posed the question of whether each of the three components’ performance is at human level. Suppose the answer to all three questions is yes. That is:
+
+Trong chương trước, chúng ta đã đặt câu hỏi liệu mỗi trong số ba thành phần có ở chất lượng mức con người. Giả sử câu trả lời cho cả ba câu hỏi là có. Điều đó có nghĩa là:
+
+> 1. The Detect cars component is at (roughly) human-level performance for detecting cars from the camera images.
+
+1. Thành phần Phát hiện xe hơi đạt chất lượng (xấp xỉ) mức con người trong việc phát hiện xe hơi từ ảnh camera.
+
+> 2. The Detect pedestrians component is at (roughly) human-level performance for detecting cars from the camera images.
+
+2. Thành phần Phát hiện người đi bộ đạt chất lượng (xấp xỉ) mức con người trong việc phát hiện xe hơi từ ảnh camera.
+
+> 3. *Compared to a human that has to plan a path for the car given only the outputs from the previous two pipeline components (rather than access to the camera images)*, the Plan path component’s performance is at a similar level.
+
+3. *So sánh với một người phải lập kế hoạch đường đi cho xe khi chỉ dựa trên đầu ra của hai thành phần pipeline trước đó (thay vì được tiếp cận với hình ảnh từ camera)*, thành phần Lập kế hoạch có chất lượng ở mức tương đương.
+
+> However, your overall self-driving car is performing significantly below human-level performance. I.e., humans given access to the camera images can plan significantly better paths for the car. What conclusion can you draw?
+
+Tuy nhiên, chiếc xe tự lái tổng thể của bạn lại hoạt động kém hơn chất lượng mức con người một cách rõ rệt. Có nghĩa là, con người được tiếp cận hình ảnh từ camera có thể dự tính những đường đi tốt hơn nhiều cho xe. Bạn có thể rút ra kết luận gì?
+
+> The only possible conclusion is that the ML pipeline is flawed. In this case, the Plan path component is doing as well as it can *given its inputs*, but the inputs do not contain enough information. You should ask yourself what other information, other than the outputs from the two earlier pipeline components, is needed to plan paths very well for a car to drive. In other words, what other information does a skilled human driver need?
+
+Kết luận khả dĩ duy nhất là pipeline học máy đã bị lỗi. Trong trường hợp này, thành phần Lên kế hoạch đã hoạt động ở mức tốt nhất có thể *với những đầu vào của nó*, nhưng đầu vào không chứa đủ thông tin. Bạn nên tự hỏi liệu những thông tin nào khác, ngoài đầu ra của hai thành phần pipeline trước, là cần thiết cho việc lên kế hoạch đường đi thật tốt cho xe tự lái. Nói cách khác, những thông tin nào mà một người lái xe có kinh nghiệm cần đến?
+
+> For example, suppose you realize that a human driver also needs to know the location of the lane markings. This suggests that you should redesign the pipeline as follows:[18]
+
+Ví dụ, giả sử bạn nhận ra rằng người lái xe cũng cần biết vị trí của chỉ dấu làn đường. Điều này gợi ý rằng bạn nên thiết kế lại pipeline như sau:
+
+![img](../imgs/C57_02.png)
+
+> Ultimately, if you don’t think your pipeline as a whole will achieve human-level performance, even if every individual component has human-level performance (remember that you are comparing to a human who is given the same input as the component), then the pipeline is flawed and should be redesigned.
+
+Cuối cùng, nếu bạn không nghĩ rằng pipeline như một chỉnh thể sẽ đạt chất lượng mức con người, ngay cả khi mỗi thành phần đơn lẻ đạt chất lượng mức con người (nhớ rằng bạn đang so sánh với một người được cung cấp cùng một đầu vào như các thành phần), có nghĩa là pipeline có lỗi và cần được thiết kế lại.
+
+> **FOOTNOTE:**
+
+**GHI CHÚ:**
+
+> [18] In the self-driving example above, in theory one could solve this problem by also feeding the raw camera image into the planning component. However, this would violate the design principle of "Task simplicity" described in Chapter 51, because the path planning module now needs to input a raw image and has a very complex task to solve. That’s why adding a Detect lane markings component is a better choice--it helps get the important and previously missing information about lane markings to the path planning module, but you avoid making any particular module overly complex to build/train.
+
+[18] Trong ví dụ về xe tự lái ở trên, theo lý thuyết ta có thể giải quyết vấn đề bằng cách cũng cho hình ảnh thô từ camera vào thành phần lên kế hoạch. Tuy nhiên, điều đó sẽ vi phạm nguyên tắc thiết kế "Tính đơn giản của tác vụ" đã được trình bày ở Chương 51, vì thành phần lên kế hoạch đường đi giờ đây cần có đầu vào là ảnh thô và có một tác vụ rất phức tạp để giải quyết. Thế nên thêm một thành phần Phát hiện chỉ dấu làn đường là một lựa chọn tốt hơn -- nó giúp lấy thêm những thông tin quan trọng vốn thiếu về làn đường cho khối lên kế hoạch đường đi, đồng thời bạn cũng tránh được việc làm bất cứ module nào trở nên quá phức tạp để xây dựng/huấn luyện.
 <!-- ============================ Insert ./chapters/p10_58.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p10_58.md instead -->
 > # Part 10: Conclusion

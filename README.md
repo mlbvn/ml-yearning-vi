@@ -1,4 +1,4 @@
-# Dự án dịch sách [Machine Learning Yearning](https://www.deeplearning.ai/machine-learning-yearning/), Andrew Ng ra tiếng Việt
+# Dự án dịch sách [Machine Learning Yearning](https://www.deeplearning.ai/machine-learning-yearning/) (Khát khao Học Máy), Andrew Ng ra tiếng Việt
 
 Nguồn để dịch https://github.com/ajaymache/machine-learning-yearning. Mặc dù là bản Draft, nội dung bản này cũng đã khá đầy đủ.
 
@@ -26,8 +26,8 @@ Chi tiết hơn về việc đóng góp có thể tìm thấy [tại đây](http
 | --- | --- |
 | [1. Tại sao cần chiến lược Học Máy](./chapters/ch01.md) | [#40](http://tinyurl.com/v3s2sxq) |
 | [2. Cách sử dụng cuốn sách khi làm việc nhóm](./chapters/ch02.md) | [#54](http://tinyurl.com/wcx6h8b) |
-| [3. Điều kiện tiên quyết và Ký hiệu](./chapters/ch03.md) | [#90](http://tinyurl.com/sbvug2x) |
-| [4. Quy mô thúc đẩy quá trình phát triển học máy](./chapters/ch04.md) | [#83](http://tinyurl.com/r3qqqrf) |
+| [3. Kiến thức tiền đề và Ký hiệu](./chapters/ch03.md) | [#90](http://tinyurl.com/sbvug2x) |
+| [4. Quy mô là động lực phát triển học máy](./chapters/ch04.md) | [#83](http://tinyurl.com/r3qqqrf) |
 | [5. Tập phát triển và tập kiểm tra](./chapters/ch05.md) | [#82](http://tinyurl.com/qtvf6kn) |
 | [6. Tập phát triển và tập kiểm tra nên có cùng phân phối](./chapters/ch06.md) | [#91](http://tinyurl.com/vtzttht) |
 | [7. Tập phát triển/kiểm tra cần lớn đến mức nào?](./chapters/ch07.md) | [#70](http://tinyurl.com/woxabbu) |
@@ -75,10 +75,10 @@ Chi tiết hơn về việc đóng góp có thể tìm thấy [tại đây](http
 | [49. Ưu nhược điểm của học đầu-cuối](./chapters/ch49.md) | [#340](http://tinyurl.com/rjppzme) |
 | [50. Lựa chọn các thành phần cho pipeline: Tính sẵn có của dữ liệu](./chapters/ch50.md) | [#342](http://tinyurl.com/wjd78jk) |
 | [51. Lựa chọn các thành phần cho pipeline: tính đơn giản của tác vụ](./chapters/ch51.md) | [#349](http://tinyurl.com/w5mhy63) |
-| [52. chưa có tên](./chapters/ch52.md) | [#363](http://tinyurl.com/vffydte) |
-| [53. chưa có tên](./chapters/ch53.md) | [#355](http://tinyurl.com/sxgfq2v) |
+| [52. Trực tiếp học những đầu ra phức tạp](./chapters/ch52.md) | [#363](http://tinyurl.com/vffydte) |
+| [53. Phân tích lỗi từng phần](./chapters/ch53.md) | [#355](http://tinyurl.com/sxgfq2v) |
 | [54. Quy lỗi cho một thành phần](./chapters/ch54.md) | [#352](http://tinyurl.com/yxx3ugx4) |
-| [55. chưa có tên](./chapters/ch55.md) | [#364](http://tinyurl.com/wk5w9h3) |
-| [56. chưa có tên](./chapters/ch56.md) | [#362](http://tinyurl.com/yxxtmguk) |
-| [57. chưa có tên](./chapters/ch57.md) |  |
+| [55. Trường hợp tổng quát của việc quy lỗi](./chapters/ch55.md) | [#364](http://tinyurl.com/wk5w9h3) |
+| [56. Phân tích lỗi từng phần và so sánh với chất lượng mức con người](./chapters/ch56.md) | [#362](http://tinyurl.com/yxxtmguk) |
+| [57. Phát hiện một pipeline học máy bị lỗi](./chapters/ch57.md) | [#392](http://tinyurl.com/tvrdwyh) |
 | [58. Xây dựng một biệt đội siêu anh hùng - Hãy để đồng đội của bạn đọc điều này](./chapters/ch58.md) | [#317](http://tinyurl.com/twb7dec) |
