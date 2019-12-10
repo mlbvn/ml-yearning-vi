@@ -156,7 +156,7 @@ def _insert_to_toc(all_file_writer, part_path, level):
     part_title = _get_title_from_file_path(part_path)
     full_link = _create_header_link(part_title)
     
-    # extract the the path name of each file. For example, ./chapters/ch01.md 
+    # Extract the the path name of each file. For example, ./chapters/ch01.md 
     # will be trimmed to ch01.md; ./chapters/p00_01_04.md will be trimmed to p00_01_04.md
     path_name = part_path[part_path.index("s")+1:]
     
@@ -286,11 +286,11 @@ def gen_readme():
                 readme.write(line)
         readme.write(_gen_progress_table())
 
-def create_pdf():
+def create_pdfs():
     pdf.main(vn_only=False)
     pdf.main(vn_only=True)
     
-    # remove the created html file and __pycache folder  
+    # Remove the created html file and __pycache folder  
     os.remove("./chapters/all_chapters_vietnamese_only.html")
     os.remove("./chapters/all_chapters.html")
     shutil.rmtree("__pycache__")
@@ -298,5 +298,5 @@ def create_pdf():
 if __name__ == '__main__':
     main(vn_only=False)
     main(vn_only=True)
-    create_pdf()
+    create_pdfs()
     gen_readme()

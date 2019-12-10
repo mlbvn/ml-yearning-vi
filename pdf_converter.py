@@ -27,14 +27,10 @@ PARTS = [
     {'path': './chapters/p09_53_57.md', 'range': [53, 57]},
     {'path': './chapters/p10_58.md', 'range': [58, 58]},
 ]
-no_part_list =["p00","p01","p02","p03","p04","p05","p06","p07","p08","p09","p10"]
 
-no_chapter_list =[]
-for i in range(1,59):
-    if i<10:
-        no_chapter_list.append("0%i"%i)
-    else:
-        no_chapter_list.append("%i"%i)
+no_part_list =['p{:02d}'.format(i) for i in range(0, 11)]
+
+no_chapter_list = ['{:02d}'.format(i) for i in range(1, 59)]
         
 # extract list of all part titles and chapter titles
 part_list = []
@@ -53,35 +49,35 @@ def _convert_title_to_link(title):
 
 for part in PARTS:
     part_path = part['path']
-    # extract the original parth title
+    # Extract the original parth title
     part_title = _get_title_from_file_path(part_path)
     
-    # convert to the html link syntax
+    # Convert to the html link syntax
     part_list.append(_convert_title_to_link(part_title))
     
     start_chapter, end_chatper = part['range']
     for chapter_number in range(start_chapter, end_chatper + 1):
         chapter_path = _chapter_path_from_chapter_number(chapter_number)
         
-        # extract the original chapter title
+        # Extract the original chapter title
         chapter_title = _get_title_from_file_path(chapter_path)
-        # convert to html link syntax
+        # Convert to html link syntax
         chapter_list.append(_convert_title_to_link(chapter_title))
   
 
-all_chapters = "./chapters/all_chapters"
-all_chapters_vn ="./chapters/all_chapters_vietnamese_only"
+All_chapters = "./chapters/all_chapters"
+All_chapters_vn ="./chapters/all_chapters_vietnamese_only"
 
 def main(vn_only=True):
     if vn_only:    
-        path = all_chapters_vn
+        path = All_chapters_vn
     else:
-        path = all_chapters
+        path = All_chapters
         
     # export mardown file to html file
     os.system("grip %s.md --export %s.html"%(path,path))
     
-    f = codecs.open("%s.html"%all_chapters,"r","utf-8","html.parser")
+    f = codecs.open("%s.html"%path,"r","utf-8","html.parser")
 
     filedata = f.read()
     f.close()
@@ -90,7 +86,7 @@ def main(vn_only=True):
     for part_name in no_part_list:
         filedata=filedata.replace('<p><a name="user-content-%s"></a></p>'%part_name,'<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>'%part_name)                            
     
-    # Add an html code for page break avobe each chapter 
+    # Add an html code for new page before each chapter 
     for chapter_name in no_chapter_list:
         filedata=filedata.replace('<p><a name="user-content-%s"></a></p>'%chapter_name,'<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>'%chapter_name)     
     
@@ -111,7 +107,7 @@ def main(vn_only=True):
     
     f.close()
     
-    # convert html to pdf file
+    # Convert html to pdf file
     pdfkit.from_file('%s.html'%path, '%s.pdf'%path[11:],configuration=config)
     
 
@@ -120,7 +116,7 @@ if __name__ == '__main__':
     main(vn_only=False)
     main(vn_only=True)
     
-    # remove the created html file and __pycache folder  
+    # Remove the created html file and __pycache__ folder  
     os.remove("./chapters/all_chapters_vietnamese_only.html")
     os.remove("./chapters/all_chapters.html")
     shutil.rmtree("__pycache__")
