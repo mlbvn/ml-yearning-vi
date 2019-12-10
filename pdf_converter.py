@@ -86,7 +86,7 @@ def main(vn_only=True):
     filedata = f.read()
     f.close()
      
-    # Add an html code for papge break above each part
+    # Add an html code for new page before each part
     for part_name in no_part_list:
         filedata=filedata.replace('<p><a name="user-content-%s"></a></p>'%part_name,'<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>'%part_name)                            
     
