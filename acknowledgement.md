@@ -96,15 +96,15 @@ Trong giai đoạn này, các chương sẽ được trau chuốt hơn về mặ
 
 | Chương | Dịch | Phản biện |
 | ---    | ---  | ---       |
-| [1 - 4](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |  nmdang 		| tiepvupsu, ngcthuong, sonvx |
-| [5 - 8](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/414) |  ngdthanhcs 	| tiepvupsu, ngcthuong |
-| [9 - 12](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/409) |  lkhphuc 	| tiepvupsu, ngcthuong |
+| [1 - 4](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386)   |  nmdang 		| tiepvupsu, ngcthuong, sonvx |
+| [5 - 8](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/414)   |  ngdthanhcs 	| tiepvupsu, ngcthuong |
+| [9 - 12](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/409)  |  lkhphuc 	| tiepvupsu, ngcthuong |
 | [13 - 16](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/413) |  nmdang 	    | tiepvupsu |
 | [17 - 19](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/408) |  thhung 		| tiepvupsu |
-| [20 - 23](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/415) |  rootonchair| tiepvupsu, ngcthuong |
-| [24 - 27](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/431) |  ngcthuong   |  |
-| [28 - 32](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
-| [33 - 35](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
+| [20 - 23](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/415) |  rootonchair | tiepvupsu, ngcthuong |
+| [24 - 27](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/431) |  ngcthuong   | tiepvupsu, william-vu |
+| [28 - 32](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) | nmdang        |   |
+| [33 - 35](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/443) | ngcthuong    |   |
 | [36 - 39](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
 | [40 - 43](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
 | [44 - 46](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
@@ -126,9 +126,10 @@ Ngoài các đóng góp về bài dịch, phản biện, cũng như hiệu đín
 | --- |  ---     | ---  |
 | 1 | Định dạng thư mục, tệp hướng dẫn	|  tiepvupsu, xuantubk 				|
 | 2 | Sao chép và định dạng bản dịch	|  duythanhvn, tiepvupsu, ngcthuong |
-| 3 | Sao chép và chỉnh sửa hình vẽ	|  samthehai, quangnhat185, rootonchair|
+| 3 | Sao chép và chỉnh sửa hình vẽ	    |  samthehai, quangnhat185, rootonchair|
 | 4 | Sao chép và chỉnh sửa bảng biểu	|  tiena2cva  					|
 | 5 | Tạo tệp pdf cho bản đầy đủ    	|  quangnhat185  				|
+| 6 | Thiết kế bìa bản tiếng Việt    	|    				            |
 
 
 
@@ -156,7 +157,7 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | nmdang        | Đặng Ngọc Minh                     |
 | khoapip       | Ngô Thế Anh Khoa     |
 | honghanhh     | Trần Thị Hồng Hạnh   |
-| tiena2cva     |                      |
+| tiena2cva     | Ngọc Việt Tiến |
 | vudaoanhtuan  |                      |
 | ngdthanhcs    |                      |
 | damminhtien   |                      |
