@@ -49,7 +49,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | false negative                    | âm tính giả                                                    |                                                              |
 | false positive                    | dương tính giả                                                 |                                                              |
 | feature                           | đặc trưng                                                      |                                                              |
-| fit                               | fit                                                            |                                                              |
+| fit                               | khớp                                                           | [#391](http://bit.ly/2qCKz8p)                                |
 | gradient descent                  | hạ gradient                                                         | [#87](http://bit.ly/2BvfPYA), [#389](http://bit.ly/2rCiYEz)                                 |
 | hand-engineering                  | thiết kế thủ công                                              |                                                              |
 | heuristic                         | thực nghiệm                                                    |                                                              |
@@ -72,7 +72,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | negative sample/example           | mẫu âm                                                         |                                                              |
 | neural network                    | mạng nơ-ron                                                    | [#87](http://bit.ly/2BvfPYA) [#115](http://bit.ly/2MAkizG)   |
 | optimizing metric                 | phép đo để tối ưu                                              | [#87](http://bit.ly/2BvfPYA)                                 |
-| overfit                           | overfit                                                        | [#87](http://bit.ly/2BvfPYA)                                 |
+| overfit                           | quá khớp                                                       | [#87](http://bit.ly/2BvfPYA), [#391](http://bit.ly/2qCKz8p)  |
 | performance                       | chất lượng                                                     | [#259](http://bit.ly/36IzQcB)                                |
 | plateau (danh từ)                 | vùng nằm ngang                                                 |                                                              |
 | plateau (động từ)                 | nằm ngang                                                      |                                                              |
@@ -81,7 +81,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | precision                         | precision                                                      |                                                              |
 | recall                            | recall                                                         |                                                              |
 | recognition                       | nhận dạng                                                      |                                                              |
-| regularization                    | regularization                                                 |                                                              |
+| regularization/regularize         | điều chuẩn                                                     | [#401](http://bit.ly/383xgP0)                                |
 | reinforcement learning            | học tăng cường                                                 |                                                              |
 | reward function                   | hàm điểm thưởng                                                |                                                              |
 | running time                      | thời gian chạy                                                 |                                                              |
@@ -98,9 +98,11 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | training set                      | tập huấn luyện                                                 |                                                              |
 | training dev set                  | tập phát triển huấn luyện                                      |                                                              |
 | training set performance          | chất lượng trên tập huấn luyện                                 |                                                              |
+| transcript                        | bản ghi thoại                                                  | [#332](http://bit.ly/2LTXo5N)                                |
+| transcribe                        | phiên thoại                                                    |                                                              |
 | true negative                     | âm tính thật                                                   |                                                              |
 | true positive                     | dương tính thật                                                |                                                              |
 | tune parameters                   | điều chỉnh tham số                                             |                                                              |
 | unavoidable bias                  | độ chệch không tránh được                                      |                                                              |
-| underfit                          | underfit                                                       | [#87](http://bit.ly/2BvfPYA)                                 |
+| underfit                          | dưới khớp                                                      | [#87](http://bit.ly/2BvfPYA), [#391](http://bit.ly/2qCKz8p)  |
 | variance (bias as variance)       | phương sai                                                     | [#125](http://bit.ly/32HJI3S)                                |
