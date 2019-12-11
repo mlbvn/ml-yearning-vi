@@ -32,10 +32,6 @@ no_part_list =['p{:02d}'.format(i) for i in range(0, 11)]
 
 no_chapter_list = ['{:02d}'.format(i) for i in range(1, 59)]
         
-# extract list of all part titles and chapter titles
-part_list = []
-chapter_list = []
-
 def _convert_title_to_link(title):
     title = title.lower()
     title = title.replace(" ","-")
@@ -47,32 +43,35 @@ def _convert_title_to_link(title):
     title = title.replace("#-","#user-content-")
     return title
 
-for part in PARTS:
-    part_path = part['path']
-    # Extract the original parth title
-    part_title = _get_title_from_file_path(part_path)
-    
-    # Convert to the html link syntax
-    part_list.append(_convert_title_to_link(part_title))
-    
-    start_chapter, end_chatper = part['range']
-    for chapter_number in range(start_chapter, end_chatper + 1):
-        chapter_path = _chapter_path_from_chapter_number(chapter_number)
-        
-        # Extract the original chapter title
-        chapter_title = _get_title_from_file_path(chapter_path)
-        # Convert to html link syntax
-        chapter_list.append(_convert_title_to_link(chapter_title))
-  
-
-All_chapters = "./chapters/all_chapters"
-All_chapters_vn ="./chapters/all_chapters_vietnamese_only"
+ALL_CHAPTERS = "./chapters/all_chapters"
+All_CHAPTERS_VN ="./chapters/all_chapters_vietnamese_only"
 
 def main(vn_only=True):
+    # extract list of all part titles and chapter titles
+    part_list = []
+    chapter_list = []
+
+    for part in PARTS:
+        part_path = part['path']
+        # Extract the original parth title
+        part_title = _get_title_from_file_path(part_path)
+        
+        # Convert to the html link syntax
+        part_list.append(_convert_title_to_link(part_title))
+        
+        start_chapter, end_chatper = part['range']
+        for chapter_number in range(start_chapter, end_chatper + 1):
+            chapter_path = _chapter_path_from_chapter_number(chapter_number)
+            
+            # Extract the original chapter title
+            chapter_title = _get_title_from_file_path(chapter_path)
+            # Convert to html link syntax
+            chapter_list.append(_convert_title_to_link(chapter_title))
+            
     if vn_only:    
-        path = All_chapters_vn
+        path = All_CHAPTERS_VN
     else:
-        path = All_chapters
+        path = ALL_CHAPTERS
         
     # export mardown file to html file
     os.system("grip %s.md --export %s.html"%(path,path))
@@ -110,13 +109,12 @@ def main(vn_only=True):
     # Convert html to pdf file
     pdfkit.from_file('%s.html'%path, '%s.pdf'%path[11:],configuration=config)
     
-
-
+    # Remove the created html file
+    os.remove("%s.html"%path)
+    
 if __name__ == '__main__':
     main(vn_only=False)
     main(vn_only=True)
     
-    # Remove the created html file and __pycache__ folder  
-    os.remove("./chapters/all_chapters_vietnamese_only.html")
-    os.remove("./chapters/all_chapters.html")
+    # Remove the created __pycache__ folder  
     shutil.rmtree("__pycache__")

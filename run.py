@@ -290,9 +290,7 @@ def create_pdfs():
     pdf.main(vn_only=False)
     pdf.main(vn_only=True)
     
-    # Remove the created html file and __pycache folder  
-    os.remove("./chapters/all_chapters_vietnamese_only.html")
-    os.remove("./chapters/all_chapters.html")
+    # Remove __pycache__ folder  
     shutil.rmtree("__pycache__")
 
 if __name__ == '__main__':
