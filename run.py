@@ -282,9 +282,10 @@ def _gen_progress_table():
 def create_pdfs():
     pdf.main(vn_only=False)
     pdf.main(vn_only=True)
-    
+
     # Remove __pycache__ folder  
     shutil.rmtree("__pycache__")
+
 
 if __name__ == '__main__':
     main(vn_only=False)
