@@ -297,4 +297,4 @@ if __name__ == '__main__':
     main(vn_only=False)
     main(vn_only=True)
     create_pdfs()
-    gen_readme()
+    # gen_readme()
