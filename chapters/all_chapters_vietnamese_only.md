@@ -1,81 +1,83 @@
 **MỤC LỤC**
 
-* [Giới thiệu](#giới-thiệu)
-	* [1. Tại sao cần chiến lược Học Máy](#1-tại-sao-cần-chiến-lược-học-máy)
-	* [2. Cách sử dụng cuốn sách khi làm việc nhóm](#2-cách-sử-dụng-cuốn-sách-khi-làm-việc-nhóm)
-	* [3. Kiến thức tiền đề và Ký hiệu](#3-kiến-thức-tiền-đề-và-ký-hiệu)
-	* [4. Quy mô là động lực phát triển học máy](#4-quy-mô-là-động-lực-phát-triển-học-máy)
-* [Phần 1: Chuẩn bị tập phát triển và tập kiểm tra](#phần-1-chuẩn-bị-tập-phát-triển-và-tập-kiểm-tra)
-	* [5. Tập phát triển và tập kiểm tra](#5-tập-phát-triển-và-tập-kiểm-tra)
-	* [6. Tập phát triển và tập kiểm tra nên có cùng phân phối](#6-tập-phát-triển-và-tập-kiểm-tra-nên-có-cùng-phân-phối)
-	* [7. Tập phát triển/kiểm tra cần lớn đến mức nào?](#7-tập-phát-triểnkiểm-tra-cần-lớn-đến-mức-nào)
-	* [8. Thiết lập một phép đo đơn trị làm mục tiêu tối ưu](#8-thiết-lập-một-phép-đo-đơn-trị-làm-mục-tiêu-tối-ưu)
-	* [9. Phép đo để tối ưu và phép đo thỏa mãn](#9-phép-đo-để-tối-ưu-và-phép-đo-thỏa-mãn)
-	* [10. Xây dựng một tập phát triển và một phép đo sẽ tăng tốc quá trình làm việc](#10-xây-dựng-một-tập-phát-triển-và-một-phép-đo-sẽ-tăng-tốc-quá-trình-làm-việc)
-	* [11. Khi nào cần thay đổi tập phát triển/kiểm tra và các phép đo](#11-khi-nào-cần-thay-đổi-tập-phát-triểnkiểm-tra-và-các-phép-đo)
-	* [12. Điều cần nhớ: Thiết lập các tập phát triển và kiểm tra](#12-điều-cần-nhớ-thiết-lập-các-tập-phát-triển-và-kiểm-tra)
-* [Phần 2: Phân tích lỗi cơ bản](#phần-2-phân-tích-lỗi-cơ-bản)
-	* [13. Bạn mong muốn xây dựng một hệ thống phòng chống email rác mới. Nhóm của bạn có rất nhiều ý tưởng:](#13-bạn-mong-muốn-xây-dựng-một-hệ-thống-phòng-chống-email-rác-mới-nhóm-của-bạn-có-rất-nhiều-ý-tưởng)
-	* [14. Phân tích lỗi: đánh giá ý tưởng dựa trên tập phát triển](#14-phân-tích-lỗi-đánh-giá-ý-tưởng-dựa-trên-tập-phát-triển)
-	* [15. Đánh giá song song các ý tưởng trong quá trình phân tích lỗi](#15-đánh-giá-song-song-các-ý-tưởng-trong-quá-trình-phân-tích-lỗi)
-	* [16. Dọn dẹp những mẫu bị gán nhãn nhầm trong tập phát triển và tập kiểm tra](#16-dọn-dẹp-những-mẫu-bị-gán-nhãn-nhầm-trong-tập-phát-triển-và-tập-kiểm-tra)
-	* [17. Nếu bạn có một tập phát triển lớn, chia nó thành hai tập con và chỉ phân tích trên một tập](#17-nếu-bạn-có-một-tập-phát-triển-lớn,-chia-nó-thành-hai-tập-con-và-chỉ-phân-tích-trên-một-tập)
-	* [18. Tập phát triển Eyeball và Blackbox nên lớn như thế nào?](#18-tập-phát-triển-eyeball-và-blackbox-nên-lớn-như-thế-nào)
-	* [19. Điều cần nhớ: Phân tích lỗi cơ bản](#19-điều-cần-nhớ-phân-tích-lỗi-cơ-bản)
-* [Phần 3: Độ chệch và Phương sai](#phần-3-độ-chệch-và-phương-sai)
-	* [20. Độ chệch và Phương sai: Hai nguồn lớn của lỗi](#20-độ-chệch-và-phương-sai-hai-nguồn-lớn-của-lỗi)
-	* [21. Những ví dụ về Độ chệch và Phương sai](#21-những-ví-dụ-về-độ-chệch-và-phương-sai)
-	* [22. So sánh với tỉ lệ lỗi tối ưu](#22-so-sánh-với-tỉ-lệ-lỗi-tối-ưu)
-	* [23. Xử lý Độ chệch và Phương sai](#23-xử-lý-độ-chệch-và-phương-sai)
-	* [24. Đánh đổi giữa Độ chệch và Phương sai](#24-đánh-đổi-giữa-độ-chệch-và-phương-sai)
-	* [25. Kỹ thuật giảm độ chệch có thể tránh được](#25-kỹ-thuật-giảm-độ-chệch-có-thể-tránh-được)
-	* [26. Phân tích lỗi trên tập huấn luyện](#26-phân-tích-lỗi-trên-tập-huấn-luyện)
-	* [27. Các kỹ thuật giảm phương sai](#27-các-kỹ-thuật-giảm-phương-sai)
-* [Phần 4: Đồ thị quá trình học](#phần-4-đồ-thị-quá-trình-học)
-	* [28. Chẩn đoán độ chệch và phương sai: Đồ thị quá trình học](#28-chẩn-đoán-độ-chệch-và-phương-sai-đồ-thị-quá-trình-học)
-	* [29. Vẽ đồ thị sai số huấn luyện](#29-vẽ-đồ-thị-sai-số-huấn-luyện)
-	* [30. Diễn giải đồ thị quá trình học: Độ chệch cao](#30-diễn-giải-đồ-thị-quá-trình-học-độ-chệch-cao)
-	* [31. Giải nghĩa các đồ thị quá trình học: Những trường hợp khác](#31-giải-nghĩa-các-đồ-thị-quá-trình-học-những-trường-hợp-khác)
-	* [32. Vẽ đồ thị quá trình học](#32-vẽ-đồ-thị-quá-trình-học)
-* [Phần 5: So sánh với chất lượng mức con người](#phần-5-so-sánh-với-chất-lượng-mức-con-người)
-	* [33. Tại sao chúng ta so sánh với chất lượng mức con người?](#33-tại-sao-chúng-ta-so-sánh-với-chất-lượng-mức-con-người)
-	* [34. Cách xác định chất lượng mức con người](#34-cách-xác-định-chất-lượng-mức-con-người)
-	* [35. Vượt qua chất lượng mức con người](#35-vượt-qua-chất-lượng-mức-con-người)
-* [Phần 6: Huấn luyện và kiểm tra trên các phân phối khác nhau](#phần-6-huấn-luyện-và-kiểm-tra-trên-các-phân-phối-khác-nhau)
-	* [36. Khi nào bạn nên huấn luyện và kiểm tra trên những phân phối khác nhau](#36-khi-nào-bạn-nên-huấn-luyện-và-kiểm-tra-trên-những-phân-phối-khác-nhau)
-	* [37. Làm sao để quyết định có nên sử dụng toàn bộ dữ liệu?](#37-làm-sao-để-quyết-định-có-nên-sử-dụng-toàn-bộ-dữ-liệu)
-	* [38. Làm thế nào để quyết định có nên bao gồm dữ liệu không nhất quán](#38-làm-thế-nào-để-quyết-định-có-nên-bao-gồm-dữ-liệu-không-nhất-quán)
-	* [39. Đánh trọng số dữ liệu](#39-đánh-trọng-số-dữ-liệu)
-	* [40. Tổng quát hóa từ tập huấn luyện đến tập phát triển](#40-tổng-quát-hóa-từ-tập-huấn-luyện-đến-tập-phát-triển)
-	* [41. Xác định những lỗi về độ chệch, phương sai, và dữ liệu không tương đồng](#41-xác-định-những-lỗi-về-độ-chệch,-phương-sai,-và-dữ-liệu-không-tương-đồng)
-	* [42. Xử lý dữ liệu không tương đồng](#42-xử-lý-dữ-liệu-không-tương-đồng)
-	* [43. Tổng hợp dữ liệu nhân tạo](#43-tổng-hợp-dữ-liệu-nhân-tạo)
-* [Phần 7: Gỡ lỗi các Thuật toán suy luận](#phần-7-gỡ-lỗi-các-thuật-toán-suy-luận)
-	* [44. Bài kiểm tra xác minh tối ưu](#44-bài-kiểm-tra-xác-minh-tối-ưu)
-	* [45. Dạng tổng quát của bài kiểm tra xác minh tối ưu](#45-dạng-tổng-quát-của-bài-kiểm-tra-xác-minh-tối-ưu)
-	* [46. Ví dụ về Học tăng cường](#46-ví-dụ-về-học-tăng-cường)
-* [Phần 8: Học sâu đầu-cuối](#phần-8-học-sâu-đầu-cuối)
-	* [47. Sự trỗi dậy của học đầu-cuối](#47-sự-trỗi-dậy-của-học-đầu-cuối)
-	* [48. Thêm những ví dụ về học đầu-cuối.](#48-thêm-những-ví-dụ-về-học-đầu-cuối)
-	* [49. Ưu nhược điểm của học đầu-cuối](#49-ưu-nhược-điểm-của-học-đầu-cuối)
-	* [50. Lựa chọn các thành phần cho pipeline: Tính sẵn có của dữ liệu](#50-lựa-chọn-các-thành-phần-cho-pipeline-tính-sẵn-có-của-dữ-liệu)
-	* [51. Lựa chọn các thành phần cho pipeline: tính đơn giản của tác vụ](#51-lựa-chọn-các-thành-phần-cho-pipeline-tính-đơn-giản-của-tác-vụ)
-	* [52. Trực tiếp học những đầu ra phức tạp](#52-trực-tiếp-học-những-đầu-ra-phức-tạp)
-* [Phần 9: Phân tích lỗi từng phần](#phần-9-phân-tích-lỗi-từng-phần)
-	* [53. Phân tích lỗi từng phần](#53-phân-tích-lỗi-từng-phần)
-	* [54. Quy lỗi cho một thành phần](#54-quy-lỗi-cho-một-thành-phần)
-	* [55. Trường hợp tổng quát của việc quy lỗi](#55-trường-hợp-tổng-quát-của-việc-quy-lỗi)
-	* [56. Phân tích lỗi từng phần và so sánh với chất lượng mức con người](#56-phân-tích-lỗi-từng-phần-và-so-sánh-với-chất-lượng-mức-con-người)
-	* [57. Phát hiện một pipeline học máy bị lỗi](#57-phát-hiện-một-pipeline-học-máy-bị-lỗi)
-* [Phần 10: Tổng kết](#phần-10-tổng-kết)
-	* [58. Xây dựng một biệt đội siêu anh hùng - Hãy để đồng đội của bạn đọc điều này](#58-xây-dựng-một-biệt-đội-siêu-anh-hùng---hãy-để-đồng-đội-của-bạn-đọc-điều-này)
+* [Giới thiệu](#p00)
+	* [1. Tại sao cần chiến lược Học Máy](#01)
+	* [2. Cách sử dụng cuốn sách khi làm việc nhóm](#02)
+	* [3. Kiến thức tiền đề và Ký hiệu](#03)
+	* [4. Quy mô là động lực phát triển học máy](#04)
+* [Phần 1: Chuẩn bị tập phát triển và tập kiểm tra](#p01)
+	* [5. Tập phát triển và tập kiểm tra](#05)
+	* [6. Tập phát triển và tập kiểm tra nên có cùng phân phối](#06)
+	* [7. Tập phát triển/kiểm tra cần lớn đến mức nào?](#07)
+	* [8. Thiết lập một phép đo đơn trị làm mục tiêu tối ưu](#08)
+	* [9. Phép đo để tối ưu và phép đo thỏa mãn](#09)
+	* [10. Xây dựng một tập phát triển và một phép đo sẽ tăng tốc quá trình làm việc](#10)
+	* [11. Khi nào cần thay đổi tập phát triển/kiểm tra và các phép đo](#11)
+	* [12. Điều cần nhớ: Thiết lập các tập phát triển và kiểm tra](#12)
+* [Phần 2: Phân tích lỗi cơ bản](#p02)
+	* [13. Bạn mong muốn xây dựng một hệ thống phòng chống email rác mới. Nhóm của bạn có rất nhiều ý tưởng:](#13)
+	* [14. Phân tích lỗi: đánh giá ý tưởng dựa trên tập phát triển](#14)
+	* [15. Đánh giá song song các ý tưởng trong quá trình phân tích lỗi](#15)
+	* [16. Dọn dẹp những mẫu bị gán nhãn nhầm trong tập phát triển và tập kiểm tra](#16)
+	* [17. Nếu bạn có một tập phát triển lớn, chia nó thành hai tập con và chỉ phân tích trên một tập](#17)
+	* [18. Tập phát triển Eyeball và Blackbox nên lớn như thế nào?](#18)
+	* [19. Điều cần nhớ: Phân tích lỗi cơ bản](#19)
+* [Phần 3: Độ chệch và Phương sai](#p03)
+	* [20. Độ chệch và Phương sai: Hai nguồn lớn của lỗi](#20)
+	* [21. Những ví dụ về Độ chệch và Phương sai](#21)
+	* [22. So sánh với tỉ lệ lỗi tối ưu](#22)
+	* [23. Xử lý Độ chệch và Phương sai](#23)
+	* [24. Đánh đổi giữa Độ chệch và Phương sai](#24)
+	* [25. Kỹ thuật giảm độ chệch có thể tránh được](#25)
+	* [26. Phân tích lỗi trên tập huấn luyện](#26)
+	* [27. Các kỹ thuật giảm phương sai](#27)
+* [Phần 4: Đồ thị quá trình học](#p04)
+	* [28. Chẩn đoán độ chệch và phương sai: Đồ thị quá trình học](#28)
+	* [29. Vẽ đồ thị sai số huấn luyện](#29)
+	* [30. Diễn giải đồ thị quá trình học: Độ chệch cao](#30)
+	* [31. Giải nghĩa các đồ thị quá trình học: Những trường hợp khác](#31)
+	* [32. Vẽ đồ thị quá trình học](#32)
+* [Phần 5: So sánh với chất lượng mức con người](#p05)
+	* [33. Tại sao chúng ta so sánh với chất lượng mức con người?](#33)
+	* [34. Cách xác định chất lượng mức con người](#34)
+	* [35. Vượt qua chất lượng mức con người](#35)
+* [Phần 6: Huấn luyện và kiểm tra trên các phân phối khác nhau](#p06)
+	* [36. Khi nào bạn nên huấn luyện và kiểm tra trên những phân phối khác nhau](#36)
+	* [37. Làm sao để quyết định có nên sử dụng toàn bộ dữ liệu?](#37)
+	* [38. Làm thế nào để quyết định có nên bao gồm dữ liệu không nhất quán](#38)
+	* [39. Đánh trọng số dữ liệu](#39)
+	* [40. Tổng quát hóa từ tập huấn luyện đến tập phát triển](#40)
+	* [41. Xác định những lỗi về độ chệch, phương sai, và dữ liệu không tương đồng](#41)
+	* [42. Xử lý dữ liệu không tương đồng](#42)
+	* [43. Tổng hợp dữ liệu nhân tạo](#43)
+* [Phần 7: Gỡ lỗi các Thuật toán suy luận](#p07)
+	* [44. Bài kiểm tra xác minh tối ưu](#44)
+	* [45. Dạng tổng quát của bài kiểm tra xác minh tối ưu](#45)
+	* [46. Ví dụ về Học tăng cường](#46)
+* [Phần 8: Học sâu đầu-cuối](#p08)
+	* [47. Sự trỗi dậy của học đầu-cuối](#47)
+	* [48. Thêm những ví dụ về học đầu-cuối.](#48)
+	* [49. Ưu nhược điểm của học đầu-cuối](#49)
+	* [50. Lựa chọn các thành phần cho pipeline: Tính sẵn có của dữ liệu](#50)
+	* [51. Lựa chọn các thành phần cho pipeline: tính đơn giản của tác vụ](#51)
+	* [52. Trực tiếp học những đầu ra phức tạp](#52)
+* [Phần 9: Phân tích lỗi từng phần](#p09)
+	* [53. Phân tích lỗi từng phần](#53)
+	* [54. Quy lỗi cho một thành phần](#54)
+	* [55. Trường hợp tổng quát của việc quy lỗi](#55)
+	* [56. Phân tích lỗi từng phần và so sánh với chất lượng mức con người](#56)
+	* [57. Phát hiện một pipeline học máy bị lỗi](#57)
+* [Phần 10: Tổng kết](#p10)
+	* [58. Xây dựng một biệt đội siêu anh hùng - Hãy để đồng đội của bạn đọc điều này](#58)
 <!-- ============================ Insert ./chapters/p00_01_04.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p00_01_04.md instead -->
+<a name="p00"></a>
 
 # Giới thiệu
 
 <!-- ============================ Insert ./chapters/ch01.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch01.md instead -->
+<a name="01"></a>
 
 ## 1. Tại sao cần chiến lược Học Máy 
 
@@ -129,6 +131,7 @@ Cuốn sách này sẽ giúp bạn trả lời câu hỏi đó. Phần lớn cá
 
 <!-- ============================ Insert ./chapters/ch02.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch02.md instead -->
+<a name="02"></a>
 
 ## 2. Cách sử dụng cuốn sách khi làm việc nhóm
 
@@ -148,6 +151,7 @@ Chỉ với một vài thay đổi nhỏ về thứ tự ưu tiên có thể tá
 
 <!-- ============================ Insert ./chapters/ch03.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch03.md instead -->
+<a name="03"></a>
 
 ## 3. Kiến thức tiền đề và Ký hiệu
 
@@ -168,6 +172,7 @@ Nếu những khái niệm nêu trên còn mới với bạn thì bạn hãy xem
 
 <!-- ============================ Insert ./chapters/ch04.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch04.md instead -->
+<a name="04"></a>
 
 ## 4. Quy mô là động lực phát triển học máy
 
@@ -218,10 +223,12 @@ Nhiều chi tiết khác như kiến trúc mạng nơ-ron cũng rất quan trọ
 
 <!-- ============================ Insert ./chapters/p01_05_12.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p01_05_12.md instead -->
+<a name="p01"></a>
 
 # Phần 1: Chuẩn bị tập phát triển và tập kiểm tra
 <!-- ============================ Insert ./chapters/ch05.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch05.md instead -->
+<a name="05"></a>
 
 ## 5. Tập phát triển và tập kiểm tra
 
@@ -283,6 +290,7 @@ Vấn đề này đòi hỏi khả năng phán đoán để quyết định cầ
 
 <!-- ============================ Insert ./chapters/ch06.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch06.md instead -->
+<a name="06"></a>
 
 ## 6. Tập phát triển và tập kiểm tra nên có cùng phân phối
 
@@ -320,6 +328,7 @@ Nếu bạn đang làm việc với một bài toán đánh giá xếp hạng c�
 
 <!-- ============================ Insert ./chapters/ch07.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch07.md instead -->
+<a name="07"></a>
 
 ## 7. Tập phát triển/kiểm tra cần lớn đến mức nào?
 
@@ -341,6 +350,7 @@ Vậy còn kích thước của tập kiểm tra thì sao? Nó cần đủ lớn
 
 <!-- ============================ Insert ./chapters/ch08.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch08.md instead -->
+<a name="08"></a>
 
 ## 8. Thiết lập một phép đo đơn trị làm mục tiêu tối ưu
 
@@ -387,6 +397,7 @@ Một ví dụ cuối cùng, giả sử bạn đang theo dõi riêng biệt đ�
 
 <!-- ============================ Insert ./chapters/ch09.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch09.md instead -->
+<a name="09"></a>
 
 ## 9. Phép đo để tối ưu và phép đo thỏa mãn
 
@@ -422,6 +433,7 @@ Một khi nhóm của bạn đã thống nhất phép đánh giá nào cần đ�
 
 <!-- ============================ Insert ./chapters/ch10.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch10.md instead -->
+<a name="10"></a>
 
 ## 10. Xây dựng một tập phát triển và một phép đo sẽ tăng tốc quá trình làm việc
 
@@ -446,6 +458,7 @@ Ngược lại, giả sử bạn không có một tập phát triển và phép 
 
 <!-- ============================ Insert ./chapters/ch11.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch11.md instead -->
+<a name="11"></a>
 
 ## 11. Khi nào cần thay đổi tập phát triển/kiểm tra và các phép đo
 
@@ -494,6 +507,7 @@ Việc thay đổi tập phát triển/kiểm tra hoặc phép đo giữa dự �
 
 <!-- ============================ Insert ./chapters/ch12.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch12.md instead -->
+<a name="12"></a>
 
 ## 12. Điều cần nhớ: Thiết lập các tập phát triển và kiểm tra
 
@@ -526,10 +540,12 @@ Việc thay đổi tập phát triển/kiểm tra hoặc phép đo giữa dự �
 
 <!-- ============================ Insert ./chapters/p02_13_19.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p02_13_19.md instead -->
+<a name="p02"></a>
 
 # Phần 2: Phân tích lỗi cơ bản
 <!-- ============================ Insert ./chapters/ch13.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch13.md instead -->
+<a name="13"></a>
 
 ## 13. Bạn mong muốn xây dựng một hệ thống phòng chống email rác mới. Nhóm của bạn có rất nhiều ý tưởng:
 
@@ -559,6 +575,7 @@ Lời khuyên này dành cho những độc giả có mong muốn xây dựng c�
 
 <!-- ============================ Insert ./chapters/ch14.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch14.md instead -->
+<a name="14"></a>
 ## 14. Phân tích lỗi: đánh giá ý tưởng dựa trên tập phát triển 
 
 ![img](../imgs/C14_01.png)
@@ -597,6 +614,7 @@ Việc phân tích lỗi là quá trình kiểm tra các mẫu trong tập phát
 
 <!-- ============================ Insert ./chapters/ch15.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch15.md instead -->
+<a name="15"></a>
 
 ## 15. Đánh giá song song các ý tưởng trong quá trình phân tích lỗi
 
@@ -658,6 +676,7 @@ Phân tích lỗi không tạo ra một công thức toán học cứng nhắc c
 
 <!-- ============================ Insert ./chapters/ch16.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch16.md instead -->
+<a name="16"></a>
 
 ## 16. Dọn dẹp những mẫu bị gán nhãn nhầm trong tập phát triển và tập kiểm tra
 
@@ -719,6 +738,7 @@ Nếu bạn quyết định cải thiện chất lượng nhãn, hãy xem xét v
 
 <!-- ============================ Insert ./chapters/ch17.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch17.md instead -->
+<a name="17"></a>
 
 ## 17. Nếu bạn có một tập phát triển lớn, chia nó thành hai tập con và chỉ phân tích trên một tập
 
@@ -746,6 +766,7 @@ Việc phân chia tập phát triển thành hai tập riêng biệt -- tập ph
 
 <!-- ============================ Insert ./chapters/ch18.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch18.md instead -->
+<a name="18"></a>
 
 ## 18. Tập phát triển Eyeball và Blackbox nên lớn như thế nào?
 
@@ -788,6 +809,7 @@ Nếu bạn có quyền truy cập vào nhiều dữ liệu thì kích thước 
 
 <!-- ============================ Insert ./chapters/ch19.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch19.md instead -->
+<a name="19"></a>
 
 ## 19. Điều cần nhớ: Phân tích lỗi cơ bản
 
@@ -811,10 +833,12 @@ Nếu bạn có quyền truy cập vào nhiều dữ liệu thì kích thước 
 
 <!-- ============================ Insert ./chapters/p03_20_27.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p03_20_27.md instead -->
+<a name="p03"></a>
 
 # Phần 3: Độ chệch và Phương sai
 <!-- ============================ Insert ./chapters/ch20.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch20.md instead -->
+<a name="20"></a>
 
 ## 20. Độ chệch và Phương sai: Hai nguồn lớn của lỗi
 
@@ -857,6 +881,7 @@ Phát triển trực giác tốt về Độ chệch và Phương sai sẽ giúp 
 
 <!-- ============================ Insert ./chapters/ch21.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch21.md instead -->
+<a name="21"></a>
 
 ## 21. Những ví dụ về Độ chệch và Phương sai
 
@@ -913,6 +938,7 @@ Bộ phân loại này đang hoạt động tốt vì nó có độ chệch th�
 
 <!-- ============================ Insert ./chapters/ch22.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch22.md instead -->
+<a name="22"></a>
 
 ## 22. So sánh với tỉ lệ lỗi tối ưu
 
@@ -995,6 +1021,7 @@ Trong một vài chương trước, bạn đã học cách tính phương sai v�
 
 <!-- ============================ Insert ./chapters/ch23.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch23.md instead -->
+<a name="23"></a>
 
 ## 23. Xử lý Độ chệch và Phương sai
 
@@ -1024,6 +1051,7 @@ Giả sử bạn đang áp dụng học sâu, với điều chuẩn L2 hoặc dr
 
 <!-- ============================ Insert ./chapters/ch24.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch24.md instead -->
+<a name="24"></a>
 
 ## 24. Đánh đổi giữa Độ chệch và Phương sai
 
@@ -1047,6 +1075,7 @@ Trong một vài chương tới, chúng ta sẽ thảo luận thêm về các k�
 
 <!-- ============================ Insert ./chapters/ch25.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch25.md instead -->
+<a name="25"></a>
 
 ## 25. Kỹ thuật giảm độ chệch có thể tránh được
 
@@ -1075,6 +1104,7 @@ Một phương pháp không hữu ích:
 
 <!-- ============================ Insert ./chapters/ch26.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch26.md instead -->
+<a name="26"></a>
 
 ## 26. Phân tích lỗi trên tập huấn luyện
 
@@ -1104,6 +1134,7 @@ Bạn cũng có thể kiểm tra kỹ xem, liệu một người có thể diễ
 
 <!-- ============================ Insert ./chapters/ch27.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch27.md instead -->
+<a name="27"></a>
 
 ## 27. Các kỹ thuật giảm phương sai
 
@@ -1148,10 +1179,12 @@ Dưới đây là hai chiến thuật bổ sung, được lặp lại từ chư�
 
 <!-- ============================ Insert ./chapters/p04_28_32.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p04_28_32.md instead -->
+<a name="p04"></a>
 
 # Phần 4: Đồ thị quá trình học
 <!-- ============================ Insert ./chapters/ch28.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch28.md instead -->
+<a name="28"></a>
 
 ## 28. Chẩn đoán độ chệch và phương sai: Đồ thị quá trình học
 
@@ -1199,6 +1232,7 @@ Một nhược điểm của quá trình này là nếu bạn chỉ nhìn vào �
 
 <!-- ============================ Insert ./chapters/ch29.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch29.md instead -->
+<a name="29"></a>
 
 ## 29. Vẽ đồ thị sai số huấn luyện
 
@@ -1227,6 +1261,7 @@ Tiếp theo chúng ta sẽ thảo luận làm thế nào để diễn giải nh�
 
 <!-- ============================ Insert ./chapters/ch30.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch30.md instead -->
+<a name="30"></a>
 
 ## 30. Diễn giải đồ thị quá trình học: Độ chệch cao
 
@@ -1266,6 +1301,7 @@ Trước đó, chúng ta chỉ đo sai số tập huấn luyện và sai số t�
 
 <!-- ============================ Insert ./chapters/ch31.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch31.md instead -->
+<a name="31"></a>
 
 ## 31. Giải nghĩa các đồ thị quá trình học: Những trường hợp khác
 
@@ -1295,6 +1331,7 @@ Lần này, lỗi huấn luyện lớn, vì nó cao hơn nhiều so với mức 
 
 <!-- ============================ Insert ./chapters/ch32.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch32.md instead -->
+<a name="32"></a>
 
 ## 32. Vẽ đồ thị quá trình học
 
@@ -1330,10 +1367,12 @@ Cuối cùng, vẽ đồ thị quá trình học có thể tốn kém về mặt
 
 <!-- ============================ Insert ./chapters/p05_33_35.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p05_33_35.md instead -->
+<a name="p05"></a>
 
 # Phần 5: So sánh với chất lượng mức con người
 <!-- ============================ Insert ./chapters/ch33.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch33.md instead -->
+<a name="33"></a>
 
 ## 33. Tại sao chúng ta so sánh với chất lượng mức con người?
 
@@ -1369,6 +1408,7 @@ Có những tác vụ mà ngay cả con người cũng không giỏi. Ví dụ, 
 
 <!-- ============================ Insert ./chapters/ch34.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch34.md instead -->
+<a name="34"></a>
 
 ## 34. Cách xác định chất lượng mức con người
 
@@ -1396,6 +1436,7 @@ Nếu hệ thống hiện tại của bạn có mức 40% lỗi, vậy thì nó 
 
 <!-- ============================ Insert ./chapters/ch35.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch35.md instead -->
+<a name="35"></a>
 
 ## 35. Vượt qua chất lượng mức con người
 
@@ -1425,10 +1466,12 @@ Có nhiều ứng dụng học máy quan trọng trong đó máy đã vượt qu
 
 <!-- ============================ Insert ./chapters/p06_36_43.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p06_36_43.md instead -->
+<a name="p06"></a>
 
 # Phần 6: Huấn luyện và kiểm tra trên các phân phối khác nhau
 <!-- ============================ Insert ./chapters/ch36.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch36.md instead -->
+<a name="36"></a>
 
 ## 36. Khi nào bạn nên huấn luyện và kiểm tra trên những phân phối khác nhau
 
@@ -1469,6 +1512,7 @@ Chúng ta sẽ tiếp tục giả định rằng dữ liệu phát triển và d
 
 <!-- ============================ Insert ./chapters/ch37.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch37.md instead -->
+<a name="37"></a>
 
 ## 37. Làm sao để quyết định có nên sử dụng toàn bộ dữ liệu?
 
@@ -1528,6 +1572,7 @@ Những tài liệu này không có gì giống như một con mèo. Chúng cũn
 
 <!-- ============================ Insert ./chapters/ch38.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch38.md instead -->
+<a name="38"></a>
 
 ## 38. Làm thế nào để quyết định có nên bao gồm dữ liệu không nhất quán
 
@@ -1554,6 +1599,7 @@ Ví dụ về ảnh mèo khác trường hợp trên bởi vì, với một ản
 
 <!-- ============================ Insert ./chapters/ch39.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch39.md instead -->
+<a name="39"></a>
 
 ## 39. Đánh trọng số dữ liệu
 
@@ -1584,6 +1630,7 @@ Khi giảm trọng số các hình ảnh bổ sung từ Internet, bạn không c
 
 <!-- ============================ Insert ./chapters/ch40.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch40.md instead -->
+<a name="40"></a>
 
 ## 40. Tổng quát hóa từ tập huấn luyện đến tập phát triển
 
@@ -1651,6 +1698,7 @@ Phần lớn những hướng dẫn ở Chương 5-7 về lựa chọn kích c�
 
 <!-- ============================ Insert ./chapters/ch41.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch41.md instead -->
+<a name="41"></a>
 
 ## 41. Xác định những lỗi về độ chệch, phương sai, và dữ liệu không tương đồng
 
@@ -1715,6 +1763,7 @@ Bằng cách hiểu được loại lỗi mà thuật toán đang gặp nhiều 
 
 <!-- ============================ Insert ./chapters/ch42.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch42.md instead -->
+<a name="42"></a>
 
 ## 42. Xử lý dữ liệu không tương đồng
 
@@ -1741,6 +1790,7 @@ Thật không may, không có một sự bảo đảm nào trong quá trình nà
 
 <!-- ============================ Insert ./chapters/ch43.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch43.md instead -->
+<a name="43"></a>
 
 ## 43. Tổng hợp dữ liệu nhân tạo
 
@@ -1772,10 +1822,12 @@ Khi làm việc về tổng hợp dữ liệu, các nhóm của tôi đôi khi p
 
 <!-- ============================ Insert ./chapters/p07_44_46.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p07_44_46.md instead -->
+<a name="p07"></a>
 
 # Phần 7: Gỡ lỗi các Thuật toán suy luận
 <!-- ============================ Insert ./chapters/ch44.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch44.md instead -->
+<a name="44"></a>
 
 ## 44. Bài kiểm tra xác minh tối ưu
 
@@ -1831,6 +1883,7 @@ Ví dụ, giả sử bạn tìm ra rằng 95% các lỗi là do hàm tính đi�
 
 <!-- ============================ Insert ./chapters/ch45.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch45.md instead -->
+<a name="45"></a>
 
 ## 45. Dạng tổng quát của bài kiểm tra xác minh tối ưu
 
@@ -1860,6 +1913,7 @@ Giả sử thuật toán của bạn dịch ra một bản không chính xác *E
 
 <!-- ============================ Insert ./chapters/ch46.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch46.md instead -->
+<a name="46"></a>
 
 ## 46. Ví dụ về Học tăng cường
 
@@ -1898,10 +1952,12 @@ Một điểm khác biệt so với những ví dụ trước là, thay vì so s
 
 <!-- ============================ Insert ./chapters/p08_47_52.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p08_47_52.md instead -->
+<a name="p08"></a>
 
 # Phần 8: Học sâu đầu-cuối
 <!-- ============================ Insert ./chapters/ch47.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch47.md instead -->
+<a name="47"></a>
 
 ## 47. Sự trỗi dậy của học đầu-cuối
 
@@ -1953,6 +2009,7 @@ Mạng neural được sử dụng phổ biến trong các hệ thống đầu-c
 
 <!-- ============================ Insert ./chapters/ch48.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch48.md instead -->
+<a name="48"></a>
 
 ## 48. Thêm những ví dụ về học đầu-cuối.
 
@@ -1999,6 +2056,7 @@ Mặc dù phương pháp học đầu-cuối đã đạt được nhiều kết 
 
 <!-- ============================ Insert ./chapters/ch49.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch49.md instead -->
+<a name="49"></a>
 
 ## 49. Ưu nhược điểm của học đầu-cuối
 
@@ -2050,6 +2108,7 @@ Nếu bạn không chọn sử dụng một hệ thống đầu-cuối, bạn s�
 
 <!-- ============================ Insert ./chapters/ch50.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch50.md instead -->
+<a name="50"></a>
 
 ## 50. Lựa chọn các thành phần cho pipeline: Tính sẵn có của dữ liệu
 
@@ -2080,6 +2139,7 @@ Cho tới khi nhiều dữ liệu đầu-cuối trở nên sẵn có, tôi tin r
 
 <!-- ============================ Insert ./chapters/ch51.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch51.md instead -->
+<a name="51"></a>
 
 ## 51. Lựa chọn các thành phần cho pipeline: tính đơn giản của tác vụ
 
@@ -2162,6 +2222,7 @@ Tóm lại, khi lựa chọn các thành phần cho một pipeline, hãy cố g�
 
 <!-- ============================ Insert ./chapters/ch52.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch52.md instead -->
+<a name="52"></a>
 
 ## 52. Trực tiếp học những đầu ra phức tạp
 
@@ -2208,10 +2269,12 @@ Dưới đây là một số ví dụ khác:
 
 <!-- ============================ Insert ./chapters/p09_53_57.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p09_53_57.md instead -->
+<a name="p09"></a>
 
 # Phần 9: Phân tích lỗi từng phần
 <!-- ============================ Insert ./chapters/ch53.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch53.md instead -->
+<a name="53"></a>
 
 ## 53. Phân tích lỗi từng phần
 
@@ -2263,6 +2326,7 @@ Việc làm thế nào để quy lỗi cho một phần của pipeline vẫn đa
 
 <!-- ============================ Insert ./chapters/ch54.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch54.md instead -->
+<a name="54"></a>
 
 ## 54. Quy lỗi cho một thành phần
 
@@ -2309,6 +2373,7 @@ Bằng cách phân tích các ảnh bị phân loại sai trên tập phát tri�
 
 <!-- ============================ Insert ./chapters/ch55.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch55.md instead -->
+<a name="55"></a>
 
 ## 55. Trường hợp tổng quát của việc quy lỗi
 
@@ -2371,6 +2436,7 @@ Nhưng các kết quả của việc phân tích lỗi thì sẽ vẫn hợp l�
 
 <!-- ============================ Insert ./chapters/ch56.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch56.md instead -->
+<a name="56"></a>
 
 ## 56. Phân tích lỗi từng phần và so sánh với chất lượng mức con người
 
@@ -2408,6 +2474,7 @@ Nhiều quy trình phân tích lỗi hoạt động tốt nhất khi chúng ta c
 
 <!-- ============================ Insert ./chapters/ch57.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch57.md instead -->
+<a name="57"></a>
 
 ## 57. Phát hiện một pipeline học máy bị lỗi
 
@@ -2449,10 +2516,12 @@ Cuối cùng, nếu bạn không nghĩ rằng pipeline như một chỉnh thể 
 [18] Trong ví dụ về xe tự lái ở trên, theo lý thuyết ta có thể giải quyết vấn đề bằng cách cũng cho hình ảnh thô từ camera vào thành phần lên kế hoạch. Tuy nhiên, điều đó sẽ vi phạm nguyên tắc thiết kế "Tính đơn giản của tác vụ" đã được trình bày ở Chương 51, vì thành phần lên kế hoạch đường đi giờ đây cần có đầu vào là ảnh thô và có một tác vụ rất phức tạp để giải quyết. Thế nên thêm một thành phần Phát hiện chỉ dấu làn đường là một lựa chọn tốt hơn -- nó giúp lấy thêm những thông tin quan trọng vốn thiếu về làn đường cho khối lên kế hoạch đường đi, đồng thời bạn cũng tránh được việc làm bất cứ module nào trở nên quá phức tạp để xây dựng/huấn luyện.
 <!-- ============================ Insert ./chapters/p10_58.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p10_58.md instead -->
+<a name="p10"></a>
 
 # Phần 10: Tổng kết
 <!-- ============================ Insert ./chapters/ch58.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch58.md instead -->
+<a name="58"></a>
 
 ## 58. Xây dựng một biệt đội siêu anh hùng - Hãy để đồng đội của bạn đọc điều này
 

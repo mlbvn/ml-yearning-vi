@@ -32,7 +32,7 @@ Chi tiết hơn về việc đóng góp có thể tìm thấy [tại đây](http
 | [6. Tập phát triển và tập kiểm tra nên có cùng phân phối](./chapters/ch06.md) | [#91](http://tinyurl.com/vtzttht) |
 | [7. Tập phát triển/kiểm tra cần lớn đến mức nào?](./chapters/ch07.md) | [#70](http://tinyurl.com/woxabbu) |
 | [8. Thiết lập một phép đo đơn trị làm mục tiêu tối ưu](./chapters/ch08.md) | [#80](http://tinyurl.com/s53zss8) |
-| [9. Phép đo tối ưu và phép đo thỏa mãn](./chapters/ch09.md) | [#77](http://tinyurl.com/s95vvzs) |
+| [9. Phép đo để tối ưu và phép đo thỏa mãn](./chapters/ch09.md) | [#77](http://tinyurl.com/s95vvzs) |
 | [10. Xây dựng một tập phát triển và một phép đo sẽ tăng tốc quá trình làm việc](./chapters/ch10.md) | [#117](http://tinyurl.com/u4u4fdm) |
 | [11. Khi nào cần thay đổi tập phát triển/kiểm tra và các phép đo](./chapters/ch11.md) | [#150](http://tinyurl.com/vqpvcyo) |
 | [12. Điều cần nhớ: Thiết lập các tập phát triển và kiểm tra](./chapters/ch12.md) | [#113](http://tinyurl.com/t8vegqq) |
@@ -47,10 +47,10 @@ Chi tiết hơn về việc đóng góp có thể tìm thấy [tại đây](http
 | [21. Những ví dụ về Độ chệch và Phương sai](./chapters/ch21.md) | [#173](http://tinyurl.com/v3lxdwz) |
 | [22. So sánh với tỉ lệ lỗi tối ưu](./chapters/ch22.md) | [#181](http://tinyurl.com/v6lycgv) |
 | [23. Xử lý Độ chệch và Phương sai](./chapters/ch23.md) | [#175](http://tinyurl.com/vdgcwnn) |
-| [24. Sự đánh đổi giữa Độ chệch và Phương sai](./chapters/ch24.md) | [#192](http://tinyurl.com/vnpudhb) |
-| [25. Các kĩ thuật để giảm độ chệch có thể tránh được](./chapters/ch25.md) | [#195](http://tinyurl.com/w4gkkus) |
+| [24. Đánh đổi giữa Độ chệch và Phương sai](./chapters/ch24.md) | [#192](http://tinyurl.com/vnpudhb) |
+| [25. Kỹ thuật giảm độ chệch có thể tránh được](./chapters/ch25.md) | [#195](http://tinyurl.com/w4gkkus) |
 | [26. Phân tích lỗi trên tập huấn luyện](./chapters/ch26.md) | [#193](http://tinyurl.com/qvxraqu) |
-| [27. Các kỹ thuật làm giảm phương sai](./chapters/ch27.md) | [#211](http://tinyurl.com/vul9xo3) |
+| [27. Các kỹ thuật giảm phương sai](./chapters/ch27.md) | [#211](http://tinyurl.com/vul9xo3) |
 | [28. Chẩn đoán độ chệch và phương sai: Đồ thị quá trình học](./chapters/ch28.md) | [#234](http://tinyurl.com/tebym9x) |
 | [29. Vẽ đồ thị sai số huấn luyện](./chapters/ch29.md) | [#225](http://tinyurl.com/txkbesg) |
 | [30. Diễn giải đồ thị quá trình học: Độ chệch cao](./chapters/ch30.md) | [#228](http://tinyurl.com/s65vxyf) |
