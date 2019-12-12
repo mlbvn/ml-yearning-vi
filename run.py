@@ -279,22 +279,15 @@ def _gen_progress_table():
     return res
 
 
-def gen_readme():
-    with codecs.open(README, 'w', encoding='utf-8') as readme:
-        with codecs.open(README_PREFIX, 'r', encoding='utf-8') as readme_prefix:
-            for line in readme_prefix:
-                readme.write(line)
-        readme.write(_gen_progress_table())
-
 def create_pdfs():
     pdf.main(vn_only=False)
     pdf.main(vn_only=True)
-    
+
     # Remove __pycache__ folder  
     shutil.rmtree("__pycache__")
+
 
 if __name__ == '__main__':
     main(vn_only=False)
     main(vn_only=True)
     create_pdfs()
-    gen_readme()
