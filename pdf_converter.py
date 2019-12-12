@@ -11,8 +11,6 @@ import os
 import shutil
 import pdfkit
 
-# On linux we don't have to initialize config. This config path apllies only on Window
-# config = pdfkit.configuration(wkhtmltopdf="C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe")
 
 PARTS = [
     {'path': './chapters/p00_01_04.md', 'range': [1, 4]},
@@ -28,15 +26,16 @@ PARTS = [
     {'path': './chapters/p10_58.md', 'range': [58, 58]},
 ]
 
+
 def _convert_title_to_link(title):
     title = title.lower()
-    title = title.replace(" ","-")
-    title = title.replace(".","")
-    title = title.replace(":","")
-    title = title.replace("/","")
-    title = title.replace("?","")
-    title = title.replace(",","")
-    title = title.replace("#-","#user-content-")
+    title = title.replace(" ", "-")
+    title = title.replace(".", "")
+    title = title.replace(":", "")
+    title = title.replace("/", "")
+    title = title.replace("?", "")
+    title = title.replace(",", "")
+    title = title.replace("#-", "#user-content-")
     return title
 
 
