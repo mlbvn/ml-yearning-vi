@@ -147,7 +147,7 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | rootonchair   | Phạm Hồng Vinh       |
 | 1612628       |                      |
 | william-vu    | Vũ Đình Quyền        |
-| SumoBBQ       |                      |
+| SumoBBQ       |   Phạm Chí Thành                   |
 | thhung        |                      |
 | naml3i        |                      |
 | quangnhat185  | Nguyễn Lê Quang Nhật |
