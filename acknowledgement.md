@@ -7,7 +7,8 @@ Việc thiết lập repo đầu tiên với dịch những chương đầu và 
 
 
 
-Lời cuối cùng xin gửi lời cảm ơn tới cộng đồng Machine Learning Cơ Bản đã theo dõi và ủng hộ suốt quá trình dự án.  Hi vọng quyển sách này sẽ trở thành một sổ tay Học Máy hữu ích cho các độc giả. Và hi vọng đây sẽ là dự án đầu tiên đặt nên móng cho các dự án *open book* - sách mở khác.    
+Lời cuối cùng xin gửi lời cảm ơn tới cộng đồng Machine Learning Cơ Bản đã theo dõi và ủng hộ suốt quá trình dự án.
+Hy vọng quyển sách này sẽ trở thành một sổ tay Học Máy hữu ích cho các độc giả. Và hi vọng đây sẽ là dự án đầu tiên đặt nên móng cho các dự án *open book* -- sách mở khác.
 
 
 Thông tin chi tiết đóng góp các thành viên cho dự án "Machine Learning Yearning" - "Khát khao học máy". Các đóng góp dịch, phản biệt, hiệu đính được thống kê dựa trên tên tài khoản Github cùng đường dẫn tới các repo tương ứng.   
