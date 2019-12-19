@@ -1,6 +1,6 @@
 # Acknowledgement - Lời cảm ơn
 
-**Dự án không thể thành công nếu không có sự đóng góp của cộng đồng.  Mới đó đã gần hai tháng từ khi bắt tay vào dự án dịch đầu tiên của nhóm. **
+**Dự án dịch sách này không thể thành công nếu không có sự đóng góp của cộng đồng.
 
 <--- Thêm lời cảm ơn 
 
