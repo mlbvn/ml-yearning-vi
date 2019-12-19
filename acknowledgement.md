@@ -2,7 +2,6 @@
 
 **Dự án dịch sách này không thể thành công nếu không có sự đóng góp của cộng đồng.
 
-<--- Thêm lời cảm ơn 
 
 Việc thiết lập repo đầu tiên với dịch những chương đầu và kêu gọi. 
 
