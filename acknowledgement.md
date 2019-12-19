@@ -1,4 +1,4 @@
-# Acknowledgement - Lời cảm ơn
+## Acknowledgement - Lời cảm ơn
 
 **Dự án dịch sách này không thể thành công nếu không có sự đóng góp của cộng đồng.
 
