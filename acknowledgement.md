@@ -165,7 +165,6 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | freeloneman   |                      |
 | xuantubk      | Nguyễn Xuân Tú       |
 |               |                      |
-|               |                      |
 
 
 
