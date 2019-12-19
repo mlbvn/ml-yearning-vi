@@ -7,7 +7,6 @@
 Việc thiết lập repo đầu tiên với dịch những chương đầu và kêu gọi. 
 
 
---->
 
 Lời cuối cùng xin gửi lời cảm ơn tới cộng đồng Machine Learning Cơ Bản đã theo dõi và ủng hộ suốt quá trình dự án.  Hi vọng quyển sách này sẽ trở thành một sổ tay Học Máy hữu ích cho các độc giả. Và hi vọng đây sẽ là dự án đầu tiên đặt nên móng cho các dự án *open book* - sách mở khác.    
 
