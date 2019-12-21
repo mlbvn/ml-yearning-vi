@@ -10,6 +10,7 @@ from run import _get_title_from_file_path, _chapter_path_from_chapter_number
 import os
 import shutil
 import pdfkit
+import sys
 
 
 PARTS = [
@@ -26,6 +27,17 @@ PARTS = [
     {'path': './chapters/p10_58.md', 'range': [58, 58]},
 ]
 
+def _is_in_windows():
+    platforms = {
+        'linux1': 'Linux',
+        'linux2': 'Linux',
+        'darwin': 'OS X',
+        'win32' : 'Windows'
+    }
+
+    assert sys.platform in platforms, sys.platform
+    return platforms[sys.platform] == 'Windows'
+
 
 def _convert_title_to_link(title):
     title = title.lower()
@@ -37,6 +49,14 @@ def _convert_title_to_link(title):
     title = title.replace(",", "")
     title = title.replace("#-", "#user-content-")
     return title
+
+def _convert_html_to_pdf(html_file, pdf_file):
+    if _is_in_windows():
+        # For windows user, please first install wkhtmltopdf to the directory below
+        config = pdfkit.configuration(wkhtmltopdf="C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe")
+        pdfkit.from_file(html_file, pdf_file, configuration=config) 
+    else:
+        pdfkit.from_file(html_file, pdf_file)
 
 
 NO_PART_LIST = ['p{:02d}'.format(i) for i in range(0, 11)]
@@ -106,13 +126,20 @@ def main(vn_only=True):
         ""
     )
 
+    # Centering images in html_file by replace <p> with <p align="center"> for lines that have
+    # <img> tag
+
+    for line in filedata.splitlines():
+        if "<img " in line:
+            new_line = line.replace("<p>","<p align=\"center\">")
+            filedata = filedata.replace(line, new_line)
+
     f = codecs.open(html_file, "w", "utf-8", "html.parser")
 
     f.write(filedata)
     f.close()
 
-    # Convert html to pdf file
-    pdfkit.from_file(html_file, pdf_file)  # ,configuration=config)
+    _convert_html_to_pdf(html_file, pdf_file)
     # Remove the created html file
     os.remove(html_file)
 
