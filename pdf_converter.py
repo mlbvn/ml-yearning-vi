@@ -11,6 +11,15 @@ import os
 import shutil
 import pdfkit
 
+WIN_USE = 0
+LINUX_USE = 1
+
+# PLEASE CHANGE THIS FLAG DEPENDING ON WHAT OS YOU ARE USING
+usage_flag = LINUX_USE
+
+# For windows user, please first install wkhtmltopdf to the directory below
+if usage_flag == WIN_USE:
+    config = pdfkit.configuration(wkhtmltopdf="C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe")
 
 PARTS = [
     {'path': './chapters/p00_01_04.md', 'range': [1, 4]},
@@ -106,13 +115,24 @@ def main(vn_only=True):
         ""
     )
 
+    # Centering images in html_file by replace <p> with <p align="center"> for lines that have
+    # <img> tag
+
+    for line in filedata.splitlines():
+        if "<img " in line:
+            new_line = line.replace("<p>","<p align=\"center\">")
+            filedata = filedata.replace(line, new_line)
+
     f = codecs.open(html_file, "w", "utf-8", "html.parser")
 
     f.write(filedata)
     f.close()
 
     # Convert html to pdf file
-    pdfkit.from_file(html_file, pdf_file)  # ,configuration=config)
+    if usage_flag == WIN_USE:
+        pdfkit.from_file(html_file, pdf_file, configuration=config) 
+    else:
+        pdfkit.from_file(html_file, pdf_file)
     # Remove the created html file
     os.remove(html_file)
 
