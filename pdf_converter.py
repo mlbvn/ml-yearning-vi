@@ -10,16 +10,8 @@ from run import _get_title_from_file_path, _chapter_path_from_chapter_number
 import os
 import shutil
 import pdfkit
+import sys
 
-WIN_USE = 0
-LINUX_USE = 1
-
-# PLEASE CHANGE THIS FLAG DEPENDING ON WHAT OS YOU ARE USING
-usage_flag = LINUX_USE
-
-# For windows user, please first install wkhtmltopdf to the directory below
-if usage_flag == WIN_USE:
-    config = pdfkit.configuration(wkhtmltopdf="C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe")
 
 PARTS = [
     {'path': './chapters/p00_01_04.md', 'range': [1, 4]},
@@ -35,6 +27,17 @@ PARTS = [
     {'path': './chapters/p10_58.md', 'range': [58, 58]},
 ]
 
+def _is_in_windows():
+    platforms = {
+        'linux1': 'Linux',
+        'linux2': 'Linux',
+        'darwin': 'OS X',
+        'win32' : 'Windows'
+    }
+
+    assert sys.platform in platforms, sys.platform
+    return platforms[sys.platform] == 'Windows'
+
 
 def _convert_title_to_link(title):
     title = title.lower()
@@ -46,6 +49,14 @@ def _convert_title_to_link(title):
     title = title.replace(",", "")
     title = title.replace("#-", "#user-content-")
     return title
+
+def _convert_html_to_pdf(html_file, pdf_file):
+    if _is_in_windows():
+        # For windows user, please first install wkhtmltopdf to the directory below
+        config = pdfkit.configuration(wkhtmltopdf="C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe")
+        pdfkit.from_file(html_file, pdf_file, configuration=config) 
+    else:
+        pdfkit.from_file(html_file, pdf_file)
 
 
 NO_PART_LIST = ['p{:02d}'.format(i) for i in range(0, 11)]
@@ -128,11 +139,7 @@ def main(vn_only=True):
     f.write(filedata)
     f.close()
 
-    # Convert html to pdf file
-    if usage_flag == WIN_USE:
-        pdfkit.from_file(html_file, pdf_file, configuration=config) 
-    else:
-        pdfkit.from_file(html_file, pdf_file)
+    _convert_html_to_pdf(html_file, pdf_file)
     # Remove the created html file
     os.remove(html_file)
 
