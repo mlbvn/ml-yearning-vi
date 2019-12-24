@@ -88,28 +88,27 @@ Mỗi chương được một hai bạn dịch chính sau đó các thành viên
 Trung bình mỗi chương có ba phản biện với tổng số 176 phản biện trên 58 chương sách. 
 
 
-
-
 ### Giai đoạn 2
 Trong giai đoạn này, các chương sẽ được trau chuốt hơn về mặt ngôn từ, cách diễn đạt. 
 
 | Chương | Dịch | Phản biện |
 | ---    | ---  | ---       |
-| [1 - 4](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386)   |  nmdang 		| tiepvupsu, ngcthuong, sonvx |
-| [5 - 8](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/414)   |  ngdthanhcs 	| tiepvupsu, ngcthuong |
-| [9 - 12](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/409)  |  lkhphuc 	| tiepvupsu, ngcthuong |
-| [13 - 16](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/413) |  nmdang 	    | tiepvupsu |
-| [17 - 19](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/408) |  thhung 		| tiepvupsu |
-| [20 - 23](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/415) |  rootonchair | tiepvupsu, ngcthuong |
-| [24 - 27](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/431) |  ngcthuong   | tiepvupsu, william-vu |
-| [28 - 32](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) | nmdang        |   |
-| [33 - 35](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/443) | ngcthuong    |   |
-| [36 - 39](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
-| [40 - 43](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
-| [44 - 46](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
-| [47 - 52](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
-| [53 - 58](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) |    |   |
-
+| [1 - 4](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386)   | nmdang 		| tiepvupsu, ngcthuong, sonvx |
+| [5 - 8](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/414)   | ngdthanhcs 	| tiepvupsu, ngcthuong |
+| [9 - 12](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/409)  | lkhphuc 	    | tiepvupsu, ngcthuong |
+| [13 - 16](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/413) | nmdang 	    | tiepvupsu |
+| [17 - 19](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/408) | thhung 		| tiepvupsu |
+| [20 - 23](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/415) | rootonchair  | tiepvupsu, ngcthuong |
+| [24 - 27](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/431) | ngcthuong    | tiepvupsu, william-vu |
+| [28 - 32](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) | nmdang       | samthehai, lkhphuc  |
+| [33 - 35](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/443) | ngcthuong    | lkhphuc, samthehai, tiepvupsu  |
+| [36 - 39](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/446) | lkhphuc      | tiepvupsu, samthehai  |
+| [40 - 43](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/460) | ngcthuong    | lkhphuc, rootonchair,  |
+| [44 - 46](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/456) | rootonchair  | lkhphuc   |
+| [47 - 49](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/460) | khoapip      | tiepvupsu, lkhphuc, ngcthuong  |
+| [50 - 52](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/448) | tiepvupsu    | samthehai, quangnhat185, ngcthuong|
+| [53 - 55](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/453) | duythanhvn   | quangnhat185, ngcthuong, tiepvupsu  |
+| [56 - 58](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/452) | tiepvupsu    | ngcthuong, lkhphuc  |
 
 
 ### Thuật ngữ
@@ -125,11 +124,11 @@ Ngoài các đóng góp về bài dịch, phản biện, cũng như hiệu đín
 | --- |  ---     | ---  |
 | 1 | Định dạng thư mục, tệp hướng dẫn	|  tiepvupsu, xuantubk 				|
 | 2 | Sao chép và định dạng bản dịch	|  duythanhvn, tiepvupsu, ngcthuong |
-| 3 | Sao chép và chỉnh sửa hình vẽ	    |  samthehai, quangnhat185, rootonchair|
-| 4 | Sao chép và chỉnh sửa bảng biểu	|  tiena2cva  					|
-| 5 | Tạo tệp pdf cho bản đầy đủ    	|  quangnhat185  				|
-| 6 | Thiết kế bìa bản tiếng Việt    	|    				            |
-
+| 3 | Sao chép và chỉnh sửa hình vẽ	    |  samthehai, quangnhat185, rootonchair, duythanhvn|
+| 4 | Sao chép và chỉnh sửa bảng biểu	|  tiena2cva  					       |
+| 5 | Tạo tệp pdf cho bản đầy đủ    	|  quangnhat185, rootonchair, tiepvupsu|
+| 6 | Thiết kế bìa bản tiếng Việt    	|  duythanhvn  				                   |
+| 7 | Tổng hợp nội dung, lời cảm ơn    	|  ngcthuong, tiepvupsu                          |
 
 
 ### Tên các thành viên  
@@ -146,17 +145,17 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | rootonchair   | Phạm Hồng Vinh       |
 | 1612628       |                      |
 | william-vu    | Vũ Đình Quyền        |
-| SumoBBQ       |   Phạm Chí Thành                   |
+| SumoBBQ       | Phạm Chí Thành       |
 | thhung        |                      |
 | naml3i        |                      |
 | quangnhat185  | Nguyễn Lê Quang Nhật |
 | seanphan      | Phan Duy Khánh       |
 | phamdinhkhanh |                      |
 | duythanhvn    | Đoàn Võ Duy Thanh    |
-| nmdang        | Đặng Ngọc Minh                     |
+| nmdang        | Đặng Ngọc Minh       |
 | khoapip       | Ngô Thế Anh Khoa     |
 | honghanhh     | Trần Thị Hồng Hạnh   |
-| tiena2cva     | Ngọc Việt Tiến |
+| tiena2cva     | Ngọc Việt Tiến       |
 | vudaoanhtuan  |                      |
 | ngdthanhcs    |                      |
 | damminhtien   |                      |
@@ -164,7 +163,6 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | kiemrong08    |                      |
 | freeloneman   |                      |
 | xuantubk      | Nguyễn Xuân Tú       |
-|               |                      |
 
 
 
