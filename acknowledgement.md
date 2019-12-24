@@ -133,8 +133,7 @@ Ngoài các đóng góp về bài dịch, phản biện, cũng như hiệu đín
 
 ### Tên các thành viên  
 
-Chi tiết tên và tài khoản github các thành viên có đóng góp cho đề tài.  
-(Mình sẽ update lại theo thứ tự tên bảng chữ cái sau khi hoàn thiện).
+Chi tiết tên và tài khoản github các thành viên có đóng góp cho đề tài không theo thứ tự nào cả.   
 
 | GitHub ID     | Họ & Tên             |
 | ------------- | -------------------- |
@@ -143,11 +142,8 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | lkhphuc       | Lê Khắc Hồng Phúc    |
 | sonvx         | Vũ Xuân Sơn          |
 | rootonchair   | Phạm Hồng Vinh       |
-| 1612628       |                      |
 | william-vu    | Vũ Đình Quyền        |
 | SumoBBQ       | Phạm Chí Thành       |
-| thhung        |                      |
-| naml3i        |                      |
 | quangnhat185  | Nguyễn Lê Quang Nhật |
 | seanphan      | Phan Duy Khánh       |
 | phamdinhkhanh |                      |
@@ -156,14 +152,16 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | khoapip       | Ngô Thế Anh Khoa     |
 | honghanhh     | Trần Thị Hồng Hạnh   |
 | tiena2cva     | Ngọc Việt Tiến       |
+| xuantubk      | Nguyễn Xuân Tú       |
+| 1612628       |                      |
+| thhung        |                      |
+| naml3i        |                      |
 | vudaoanhtuan  |                      |
 | ngdthanhcs    |                      |
 | damminhtien   |                      |
 | van-tienhoang |                      |
 | kiemrong08    |                      |
 | freeloneman   |                      |
-| xuantubk      | Nguyễn Xuân Tú       |
-
 
 
 **Mọi đóng góp của các bạn đều được lưu lại trong lịch sử của repo này.**
