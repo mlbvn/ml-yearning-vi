@@ -119,8 +119,40 @@ Giai đoạn hai được hoàn thành với 16 bài hiệu đính (mỗi bài t
 
 ### Thuật ngữ
 
-Các thuật ngữ tiếng Anh xuất hiện trong sách nếu chưa có trong [Bảng thuật ngữ](glossary.md). 
+Còn rất nhiều các đóng góp từ các bạn dịch, phản biện cũng như thảo luận về các thuật ngữ tiếng Anh trong [Bảng thuật ngữ](glossary.md) với một số từ khóa điển hình được hoàn thiện trong quá trình dịch như: 
 
+| English                           | Tiếng Việt (Nếu bạn bổ sung thì KHÔNG căn chỉnh các dòng khác) | Thảo luận tại                                                |
+|-----------------------------------|----------------------------------------------------------------|--------------------------------------------------------------|
+| artificial data synthesis         | tổng hợp dữ liệu nhân tạo                                      | [#297](http://bit.ly/2PVhv5V)                                |
+| background noise                  | nhiễu nền                                                      | [#193](http://bit.ly/31ObyKI)                                |
+| benchmark                         | đánh giá xếp hạng                                              | [#87](http://bit.ly/2BvfPYA)                                 |
+| bias (bias as variance)           | độ chệch                                                       | [#125](http://bit.ly/32HJI3S)                                | 
+| data mismatch                     | dữ liệu không tương đồng                                       | [#305](http://bit.ly/2PRYVLV)                                |
+| domain adaptation                 | thích ứng miền                                                 | [#256](http://bit.ly/2ZoBtJ7)                                |
+| Eyeball dev set                   | Tập phát triển Eyeball                                         | [#162](http://bit.ly/2MVHcl7)                                |
+| human-level performance           | chất lượng mức con người                                       | [#259](http://bit.ly/36IzQcB), [#287](http://bit.ly/33CJfjX) |
+| learning curve                    | đồ thị quá trình học                                           | [#87](http://bit.ly/2BvfPYA)                                 |
+| multiple-number evaluation metric | phép đo đa trị                                                 | [#305](http://bit.ly/2PRYVLV)                                |
+| multitask learning                | học đa nhiệm                                                   | [#256](http://bit.ly/2ZoBtJ7)                                |
+| negative sample/example           | mẫu âm                                                         |                                                              |
+| neural network                    | mạng nơ-ron                                                    | [#87](http://bit.ly/2BvfPYA) [#115](http://bit.ly/2MAkizG)   |
+| optimizing metric                 | phép đo để tối ưu                                              | [#87](http://bit.ly/2BvfPYA)                                 |
+| overfit                           | overfit                                                        | [#87](http://bit.ly/2BvfPYA)                                 |
+| performance                       | chất lượng                                                     | [#259](http://bit.ly/36IzQcB)                                |
+| plateau (danh từ)                 | vùng nằm ngang                                                 | [#260](http://bit.ly/35XznCO)                                |
+| plateau (động từ)                 | nằm ngang                                                      | [#260](http://bit.ly/35XznCO)                                |
+| pipeline                          | pipeline                                                       | [#334](http://bit.ly/2OyYuEf)                                |
+| positive sample/example           | mẫu dương                                                      |                                                              |
+| sampling with replacement         | lấy mẫu có hoàn lại                                            | [#251](http://bit.ly/34wQuKr)                                |
+| sampling without replacement      | lấy mẫu không hoàn lại                                         | [#251](http://bit.ly/34wQuKr)                                |
+| satisficing metric                | phép đo thỏa mãn                                               | [#87](http://bit.ly/2BvfPYA)                                 |
+| single-number evaluation metric   | phép đo đơn trị                                                |                                                              |
+| training dev set                  | tập phát triển huấn luyện                                      | [#305](http://bit.ly/2PRYVLV)                                |
+| unavoidable bias                  | độ chệch không tránh được                                      |                                                              |
+| underfit                          | underfit                                                       | [#87](http://bit.ly/2BvfPYA)                                 |
+| variance (bias as variance)       | phương sai                                                     | [#125](http://bit.ly/32HJI3S)                                |
+
+Chi tiết xem thêm tại Bảng thuật ngữ. 
 
 
 ### Các đóng góp khác
