@@ -126,7 +126,7 @@ Còn rất nhiều các đóng góp từ các bạn dịch, phản biện cũng 
 | artificial data synthesis         | tổng hợp dữ liệu nhân tạo                                      | [#297](http://bit.ly/2PVhv5V)                                |
 | background noise                  | nhiễu nền                                                      | [#193](http://bit.ly/31ObyKI)                                |
 | benchmark                         | đánh giá xếp hạng                                              | [#87](http://bit.ly/2BvfPYA)                                 |
-| bias (bias as variance)           | độ chệch                                                       | [#125](http://bit.ly/32HJI3S)                                | 
+| bias (bias as variance)           | độ chệch                                                       | [#125](http://bit.ly/32HJI3S)                                |
 | data mismatch                     | dữ liệu không tương đồng                                       | [#305](http://bit.ly/2PRYVLV)                                |
 | domain adaptation                 | thích ứng miền                                                 | [#256](http://bit.ly/2ZoBtJ7)                                |
 | Eyeball dev set                   | Tập phát triển Eyeball                                         | [#162](http://bit.ly/2MVHcl7)                                |
@@ -153,6 +153,8 @@ Còn rất nhiều các đóng góp từ các bạn dịch, phản biện cũng 
 | variance (bias as variance)       | phương sai                                                     | [#125](http://bit.ly/32HJI3S)                                |
 
 Chi tiết xem thêm tại Bảng thuật ngữ. 
+
+
 
 
 ### Các đóng góp khác
@@ -185,7 +187,6 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | SumoBBQ       | Phạm Chí Thành       |
 | quangnhat185  | Nguyễn Lê Quang Nhật |
 | seanphan      | Phan Duy Khánh       |
-| phamdinhkhanh |                      |
 | duythanhvn    | Đoàn Võ Duy Thanh    |
 | nmdang        | Đặng Ngọc Minh       |
 | khoapip       | Ngô Thế Anh Khoa     |
@@ -193,6 +194,7 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | tiena2cva     | Ngọc Việt Tiến       |
 | xuantubk      | Nguyễn Xuân Tú       |
 | 1612628       |                      |
+| phamdinhkhanh |                      |
 | thhung        |                      |
 | naml3i        |                      |
 | vudaoanhtuan  |                      |
