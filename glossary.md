@@ -14,7 +14,7 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 ## Anh - Việt
 
 
-| English                           | Tiếng Việt (Nếu bạn bổ sung thì KHÔNG căn chỉnh các dòng khác) | Thảo luận tại                                                |
+| English                           | Tiếng Việt| Thảo luận tại                                                |
 |-----------------------------------|----------------------------------------------------------------|--------------------------------------------------------------|
 | accuracy                          | độ chính xác                                                   |                                                              |
 | activation function               | hàm kích hoạt                                                  |                                                              |
