@@ -103,12 +103,18 @@ Trong giai đoạn này, các chương sẽ được trau chuốt hơn về mặ
 | [28 - 32](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/386) | nmdang       | samthehai, lkhphuc  |
 | [33 - 35](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/443) | ngcthuong    | lkhphuc, samthehai, tiepvupsu  |
 | [36 - 39](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/446) | lkhphuc      | tiepvupsu, samthehai  |
-| [40 - 43](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/460) | ngcthuong    | lkhphuc, rootonchair,  |
+| [40 - 43](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/460) | ngcthuong    | lkhphuc, rootonchair  |
 | [44 - 46](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/456) | rootonchair  | lkhphuc   |
-| [47 - 49](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/460) | khoapip      | tiepvupsu, lkhphuc, ngcthuong  |
+| [47 - 49](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/460) | khoapip      | tiepvupsu, lkhphuc, ngcthuong, rootonchair |
 | [50 - 52](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/448) | tiepvupsu    | samthehai, quangnhat185, ngcthuong|
 | [53 - 55](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/453) | duythanhvn   | quangnhat185, ngcthuong, tiepvupsu  |
 | [56 - 58](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/452) | tiepvupsu    | ngcthuong, lkhphuc  |
+
+Giai đoạn hai được hoàn thành với 16 bài hiệu đính (mỗi bài từ 3 - 4 chương) và 35 đóng góp phản biện. Tính trung bình, có 2.2 phản biện trên một hiệu đính. Chi tiết đóng góp như sau 
+
+![img](imgs/ACK_Phase2_Translator.PNG)
+
+![img](imgs/ACK_Phase2_Reviewers.PNG)
 
 
 ### Thuật ngữ
@@ -126,9 +132,10 @@ Ngoài các đóng góp về bài dịch, phản biện, cũng như hiệu đín
 | 2 | Sao chép và định dạng bản dịch	|  duythanhvn, tiepvupsu, ngcthuong |
 | 3 | Sao chép và chỉnh sửa hình vẽ	    |  samthehai, quangnhat185, rootonchair, duythanhvn|
 | 4 | Sao chép và chỉnh sửa bảng biểu	|  tiena2cva  					       |
-| 5 | Tạo tệp pdf cho bản đầy đủ    	|  quangnhat185, rootonchair, tiepvupsu|
+| 5 | Tạo tệp pdf cho bản đầy đủ    	| quangnhat185, rootonchair, duythanhvn, tiepvupsu |
 | 6 | Thiết kế bìa bản tiếng Việt    	|  duythanhvn  				                   |
 | 7 | Tổng hợp nội dung, lời cảm ơn    	|  ngcthuong, tiepvupsu                          |
+
 
 
 ### Tên các thành viên  
