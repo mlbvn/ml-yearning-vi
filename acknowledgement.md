@@ -205,4 +205,5 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | freeloneman   |                      |
 
 
-**Mọi đóng góp của các bạn đều được lưu lại trong lịch sử của repo này.**
+**Mọi đóng góp của các bạn đều được lưu lại trong lịch sử của trang này.**
+các bạn chưa có tên đầy đủ, hoặc tên đóng góp trong trang này xin vui lòng liên hệ lại với nhóm để lưu lại những đóng góp của các bạn. 
