@@ -1,9 +1,9 @@
 ## Acknowledgement - Lời cảm ơn
 
-**Dự án dịch sách này không thể thành công nếu không có sự đóng góp của cộng đồng.
+**Dự án dịch sách này không thể thành công nếu không có sự đóng góp của cộng đồng.**
 
 
-Việc thiết lập repo đầu tiên với dịch những chương đầu và kêu gọi. 
+Việc thiết lập repo đầu tiên với dịch những chương đầu và kêu gọi.
 
 
 
@@ -14,7 +14,7 @@ Hy vọng quyển sách này sẽ trở thành một sổ tay Học Máy hữu �
 Thông tin chi tiết đóng góp các thành viên cho dự án "Machine Learning Yearning" - "Khát khao học máy". Các đóng góp dịch, phản biệt, hiệu đính được thống kê dựa trên tên tài khoản Github cùng đường dẫn tới các repo tương ứng.   
 
 ### Giai đoạn 1
-Đây là giai đoạn dịch từ bản tiếng Anh sang bản tiếng Việt lần đầu tiên. Bản dịch này phải đảm bảo ý nghĩa của bản dịch sát với bản gốc, việc trau chuốt ngôn từ sẽ được làm kỹ hơn ở giai đoạn 2. 
+Đây là giai đoạn dịch từ bản tiếng Anh sang bản tiếng Việt lần đầu tiên. Bản dịch này phải đảm bảo ý nghĩa của bản dịch sát với bản gốc, việc trau chuốt ngôn từ sẽ được làm kỹ hơn ở giai đoạn 2.
 
 | Chương | Thảo luận | Dịch | Phản biện |
 | ---    |  ---      | ---  | ---    |
@@ -38,6 +38,9 @@ Thông tin chi tiết đóng góp các thành viên cho dự án "Machine Learni
 | [18. ](./chapters/ch18.md) | [#156](http://tinyurl.com/qsxqc9h) | phamdinhkhanh| tiepvupsu, khoapip, thhung, william-vu|
 | [19. ](./chapters/ch19.md) | [#169](http://tinyurl.com/yx2qboe8)| seanphan 	| tiepvupsu, william-vu, ngcthuong |
 | [20. ](./chapters/ch20.md) | [#172](http://tinyurl.com/vo728jr) | tiepvupsu 	| thhung, william-vu, 1612628 |
+
+| Chương | Thảo luận | Dịch | Phản biện |
+| ---    |  ---      | ---  | ---    |
 | [21. ](./chapters/ch21.md) | [#173](http://tinyurl.com/v3lxdwz) | seanphan 	| tiepvupsu |
 | [22. ](./chapters/ch22.md) | [#181](http://tinyurl.com/v6lycgv) | william-vu  | tiepvupsu |
 | [23. ](./chapters/ch23.md) | [#175](http://tinyurl.com/vdgcwnn) | seanphan    | tiepvupsu, duythanhvn, ngcthuong, thhung |
@@ -57,6 +60,9 @@ Thông tin chi tiết đóng góp các thành viên cho dự án "Machine Learni
 | [37. ](./chapters/ch37.md) | [#279](http://tinyurl.com/yx42q9ln) | seanphan    | quangnhat185, sonvx, 1612628, ngcthuong |
 | [38. ](./chapters/ch38.md) | [#302](http://tinyurl.com/seotxz5) | honghanhh    | tiepvupsu, phamdinhkhanh|
 | [39. ](./chapters/ch39.md) | [#258](http://tinyurl.com/r6jpbak) | honghanhh    | naml3i, lkhphuc, tiena2cva, tiepvupsu|
+
+| Chương | Thảo luận | Dịch | Phản biện |
+| ---    |  ---      | ---  | ---    |
 | [40. ](./chapters/ch40.md) | [#282](http://tinyurl.com/w677y7q) | quangnhat185| seanphan, rootonchair, ngcthuong, honghanhh, tiepvupsu|
 | [41. ](./chapters/ch41.md) | [#278](http://tinyurl.com/syy5q4l) | lkhphuc     | sonvx, ngcthuong, tiepvupsu|
 | [42. ](./chapters/ch42.md) | [#298](http://tinyurl.com/yxxlkgyr) | naml3i      | tiepvupsu|
@@ -78,18 +84,19 @@ Thông tin chi tiết đóng góp các thành viên cho dự án "Machine Learni
 | [58. ](./chapters/ch58.md) | [#317](http://tinyurl.com/twb7dec) | tuanbieber  | tiepvupsu|
 
 Tổng hợp đóng góp dịch và phản biện giai đoạn một dưới dạng biểu đồ sau.  
-![img](imgs/ACK_Phase1_Translator.PNG)
 
-Mỗi chương được một hai bạn dịch chính sau đó các thành viên khác đóng góp phản biện. 
+<p align="center"><img src="imgs/ACK_Phase1_Translator.PNG"></p>
+
+Mỗi chương được một hai bạn dịch chính sau đó các thành viên khác đóng góp phản biện.
 
 
 ![img](imgs/ACK_Phase1_Reviewers.PNG)
 
-Trung bình mỗi chương có ba phản biện với tổng số 176 phản biện trên 58 chương sách. 
+Trung bình mỗi chương có ba phản biện với tổng số 176 phản biện trên 58 chương sách.
 
 
 ### Giai đoạn 2
-Trong giai đoạn này, các chương sẽ được trau chuốt hơn về mặt ngôn từ, cách diễn đạt. 
+Trong giai đoạn này, các chương sẽ được trau chuốt hơn về mặt ngôn từ, cách diễn đạt.
 
 | Chương | Dịch | Phản biện |
 | ---    | ---  | ---       |
@@ -110,16 +117,15 @@ Trong giai đoạn này, các chương sẽ được trau chuốt hơn về mặ
 | [53 - 55](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/453) | duythanhvn   | quangnhat185, ngcthuong, tiepvupsu  |
 | [56 - 58](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/452) | tiepvupsu    | ngcthuong, lkhphuc  |
 
-Giai đoạn hai được hoàn thành với 16 bài hiệu đính (mỗi bài từ 3 - 4 chương) và 35 đóng góp phản biện. Tính trung bình, có 2.2 phản biện trên một hiệu đính. Chi tiết đóng góp như sau 
+Giai đoạn hai được hoàn thành với 16 bài hiệu đính (mỗi bài từ 3 - 4 chương) và 35 đóng góp phản biện. Tính trung bình, có 2.2 phản biện trên một hiệu đính. Chi tiết đóng góp như sau
 
-![img](imgs/ACK_Phase2_Translator.PNG)
+<p align="center"><img src="imgs/ACK_Phase2_Translator.PNG" width=80%</p>
 
-![img](imgs/ACK_Phase2_Reviewers.PNG)
-
+<p align="center"><img src="imgs/ACK_Phase2_Reviewers.PNG" width=80%</p>
 
 ### Thuật ngữ
 
-Còn rất nhiều các đóng góp từ các bạn dịch, phản biện cũng như thảo luận về các thuật ngữ tiếng Anh trong [Bảng thuật ngữ](glossary.md) với một số từ khóa điển hình được hoàn thiện trong quá trình dịch như: 
+Còn rất nhiều các đóng góp từ các bạn dịch, phản biện cũng như thảo luận về các thuật ngữ tiếng Anh trong [Bảng thuật ngữ](glossary.md) với một số từ khóa điển hình được hoàn thiện trong quá trình dịch như:
 
 | English                           | Tiếng Việt (Nếu bạn bổ sung thì KHÔNG căn chỉnh các dòng khác) | Thảo luận tại                                                |
 |-----------------------------------|----------------------------------------------------------------|--------------------------------------------------------------|
@@ -152,13 +158,13 @@ Còn rất nhiều các đóng góp từ các bạn dịch, phản biện cũng 
 | underfit                          | underfit                                                       | [#87](http://bit.ly/2BvfPYA)                                 |
 | variance (bias as variance)       | phương sai                                                     | [#125](http://bit.ly/32HJI3S)                                |
 
-Chi tiết xem thêm tại Bảng thuật ngữ. 
+Chi tiết xem thêm tại Bảng thuật ngữ.
 
 
 
 
 ### Các đóng góp khác
-Ngoài các đóng góp về bài dịch, phản biện, cũng như hiệu đính tuyệt vời nêu trên, cũng không thể không nêu những đóng góp thầm lặng khác cho đề tài như 
+Ngoài các đóng góp về bài dịch, phản biện, cũng như hiệu đính tuyệt vời nêu trên, cũng không thể không nêu những đóng góp thầm lặng khác cho đề tài như
 
 | STT | Nội dung | Đóng góp |
 | --- |  ---     | ---  |
@@ -206,4 +212,4 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 
 
 **Mọi đóng góp của các bạn đều được lưu lại trong lịch sử của trang này.**
-các bạn chưa có tên đầy đủ, hoặc tên đóng góp trong trang này xin vui lòng liên hệ lại với nhóm để lưu lại những đóng góp của các bạn. 
+các bạn chưa có tên đầy đủ, hoặc tên đóng góp trong trang này xin vui lòng liên hệ lại với nhóm để lưu lại những đóng góp của các bạn.
