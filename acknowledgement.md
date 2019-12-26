@@ -89,8 +89,7 @@ Tổng hợp đóng góp dịch và phản biện giai đoạn một dưới d�
 
 Mỗi chương được một hai bạn dịch chính sau đó các thành viên khác đóng góp phản biện.
 
-
-![img](imgs/ACK_Phase1_Reviewers.PNG)
+<p align="center"><img src="imgs/ACK_Phase1_Reviewers.PNG"></p>
 
 Trung bình mỗi chương có ba phản biện với tổng số 176 phản biện trên 58 chương sách.
 
