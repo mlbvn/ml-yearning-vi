@@ -92,7 +92,7 @@ def main(vn_only=True):
             chapter_list.append(_convert_title_to_link(chapter_title))
 
     # export mardown file to html file
-    os.system("grip {} --export {}".format(md_file, html_file))
+    os.system("python3 -m grip {} --export {}".format(md_file, html_file))
 
     f = codecs.open(html_file, "r", "utf-8", "html.parser")
 
