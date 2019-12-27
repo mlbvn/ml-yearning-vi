@@ -148,12 +148,6 @@ def _chapter_path_from_chapter_number(chapter_number):
     return os.path.join(CHAPTERS_DIR, 'ch{:02d}.md'.format(chapter_number))
 
 
-def shorten_url(long_url):
-    apiurl = "http://tinyurl.com/api-create.php?url="
-    tinyurl = urllib.request.urlopen(apiurl + long_url).read()
-    return tinyurl.decode("utf-8")
-
-
 def create_pdfs():
     pdf.main(vn_only=False)
     pdf.main(vn_only=True)
