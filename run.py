@@ -45,8 +45,17 @@ def _convert_title_to_link(title):
     return title
 
 def _convert_html_to_pdf(html_file, pdf_file):
+    options = {
+        'page-size': 'A4',
+        'margin-top': '2.5cm',
+        'margin-right': '2.5cm',
+        'margin-bottom': '2.5cm',
+        'margin-left': '2.5cm',
+        'encoding': "UTF-8",
+        'footer-center': '[page]'
+    }
     print("Convert html file {} to pdf file {}".format(html_file, pdf_file))
-    pdfkit.from_file(html_file, pdf_file)
+    pdfkit.from_file(html_file, pdf_file, options=options)
 
 
 class Book(object):
