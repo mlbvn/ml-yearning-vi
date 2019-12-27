@@ -152,7 +152,7 @@ class Book(object):
         # Remove the ".md" title bar at begining
         print(path)
         filedata = filedata.replace(
-            '<h3>\n                  <span class="octicon octicon-book"></span>\n                  %s.md\r\n                </h3>'%os.path.basename(path)
+            '<h3>\n                  <span class="octicon octicon-book"></span>\n                  %s.md\r\n                </h3>'%os.path.basename(path),
             ""
         )
 
@@ -208,7 +208,7 @@ class TableOfContent(BookPart):
 
     def _get_content_lines_md(self):
         lines = []
-        lines.append("**MỤC LỤC**\n")
+        lines.append("## MỤC LỤC\n")
         for part in PARTS:
             part_path = part['path']
             lines.append(self.get_toc_line(part_path, level=0))

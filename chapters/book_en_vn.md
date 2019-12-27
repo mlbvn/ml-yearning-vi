@@ -1,4 +1,4 @@
-**MỤC LỤC**
+## MỤC LỤC
 * [Giới thiệu](#p00)
 	* [1. Tại sao cần chiến lược Học Máy](#ch01)
 	* [2. Cách sử dụng cuốn sách khi làm việc nhóm](#ch02)
