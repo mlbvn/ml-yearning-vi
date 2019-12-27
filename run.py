@@ -41,31 +41,6 @@ PARTS = [
 ]
 
 
-def _convert_title_to_link(title):
-    title = title.lower()
-    title = title.replace(" ", "-")
-    title = title.replace(".", "")
-    title = title.replace(":", "")
-    title = title.replace("/", "")
-    title = title.replace("?", "")
-    title = title.replace(",", "")
-    title = title.replace("#-", "#user-content-")
-    return title
-
-def _convert_html_to_pdf(html_file, pdf_file):
-    options = {
-        'page-size': 'A4',
-        'margin-top': '2.5cm',
-        'margin-right': '2.5cm',
-        'margin-bottom': '2.5cm',
-        'margin-left': '2.5cm',
-        'encoding': "UTF-8",
-        'footer-center': '[page]'
-    }
-    print("Convert html file {} to pdf file {}".format(html_file, pdf_file))
-    pdfkit.from_file(html_file, pdf_file, options=options)
-
-
 class Book(object):
     def __init__(self):
         self.en_vi_md_path = self._get_path('book_en_vn.md')
@@ -295,6 +270,31 @@ class Acknowledgement(BookPart):
         return lines
 
 
+def _convert_title_to_link(title):
+    title = title.lower()
+    title = title.replace(" ", "-")
+    title = title.replace(".", "")
+    title = title.replace(":", "")
+    title = title.replace("/", "")
+    title = title.replace("?", "")
+    title = title.replace(",", "")
+    title = title.replace("#-", "#user-content-")
+    return title
+
+def _convert_html_to_pdf(html_file, pdf_file):
+    options = {
+        'page-size': 'A4',
+        'margin-top': '2.5cm',
+        'margin-right': '2.5cm',
+        'margin-bottom': '2.5cm',
+        'margin-left': '2.5cm',
+        'encoding': "UTF-8",
+        'footer-center': '[page]'
+    }
+    print("Convert html file {} to pdf file {}".format(html_file, pdf_file))
+    pdfkit.from_file(html_file, pdf_file, options=options)
+
+
 def _get_label_from_filename(chapter_or_part_filename):
     if chapter_or_part_filename.startswith('p'):
         return chapter_or_part_filename[:3]  # pxx
@@ -316,15 +316,6 @@ def _get_title_from_file_path(part_path):
                 line = line.strip()
                 return line
     assert False, part_path
-
-
-def is_part(path_name):
-    assert path_name[1] in ['p', 'c'], path_name
-    return path_name[1] == "p"
-
-
-def _insert_to_toc(all_file_writer, part_path, level):
-    all_file_writer.write(TableOfContent().get_toc_line(part_path, level))
 
 
 def _chapter_path_from_chapter_number(chapter_number):
