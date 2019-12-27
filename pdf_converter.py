@@ -40,8 +40,17 @@ def _convert_title_to_link(title):
     return title
 
 def _convert_html_to_pdf(html_file, pdf_file):
+    options = {
+        'page-size': 'A4',
+        'margin-top': '2.5cm',
+        'margin-right': '2.5cm',
+        'margin-bottom': '2.5cm',
+        'margin-left': '2.5cm',
+        'encoding': "UTF-8",
+        'footer-center': '[page]'
+        }
     print("Convert html file {} to pdf file {}".format(html_file, pdf_file))
-    pdfkit.from_file(html_file, pdf_file)
+    pdfkit.from_file(html_file, pdf_file,options=options)
 
 
 NO_PART_LIST = ['p{:02d}'.format(i) for i in range(0, 11)]
@@ -49,12 +58,20 @@ NO_CHAPTER_LIST = ['{:02d}'.format(i) for i in range(1, 59)]
 ALL_CHAPTERS = "./chapters/all_chapters"
 ALL_CHAPTERS_VN = "./chapters/all_chapters_vietnamese_only"
 
+# Ajust values below to modify font-size (unit:pt), colors and margin(unit:px)
+NORMAL_TEXT_SIZE = 16
+SUB_TITLE_SIZE =28
+PART_NAME_SIZE= 72
+PART_NAME_COLOR="#0E275A"
+PADDING_TOP_ALL_CHAPTERS=200
+PADDING_TOP_ALL_CHAPTERS_VN=500
 
 def main(vn_only=True):
     # extract list of all part titles and chapter titles
     part_list = []
     chapter_list = []
     path = ALL_CHAPTERS_VN if vn_only else ALL_CHAPTERS
+    padding_top = PADDING_TOP_ALL_CHAPTERS_VN if vn_only else PADDING_TOP_ALL_CHAPTERS
     html_file = path + '.html'
     md_file = path + '.md'
     pdf_file = path[11:] + '.pdf'
@@ -107,10 +124,17 @@ def main(vn_only=True):
         filedata = filedata.replace('#%s' % chapter_name, '%s'% chapter_list[order])
     # Remove the ".md" title bar at begining
     filedata = filedata.replace(
-        '<h3>\r\n                  <span class="octicon octicon-book"></span>\r\n                  %s.md\r\n                </h3>'%path[11:],
+        '<h3>\n                  <span class="octicon octicon-book"></span>\n                  %s.md\n                </h3>'%path[11:],
         ""
     )
-
+    
+    # Change font-size, color, margin
+    filedata=filedata.replace('<p><strong>MỤC LỤC</strong></p>','<h2><strong>MỤC LỤC</strong></h2>')
+    filedata = filedata.replace('<style>','<style>tr{font-size: %ipt}h1{padding-top: %ipx;text-align: center;color: %s}li,p{font-size: %ipt}body{text-align: justify;}'%(NORMAL_TEXT_SIZE,padding_top,PART_NAME_COLOR,NORMAL_TEXT_SIZE))
+    filedata=filedata.replace('<h1>','<h1 style="font-size:%ipt">'%PART_NAME_SIZE)    
+    filedata=filedata.replace('<h2>','<h2 style="font-size:%ipt">'%SUB_TITLE_SIZE) 
+    
+    
     # Centering images in html_file by replace <p> with <p align="center"> for lines that have
     # <img> tag
 
