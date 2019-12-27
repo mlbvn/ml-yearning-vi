@@ -85,11 +85,11 @@ Thông tin chi tiết đóng góp các thành viên cho dự án "Machine Learni
 
 Tổng hợp đóng góp dịch và phản biện giai đoạn một dưới dạng biểu đồ sau.  
 
-<p align="center"><img src="imgs/ACK_Phase1_Translator.PNG"></p>
+<p align="center"><img src="../imgs/ACK_Phase1_Translator.PNG"></p>
 
 Mỗi chương được một hai bạn dịch chính sau đó các thành viên khác đóng góp phản biện.
 
-<p align="center"><img src="imgs/ACK_Phase1_Reviewers.PNG"></p>
+<p align="center"><img src="../imgs/ACK_Phase1_Reviewers.PNG"></p>
 
 Trung bình mỗi chương có ba phản biện với tổng số 176 phản biện trên 58 chương sách.
 
@@ -118,9 +118,9 @@ Trong giai đoạn này, các chương sẽ được trau chuốt hơn về mặ
 
 Giai đoạn hai được hoàn thành với 16 bài hiệu đính (mỗi bài từ 3 - 4 chương) và 35 đóng góp phản biện. Tính trung bình, có 2.2 phản biện trên một hiệu đính. Chi tiết đóng góp như sau
 
-<p align="center"><img src="imgs/ACK_Phase2_Translator.PNG" width=80%</p>
+<p align="center"><img src="../imgs/ACK_Phase2_Translator.PNG" width=80%</p>
 
-<p align="center"><img src="imgs/ACK_Phase2_Reviewers.PNG" width=80%</p>
+<p align="center"><img src="../imgs/ACK_Phase2_Reviewers.PNG" width=80%</p>
 
 ### Thuật ngữ
 

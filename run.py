@@ -13,7 +13,7 @@ import pdfkit
 
 CHAPTERS_DIR = './chapters/'
 BOOK_DIR = CHAPTERS_DIR
-ACKNOWLEDGEMENT_PATH = './acknowledgement.md'
+ACKNOWLEDGEMENT_PATH = './chapters/acknowledgement.md'
 
 NO_PART_LIST = ['p{:02d}'.format(i) for i in range(0, 11)]
 NO_CHAPTER_LIST = ['ch{:02d}'.format(i) for i in range(1, 59)]
@@ -51,10 +51,10 @@ def _convert_html_to_pdf(html_file, pdf_file):
 
 class Book(object):
     def __init__(self):
-        self.en_vi_md_path = self._get_path('myl_en_vi.md')
-        self.vi_md_path = self._get_path('myl_vi.md')
-        self.en_vi_pdf_path = self._get_path('myl_en_vi.pdf')
-        self.vi_pdf_path = self._get_path('myl_vi.pdf')
+        self.en_vi_md_path = self._get_path('book_en_vn.md')
+        self.vi_md_path = self._get_path('book_vn.md')
+        self.en_vi_pdf_path = self._get_path('book_en_vn.pdf')
+        self.vi_pdf_path = self._get_path('book_vn.pdf')
 
     @staticmethod
     def _get_path(filename):
@@ -64,7 +64,7 @@ class Book(object):
         self.build_all_md(vn_only=True)
         self.build_all_md(vn_only=False)
         self.build_all_pdf(vn_only=True)
-        # self.build_all_pdf(vn_only=False)
+        self.build_all_pdf(vn_only=False)
 
     def build_all_md(self, vn_only):
         output_filename = self.vi_md_path if vn_only else self.en_vi_md_path
