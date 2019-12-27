@@ -229,14 +229,6 @@ def shorten_url(long_url):
     return tinyurl.decode("utf-8")
 
 
-def _get_markdown_link_to_pr(pr):
-    assert isinstance(pr, int)
-    pr_link = PR_PREFIX + str(pr)
-    tiny_url = shorten_url(pr_link)
-    res = '[#{}]({})'.format(pr, tiny_url)
-    return res
-
-
 def create_pdfs():
     pdf.main(vn_only=False)
     pdf.main(vn_only=True)
