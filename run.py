@@ -267,22 +267,6 @@ def _insert_content(all_file_writer, file_path, vn_only, heading):
     all_file_writer.write('\n')
 
 
-def _create_header_link(line):
-    for char, new_char in HEADER_TO_LINK_MAP.items():
-        line = line.replace(char, new_char)
-    return line.lower()
-
-
-def _get_chapter_title(chapter_number):
-    chapter_path = _chapter_path_from_chapter_number(chapter_number)
-    with codecs.open(chapter_path, 'r', encoding='utf-8') as one_file:
-        for line in one_file:
-            if line.startswith('# '):
-                line = line.strip()
-                return line
-    return '# {:02d}. chưa có tên'.format(chapter_number)
-
-
 def _chapter_path_from_chapter_number(chapter_number):
     return os.path.join(CHAPTERS_DIR, 'ch{:02d}.md'.format(chapter_number))
 
