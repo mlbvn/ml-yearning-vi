@@ -94,6 +94,7 @@ class Book(object):
             file_writer.write('\n\n')
 
     def build_all_pdf(self, vn_only):
+        # TODO: refactor this method, divide it into multiple small methods/functions.
         md_file = self.vi_md_path if vn_only else self.en_vi_md_path
         # extract list of all part titles and chapter titles
         part_list = []
@@ -151,7 +152,7 @@ class Book(object):
         # Remove the ".md" title bar at begining
         print(path)
         filedata = filedata.replace(
-            '<h3>\n                  <span class="octicon octicon-book"></span>\n                  %s.md\r\n                </h3>'%path[len(CHAPTERS_DIR):],
+            '<h3>\n                  <span class="octicon octicon-book"></span>\n                  %s.md\r\n                </h3>'%os.path.basename(path)
             ""
         )
 
