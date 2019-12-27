@@ -15,6 +15,7 @@ ALL_CHAPTERS_VN_FILENAME = 'all_chapters_vietnamese_only.md'
 HEADER_TO_LINK_MAP = OrderedDict([(' ', '-'), ('#-', '#')])
 HEADER_TO_LINK_MAP.update({a: '' for a in '.:?/'})
 BOOK_DIR = './book/'
+ACKNOWLEDGEMENT_PATH = './acknowledgement.md'
 
 PARTS = [
     {'path': './chapters/p00_01_04.md', 'range': [1, 4]},
@@ -55,7 +56,8 @@ class Book(object):
             TableOfContent().add_md(file_writer)
             MainContent(vn_only).add_md(file_writer)
             # Glossary.add_md(file_writer)
-            # Acknowledge.add_md(file_writer)
+            Acknowledgement().add_md(file_writer)
+            file_writer.write('\n\n')
 
     def build_add_pdf(self, vn_only):
         output_filename = self.vi_pdf_path if vn_only else self.en_vi_pdf_path
@@ -97,6 +99,8 @@ class TableOfContent(BookPart):
             for chapter_number in range(start_chapter, end_chatper + 1):
                 chapter_path = _chapter_path_from_chapter_number(chapter_number)
                 lines.append(self.get_toc_line(chapter_path, level=1))
+        # ack
+        lines.append(Acknowledgement.toc_line())
         return lines
 
     def _get_content_lines_html(self):
@@ -153,6 +157,27 @@ class MainContent(BookPart):
                     print(e)
         lines.append('\n')
         return lines
+
+
+class Acknowledgement(BookPart):
+    label = 'ack'
+
+    def __init__(self, vn_only=True):
+        super().__init__(vn_only=vn_only)
+
+    @classmethod
+    def toc_line(cls):
+        return "* [Lời cảm ơn](#{})\n".format(cls.label)
+
+    def _get_content_lines_md(self):
+        lines = []
+        lines.append('<a name="{}"></a>\n'.format(self.label))
+        with codecs.open(ACKNOWLEDGEMENT_PATH, 'r', encoding='utf-8') as ack_file:
+            for line in ack_file:
+                lines.append(line)
+        return lines
+
+
 
 
 def _get_label_from_filename(chapter_or_part_filename):

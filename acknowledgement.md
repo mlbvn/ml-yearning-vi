@@ -165,15 +165,15 @@ Chi tiết xem thêm tại Bảng thuật ngữ.
 ### Các đóng góp khác
 Ngoài các đóng góp về bài dịch, phản biện, cũng như hiệu đính tuyệt vời nêu trên, cũng không thể không nêu những đóng góp thầm lặng khác cho đề tài như
 
-| STT | Nội dung | Đóng góp |
-| --- |  ---     | ---  |
-| 1 | Định dạng thư mục, tệp hướng dẫn	|  tiepvupsu, xuantubk 				|
-| 2 | Sao chép và định dạng bản dịch	|  duythanhvn, tiepvupsu, ngcthuong |
-| 3 | Sao chép và chỉnh sửa hình vẽ	    |  samthehai, quangnhat185, rootonchair, duythanhvn|
-| 4 | Sao chép và chỉnh sửa bảng biểu	|  tiena2cva  					       |
-| 5 | Tạo tệp pdf cho bản đầy đủ    	| quangnhat185, rootonchair, duythanhvn, tiepvupsu |
-| 6 | Thiết kế bìa bản tiếng Việt    	|  duythanhvn  				                   |
-| 7 | Tổng hợp nội dung, lời cảm ơn    	|  ngcthuong, tiepvupsu                          |
+| STT | Nội dung                         | Đóng góp                                         |
+| --- | ---                              | ---                                              |
+| 1   | Định dạng thư mục, tệp hướng dẫn | tiepvupsu, xuantubk                              |
+| 2   | Sao chép và định dạng bản dịch   | duythanhvn, tiepvupsu, ngcthuong                 |
+| 3   | Sao chép và chỉnh sửa hình vẽ    | samthehai, quangnhat185, rootonchair, duythanhvn |
+| 4   | Sao chép và chỉnh sửa bảng biểu  | tiena2cva                                        |
+| 5   | Tạo tệp pdf cho bản đầy đủ       | quangnhat185, rootonchair, duythanhvn, tiepvupsu |
+| 6   | Thiết kế bìa bản tiếng Việt      | duythanhvn                                       |
+| 7   | Tổng hợp nội dung, lời cảm ơn    | ngcthuong, tiepvupsu                             |
 
 
 
