@@ -205,31 +205,6 @@ def _insert_content(all_file_writer, file_path, vn_only, heading):
     all_file_writer.write('\n')
 
 
-def reformat():
-    min_chapter = 30
-    for chapter in range(min_chapter, NUM_CHAPTERS + 1):
-        chapter_path = _chapter_path_from_chapter_number(chapter)
-        chapter_path_new = chapter_path.replace('.md', '_.md') 
-        with codecs.open(chapter_path_new, 'w', encoding='utf-8') as new_file:
-            with codecs.open(chapter_path, 'r', encoding='utf-8') as old_file:
-                for line in old_file:
-                    line = line.strip()
-                    if line.startswith('!['):
-                        new_file.write(line + '\n')
-                    elif line == '':
-                        new_file.write('\n')
-                    elif line.startswith('>'):
-                        new_file.write(line)
-                    elif line == '->':
-                        # add one more blankline
-                        new_file.write('\n')
-                        new_file.write(TRANSLATE_INDICATOR_STR + '\n')
-                    else:
-                        new_file.write('> ' + line + '\n')
-        os.remove(chapter_path)
-        os.rename(chapter_path_new, chapter_path)
-
-
 def _create_header_link(line):
     for char, new_char in HEADER_TO_LINK_MAP.items():
         line = line.replace(char, new_char)
