@@ -38,7 +38,7 @@
 	* [31. Giải nghĩa các đồ thị quá trình học: Những trường hợp khác](#31)
 	* [32. Vẽ đồ thị quá trình học](#32)
 * [Phần 5: So sánh với chất lượng mức con người](#p05)
-	* [33. Tại sao chúng ta so sánh với chất lượng mức con người?](#33)
+	* [33. Tại sao cần so sánh chất lượng mức con người?](#33)
 	* [34. Cách xác định chất lượng mức con người](#34)
 	* [35. Vượt qua chất lượng mức con người](#35)
 * [Phần 6: Huấn luyện và kiểm tra trên các phân phối khác nhau](#p06)
@@ -47,7 +47,7 @@
 	* [38. Làm thế nào để quyết định có nên bao gồm dữ liệu không nhất quán](#38)
 	* [39. Đánh trọng số dữ liệu](#39)
 	* [40. Tổng quát hóa từ tập huấn luyện đến tập phát triển](#40)
-	* [41. Xác định những lỗi về độ chệch, phương sai, và dữ liệu không tương đồng](#41)
+	* [41. Xác định lỗi về độ chệch, phương sai và dữ liệu không tương đồng](#41)
 	* [42. Xử lý dữ liệu không tương đồng](#42)
 	* [43. Tổng hợp dữ liệu nhân tạo](#43)
 * [Phần 7: Gỡ lỗi các Thuật toán suy luận](#p07)
@@ -56,7 +56,7 @@
 	* [46. Ví dụ về Học tăng cường](#46)
 * [Phần 8: Học sâu đầu-cuối](#p08)
 	* [47. Sự trỗi dậy của học đầu-cuối](#47)
-	* [48. Thêm những ví dụ về học đầu-cuối.](#48)
+	* [48. Những ví dụ học đầu-cuối khác](#48)
 	* [49. Ưu nhược điểm của học đầu-cuối](#49)
 	* [50. Lựa chọn các thành phần cho pipeline: Tính sẵn có của dữ liệu](#50)
 	* [51. Lựa chọn các thành phần cho pipeline: tính đơn giản của tác vụ](#51)
@@ -1497,17 +1497,17 @@ Dưới đây là hai chiến thuật bổ sung, được lặp lại từ chư�
 
 > We've seen some ways to estimate how much error can be attributed to avoidable bias vs. variance. We did so by estimating the optimal error rate and computing the algorithm’s training set and dev set errors. Let’s discuss a technique that is even more informative: plotting a learning curve.
 
-Chúng ta đã thấy một số cách để ước tính có bao nhiêu lỗi tạo ra bởi độ chệch tránh được so với phương sai. Một trong số đó là dự đoán tỉ lệ lỗi tối ưu và tính toán lỗi của thuật toán trên tập huấn luyện và tập phát triển. Hãy cũng thảo luận về một kỹ thuật khác thậm chí còn mang lại nhiều thông tin hơn: biểu diễn một đồ thị quá trình học.
+Chúng ta đã xem qua một số cách ước tính số lượng lỗi tạo ra bởi độ chệch tránh được so với phương sai. Một trong số đó là ước lượng tỉ lệ lỗi tối ưu và tính toán lỗi của thuật toán trên tập huấn luyện và tập phát triển. Hãy cũng thảo luận một kỹ thuật khác thậm chí còn mang lại nhiều thông tin hơn: biểu diễn một đồ thị quá trình học.
 
 > A learning curve plots your dev set error against the number of training examples. To plot it, you would run your algorithm using different training set sizes. For example, if you have 1,000 examples, you might train separate copies of the algorithm on 100, 200, 300, ..., 1000 examples. Then you could plot how dev set error varies with the training set size. Here is an example:
 
-Một đồ thị quá trình học cho thấy sự tương quan giữa lỗi của tập phát triển so với số lượng các mẫu huấn luyện. Để biểu diễn nó, bạn cần áp dụng thuật toán của bạn với các tập huấn luyện có độ lớn khác nhau. Ví dụ, nếu bạn có 1,000 mẫu, bạn có thể huấn luyện riêng biệt các bản sao của thuật toán trên các tập 100, 200, 300, ..., 1000 mẫu. Sau đó bạn có thể biểu diễn sự thay đổi giữa lỗi của tập phát triển so với độ lớn của tập mẫu. Dưới đây là một ví dụ:
+Một đồ thị quá trình học cho thấy sự tương quan giữa lỗi của tập phát triển so với số lượng các mẫu huấn luyện. Để biểu diễn nó, bạn cần áp dụng thuật toán của bạn với các tập huấn luyện có độ lớn khác nhau. Ví dụ, nếu bạn có 1.000 mẫu, bạn có thể huấn luyện riêng biệt các bản sao của thuật toán trên các tập 100, 200, 300, ..., 1.000 mẫu. Sau đó bạn có thể biểu diễn sự thay đổi giữa lỗi của tập phát triển so với độ lớn của tập huấn luyện. Dưới đây là một ví dụ:
 
 ![img](../imgs/C28_01.png)
 
 > As the training set size increases, the dev set error should decrease.
 
-Khi số lượng mẫu tăng, lỗi của tập phát triển nên giảm.
+Khi kích thước tập huấn luyện tăng, lỗi của tập phát triển nên giảm.
 
 > We will often have some "desired error rate" that we hope our learning algorithm will eventually achieve. For example:
 
@@ -1519,7 +1519,7 @@ Chúng ta thường sẽ có một số "tỉ lệ lỗi mong muốn" mà chúng
 
 > * If our learning algorithm serves some product (such as delivering cat pictures), we might have an intuition about what level of performance is needed to give users a great experience.
 
-* Nếu thuật toán học của chúng ta phục vụ một số sản phẩm (ví dụ như cung cấp ảnh mèo), chúng ta có thể có một trực giác về mức chất lượng cần thiết để người dùng có được trải nghiệm tốt nhất.
+* Nếu thuật toán học của chúng ta được dùng trong một sản phẩm nào đó (ví dụ như cung cấp ảnh mèo), chúng ta có thể có một trực giác về mức chất lượng cần thiết để người dùng có được trải nghiệm tốt nhất.
 
 > * If you have worked on a important application for a long time, then you might have intuition about how much more progress you can reasonably make in the next quarter/year
 
@@ -1533,7 +1533,7 @@ Thêm mức chất lượng mong muốn vào đồ thị quá trình học của
 
 > You can visually extrapolate the red "dev error" curve to guess how much closer you could get to the desired level of performance by adding more data. In the example above, it looks plausible that doubling the training set size might allow you to reach the desired performance.
 
-Bạn có thể ngoại suy đường cong đỏ thể hiện "lỗi tập phát triển" để ước tính mức độ cải thiện có thể đạt được so với mức chất lượng mong muốn bằng cách thêm vào dữ liệu. Ví dụ trên cho thấy bạn có thể đạt được mức chất lượng mong muốn bằng cách tăng gấp đôi độ lớn tập huấn luyện.
+Bạn có thể ngoại suy đường cong "lỗi tập phát triển" (màu đỏ) để ước tính mức độ cải thiện có thể đạt được so với mức chất lượng mong muốn bằng cách thêm dữ liệu vào. Ví dụ trên cho thấy bạn có thể đạt được mức chất lượng mong muốn bằng cách tăng gấp đôi độ lớn tập huấn luyện.
 
 > But if the dev error curve has "plateaued" (i.e. flattened out), then you can immediately tell that adding more data won’t get you to your goal:
 
@@ -1558,19 +1558,19 @@ Một nhược điểm của quá trình này là nếu bạn chỉ nhìn vào �
 
 > Your dev set (and test set) error should decrease as the training set size grows. But your training set error usually *increases* as the training set size grows.
 
-Sai số tập phát triển của bạn (và tập kiểm thử) thường giảm khi kích thước tập huấn luyện tăng lên. Nhưng sai số tập huấn luyện của bạn thường xuyên *tăng* khi kích thước tập huấn luyện tăng.
+Sai số tập phát triển (và tập kiểm tra) thường giảm khi kích thước tập huấn luyện tăng lên. Nhưng sai số tập huấn luyện lại thường xuyên *tăng* khi kích thước tập huấn luyện tăng.
 
 > Let's illustrate this effect with an example. Suppose your training set has only 2 examples: One cat image and one non-cat image. Then it is easy for the learning algorithms to "memorize" both examples in the training set, and get 0% training set error. Even if either or both of the training examples were mislabeled, it is still easy for the algorithm to memorize both labels.
 
-Chúng ta hãy mô tả ảnh hưởng này bằng một ví dụ. Giả sử tập huấn luyện của bạn chỉ 2 gồm mẫu: Một ảnh mèo và một ảnh không phải mèo. Khi đó rất dễ dàng để thuật toán học ghi nhớ cả 2 mẫu trong tập huấn luyện, và nhận 0% sai số huấn luyện. Thậm chí nếu cả 2 mẫu huấn luyện bị gán nhãn sai, vẫn khá dễ dàng cho thuật toán ghi nhớ cả 2 nhãn.
+Chúng ta hãy mô tả ảnh hưởng này bằng một ví dụ. Giả sử tập huấn luyện chỉ gồm 2 mẫu: Một ảnh mèo và một ảnh không phải mèo. Khi đó thuật toán học máy có thể dễ  dàng ghi nhớ cả 2 mẫu trong tập huấn luyện, và cho 0% sai số huấn luyện. Thậm chí nếu cả 2 mẫu huấn luyện bị gán nhãn sai, thuật toán vẫn ghi nhớ dễ dàng cả 2 nhãn.
 
 > Now suppose your training set has 100 examples. Perhaps even a few examples are mislabeled, or ambiguous—some images are very blurry, so even humans cannot tell if there is a cat. Perhaps the learning algorithm can still "memorize" most or all of the training set, but it is now harder to obtain 100% accuracy. By increasing the training set from 2 to 100 examples, you will find that the training set accuracy will drop slightly.
 
-Bây giờ giả định tập huấn luyện có 100 mẫu. Thậm chí một vài mẫu bị gán nhãn sai, hoặc một vài hình ảnh là rất mơ hồ do bị mờ, nên ngay cả con người cũng không thể khẳng định đó là một chú mèo. Có lẽ thuật toán học vẫn có thể "ghi nhớ" được hầu hết tập huấn luyện, nhưng nó khó mà đạt được 100% độ chính xác vào lúc này. Bằng cách gia tăng tập huấn luyện từ 2 lên 100 mẫu, bạn sẽ nhận ra rằng độ chính xác của tập huấn luyện sẽ giảm một ít.
+Bây giờ giả định tập huấn luyện có 100 mẫu. Một vài mẫu thậm chí bị gán nhãn sai, hoặc một vài hình ảnh thì không rõ ràng do bị mờ, nên ngay cả con người cũng không thể khẳng định đó là một chú mèo. Có lẽ thuật toán học vẫn có thể "ghi nhớ" được hầu hết tập huấn luyện, nhưng nó khó mà đạt được 100% độ chính xác vào lúc này. Bằng cách gia tăng tập huấn luyện từ 2 lên 100 mẫu, bạn sẽ nhận ra rằng độ chính xác của tập huấn luyện sẽ giảm một ít.
 
 > Finally, suppose your training set has 10,000 examples. In this case, it becomes even harder for the algorithm to perfectly fit all 10,000 examples, especially if some are ambiguous or mislabeled. Thus, your learning algorithm will do even worse on this training set.
 
-Cuối cùng, giả sử tập huấn luyện có 10,000 mẫu. Trong trường hợp này, sẽ khó hơn cho thuật toán khớp hoàn hảo 10,000 mẫu, đặc biệt là nếu một vài mẫu mơ hồ hoặc bị gán nhãn sai. Do đó, thuật toán học của bạn sẽ hoạt động thậm chí là kém hơn trên tập huấn luyện.
+Cuối cùng, giả sử tập huấn luyện có 10.000 mẫu. Trong trường hợp này, sẽ khó hơn cho thuật toán khớp hoàn hảo 10.000 mẫu, đặc biệt là nếu có một vài mẫu không rõ ràng hoặc bị gán sai nhãn. Do đó, trên tập huấn luyện thuật toán của bạn sẽ hoạt động càng kém hơn trước.
 
 > Let’s add a plot of training error to our earlier figures:
 
@@ -1580,7 +1580,7 @@ Chúng ta hãy thêm một đồ thị sai số huấn luyện vào các hình t
 
 > You can see that the blue "training error" curve increases with the size of the training set. Furthermore, your algorithm usually does better on the training set than on the dev set; thus the red dev error curve usually lies strictly above the blue training error curve.
 
-Bạn có thể thấy rằng đồ thị sai số huấn luyện (training error) màu xanh lam tăng theo kích thước của tập huấn luyện. Thêm nữa, thuật toán của bạn thường hoạt động tốt trên tập huấn luyện hơn là tập phát triển; do đó đồ thị sai số tập phát triển hoàn toàn nằm trên đồ thị sai số huấn luyện.
+Bạn có thể thấy rằng đồ thị "sai số huấn luyện" (màu xanh lam) tăng theo kích thước của tập huấn luyện. Thêm nữa, thuật toán của bạn thường hoạt động tốt trên tập huấn luyện hơn là tập phát triển; do đó đồ thị sai số tập phát triển (màu đỏ) hoàn toàn nằm trên đồ thị sai số huấn luyện.
 
 > Let's discuss next how to interpret these plots.
 
@@ -1601,11 +1601,11 @@ Giả sử đường cong sai số trên tập phát triển có dạng như sau
 
 > We previously said that, if your dev error curve plateaus, you are unlikely to achieve the desired performance just by adding data.
 
-Như chúng ta đã thảo luận, nếu đường cong sai số trên tập phát triển đã nằm ngang, việc chỉ thêm dữ liệu sẽ khó có thể đem về hiệu suất ta mong muốn.
+Như đã thảo luận, nếu đường cong sai số trên tập phát triển đã nằm ngang, việc chỉ thêm dữ liệu sẽ khó có thể đem về hiệu suất ta mong muốn.
 
 > But it is hard to know exactly what an extrapolation of the red dev error curve will look like. If the dev set was small, you would be even less certain because the curves could be noisy.
 
-Tuy nhiên, sẽ thật khó để biết chính xác ngoại suy đường cong thể hiện sai số trên tập phát triển (màu đỏ) sẽ trông như thế nào. Trong trường hợp tập phát triển nhỏ, việc dự đoán chính xác sẽ càng trở nên khó khăn bởi khi đó đường cong này sẽ có khả năng bị nhiễu.
+Tuy nhiên, sẽ thật khó để ngoại suy chính xác đường cong sai số trên tập phát triển (màu đỏ) sẽ trông như thế nào. Trong trường hợp tập phát triển nhỏ, việc dự đoán chính xác sẽ càng trở nên khó khăn bởi khi đó đường cong này sẽ có khả năng bị nhiễu.
 
 > Suppose we add the training error curve to this plot and get the following:
 
@@ -1619,23 +1619,23 @@ Lúc này, bạn có thể hoàn toàn chắc chắn việc chỉ thêm dữ li�
 
 > * As we add more training data, training error can only get worse. Thus, the blue training error curve can only stay the same or go higher, and thus it can only get further away from the (green line) level of desired performance.
 
-Khi chúng ta thêm dữ liệu huấn luyện, sai số huấn luyện chỉ có thể tăng lên. Vì vậy, đường cong chỉ sai số huấn luyện (màu xanh dương) chỉ có thể giữ nguyên hoặc hướng cao lên. Bởi vậy, đường cong đó chỉ có thể cách xa hơn hiệu suất mong đợi (được thể hiện bởi màu xanh lục).
+Khi chúng ta thêm dữ liệu huấn luyện, sai số huấn luyện chỉ có thể tăng lên. Vì vậy, đường cong chỉ sai số huấn luyện (màu xanh lam) chỉ có thể giữ nguyên hoặc hướng cao lên. Bởi vậy, đường cong đó chỉ có thể cách xa hơn hiệu suất mong đợi (màu xanh lục).
 
 > * The red dev error curve is usually higher than the blue training error. Thus, there’s almost no way that adding more data would allow the red dev error curve to drop down to the desired level of performance when even the training error is higher than the desired level of performance.
 
-Đường cong thể hiện sai số tập phát triển (màu đỏ) thường cao hơn so với đường cong thể hiện sai số tập huấn luyện (màu xanh). Vì vậy, việc lấy thêm dữ liệu không thể nào giảm đường cong sai số tập phát triển (màu đỏ) xuống mức hiệu xuất mong muốn khi ngay cả sai số trên tập huấn luyện vẫn còn lớn hơn mức đó.
+Đường cong sai số tập phát triển (màu đỏ) thường cao hơn so với đường cong sai số tập huấn luyện (màu xanh lam). Vì vậy, việc lấy thêm dữ liệu không thể nào giảm đường cong sai số tập phát triển xuống mức hiệu suất mong muốn khi ngay cả sai số trên tập huấn luyện vẫn còn lớn hơn mức đó.
 
 > Examining both the dev error curve and the training error curve on the same plot allows us to more confidently extrapolate the dev error curve.
 
-Đánh giá cả đường cong sai số trên tập phát triển lẫn đường cong sai số trên tập huấn luyện trên cùng một biểu đồ giúp những ngoại suy về đường cong sai số tập phát triển có độ tin cậy cao hơn.
+Đánh giá cả đường cong sai số tập phát triển lẫn đường cong sai số tập huấn luyện trên cùng một biểu đồ giúp những ngoại suy về đường cong sai số tập phát triển có độ tin cậy cao hơn.
 
 > Suppose, for the sake of discussion, that the desired performance is our estimate of the optimal error rate. The figure above is then the standard "textbook" example of what a learning curve with high avoidable bias looks like: At the largest training set size -- presumably corresponding to all the training data we have -- there is a large gap between the training error and the desired performance, indicating large avoidable bias. Furthermore, the gap between the training and dev curves is small, indicating small variance.
 
-Cho mục đích thảo luận, giả sử hiệu suất mong muốn chính là ước lượng của tỉ lệ lỗi tối ưu. Đồ thị trên trở thành ví dụ chuẩn "sách giáo khoa" về hình dáng của một đồ thị quá trình học với độ chệch có thể tránh cao: Khi tập huấn luyện có kích cỡ lớn nhất -- tương ứng với tất cả dữ liệu trong tập huấn luyện - có một khoảng cách lớn giữa sai số huấn luyện và hiệu suất mong muốn. Đây chính là dấu hiệu của độ chệch có thể tránh cao. Ngược lại, lúc này, khoảng cách nhỏ giữa đường cong của tập huấn luyện và đường cong của tập phát triển tương ứng với phương sai nhỏ.
+Để dễ thảo luận, giả sử hiệu suất mong muốn chính là ước lượng của tỉ lệ lỗi tối ưu. Đồ thị trên trở thành ví dụ chuẩn "sách giáo khoa" về hình dáng của một đồ thị quá trình học với độ chệch có thể tránh lớn: Khi tập huấn luyện có kích cỡ lớn nhất -- tương ứng với tất cả dữ liệu trong tập huấn luyện - có một khoảng cách lớn giữa sai số huấn luyện và hiệu suất mong muốn. Đây chính là dấu hiệu của độ chệch có thể tránh lớn. Ngược lại, lúc này, khoảng cách nhỏ giữa đường cong của tập huấn luyện và đường cong của tập phát triển tương ứng với phương sai nhỏ.
 
 > Previously, we were measuring training and dev set error only at the rightmost point of this plot, which corresponds to using all the available training data. Plotting the full learning curve gives us a more comprehensive picture of the algorithms’ performance on different training set sizes.
 
-Trước đó, chúng ta chỉ đo sai số tập huấn luyện và sai số tập phát triển tại điểm ngoài cùng bên phải của đồ thị, tương ứng với việc sử dụng tất cả dữ liệu trong tập huấn luyện. Biểu diễn đầy đủ đồ thị quá trình học sẽ cho chúng ta một bức tranh tổng thể hơn về chất lượng của những thuật toán trên các kích cỡ tập huấn luyện khác nhau.
+Trước kia, chúng ta chỉ đo sai số tập huấn luyện và sai số tập phát triển tại điểm ngoài cùng bên phải của đồ thị, tương ứng với việc sử dụng tất cả dữ liệu trong tập huấn luyện. Biểu diễn đầy đủ đồ thị quá trình học sẽ cho chúng ta một bức tranh tổng thể hơn về chất lượng của những thuật toán trên các kích cỡ tập huấn luyện khác nhau.
 
 <!-- ============================ Insert ./chapters/ch31.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch31.md instead -->
@@ -1644,11 +1644,9 @@ Trước đó, chúng ta chỉ đo sai số tập huấn luyện và sai số t�
 
 ## 31. Giải nghĩa các đồ thị quá trình học: Những trường hợp khác
 
-
 > Consider this learning curve:
 
 Hãy xem xét đồ thị quá trình học này:
-
 
 ![img](../imgs/C31_01.png)
 
@@ -1656,16 +1654,13 @@ Hãy xem xét đồ thị quá trình học này:
 
 Đồ thị này thể hiện độ chệch lớn, phương sai lớn hay cả hai?
 
-
 > The blue training error curve is relatively low, and the red dev error curve is much higher than the blue training error. Thus, the bias is small, but the variance is large. Adding more training data will probably help close the gap between dev error and training error.
 
-Đường cong lỗi huấn luyện màu xanh lam tương đối thấp và đường cong lỗi phát triển màu đỏ cao hơn nhiều so với lỗi huấn luyện màu xanh lam. Do đó, độ chệch nhỏ, nhưng phương sai lớn. Thêm dữ liệu huấn luyện (nhiều khả năng) sẽ giúp thu hẹp khoảng cách giữa lỗi phát triển và lỗi huấn luyện.
-
+Đường cong lỗi huấn luyện (màu xanh lam) tương đối thấp và đường cong lỗi phát triển (màu đỏ) cao hơn nhiều so với lỗi huấn luyện. Do đó, độ chệch nhỏ, nhưng phương sai lớn. Thêm dữ liệu huấn luyện có thể giúp thu hẹp khoảng cách giữa lỗi phát triển và lỗi huấn luyện.
 
 > Now, consider this:
 
 Bây giờ, hãy xem xét đồ thị này:
-
 
 ![img](../imgs/C31_02.png)
 
@@ -1731,7 +1726,7 @@ Cuối cùng, vẽ đồ thị quá trình học có thể tốn kém về mặt
 <a name="33"></a>
 > ## 33. Why we compare to human-level performance
 
-## 33. Tại sao chúng ta so sánh với chất lượng mức con người?
+## 33. Tại sao cần so sánh chất lượng mức con người?
 
 > Many machine learning systems aim to automate things that humans do well. Examples include image recognition, speech recognition, and email spam classification. Learning algorithms have also improved so much that we are now surpassing human-level performance on more and more of these tasks.
 
@@ -1739,39 +1734,39 @@ Nhiều hệ thống học máy hướng tới tự động hóa những thứ c
 
 > Further, there are several reasons building an ML system is easier if you are trying to do a task that people can do well:
 
-Hơn nữa, có rất nhiều lý do khiến việc xây dựng một hệ thống ML dễ dàng hơn nếu bạn đang giải quyết một tác vụ con người có thể làm tốt:
+Hơn nữa, có rất nhiều lý do khiến việc xây dựng một hệ thống học máy dễ dàng hơn nếu bạn đang giải quyết một tác vụ mà con người có thể làm tốt:
 
 > 1. **Ease of obtaining data from human labelers**. For example, since people recognize cat images well, it is straightforward for people to provide high accuracy labels for your learning algorithm.
 
-1. **Dễ dàng thu thập dữ liệu từ người gán nhãn**. Ví dụ, con người nhận diện hình ảnh mèo tốt nên việc mọi người cung cấp nhãn có độ chính xác cao cho thuật toán học tập là điều đơn giản.
+1. **Dễ dàng thu thập dữ liệu từ người gán nhãn**. Ví dụ, con người nhận diện hình ảnh mèo tốt, nên tất nhiên việc dùng người để gán nhãn sẽ cung cấp nhãn có độ chính xác cao cho thuật toán học.
 
 > 2. **Error analysis can draw on human intuition**. Suppose a speech recognition algorithm is doing worse than human-level recognition. Say it incorrectly transcribes an audio clip as "This recipe calls for a *pear* of apples," mistaking "pair" for "pear." You can draw on human intuition and try to understand what information a person uses to get the correct transcription, and use this knowledge to modify the learning algorithm.
 
-2. **Phân tích lỗi có thể dựa vào trực giác của con người**. Giả sử rằng một thuật toán nhận dạng giọng nói làm tệ hơn so với con người. Giả dụ nó ghi nhầm một đoạn âm thanh thành "This recipe calls for a *pear* of apples," (dịch là "công thức nấu ăn này cần một quả lê của táo") gây ra lỗi tại từ "pair" trở thành "pear". Bạn có thể dựa vào trực giác và cố gắng hiểu thông tin nào một người sử dụng để thu được bản ghi thoại chuẩn, và dùng thông tin này để điều chỉnh thuật toán.
+2. **Phân tích lỗi có thể dựa vào trực giác của con người**. Giả sử rằng một thuật toán nhận dạng giọng nói hoạt động kém hơn so với con người. Giả dụ nó ghi nhầm một đoạn âm thanh thành "This recipe calls for a *pear* of apples," (dịch là "công thức nấu ăn này cần một quả lê của táo") với lỗi từ "pair" trở thành "pear". Bạn có thể dựa vào trực giác và cố gắng hiểu thông tin nào mà con người dùng để nghe ra được bản ghi thoại chuẩn và dùng thông tin này để điều chỉnh thuật toán.
 
 > 3. **Use human-level performance to estimate the optimal error rate and also set a "desired error rate."** Suppose your algorithm achieves 10% error on a task, but a person achieves 2% error. Then we know that the optimal error rate is 2% or lower and the avoidable bias is at least 8%. Thus, you should try bias-reducing techniques.
 
-3. **Sử dụng chất lượng mức con người để ước tính tỷ lệ lỗi tối ưu cũng như đặt ra một "tỷ lệ lỗi mong muốn."** Giả sử thuật toán của bạn trả về 10% lỗi trong một tác vụ, nhưng một người chỉ lỗi 2%. Dựa vào đó, chúng ta biết rằng tỷ lệ lỗi tối ưu là 2% hoặc thấp hơn và độ chệch có thể tránh ít nhất là 8%. Vì vậy, bạn nên thử các kỹ thuật giảm độ chệch.
+3. **Sử dụng chất lượng mức con người để ước tính tỷ lệ lỗi tối ưu cũng như đặt ra một "tỷ lệ lỗi mong muốn."** Giả sử thuật toán của bạn trả về 10% lỗi trong một tác vụ, nhưng con người chỉ lỗi 2%. Dựa vào đó, chúng ta biết rằng tỷ lệ lỗi tối ưu bằng hoặc nhỏ hơn 2% và độ chệch có thể tránh được ở mức nhỏ nhất là 8%. Vì vậy, bạn nên thử các kỹ thuật giảm độ chệch.
 
 > Even though item #3 might not sound important, I find that having a reasonable and achievable target error rate helps accelerate a team’s progress. Knowing your algorithm has high avoidable bias is incredibly valuable and opens up a menu of options to try.
 
-Mặc dù mục số 3 nghe có vẻ không quan trọng, tôi thấy rằng việc xác định mục tiêu tỷ lệ lỗi hợp lý sẽ giúp đẩy nhanh tiến độ của nhóm. Việc biết thuật toán của bạn có độ chệch cao nhưng có thể tránh được là vô cùng có giá trị và mở ra nhiều tùy chọn để thử.
+Mặc dù mục số 3 dường như không quan trọng, tôi thấy rằng việc đặt mục tiêu về tỷ lệ lỗi ở mức hợp lý sẽ giúp đẩy nhanh tiến độ của nhóm. Việc biết thuật toán của bạn có độ chệch cao có thể tránh được là vô cùng có giá trị và mở ra nhiều tùy chọn để thử nghiệm.
 
 > There are some tasks that even humans aren’t good at. For example, picking a book to recommend to you; or picking an ad to show a user on a website; or predicting the stock market. Computers already surpass the performance of most people on these tasks. With these applications, we run into the following problems:
 
-Có những tác vụ mà ngay cả con người cũng không giỏi. Ví dụ, chọn một cuốn sách để giới thiệu cho bạn; hoặc chọn một quảng cáo để hiển thị cho người dùng trên một trang web; hoặc dự đoán thị trường chứng khoán. Máy tính đã trở nên hiệu quả hơn hầu hết mọi người trong những tác vụ này. Với các ứng dụng này, chúng ta gặp phải các vấn đề sau:
+Có những tác vụ mà ngay cả con người cũng làm không tốt. Ví dụ, chọn một cuốn sách để giới thiệu cho bạn; hoặc chọn một tin quảng cáo để hiển thị cho người dùng trên một trang web; hoặc dự đoán thị trường chứng khoán. Máy tính đã làm việc hiệu quả hơn hầu hết mọi người trong những tác vụ này. Với các ứng dụng này, chúng ta gặp phải các vấn đề sau:
 
 > * It is harder to obtain labels. For example, it’s hard for human labelers to annotate a database of users with the "optimal" book recommendation. If you operate a website or app that sells books, you can obtain data by showing books to users and seeing what they buy. If you do not operate such a site, you need to find more creative ways to get data.
 
-* Việc lấy nhãn khó hơn. Ví dụ, người ghi nhãn khó có thể dán nhãn một cơ sở dữ liệu người dùng với danh sách gợi ý sách tối ưu. Nếu bạn vận hành một trang web hoặc ứng dụng bán sách, bạn có thể lấy dữ liệu bằng cách hiển thị sách cho người dùng và xem những gì họ mua. Nếu bạn không vận hành một trang web như vậy, bạn cần tìm những cách sáng tạo hơn để lấy dữ liệu.
+* Khó khăn hơn khi gán nhãn. Ví dụ, người gán nhãn khó có thể dán nhãn một cơ sở dữ liệu người dùng cho tác vụ "tối ưu" việc gợi ý sách. Nếu đang vận hành một trang web hoặc ứng dụng bán sách, bạn có thể lấy dữ liệu bằng cách hiển thị sách cho người dùng và xem những gì họ mua. Nếu không vận hành một trang web như vậy, bạn cần tìm những cách sáng tạo hơn để lấy dữ liệu.
 
 > * Human intuition is harder to count on. For example, pretty much no one can predict the stock market. So if our stock prediction algorithm does no better than random guessing, it is hard to figure out how to improve it.
 
-* Trực giác của con người khó dựa vào hơn. Ví dụ, khá nhiều người không thể dự đoán được thị trường chứng khoán. Vì vậy, nếu thuật toán dự đoán cổ phiếu của chúng ta không tốt hơn đoán ngẫu nhiên, thật khó để tìm ra cách cải thiện nó.
+* Khó tin tưởng trực giác của con người. Ví dụ, gần như không ai có thể dự đoán được thị trường chứng khoán. Vì thế, nếu thuật toán dự đoán cổ phiếu của chúng ta không tốt hơn dự đoán ngẫu nhiên, thì thật khó để tìm ra cách cải thiện nó.
 
 > * It is hard to know what the optimal error rate and reasonable desired error rate is. Suppose you already have a book recommendation system that is doing quite well. How do you know how much more it can improve without a human baseline?
 
-* Thật khó để biết tỷ lệ lỗi tối ưu và tỷ lệ lỗi mong muốn hợp lý là gì. Giả sử bạn đã có một hệ thống giới thiệu sách đang hoạt động khá tốt. Làm thế nào để bạn biết nó có thể cải thiện bao nhiêu nếu không có giải pháp cấp con người?
+* Khó tìm ra tỷ lệ lỗi tối ưu và tỷ lệ lỗi mong muốn hợp lý. Giả sử bạn đã có một hệ thống giới thiệu sách đang hoạt động khá tốt. Làm thế nào để bạn biết mình có thể cải thiện nó thêm bao nhiêu nếu không có giải pháp cấp con người?
 
 <!-- ============================ Insert ./chapters/ch34.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch34.md instead -->
@@ -1782,32 +1777,32 @@ Có những tác vụ mà ngay cả con người cũng không giỏi. Ví dụ, 
 
 > Suppose you are working on a medical imaging application that automatically makes diagnoses from x-ray images. A typical person with no previous medical background besides some basic training achieves 15% error on this task. A junior doctor achieves 10% error. An experienced doctor achieves 5% error. And a small team of doctors that discuss and debate each image achieves 2% error. Which one of these error rates defines "human-level performance"?
 
-Giả sử bạn đang làm việc trên một ứng dụng hình ảnh y tế tự động đưa ra chẩn đoán từ hình ảnh X quang. Một người bình thường không có nền tảng y khoa nào ngoài một số đào tạo cơ bản có thể đạt được mức 15% lỗi trong tác vụ này. Một bác sĩ trẻ mới ra trường đạt được mức 10% lỗi. Một bác sĩ dày dặn kinh nghiệm đạt được mức 5% lỗi. Và một nhóm nhỏ các bác sĩ trao đổi và tranh luận mỗi hình ảnh đạt được mức 2% lỗi. Vậy cái nào trong những tỉ lệ lỗi này xác định "chất lượng mức con người"?
+Giả sử bạn đang làm việc trên một ứng dụng hình ảnh y tế mà tự động đưa ra chẩn đoán từ ảnh X quang. Với tác vụ chuẩn đoán này, một người bình thường không có nền tảng y học nào ngoài một số đào tạo cơ bản có mức 15% lỗi. Một bác sĩ trẻ mới ra trường có mức 10% lỗi. Một bác sĩ dày dặn kinh nghiệm đạt được mức 5% lỗi. Và một nhóm nhỏ các bác sĩ cùng trao đổi và thảo luận từng ảnh đạt được mức 2% lỗi. Vậy cái nào trong những tỉ lệ lỗi này được định nghĩa là "chất lượng mức con người"?
 
 > In this case, I would use 2% as the human-level performance proxy for our optimal error rate. You can also set 2% as the desired performance level because all three reasons from the previous chapter for comparing to human-level performance apply:
 
-Trong trường hợp này, tôi sẽ sử dụng 2% làm "chất lượng mức con người" cho tỉ lệ lỗi tối ưu của chúng ta. Bạn cũng có thể đặt 2% làm mức chất lượng mong muốn vì nó thỏa mãn cả ba lý do để so sánh với chất lượng mức con người mà chúng ta đã nói ở chương trước:
+Trong trường hợp này, tôi sẽ lấy 2% làm "chất lượng mức con người" cho tỉ lệ lỗi tối ưu của chúng ta. Bạn cũng có thể đặt 2% làm mức chất lượng mong muốn vì nó thỏa mãn cả ba lý do (trình bày ở chương trước) để so sánh với chất lượng mức con người:
 
 > * **Ease of obtaining labeled data from human labelers.** You can get a team of doctors to provide labels to you with a 2% error rate.
 
-* **Dữ liệu được lấy dễ dàng từ người gán nhãn.** Bạn có thể nhờ một nhóm bác sĩ cung cấp nhãn cho bạn với tỉ lệ lỗi 2%.
+* **Dễ dàng lấy dữ liệu từ người gán nhãn.** Bạn có thể nhờ một nhóm bác sĩ dán nhãn cho bạn với tỉ lệ lỗi 2%.
 
 > * **Error analysis can draw on human intuition.** By discussing images with a team of doctors, you can draw on their intuitions.
 
-* **Phân tích lỗi có thể dựa vào trực giác.** Bằng cách thảo luận với một nhóm các bác sĩ, bạn có thể dựa trên được trực giác của họ để đưa ra kết luận về các bức ảnh.
+* **Phân tích lỗi dựa vào trực giác.** Bằng cách thảo luận hình ảnh với một nhóm các bác sĩ, bạn có thể dựa vào trực giác của họ để phân tích lỗi.
 
 
 > * **Use human-level performance to estimate the optimal error rate and also set achievable "desired error rate."** It is reasonable to use 2% error as our estimate of the optimal error rate. The optimal error rate could be even lower than 2%, but it cannot be higher, since it is possible for a team of doctors to achieve 2% error. In contrast, it is not reasonable to use 5% or 10% as an estimate of the optimal error rate, since we know these estimates are necessarily too high.
 
-* **Sử dụng chất lượng mức con người để ước tính tỉ lệ lỗi tối ưu cũng như đặt ra "tỉ lệ lỗi mong muốn" khả thi.** Đó là điều khá hợp lý khi sử dụng mức 2% lỗi làm ước lượng của chúng ta về tỉ lệ lỗi tối ưu. Tỉ lệ lỗi tối ưu có thể thậm chí thấp hơn 2%, nhưng không thể cao hơn, vì một nhóm bác sĩ có thể đạt được mức 2% lỗi. Ngược lại, sẽ không hợp lý khi sử dụng 5% hoặc 10% làm ước tính tỉ lệ lỗi tối ưu, vì chúng ta biết các ước tính này đang quá cao.
+* **Dùng chất lượng mức con người để ước tính tỉ lệ lỗi tối ưu cũng như đặt ra "tỉ lệ lỗi mong muốn" khả thi.** Việc dùng mức 2% làm ước lượng về tỉ lệ lỗi tối ưu là hợp lý. Tỉ lệ lỗi tối ưu thậm chí có thể thấp hơn 2%, nhưng không thể lớn hơn, vì một nhóm bác sĩ có thể đạt được mức 2% lỗi. Ngược lại, sẽ không hợp lý khi sử dụng 5% hoặc 10% làm ước lượng cho tỉ lệ lỗi tối ưu, vì chúng ta biết các mức ước tính này quá lớn.
 
 > When it comes to obtaining labeled data, you might not want to discuss every image with an entire team of doctors since their time is expensive. Perhaps you can have a single junior doctor label the vast majority of cases and bring only the harder cases to more experienced doctors or to the team of doctors.
 
-Khi nói đến việc lấy dữ liệu được gán nhãn, bạn có thể không muốn thảo luận về mọi bức ảnh với toàn bộ đội ngũ bác sĩ vì thời gian của họ rất đáng giá. Có lẽ bạn có thể có một bác sĩ trẻ mới ra trường gán nhãn cho phần lớn các trường hợp và chỉ dành những trường hợp khó hơn cho các bác sĩ có kinh nghiệm hơn hoặc cho đội ngũ bác sĩ.
+Khi lấy dữ liệu được gán nhãn, có thể bạn không muốn thảo luận về mọi bức ảnh với toàn bộ đội ngũ bác sĩ vì thời gian của họ rất đáng giá. Nhưng bạn có thể nhờ một bác sĩ trẻ mới ra trường gán nhãn cho phần lớn các trường hợp và chỉ dành những trường hợp khó hơn cho các bác sĩ có kinh nghiệm hơn hoặc cho đội ngũ bác sĩ.
 
 > If your system is currently at 40% error, then it doesn’t matter much whether you use a junior doctor (10% error) or an experienced doctor (5% error) to label your data and provide intuitions. But if your system is already at 10% error, then defining the human-level reference as 2% gives you better tools to keep improving your system.
 
-Nếu hệ thống hiện tại của bạn có mức 40% lỗi, vậy thì nó không có ý nghĩa nhiều giữa việc bạn sử dụng một bác sĩ mới ra trường (10% lỗi) hoặc một bác sĩ có kinh nghiệm (5% lỗi) để gán nhãn và đưa ra những phán đoán trực giác cho dữ liệu của bạn. Nhưng nếu hệ thống của bạn đang có 10% lỗi thì việc xác định chất lượng mức con người ở mức 2% sẽ cho bạn các công cụ tốt hơn để tiếp tục cải thiện hệ thống của mình.
+Nếu hệ thống hiện tại của bạn có mức 40% lỗi, thì việc nhờ một bác sĩ mới ra trường (10% lỗi) hay một bác sĩ có kinh nghiệm (5% lỗi) để gán nhãn và đưa ra những phán đoán trực giác không đem lại nhiều khác biệt. Nhưng nếu hệ thống của bạn đang có 10% lỗi, thì việc xác định chất lượng mức con người ở mức 2% sẽ cho bạn các công cụ tốt hơn để tiếp tục cải thiện hệ thống của mình.
 
 <!-- ============================ Insert ./chapters/ch35.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch35.md instead -->
@@ -1818,35 +1813,35 @@ Nếu hệ thống hiện tại của bạn có mức 40% lỗi, vậy thì nó 
 
 > You are working on speech recognition and have a dataset of audio clips. Suppose your dataset has many noisy audio clips so that even humans have 10% error. Suppose your system already achieves 8% error. Can you use any of the three techniques described in Chapter 33 to continue making rapid progress?
 
-Bạn đang làm về nhận dạng giọng nói và bạn có một tập dữ liệu là các đoạn âm thanh. Giả sử, tập dữ liệu của bạn có nhiều âm thanh nhiễu mà thậm chí con người còn mắc phải 10% lỗi. Giả sử, hệ thống của bạn đã đạt được 8% lỗi. Liệu bạn có thể sử dụng bất kỳ kỹ thuật nào trong ba kỹ thuật được mô tả trong Chương 33 để tiếp tục tiến bộ nhanh chóng?
+Bạn đang làm về nhận dạng giọng nói và có một tập dữ liệu là các đoạn âm thanh. Giả sử, tập dữ liệu đó có nhiều đoạn âm thanh nhiễu mà thậm chí con người cũng mắc phải 10% lỗi. Giả sử, hệ thống của bạn đã đạt được 8% lỗi. Liệu bạn có thể sử dụng bất kỳ kỹ thuật nào trong ba kỹ thuật được mô tả trong Chương 33 để tiếp tục tiến bộ nhanh chóng không?
 
 > If you can identify a subset of data in which humans significantly surpass your system, then you can still use those techniques to drive rapid progress. For example, suppose your system is much better than people at recognizing speech in noisy audio, but humans are still better at transcribing very rapidly spoken speech.
 
-Nếu bạn có thể xác định một tập dữ liệu con mà con người vượt qua được hệ thống của bạn một cách đáng kể, thì bạn vẫn có thể sử dụng các kỹ thuật đó để thúc đẩy tiến trình nhanh chóng. Ví dụ, giả sử hệ thống của bạn tốt hơn nhiều so với con người trong việc nhận dạng giọng nói trong âm thanh nhiễu, nhưng con người vẫn làm tốt hơn trong việc ghi lại lời nói rất nhanh.
+Nếu có thể xác định một tập dữ liệu con mà con người đạt chất lượng cao hơn đáng kể so với hệ thống của bạn, thì bạn vẫn có thể sử dụng các kỹ thuật đó để thúc đẩy tiến trình nhanh chóng. Ví dụ, giả sử hệ thống của bạn tốt hơn nhiều so với con người trong việc nhận dạng giọng nói trong âm thanh nhiễu, nhưng con người vẫn tốt hơn trong việc ghi lại lời nói rất nhanh.
 
 > For the subset of data with rapidly spoken speech:
 
-Đối với tập dữ liệu con với lời nói nhanh:
+Đối với tập dữ liệu con với lời nói nhanh, bạn có thể:
 
 > 1. You can still obtain transcripts from humans that are higher quality than your algorithm’s output.
 
-1. Bạn vẫn có thể lấy được bản ghi thoại từ con người với chất lượng cao hơn so với đầu ra thuật toán của bạn.
+1. lấy bản ghi thoại từ con người với chất lượng cao hơn so với đầu ra thuật toán của bạn.
 
 > 2. You can draw on human intuition to understand why they correctly heard a rapidly spoken utterance when your system didn’t.
 
-1. Bạn có thể dựa vào trực giác để hiểu lý do tại sao họ nghe chính xác một phát ngôn nhanh khi hệ thống của bạn chưa thể.
+2. dựa vào trực giác để hiểu lý do tại sao họ nghe chính xác một phát ngôn nhanh khi hệ thống của bạn chưa thể.
 
 > 3. You can use human-level performance on rapidly spoken speech as a desired performance target.
 
-1. Bạn có thể dùng chất lượng mức con người trên lời nói nhanh như một mục tiêu chất lượng mong muốn.
+3. dùng chất lượng mức con người trên lời nói nhanh như một mục tiêu chất lượng mong muốn.
 
 > More generally, so long as there are dev set examples where humans are right and your algorithm is wrong, then many of the techniques described earlier will apply. This is true even if, averaged over the entire dev/test set, your performance is already surpassing human-level performance.
 
-Tổng quát hơn, miễn là có các mẫu trong tập phát triển mà con người đúng và thuật toán của bạn sai, thì rất nhiều kỹ thuật được mô tả trước đây sẽ áp dụng được. Điều này đúng ngay cả khi chất lượng của bạn (tính trung bình trên toàn bộ tập phát triển/kiểm tra) đã vượt qua chất lượng mức con người.
+Tổng quát hơn, miễn là có các mẫu trong tập phát triển mà con người làm đúng và thuật toán của bạn làm sai, thì rất nhiều kỹ thuật được mô tả trước đây sẽ áp dụng được. Điều này vẫn đúng ngay cả khi chất lượng thật toán của bạn (tính trung bình trên toàn bộ tập phát triển/kiểm tra) đã vượt qua chất lượng mức con người.
 
 > There are many important machine learning applications where machines surpass human level performance. For example, machines are better at predicting movie ratings, how long it takes for a delivery car to drive somewhere, or whether to approve loan applications. Only a subset of techniques apply once humans have a hard time identifying examples that the algorithm is clearly getting wrong. Consequently, progress is usually slower on problems where machines already surpass human-level performance, while progress is faster when machines are still trying to catch up to humans.
 
-Có nhiều ứng dụng học máy quan trọng trong đó máy đã vượt qua chất lượng mức con người. Ví dụ, máy làm tốt hơn trong việc dự đoán xếp hạng phim, sẽ mất bao lâu để một chiếc xe giao hàng lái xe đi đâu đó, hoặc có chấp nhận hồ sơ vay vốn hay không. Chỉ một tập con những kỹ thuật là áp dụng được khi mà con người còn gặp khó khăn trong việc xác định các mẫu nào mà thuật toán còn rõ ràng đang làm sai. Do đó, tiến độ thường chậm hơn đối với các vấn đề trong đó máy móc đã vượt qua chất lượng mức con người, và ngược lại, nhanh hơn khi máy móc vẫn đang cố gắng bắt kịp con người.
+Có nhiều ứng dụng học máy quan trọng mà máy đã vượt qua chất lượng mức con người. Ví dụ, máy làm tốt hơn trong việc dự đoán xếp hạng phim, ước lượng thời gian di chuyển của một chiếc xe giao hàng hoặc có chấp nhận hồ sơ vay vốn hay không. Chỉ một phần những kỹ thuật này là áp dụng được một khi con người còn gặp khó khăn trong việc xác định các mẫu mà thuật toán còn rõ ràng đang làm sai. Do đó, tiến độ thường chậm hơn trong các vấn đề mà máy đã vượt qua chất lượng mức con người, và ngược lại, nhanh hơn khi máy vẫn đang cố gắng bắt kịp con người.
 
 <!-- ============================ Insert ./chapters/p06_36_43.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p06_36_43.md instead -->
@@ -1863,37 +1858,37 @@ Có nhiều ứng dụng học máy quan trọng trong đó máy đã vượt qu
 
 > Users of your cat pictures app have uploaded 10,000 images, which you have manually labeled as containing cats or not. You also have a larger set of 200,000 images that you downloaded off the internet. How should you define train/dev/test sets?
 
-Người dùng của ứng dụng ảnh mèo của bạn đã đăng tải 10.000 tấm ảnh mà sau đó bạn đã gán nhãn chúng có mèo hay không một cách thủ công. Bạn cũng có một tập ảnh lớn hơn gồm 200.000 tấm bạn đã tải về trên mạng. Bạn nên tạo tập huấn luyện/phát triển/kiểm tra như thế nào?
+Người dùng ứng dụng ảnh mèo của bạn đã đăng tải 10.000 tấm ảnh mà sau đó bạn đã gán nhãn có mèo hoặc không có mèo cho tất cả một cách thủ công. Bạn cũng có một tập ảnh lớn hơn gồm 200.000 tấm bạn đã tải từ trên mạng về. Bạn nên tạo tập huấn luyện/phát triển/kiểm tra như thế nào?
 
 
 > Since the 10,000 user images closely reflect the actual probability distribution of data you want to do well on, you might use that for your dev and test sets. If you are training a data-hungry deep learning algorithm, you might give it the additional 200,000 internet images for training. Thus, your training and dev/test sets come from different probability distributions. How does this affect your work?
 
-Vì 10.000 tấm ảnh của người dùng phản ánh mật thiết phân bố xác suất thật của dữ liệu mà bạn muốn làm tốt, bạn có thể sử dụng chúng cho tập phát triển và kiểm tra. Nếu bạn đang huấn luyện một thuật toán deep learning "đói" dữ liệu, bạn có thể đưa thêm 200.000 tấm ảnh trên mạng cho việc huấn luyện. Do vậy, tập huấn luyện và tập phát triển/kiểm tra sẽ đến từ những phân phối khác nhau. Điều này ảnh hưởng thế nào tới công việc của bạn?
+Vì 10.000 tấm ảnh của người dùng phản ánh chính xác phân bố xác suất của dữ liệu mà bạn muốn hệ thống hoạt động tốt trong tương lai, bạn có thể sử dụng chúng cho tập phát triển và kiểm tra. Nếu bạn đang huấn luyện một thuật toán học sâu "đói" dữ liệu, bạn có thể đưa thêm 200.000 tấm ảnh trên mạng cho việc huấn luyện. Do vậy, tập huấn luyện và tập phát triển/kiểm tra sẽ đến từ những phân phối khác nhau. Điều này ảnh hưởng thế nào tới công việc của bạn?
 
 
 > Instead of partitioning our data into train/dev/test sets, we could take all 210,000 images we have, and randomly shuffle them into train/dev/test sets. In this case, all the data comes from the same distribution. But I recommend against this method, because about 205,000/210,000 ≈ 97.6% of your dev/test data would come from internet images, which does not reflect the actual distribution you want to do well on. Remember our recommendation on choosing dev/test sets:
 
-Thay vì phân chia dữ liệu của chúng ta ra thành tập huấn luyện/phát triển/kiểm tra, chúng ta có thể lấy hết 210.000 tấm ảnh mà ta có, và trộn một cách ngẫu nhiên vào các tập huấn luyện/phát triển/kiểm tra. Trong trường hợp này, tất cả dữ liệu đều đến từ cùng một phân phối. Nhưng tôi không ủng hộ phương pháp này, bởi vì khoảng 205.000/210.000 ≈ 97,6% dữ liệu phát triển/kiểm tra đến từ những ảnh trên mạng nên nó không phản ánh được phân phối thật mà bạn muốn làm tốt trên nó. Hãy nhớ lời khuyên khi chọn tập phát triển/kiểm tra:
+Thay vì phân chia dữ liệu của chúng ta ra thành tập huấn luyện/phát triển/kiểm tra, chúng ta có thể lấy hết 210.000 tấm ảnh mà ta có, và trộn một cách ngẫu nhiên vào các tập huấn luyện/phát triển/kiểm tra. Trong trường hợp này, tất cả dữ liệu đều đến từ cùng một phân phối. Nhưng tôi không ủng hộ phương pháp này, bởi vì khoảng 205.000/210.000 ≈ 97,6% dữ liệu phát triển/kiểm tra đến từ những ảnh trên mạng nên nó không phản ánh được phân phối thật mà bạn muốn hệ thống đạt được chất lượng cao. Hãy nhớ lời khuyên này khi chọn tập phát triển/kiểm tra:
 
 > _Choose dev and test sets to reflect data you expect to get in the future and want to do well on._
 
-_Chọn tập phát triển và kiểm tra phản ánh dữ liệu bạn kỳ vọng sẽ có trong tương lai và muốn làm tốt trên nó._
+_Chọn tập phát triển và kiểm tra phản ánh dữ liệu bạn mong muốn hệ thống hoạt động tốt trong tương lai._
 
 > Most of the academic literature on machine learning assumes that the training set, dev set and test set all come from the same distribution [11]. In the early days of machine learning, data was scarce. We usually only had one dataset drawn from some probability distribution. So we would randomly split that data into train/dev/test sets, and the assumption that all the data was coming from the same source was usually satisfied.
 
-Đa số các tài liệu học thuật về machine learning đều giả định tập huấn luyện, tập phát triển và tập kiểm tra đến từ cùng một phân phối [11]. Trong những ngày đầu của học máy, dữ liệu rất khan hiếm. Ta thường chỉ có một bộ dữ liệu được lấy ra từ một phân bố xác suất nào đó. Bởi vậy, ta thường phân tách một cách ngẫu nhiên dữ liệu đó thành tập huấn luyện/phát triển/kiểm tra, và việc mặc định là tất cả các dữ liệu đến từ cùng một nguồn thường được thỏa mãn.
+Đa số các tài liệu học thuật về học máy đều giả định tập huấn luyện, tập phát triển và tập kiểm tra đến từ cùng một phân phối [11]. Trong những ngày đầu của học máy, dữ liệu rất khan hiếm. Ta thường chỉ có một bộ dữ liệu được lấy ra từ một phân bố xác suất nào đó. Bởi vậy, ta thường phân tách một cách ngẫu nhiên dữ liệu đó thành tập huấn luyện/phát triển/kiểm tra, và việc mặc định tất cả các dữ liệu đến từ cùng một nguồn thường được thỏa mãn.
 
 > But in the era of big data, we now have access to huge training sets, such as cat internet images. Even if the training set comes from a different distribution than the dev/test set, we still want to use it for learning since it can provide a lot of information.
 
-Nhưng trong thời đại của dữ liệu lớn, ta nay đã có thể tiếp cận với những tập huấn luyện khổng lồ, như là những tấm ảnh mèo trên mạng. Kể cả khi tập huấn luyện đến từ một phân phối khác với tập phát triển/kiểm tra, ta vẫn muốn sử dụng chúng cho quá trình học bởi vì chúng có thể cung cấp rất nhiều thông tin.
+Nhưng trong thời đại của dữ liệu lớn, ta nay đã có thể tiếp cận với những tập huấn luyện khổng lồ, chẳng hạn như những tấm ảnh mèo trên mạng. Kể cả khi tập huấn luyện đến từ một phân phối khác với tập phát triển/kiểm tra, ta vẫn muốn sử dụng chúng cho quá trình học bởi vì chúng có thể cung cấp rất nhiều thông tin.
 
 > For the cat detector example, instead of putting all 10,000 user-uploaded images into the dev/test sets, we might instead put 5,000 into the dev/test sets. We can put the remaining 5,000 user-uploaded examples into the training set. This way, your training set of 205,000 examples contains some data that comes from your dev/test distribution along with the 200,000 internet images. We will discuss in a later chapter why this method is helpful.
 
-Với ví dụ về bộ nhận diện mèo, thay vì bỏ toàn bộ 10.000 tấm ảnh do người dùng đăng tải vào tập phát triển/kiểm tra, thay vào đó ta chỉ bỏ 5.000 tấm vào tập phát triển/kiểm tra. Còn lại 5.000 tấm do người dùng đăng tải, ta có thể bỏ vào tập huấn luyện. Bằng cách này, tập huấn luyện gồm 205.000 mẫu sẽ chứa một vài dữ liệu đến từ phân phối của tập phát triển/kiểm tra cùng với 200.000 tấm từ internet. Chúng ta sẽ bàn thêm trong chương sau vì sao phương pháp này lại có ích.
+Với ví dụ về bộ nhận diện mèo, thay vì bỏ toàn bộ 10.000 tấm ảnh do người dùng đăng tải vào tập phát triển/kiểm tra, thay vào đó ta chỉ bỏ 5.000 tấm vào tập phát triển/kiểm tra. Còn lại 5.000 tấm do người dùng đăng tải, ta có thể bỏ vào tập huấn luyện. Bằng cách này, tập huấn luyện gồm 205.000 mẫu sẽ chứa một vài dữ liệu đến từ phân phối của tập phát triển/kiểm tra cùng với 200.000 tấm từ internet. Chúng ta sẽ bàn thêm trong chương sau lý do vì sao phương pháp này lại hữu dụng.
 
 > Let's consider a second example. Suppose you are building a speech recognition system to transcribe street addresses for a voice-controlled mobile map/navigation app. You have 20,000 examples of users speaking street addresses. But you also have 500,000 examples of other audio clips with users speaking about other topics. You might take 10,000 examples of street addresses for the dev/test sets, and use the remaining 10,000, plus the additional 500,000 examples, for training.
 
-Hãy xem xét một ví dụ thứ hai. Giả sử bạn đang xây dựng một hệ thống nhận diện giọng nói để phiên âm địa chỉ đường cho một ứng dụng bản đồ/định vị trên di động điều khiển bằng giọng nói. Bạn có 20.000 mẫu của người dùng đang nói địa chỉ đường. Nhưng bạn cũng có 500.000 mẫu là những bản ghi âm khác của người dùng đang nói về những chủ đề khác. Bạn có thể lấy 10.000 mẫu nói về địa chỉ đường cho tập phát triển/kiểm tra, và sử dụng 10.000 mẫu còn lại, cộng thêm 500.000 mẫu, cho việc huấn luyện.
+Hãy xem xét một ví dụ thứ hai. Giả sử bạn đang xây dựng một hệ thống nhận diện giọng nói để phiên thoại địa chỉ đường cho một ứng dụng bản đồ/định vị trên di động điều khiển bằng giọng nói. Bạn có 20.000 mẫu của người dùng nói về địa chỉ đường. Nhưng bạn cũng có 500.000 mẫu là những bản ghi âm khác của người dùng đang nói về những chủ đề khác. Bạn có thể lấy 10.000 mẫu nói về địa chỉ đường cho tập phát triển/kiểm tra, và sử dụng 10.000 mẫu còn lại, cộng thêm 500.000 mẫu, cho việc huấn luyện.
 
 > We will continue to assume that your dev data and your test data come from the same distribution. But it is important to understand that different training and dev/test distributions offer some special challenges.
 
@@ -1905,7 +1900,7 @@ Chúng ta sẽ tiếp tục giả định rằng dữ liệu phát triển và d
 
 > [11] There is some academic research on training and testing on different distributions. Examples include "domain adaptation," "transfer learning" and "multitask learning." But there is still a huge gap between theory and practice. If you train on dataset A and test on some very different type of data B, luck could have a huge effect on how well your algorithm performs. (Here, "luck" includes the researcher’s hand-designed features for the particular task, as well as other factors that we just don’t understand yet.) This makes the academic study of training and testing on different distributions difficult to carry out in a systematic way.
 
-[11] Có một vài nghiên cứu khoa học về việc huấn luyện và kiểm tra trên các phân phối khác nhau. Những ví dụ bao gồm "thích ứng miền", "học chuyển tiếp" và "học đa nhiệm". Tuy nhiên vẫn còn một khoảng cách lớn giữa lý thuyết và thực hành. Nếu bạn huấn luyện trên bộ dữ liệu A và kiểm tra trên một vài kiểu dữ liệu rất khác B, may mắn sẽ có ảnh hưởng rất lớn tới việc thuật toán của bạn hoạt động tốt thế nào. (Ở đây, "may mắn" bao gồm những đặc trưng được tạo thủ công cho một bài toán nhất định của người làm nghiên cứu, cũng như một vài nhân tố khác mà chúng ta vẫn chưa hiểu rõ.) Điều này làm cho nghiên cứu khoa học của việc huấn luyện và kiểm tra trên những phân phối khác nhau khó có thể hoàn thành một cách có hệ thống.
+[11] Có một vài nghiên cứu khoa học về việc huấn luyện và kiểm tra trên các phân phối khác nhau. Những ví dụ bao gồm "thích ứng miền", "học chuyển tiếp" và "học đa nhiệm". Tuy nhiên vẫn còn một khoảng cách lớn giữa lý thuyết và thực hành. Nếu bạn huấn luyện trên bộ dữ liệu A và kiểm tra trên một vài kiểu dữ liệu rất khác B, may mắn sẽ có ảnh hưởng rất lớn tới việc thuật toán của bạn hoạt động tốt thế nào. (Ở đây, "may mắn" bao gồm những đặc trưng được tạo thủ công cho một bài toán nhất định của người làm nghiên cứu, cũng như một vài nhân tố khác mà chúng ta vẫn chưa hiểu rõ.) Điều này làm cho đề tài nghiên cứu khoa học của việc huấn luyện và kiểm tra trên những phân phối khác nhau khó có thể hoàn thành một cách có hệ thống.
 
 <!-- ============================ Insert ./chapters/ch37.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch37.md instead -->
@@ -1916,21 +1911,21 @@ Chúng ta sẽ tiếp tục giả định rằng dữ liệu phát triển và d
 
 > Suppose your cat detector’s training set includes 10,000 user-uploaded images. This data comes from the same distribution as a separate dev/test set, and represents the distribution you care about doing well on. You also have an additional 20,000 images downloaded from the internet. Should you provide all 20,000+10,000=30,000 images to your learning algorithm as its training set, or discard the 20,000 internet images for fear of it biasing your learning algorithm?
 
-Giả sử tập huấn luyện của bộ nhận diện mèo của bạn bao gồm 10.000 hình ảnh do người dùng tải lên. Dữ liệu này đến từ cùng một phân phối chia ra một tập phát triển/kiểm tra riêng biệt, và đại diện cho phân phối mà bạn muốn làm tốt trên đó. Bạn cũng có thêm 20.000 hình ảnh được tải xuống từ internet. Bạn có nên cung cấp tất cả 20.000 + 10.000 = 30.000 ảnh cho thuật toán học dưới dạng tập huấn luyện, hay nên loại bỏ 20.000 ảnh từ internet để tránh làm chệch đi thuật toán học của bạn?
+Giả sử tập huấn luyện của bộ nhận diện mèo có 10.000 hình ảnh do người dùng tải lên. Dữ liệu này đến từ cùng phân phối với một tập phát triển/kiểm tra riêng biệt. Chúng đại diện cho phân phối dữ liệu mà bạn muốn hệ thống đạt được chất lượng cao với nó. Bạn cũng có thêm 20.000 ảnh được tải xuống từ internet. Bạn có nên cung cấp tất cả 20.000 + 10.000 = 30.000 ảnh cho thuật toán học dưới dạng tập huấn luyện, hay nên loại bỏ 20.000 ảnh từ internet để tránh làm chệch đi thuật toán học của bạn?
 
 
 > When using earlier generations of learning algorithms (such as hand-designed computer vision features, followed by a simple linear classifier) there was a real risk that merging both types of data would cause you to perform worse. Thus, some engineers will warn you against including the 20,000 internet images.
 
-Khi sử dụng các thế hệ thuật toán học trước đó (như các tính năng nhận diện hình ảnh được thiết kế thủ công, theo sau là một phân loại tuyến tính đơn giản), có một rủi ro thực sự là việc hợp nhất cả hai loại dữ liệu sẽ khiến bạn đạt chất lượng tệ hơn. Do đó, một số kỹ sư sẽ cảnh báo bạn không thêm vào 20.000 ảnh internet.
+Khi sử dụng các thuật toán học thế hệ trước (chẳng hạn như các đặc trưng thị giác máy tính được thiết kế thủ công, theo sau là một bộ phân loại tuyến tính đơn giản), sẽ có rủi ro khi kết hợp cả hai loại dữ liệu sẽ khiến chất lượng của hệ thống tệ đi. Do đó, một số kỹ sư sẽ cảnh báo bạn đừng thêm 20.000 ảnh internet vào.
 
 
 > But in the modern era of powerful, flexible learning algorithms—such as large neural networks—this risk has greatly diminished. If you can afford to build a neural network with a large enough number of hidden units/layers, you can safely add the 20,000 images to your training set. Adding the images is more likely to increase your performance.
 
-Nhưng ngày nay, với các thuật toán học linh hoạt, mạnh mẽ -- chẳng hạn như các mạng nơ-ron lớn -- rủi ro này đã giảm đi rất nhiều. Nếu bạn có thể đủ khả năng để xây dựng một mạng nơ-ron với số lượng đơn vị/tầng ẩn đủ lớn, bạn có thể thêm 20.000 hình ảnh vào tập huấn luyện của mình một cách an toàn. Việc thêm hình ảnh có nhiều khả năng để tăng chất lượng của bạn.
+Nhưng ngày nay với các thuật toán học linh hoạt và mạnh mẽ -- chẳng hạn như các mạng nơ-ron lớn -- rủi ro này đã giảm đi rất nhiều. Nếu bạn có đủ khả năng để xây dựng một mạng nơ-ron với số lượng đơn vị và tầng ẩn đủ lớn, bạn có thể an toàn thêm 20.000 hình ảnh vào tập huấn luyện. Việc thêm nhiều hình ảnh học có khả năng giúp hệ thống nâng cao chất lượng.
 
 > This observation relies on the fact that there is some x —> y mapping that works well for both types of data. In other words, there exists some system that inputs either an internet image or a mobile app image and reliably predicts the label, even without knowing the source of the image.
 
-Nhận định này dựa trên thực tế là có một số ánh xạ x -> y hoạt động tốt cho cả hai loại dữ liệu. Nói cách khác, vẫn tồn tại một số hệ thống nhận đầu vào là ảnh internet hoặc ảnh ứng dụng di động và dự đoán một cách đáng tin cậy nhãn ảnh, ngay cả khi không biết nguồn gốc của nó.
+Nhận định này dựa trên thực tế là có một số ánh xạ x -> y hoạt động tốt cho cả hai loại dữ liệu. Nói cách khác, vẫn tồn tại một số hệ thống nhận đầu vào là ảnh internet hoặc ảnh từ ứng dụng di động và dự đoán nhãn ảnh một cách đáng tin cậy, ngay cả khi không biết nguồn gốc của nó.
 
 > Adding the additional 20,000 images has the following effects:
 
@@ -1939,39 +1934,39 @@ Thêm vào 20.000 hình ảnh bổ sung có những ảnh hưởng sau:
 
 > 1. It gives your neural network more examples of what cats do/do not look like. This is helpful, since internet images and user-uploaded mobile app images do share some similarities. Your neural network can apply some of the knowledge acquired from internet images to mobile app images.
 
-1. Nó cung cấp cho mạng nơ-ron của bạn nhiều mẫu hơn về những gì giống/không giống mèo. Điều này rất hữu ích, vì hình ảnh internet và hình ảnh ứng dụng di động do người dùng tải lên có chung một số điểm tương đồng. Mạng neural của bạn có thể áp dụng một số kiến thức thu được từ hình ảnh internet vào hình ảnh ứng dụng di động.
+1. Nó cung cấp cho mạng nơ-ron của bạn nhiều mẫu hơn về những gì giống/không giống mèo. Điều này rất hữu ích, vì hình ảnh trên internet và hình ảnh từ ứng dụng di động do người dùng tải lên có chung một số điểm tương đồng. Mạng nơ-ron của bạn có thể áp dụng một số kiến thức thu được từ hình ảnh internet vào hình ảnh ứng dụng di động.
 
 
 > 2. It forces the neural network to expend some of its capacity to learn about properties that are specific to internet images (such as higher resolution, different distributions of how the images are framed, etc.) If these properties differ greatly from mobile app images, it will "use up" some of the representational capacity of the neural network. Thus there is less capacity for recognizing data drawn from the distribution of mobile app images, which is what you really care about. Theoretically, this could hurt your algorithms’ performance.
 
-2. Nó buộc mạng nơ-ron phải sử dụng một số nguồn lực của nó để tìm hiểu về các thuộc tính dành riêng cho hình ảnh trên internet (chẳng hạn như độ phân giải cao hơn, các phân phối khác nhau về cách các hình ảnh được đóng khung, v.v.) Nếu các thuộc tính này khác nhiều so với hình ảnh ứng dụng di động, nó sẽ "sử dụng hết" một số khả năng đại diện của mạng nơ-ron. Vì vậy khả năng nhận biết dữ liệu trích xuất từ phân phối ảnh ứng dụng di động sẽ ít hơn, trong khi đó mới là điều bạn thực sự quan tâm. Trên lý thuyết, điều này có thể gây tổn thương đến chất lượng thuật toán của bạn.
+2. Nó buộc mạng nơ-ron phải sử dụng một số nguồn lực của nó để tìm hiểu về các thuộc tính dành riêng cho hình ảnh trên internet (chẳng hạn như độ phân giải cao hơn, các phân phối khác nhau về cách các hình ảnh được đóng khung, v.v.) Nếu các thuộc tính này khác nhiều so với hình ảnh ứng dụng di động, nó sẽ "sử dụng hết" khả năng biễu diễn của mạng nơ-ron. Vì vậy khả năng nhận biết dữ liệu trên phân phối ảnh ứng dụng di động sẽ ít hơn, trong khi đó mới là điều bạn thực sự quan tâm. Trên lý thuyết, điều này có thể gây tổn thương đến chất lượng thuật toán của bạn.
 
 
 > To describe the second effect in different terms, we can turn to the fictional character Sherlock Holmes, who says that your brain is like an attic; it only has a finite amount of space. He says that "for every addition of knowledge, you forget something that you knew before. It is of the highest importance, therefore, not to have useless facts elbowing out the useful ones." [12]
 
-Để mô tả ảnh hưởng thứ hai theo các thuật ngữ khác nhau, chúng ta có thể chuyển sang nhân vật hư cấu Sherlock Holmes, người nói rằng bộ não của bạn giống như một căn gác; nó chỉ có một không gian hữu hạn. Anh ta nói rằng "mỗi lần bổ sung kiến thức, bạn sẽ quên đi những điều mà bạn biết trước đây. Do đó, điều quan trọng bậc nhất là không để những thông tin vô dụng lấn át những thông tin hữu ích." [12]
+Để mô tả ảnh hưởng thứ hai theo các thuật ngữ khác nhau, chúng ta có thể mượn nhân vật hư cấu Sherlock Holmes, người nói rằng bộ não của bạn giống như một căn gác; nó chỉ có một không gian hữu hạn. Anh ta nói rằng "mỗi lần bổ sung kiến thức, bạn sẽ quên đi những điều mà bạn biết trước đây. Do đó, điều quan trọng bậc nhất là không để những thông tin vô dụng lấn át những thông tin hữu ích." [12]
 
 
 > Fortunately, if you have the computational capacity needed to build a big enough neural network—i.e., a big enough attic—then this is not a serious concern. You have enough capacity to learn from both internet and from mobile app images, without the two types of data competing for capacity. Your algorithm’s "brain" is big enough that you don’t have to worry about running out of attic space.
 
-May mắn thay, nếu bạn có khả năng tính toán cần thiết để xây dựng một mạng nơ-ron đủ lớn -- ví dụ, một căn gác đủ lớn -- thì đây không phải là một vấn đề nghiêm trọng. Bạn có đủ năng lực để học từ cả hình ảnh internet và từ hình ảnh ứng dụng di động mà không có sự cạnh tranh về dung lượng giữa hai loại dữ liệu. "Bộ não" của thuật toán đủ lớn để bạn không phải lo lắng về việc hết không gian căn gác.
+May mắn thay, nếu bạn có đủ khả năng tính toán để xây dựng một mạng nơ-ron lớn -- nói như trên là có một căn gác đủ lớn -- thì đây không phải là một vấn đề nghiêm trọng. Bạn có đủ năng lực để học từ cả hình ảnh internet và từ hình ảnh ứng dụng di động mà không có sự cạnh tranh về dung lượng giữa hai loại dữ liệu. "Bộ não" của thuật toán cần đủ lớn để bạn không phải lo lắng về việc hết không gian căn gác.
 
 
 > But if you do not have a big enough neural network (or another highly flexible learning algorithm), then you should pay more attention to your training data matching your dev/test set distribution.
 
-Nhưng nếu bạn không có một mạng nơ-ron đủ lớn (hoặc một thuật toán học rất linh hoạt khác), thì bạn nên chú ý hơn đến dữ liệu huấn luyện phù hợp với việc phân phối tập hợp phát triển/kiểm tra của bạn.
+Nhưng nếu bạn không có một mạng nơ-ron đủ lớn (hoặc một thuật toán học rất linh hoạt nào đó), thì bạn nên chú ý hơn đến dữ liệu huấn luyện tương đồng với phân phối trên tập phát triển/kiểm tra của bạn.
 
 
 > If you think you have data that has no benefit, you should just leave out that data for computational reasons. For example, suppose your dev/test sets contain mainly casual pictures of people, places, landmarks, animals. Suppose you also have a large collection of scanned historical documents:
 
-Nếu bạn nghĩ rằng bạn có dữ liệu không giá trị, bạn nên loạt bỏ dữ liệu đó vì lý do khả năng tính toán. Ví dụ: giả sử tập huấn luyện/kiểm tra của bạn chứa chủ yếu là hình ảnh thông thường về con người, địa điểm, địa danh, động vật. Giả sử bạn cũng có một bộ sưu tập lớn bản scan các tài liệu lịch sử:
+Nếu bạn nghĩ rằng dữ liệu nào đó không giá trị, bạn nên loại bỏ dữ liệu đó vì khả năng tính toán là có hạn. Ví dụ: giả sử tập huấn luyện/kiểm tra của bạn chứa chủ yếu là hình ảnh thông thường về người, địa điểm, địa danh, động vật. Giả sử bạn cũng có một bộ sưu tập lớn bản scan các tài liệu lịch sử:
 
 
 ![img](../imgs/C37_01.png)
 
 > These documents don’t contain anything resembling a cat. They also look completely unlike your dev/test distribution. There is no point including this data as negative examples, because the benefit from the first effect above is negligible -- there is almost nothing your neural network can learn from this data that it can apply to your dev/test set distribution. Including them would waste computation resources and representation capacity of the neural network.
 
-Những tài liệu này không có gì giống như một con mèo. Chúng cũng trông hoàn toàn không giống như tập phân phối phát triển/kiểm tra của bạn. Hoàn toàn không có ý nghĩa gì khi giữ lại dữ liệu này để làm mẫu thử âm tính, vì lợi ích từ ảnh hưởng đầu tiên ở trên là không đáng kể -- hầu như mạng nơ-ron của bạn không thể học được từ dữ liệu này để có thể áp dụng cho phân phối tập phát triển/kiểm tra của bạn. Giữ lại chúng sẽ lãng phí tài nguyên tính toán và khả năng đại diện của mạng nơ-ron.
+Những tài liệu này nhìn không có gì giống mèo cả. Chúng cũng trông hoàn toàn không giống như tập phân phối phát triển/kiểm tra của bạn. Hoàn toàn không có ý nghĩa gì khi giữ lại dữ liệu này để làm mẫu thử âm tính vì lợi ích thứ nhất như nêu ở trên là không đáng kể -- mạng nơ-ron hầu như không thể học được gì từ dữ liệu này để có thể áp dụng cho phân phối tập phát triển/kiểm tra của bạn. Giữ lại chúng sẽ lãng phí tài nguyên tính toán và khả năng biễu diễn của mạng nơ-ron.
 
 
 > **FOOTNOTE:**
@@ -1980,7 +1975,7 @@ Những tài liệu này không có gì giống như một con mèo. Chúng cũn
 
 > [12] A Study in Scarlet by Arthur Conan Doyle
 
-[12] Một nghiên cứu về Scarlet của Arthur Conan Doyle
+[12] Trích từ "A Study in Scarlet" của Arthur Conan Doyle
 
 <!-- ============================ Insert ./chapters/ch38.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch38.md instead -->
@@ -1991,7 +1986,7 @@ Những tài liệu này không có gì giống như một con mèo. Chúng cũn
 
 > Suppose you want to learn to predict housing prices in New York City. Given the size of a house (input feature x), you want to predict the price (target label y).
 
-Giả sử bạn muốn tìm hiểu để dự đoán giá nhà ở Thành phố New York. Với kích thước của một ngôi nhà (đặc trưng đầu vào x), bạn muốn dự đoán mức giá (nhãn mục tiêu y).
+Giả sử bạn có thuật toán học dự đoán giá nhà ở Thành phố New York. Với kích thước của một ngôi nhà (đặc trưng đầu vào x), bạn muốn dự đoán mức giá (nhãn mục tiêu y).
 
 > Housing prices in New York City are very high. Suppose you have a second dataset of housing prices in Detroit, Michigan, where housing prices are much lower. Should you include this data in your training set?
 
@@ -1999,7 +1994,7 @@ Giá nhà ở Thành phố New York rất cao. Giả sử bạn có bộ dữ li
 
 > Given the same size x, the price of a house y is very different depending on whether it is in New York City or in Detroit. If you only care about predicting New York City housing prices, putting the two datasets together will hurt your performance. In this case, it would be better to leave out the inconsistent Detroit data. [13]
 
-Với cùng kích thước x, giá của ngôi nhà y rất khác nhau tùy thuộc vào việc nó ở Thành phố New York hay ở Detroit. Nếu bạn chỉ quan tâm đến việc dự đoán giá nhà ở Thành phố New York, việc đặt hai bộ dữ liệu lại với nhau sẽ làm tổn hại đến hiệu suất của bạn. Trong trường hợp này, tốt hơn hết là bỏ qua dữ liệu không nhất quán Detroit. [13]
+Với cùng kích thước x, giá của ngôi nhà y rất khác nhau tùy thuộc vào việc nó ở Thành phố New York hay ở Detroit. Nếu bạn chỉ quan tâm đến việc dự đoán giá nhà ở Thành phố New York, việc đặt hai bộ dữ liệu lại với nhau sẽ làm tổn hại đến hiệu suất của bạn. Trong trường hợp này, tốt hơn hết là bỏ qua dữ liệu không nhất quán ở Detroit. [13]
 
 > How is this New York City vs. Detroit example different from the mobile app vs. internet cat images example?
 
@@ -2007,7 +2002,7 @@ Ví dụ về Thành phố New York và Detroit này khác gì so với ví dụ
 
 > The cat image example is different because, given an input picture x, one can reliably predict the label y indicating whether there is a cat, even without knowing if the image is an internet image or a mobile app image. I.e., there is a function f(x) that reliably maps from the input x to the target output y, even without knowing the origin of x. Thus, the task of recognition from internet images is "consistent" with the task of recognition from mobile app images. This means there was little downside (other than computational cost) to including all the data, and some possible significant upside. In contrast, New York City and Detroit, Michigan data are not consistent. Given the same x (size of house), the price is very different depending on where the house is.
 
-Ví dụ về ảnh mèo khác trường hợp trên bởi vì, với một ảnh đầu vào x, ta có thể dự đoán một cách đáng tin cậy nhãn y liệu có mèo trong ảnh hay không mà không cần biết hình ảnh đó là từ internet hay từ ứng dụng di động. Nghĩa là, có một hàm f(x) ánh xạ đáng tin cậy từ đầu vào x đến đầu ra mục tiêu y, ngay cả khi không biết nguồn gốc của x. Do đó, nhiệm vụ nhận dạng hình ảnh từ internet là nhiệm vụ nhất quán với nhiệm vụ nhận dạng hình ảnh từ ứng dụng di động. Điều này có nghĩa là có rất ít nhược điểm (ngoài chi phí tính toán) khi bao gồm tất cả các dữ liệu và một số nhược điểm đáng kể có thể có. Ngược lại, dữ liệu của Thành phố New York và Detroit, Michigan không nhất quán. Cho cùng một x (kích thước của ngôi nhà), giá nhà rất khác nhau tùy thuộc vào vị trí ngôi nhà.
+Ví dụ về ảnh mèo khác trường hợp trên bởi vì, với một ảnh đầu vào x, ta có thể dự đoán một cách đáng tin cậy nhãn y liệu có mèo trong ảnh hay không mà không cần biết hình ảnh đó là từ internet hay từ ứng dụng di động. Nghĩa là, có một hàm f(x) ánh xạ đáng tin cậy từ đầu vào x đến đầu ra mục tiêu y, ngay cả khi không biết nguồn gốc của x. Do đó, nhiệm vụ nhận dạng hình ảnh từ internet là nhiệm vụ nhất quán với nhiệm vụ nhận dạng hình ảnh từ ứng dụng di động. Điều này có nghĩa là có rất ít nhược điểm (ngoài chi phí tính toán) khi bao gồm tất cả các dữ liệu nhưng lại có thể có những ưu điểm lơn. Ngược lại, dữ liệu của Thành phố New York với Detroit và Michigan không nhất quán. Cho cùng một x (kích thước của ngôi nhà), giá nhà rất khác nhau tùy thuộc vào vị trí ngôi nhà.
 
 > **FOOTNOTE:**
 
@@ -2015,7 +2010,7 @@ Ví dụ về ảnh mèo khác trường hợp trên bởi vì, với một ản
 
 > [13] There is one way to address the problem of Detroit data being inconsistent with New York City data, which is to add an extra feature to each training example indicating the city. Given an input x—which now specifies the city—the target value of y is now unambiguous. However, in practice I do not see this done frequently.
 
-[13] Có một cách để giải quyết vấn đề dữ liệu Detroit không nhất quán với dữ liệu của Thành phố New York, đó là thêm một đặc trưng biểu diễn thành phố. Cho một đầu vào x—với đặc trưng biểu diễn thành phố—giá trị mục tiêu của y bây giờ không mập mờ nữa. Tuy nhiên, trong thực tế tôi không thấy điều này được thực hiện thường xuyên.
+[13] Có một cách để giải quyết vấn đề dữ liệu Detroit không nhất quán với dữ liệu của Thành phố New York, đó là thêm một đặc trưng biểu diễn thành phố. Cho một đầu vào x mà có chứa thêm đặc trưng biểu diễn thành phố, giá trị mục tiêu y bây giờ không còn mập mờ nữa. Tuy nhiên, trong thực tế tôi không thấy điều này được thực hiện thường xuyên.
 
 <!-- ============================ Insert ./chapters/ch39.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch39.md instead -->
@@ -2034,7 +2029,7 @@ Nhưng trên thực tế, việc có hình ảnh từ internet gấp 40 lần so
 
 > If you don’t have huge computational resources, you could give the internet images a much lower weight as a compromise.
 
-Nếu bạn không có tài nguyên tính toán khổng lồ, bạn có thể gán trọng số thấp hơn nhiều cho các hình ảnh từ internet như một cách thỏa hiệp.
+Nếu bạn không có tài nguyên tính toán khổng lồ, bạn có thể thoả hiệp bằng cách gán trọng số với giá trị thấp hơn đáng kể cho các hình ảnh từ internet.
 
 > For example, suppose your optimization objective is squared error (This is not a good choice for a classification task, but it will simplify our explanation.) Thus, our learning algorithm tries to optimize:
 
@@ -2050,11 +2045,11 @@ Tổng đầu tiên phía trên là trên 5.000 hình ảnh từ di động và 
 
 > If you set ​𝛽​=1/40, the algorithm would give equal weight to the 5,000 mobile images and the 200,000 internet images. You can also set the parameter ​𝛽​ to other values, perhaps by tuning to the dev set.
   
-Nếu bạn chọn ​𝛽​ = 1/40, thuật toán sẽ gán trọng số tương đương cho 5.000 hình ảnh từ di động và 200.000 hình ảnh từ internet. Bạn cũng có thể chọn các giá trị khác cho ​𝛽​, có thể bằng cách điều chỉnh theo tập phát triển.
+Nếu bạn chọn trọng số ​𝛽​ = 1/40, thuật toán sẽ đối xử với 5.000 hình ảnh từ di động tương đương với 200.000 hình ảnh từ internet. Bạn cũng có thể chọn các giá trị khác cho ​𝛽​, chẳng hạn như tinh chỉnh theo tập phát triển.
 
 > By weighting the additional Internet images less, you don’t have to build as massive a neural network to make sure the algorithm does well on both types of tasks. This type of re-weighting is needed only when you suspect the additional data (Internet Images) has a very different distribution than the dev/test set, or if the additional data is much larger than the data that came from the same distribution as the dev/test set (mobile images).
 
-Khi giảm trọng số các hình ảnh bổ sung từ Internet, bạn không cần phải xây dựng một mạng nơ-ron khổng lồ để đảm bảo thuật toán thực hiện tốt cả hai loại tác vụ. Việc đánh lại trọng số này chỉ cần thiết khi bạn nghi ngờ dữ liệu bổ sung (Hình ảnh từ Internet) có phân phối rất khác so với tập phát triển/ tập kiểm tra, hoặc nếu dữ liệu bổ sung lớn hơn nhiều so với dữ liệu mà có cùng phân phối với tập phát triển/ tập kiểm tra (hình ảnh từ di động).
+Khi giảm trọng số các hình ảnh được bổ sung từ Internet, bạn không cần phải xây dựng một mạng nơ-ron khổng lồ để đảm bảo thuật toán thực hiện tốt trên cả hai tác vụ. Việc đánh lại trọng số này chỉ cần thiết khi bạn nghi ngờ dữ liệu bổ sung (hình ảnh từ internet) có phân phối rất khác so với tập phát triển/kiểm tra, hoặc nếu dữ liệu bổ sung lớn hơn nhiều so với dữ liệu mà có cùng phân phối với tập phát triển/kiểm tra (hình ảnh từ di động).
 
 <!-- ============================ Insert ./chapters/ch40.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch40.md instead -->
@@ -2065,7 +2060,7 @@ Khi giảm trọng số các hình ảnh bổ sung từ Internet, bạn không c
 
 > Suppose you are applying ML in a setting where the training and the dev/test distributions are different. Say, the training set contains Internet images + Mobile images, and the dev/test sets contain only Mobile images. However, the algorithm is not working well: It has a much higher dev/test set error than you would like. Here are some possibilities of what might be wrong:
 
-Giả sử bạn đang áp dụng học máy cho một ứng dụng mà phân phối của tập huấn luyện và tập phát triển khác nhau. Tập huấn luyện chứa ảnh Internet + ảnh Điện Thoại trong khi tập phát triển/kiểm tra chỉ chứa ảnh Điện Thoại. Tuy nhiên, thuật toán của bạn không hoạt động tốt: Lượng lỗi trên tập phát triển/kiểm tra cao hơn nhiều con số mà bạn muốn. Dưới đây là một số khả năng có thể gây ra vấn đề trên:
+Giả sử bạn đang áp dụng học máy cho một ứng dụng mà phân phối của tập huấn luyện và tập phát triển/kiểm tra khác nhau. Tập huấn luyện chứa ảnh Internet + ảnh Điện Thoại trong khi tập phát triển/kiểm tra chỉ chứa ảnh Điện Thoại. Tuy nhiên, thuật toán của bạn không hoạt động tốt: Mức lỗi trên tập phát triển/kiểm tra cao hơn nhiều con số mong muốn. Một số nguyên nhân có thể gây ra vấn đề trên là:
 
 > 1. It does not do well on the training set. This is the problem of high (avoidable) bias on the training set distribution.
 
@@ -2073,12 +2068,12 @@ Giả sử bạn đang áp dụng học máy cho một ứng dụng mà phân ph
 
 > 2. It does well on the training set, but does not generalize well to previously unseen data *drawn from the same distribution as the training set*. This is high variance.
 
-2. Thuật toán thể hiện tốt trên tập huấn luyện, nhưng không tổng quát hóa tốt trên dữ liệu chưa thấy trích xuất *từ cùng phân phối với tập huấn luyện*. Trường hợp này là phương sai cao.
+2. Thuật toán hoạt động tốt trên tập huấn luyện, nhưng không tổng quát hóa tốt trên dữ liệu được trích xuất *từ cùng phân phối với tập huấn luyện* mà thuật toán chưa thấy trước đó. Trường hợp này là phương sai cao.
 
 
 > 3. It generalizes well to new data drawn from the same distribution as the training set, but not to data drawn from the dev/test set distribution. We call this problem **data mismatch**, since it is because the training set data is a poor match for the dev/test set data.
 
-3. Thuật toán tổng quát hóa tốt với dữ liệu mới trích xuất từ cùng phân phối với tập huấn luyện, nhưng không tốt với dữ liệu trích xuất từ phân phối của tập phát triển/kiểm tra. Chúng ta gọi vấn đề này là **dữ liệu không tương đồng** bởi dữ liệu của tập huấn luyện khớp kém so với dữ liệu của tập phát triển/kiểm tra.
+3. Thuật toán tổng quát hóa tốt với dữ liệu mới, được trích xuất từ cùng phân phối với tập huấn luyện, nhưng không tốt với dữ liệu trích xuất từ phân phối của tập phát triển/kiểm tra. Chúng ta gọi vấn đề này là **dữ liệu không tương đồng** bởi dữ liệu của tập huấn luyện khớp kém so với dữ liệu của tập phát triển/kiểm tra.
 
 > For example, suppose that humans achieve near perfect performance on the cat recognition task. Your algorithm achieves this:
 
@@ -2098,11 +2093,11 @@ Ví dụ, giả sử con người đạt chất lượng hoàn hảo trong việ
 
 > In this case, you clearly have a data mismatch problem. To address this, you might try to make the training data more similar to the dev/test data. We discuss some techniques for this later.
 
-Trường hợp này bạn rõ ràng có vấn đề về dữ liệu không tương đồng. Để khắc phục, bạn có thể cố gắng xử lý dữ liệu huấn luyện sao cho giống hơn với dữ liệu trên tập phát triển/kiểm tra. Chúng ta sẽ bàn luận các kỹ thuật xử lý vấn đề này về sau.
+Trường hợp này, bạn rõ ràng có vấn đề về dữ liệu không tương đồng. Để khắc phục, bạn có thể cố gắng xử lý dữ liệu huấn luyện sao cho giống hơn với dữ liệu trên tập phát triển/kiểm tra. Chúng ta sẽ bàn luận các kỹ thuật xử lý vấn đề này về sau.
 
 > In order to diagnose to what extent an algorithm suffers from each of the problems 1-3 above, it will be useful to have another dataset. Specifically, rather than giving the algorithm all the available training data, you can split it into two subsets: The actual training set which the algorithm will train on, and a separate set, which we will call the "Training dev" set, that we will not train on.
 
-Để chẩn đoán mức độ tác động tới thuật toán từ mỗi vần đề 1-3 ở trên, sẽ rất hữu ích khi bạn có một bộ dữ liệu khác. Cụ thể, thay vì áp dụng thuật toán với toàn bộ dữ liệu huấn luyện, bạn có thể chia nó thành hai tập con: Tập huấn luyện thực tế mà thuật toán sẽ huấn luyện và một tập riêng, ở đây chúng tôi gọi là tập "phát triển huấn luyện" và nó sẽ không được dùng cho việc huấn luyện.
+Để chẩn đoán mức độ tác động tới thuật toán từ mỗi vần đề 1-3 ở trên, việc sở hữu một bộ dữ liệu khác sẽ rất hữu ích. Cụ thể, thay vì áp dụng thuật toán với toàn bộ dữ liệu huấn luyện, bạn có thể chia nó thành hai tập con: Tập huấn luyện thực tế mà thuật toán sẽ huấn luyện và một tập riêng, ở đây chúng tôi gọi là tập "phát triển huấn luyện" và nó sẽ không được dùng cho việc huấn luyện.
 
 > You now have four subsets of data:
 
@@ -2111,15 +2106,15 @@ Bạn giờ đây có bốn tập con dữ liệu:
 
 > * Training set. This is the data that the algorithm will learn from (e.g., Internet images + Mobile images). This does not have to be drawn from the same distribution as what we really care about (the dev/test set distribution).
 
-Tập huấn luyện: Đây là dữ liệu mà thuật toán sẽ học từ nó (ví dụ: ảnh Internet + ảnh Điện Thoại). Tập dữ liệu này không nhất thiết phải được trích xuất từ cùng phân phối như là đối với tập phát triển/kiểm tra.
+* Tập huấn luyện: Đây là dữ liệu mà thuật toán sẽ học từ nó (ví dụ: ảnh Internet + ảnh Điện Thoại). Tập dữ liệu này không nhất thiết phải được trích xuất từ cùng phân phối như là đối với tập phát triển/kiểm tra.
 
 > * Training dev set: This data is drawn from the same distribution as the training set (e.g., Internet images + Mobile images). This is usually smaller than the training set; it only needs to be large enough to evaluate and track the progress of our learning algorithm.
 
-Tập phát triển huấn luyện: Đây là dữ liệu trích xuất từ cùng phân phối với tập huấn luyện (ví dụ: ảnh Internet + ảnh Điện Thoại). Nó thông thường nhỏ hơn tập huấn luyện và chỉ cần đủ lớn để có thể đánh giá và theo dõi quá trình học của thuật toán.
+* Tập phát triển huấn luyện: Đây là dữ liệu trích xuất từ cùng phân phối với tập huấn luyện (ví dụ: ảnh Internet + ảnh Điện Thoại). Tập dữ liệu này thường nhỏ hơn tập huấn luyện và chỉ cần đủ lớn để có thể đánh giá và theo dõi quá trình học của thuật toán.
 
 > * Dev set: This is drawn from the same distribution as the test set, and it reflects the distribution of data that we ultimately care about doing well on. (E.g., mobile images.)
 
-* Tâp phát triển: Đây là dữ liệu trích xuất từ cùng phân phối với tập kiểm tra, nó phản ánh phân phối dữ liệu mà chúng ta mong muốn thuật toán thực hiện tốt nhất. (Ví dụ: ảnh điện thoại)
+* Tập phát triển: Đây là dữ liệu trích xuất từ cùng phân phối với tập kiểm tra, nó phản ánh phân phối dữ liệu mà chúng ta mong muốn thuật toán thực hiện tốt nhất. (Ví dụ: ảnh điện thoại)
 
 > * Test set: This is drawn from the same distribution as the dev set. (E.g., mobile images.)
 
@@ -2135,26 +2130,26 @@ Tập phát triển huấn luyện: Đây là dữ liệu trích xuất từ cù
 
 > * The algorithm’s ability to generalize to new data drawn from the training set distribution, by evaluating on the training dev set.
 
-* Khả năng tổng quát hóa của thuật toán đối với dữ liệu mới trích xuất từ cùng phân phối với tập huấn luyện, bằng cách đánh giá tập phát triển huấn luyện.
+* Khả năng tổng quát hóa của thuật toán đối với dữ liệu mới, được trích xuất từ cùng phân phối với tập huấn luyện, bằng cách đánh giá tập phát triển huấn luyện.
 
 > * The algorithm’s performance on the task you care about, by evaluating on the dev and/or test sets.
 
-* Chất lượng của thuật toán trên tác vụ mà bạn quan tâm, bằng cách đánh giá tập phát triển và/hoặc tập kiểm tra.
+* Đánh giá chất lượng của thuật toán ở tác vụ mà bạn quan tâm trên tập phát triển và/hoặc tập kiểm tra.
 
 > Most of the guidelines in Chapters 5-7 for picking the size of the dev set also apply to the training dev set.
 
-Phần lớn những hướng dẫn ở Chương 5-7 về lựa chọn kích cỡ của tập phát triển có thể áp dụng được với tập phát triển huấn luyện.
+Phần lớn những hướng dẫn ở Chương 5-7 về lựa chọn kích thước của tập phát triển có thể áp dụng được với tập phát triển huấn luyện.
 
 <!-- ============================ Insert ./chapters/ch41.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch41.md instead -->
 <a name="41"></a>
 > ## 41. Identifying Bias, Variance, and Data Mismatch Errors
 
-## 41. Xác định những lỗi về độ chệch, phương sai, và dữ liệu không tương đồng
+## 41. Xác định lỗi về độ chệch, phương sai và dữ liệu không tương đồng
 
 > Suppose humans achieve almost perfect performance (≈0% error) on the cat detection task, and thus the optimal error rate is about 0%. Suppose you have:
 
-Giả sử con người đạt được chất lượng gần như hoàn hảo (lỗi ≈0%) trong việc phát hiện mèo, và do vậy tỷ lệ lỗi tối ưu là khoảng 0%. Giả sử bạn có:
+Giả sử con người đạt được chất lượng gần như hoàn hảo (lỗi ≈0%) trong việc phát hiện mèo và do vậy tỷ lệ lỗi tối ưu là khoảng 0%. Giả sử bạn có:
 
 > * 1% error on the training set.
 
@@ -2170,7 +2165,7 @@ Giả sử con người đạt được chất lượng gần như hoàn hảo (
 
 > What does this tell you? Here, you know that you have high variance. The variance reduction techniques described earlier should allow you to make progress.
 
-Như vậy nói lên được điều gì? Ở đây, bạn biết rằng bạn đang có phương sai cao. Bạn có thể cải tiến thêm với các kỹ thuật giảm phương sai được mô tả trước đây.
+Như vậy nói lên được điều gì? Ở đây, bạn biết rằng mình đang có phương sai cao. Bạn có thể cải tiến thêm với các kỹ thuật giảm phương sai được mô tả trước đây.
 
 > Now, suppose your algorithm achieves:
 
@@ -2190,11 +2185,11 @@ Bây giờ, giả sử thuật toán của bạn đạt được:
 
 > This tells you that you have high avoidable bias on the training set. I.e., the algorithm is doing poorly on the training set. Bias reduction techniques should help.
 
-Điều này cho bạn biết rằng bạn có độ chệch có thể tránh được cao trên tập huấn luyện. Tức là, thuật toán đang hoạt động kém trên tập huấn luyện. Kỹ thuật giảm độ chệch sẽ có ích trong trường hợp này.
+Điều này cho bạn biết rằng bạn có độ chệch tránh được cao trên tập huấn luyện. Tức là, thuật toán đang hoạt động kém trên tập huấn luyện. Kỹ thuật giảm độ chệch sẽ có ích trong trường hợp này.
 
 > In the two examples above, the algorithm suffered from only high avoidable bias or high variance. It is possible for an algorithm to suffer from any subset of high avoidable bias, high variance, and data mismatch. For example:
 
-Trong hai ví dụ trên, thuật toán chỉ có vấn đề về độ chệch có thể tránh được cao, hoặc về phương sai cao. Một thuật toán có thể mắc phải một hoặc nhiều vấn đề về độ chệch tránh được cao, phương sai cao hoặc dữ liệu không tương đồng. Ví dụ như:
+Trong hai ví dụ trên, thuật toán chỉ có vấn đề về độ chệch tránh được cao hoặc phương sai cao. Một thuật toán có thể mắc phải một hoặc nhiều vấn đề về độ chệch tránh được cao, phương sai cao hoặc dữ liệu không tương đồng. Ví dụ như:
 
 > * 10% error on the training set.
 
@@ -2210,25 +2205,25 @@ Trong hai ví dụ trên, thuật toán chỉ có vấn đề về độ chệch
 
 > This algorithm suffers from high avoidable bias and from data mismatch. It does not, however, suffer from high variance on the training set distribution.
 
-Thuật toán này có độ chệch có thể tránh được cao và lỗi dữ liệu không tương đồng. Tuy nhiên, nó không có vấn đề phương sai cao trong phân phối tập huấn luyện.
+Thuật toán này có độ chệch tránh được cao và lỗi dữ liệu không tương đồng. Tuy nhiên, nó không có vấn đề phương sai cao trong phân phối tập huấn luyện.
 
 > It might be easier to understand how the different types of errors relate to each other by drawing them as entries in a table:
 
-Mối quan hệ giữa các loại lỗi có thể sẽ dễ hiểu hơn bằng cách vẽ chúng trong bảng:
+Để dễ hiểu hơn, mối quan hệ giữa các loại lỗi được trình bày trong bảng sau:
 
 ![img](../imgs/C41_01.png)
 
 > Continuing with the example of the cat image detector, you can see that there are two different distributions of data on the x-axis. On the y-axis, we have three types of error: human level error, error on examples the algorithm has trained on, and error on examples the algorithm has not trained on. We can fill in the boxes with the different types of errors we identified in the previous chapter.
 
-Tiếp tục với ví dụ về bộ phát hiện hình ảnh mèo, bạn có thể thấy rằng có hai phân phối dữ liệu khác nhau trên trục x. Trên trục y, chúng ta có ba loại lỗi: lỗi ở mức con người, lỗi trên các mẫu mà thuật toán đã được học và lỗi trên các mẫu mà thuật toán chưa được học. Chúng ta có thể điền vào các ô với các loại lỗi khác nhau mà chúng ta đã xác định được trong chương trước.
+Tiếp tục với ví dụ về bộ phát hiện hình ảnh mèo, bạn có thể thấy rằng có hai phân phối dữ liệu khác nhau trên trục x. Trên trục y, chúng ta có ba loại lỗi: lỗi ở mức con người, lỗi trên các mẫu mà thuật toán đã được học và lỗi trên các mẫu mà thuật toán chưa được học. Chúng ta có thể điền vào các ô với các loại lỗi khác nhau đã được xác định được trong chương trước.
 
 > If you wish, you can also fill in the remaining two boxes in this table: You can fill in the upper-right box (Human level performance on Mobile Images) by asking some humans to label your mobile cat images data and measure their error. You can fill in the next box by taking the mobile cat images (Distribution B) and putting a small fraction of into the training set so that the neural network learns on it too. Then you measure the learned model’s error on that subset of data. Filling in these two additional entries may sometimes give additional insight about what the algorithm is doing on the two different distributions (Distribution A and B) of data.
 
-Nếu muốn, bạn cũng có thể điền vào hai ô còn lại: Bạn có thể điền vào ô phía trên bên phải (Chất lượng mức con người trên Hình ảnh từ điện thoại) bằng cách yêu cầu một vài người dán nhãn dữ liệu ảnh mèo được tải lên từ điện thoại và đo lỗi của họ. Bạn có thể điền vào ô tiếp theo bằng cách lấy một phần nhỏ những tấm ảnh mèo chụp từ điện thoại (Phân phối B) vào tập huấn luyện để mạng nơ-ron cũng có thể học theo. Sau đó, bạn đo lỗi mô hình đã học trên tập dữ liệu con đó. Việc điền thêm vào hai mục này đôi khi có thể cung cấp thêm cái nhìn sâu sắc về những gì thuật toán đang thực hiện trên những phân phối khác nhau (Phân phối A và B) của dữ liệu.
+Nếu muốn, bạn cũng có thể điền vào hai ô còn lại: Bạn có thể điền vào ô phía trên bên phải (Chất lượng mức con người trên Hình ảnh tải lên từ điện thoại) bằng cách nhờ một vài người dán nhãn dữ liệu ảnh mèo tải lên từ điện thoại và đo mức lỗi gán nhãn của họ. Bạn có thể điền vào ô kế tiếp bằng cách bỏ một phần nhỏ những tấm ảnh mèo chụp từ điện thoại (có Phân phối B) vào tập huấn luyện để mạng nơ-ron cũng có thể học theo chúng. Sau đó, bạn đo lỗi của mô hình đã học trên tập dữ liệu con đó. Việc điền thêm vào hai mục này đôi khi có thể cung cấp cái nhìn sâu sắc hơn về những gì thuật toán đang thực hiện trên các phân phối dữ liệu khác nhau (Phân phối A và B).
 
 > By understanding which types of error the algorithm suffers from the most, you will be better positioned to decide whether to focus on reducing bias, reducing variance, or reducing data mismatch.
 
-Bằng cách hiểu được loại lỗi mà thuật toán đang gặp nhiều vấn đề nhất, bạn sẽ ở trong vị thế tốt hơn để quyết định xem nên tập trung vào việc giảm độ chệch, giảm phương sai hay giảm độ không tương đồng của dữ liệu.
+Bằng cách hiểu được loại lỗi mà thuật toán đang gặp nhiều nhất, bạn sẽ ở vị thế tốt hơn để quyết định nên tập trung vào việc giảm độ chệch, giảm phương sai hay giảm độ không tương đồng của dữ liệu.
 
 <!-- ============================ Insert ./chapters/ch42.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch42.md instead -->
@@ -2239,23 +2234,23 @@ Bằng cách hiểu được loại lỗi mà thuật toán đang gặp nhiều 
 
 > Suppose you have developed a speech recognition system that does very well on the training set and on the training dev set. However, it does poorly on your dev set: You have a data mismatch problem. What can you do?
 
-Giả sử bạn đã phát triển một hệ thống nhận dạng giọng nói hoạt động rất tốt trên tập huấn luyện và trên tập phát triển huấn luyện. Tuy nhiên, hệ thống đó lại hoạt động kém trên tập phát triển: Bạn có vấn đề về dữ liệu không tương đồng. Bạn có thể làm gì?
+Giả sử, bạn đã phát triển một hệ thống nhận dạng giọng nói hoạt động rất tốt trên tập huấn luyện và tập phát triển huấn luyện. Tuy nhiên, hệ thống đó lại hoạt động kém trên tập phát triển: Bạn có vấn đề về dữ liệu không tương đồng. Bạn có thể làm gì?
 
 > I recommend that you: (i) Try to understand what properties of the data differ between the training and the dev set distributions. (ii) Try to find more training data that better matches the dev set examples that your algorithm has trouble with. [14]
 
-Tôi đề xuất bạn nên: (i) Cố gắng hiểu những thuộc tính nào của dữ liệu là khác nhau giữa phân phối của tập huấn luyện và tập phát triển. (ii) Cố gắng tìm thêm dữ liệu huấn luyện tương đồng hơn với những mẫu trong tập phát triển mà thuật toán của bạn đang gặp vấn đề.
+Tôi đề xuất bạn nên: (i) Cố gắng hiểu những thuộc tính của dữ liệu mà khác biệt giữa phân phối của tập huấn luyện và tập phát triển. (ii) Cố gắng lấy thêm dữ liệu huấn luyện tương đồng hơn với các mẫu trong tập phát triển mà thuật toán của bạn đang gặp vấn đề.
 
 > For example, suppose you carry out an error analysis on the speech recognition dev set: You manually go through 100 examples, and try to understand where the algorithm is making mistakes. You find that your system does poorly because most of the audio clips in the dev set are taken within a car, whereas most of the training examples were recorded against a quiet background. The engine and road noise dramatically worsen the performance of your speech system. In this case, you might try to acquire more training data comprising audio clips that were taken in a car. The purpose of the error analysis is to understand the significant differences between the training and the dev set, which is what leads to the data mismatch.
 
-Ví dụ, giả sử bạn thực hiện phân tích lỗi nhận dạng giọng nói trên tập phát triển: Bạn duyệt qua 100 mẫu một cách thủ công và cố gắng hiểu xem thuật toán đang mắc lỗi ở những đâu. Bạn phát hiện rằng hệ thống của bạn hoạt động kém vì hầu hết những đoạn âm thanh trong tập phát triển được thu trong xe hơi, trong khi hầu hết các ví dụ để huấn luyện được thu trong môi trường yên tĩnh. Tiếng ồn từ động cơ và đường phố làm ảnh hưởng nghiêm trọng đến chất lượng của hệ thống của bạn. Trong trường hợp này, bạn có thể cố gắng thu thập thêm dữ liệu huấn luyện bao gồm những đoạn âm thanh được thu trong xe hơi. Mục đích của việc phân tích lỗi là để hiểu những khác biệt đáng kể giữa tập huấn luyện và tập phát triển, vốn là nguyên nhân dẫn đến dữ liệu không tương đồng.
+Giả sử bạn thực hiện phân tích lỗi nhận dạng giọng nói trên tập phát triển: Bạn nghe thủ công qua 100 mẫu và cố gắng hiểu xem thuật toán đang mắc lỗi ở những đâu. Bạn phát hiện rằng, hệ thống của bạn hoạt động kém vì hầu hết những đoạn âm thanh trong tập phát triển được thu bên trong xe hơi, trong khi hầu hết các ví dụ để huấn luyện được thu trong môi trường yên tĩnh. Tiếng ồn từ động cơ và đường phố làm ảnh hưởng nghiêm trọng đến chất lượng của hệ thống. Trong trường hợp này, bạn có thể cố gắng thu thập thêm dữ liệu huấn luyện bao gồm các đoạn âm thanh được thu trong xe hơi. Mục đích của việc phân tích lỗi là để hiểu những khác biệt nào là đáng kể giữa tập huấn luyện và tập phát triển, đây vốn là nguyên nhân dẫn đến dữ liệu không tương đồng.
 
 > If your training and training dev sets include audio recorded within a car, you should also double-check your system’s performance on this subset of data. If it is doing well on the car data in the training set but not on car data in the training dev set, then this further validates the hypothesis that getting more car data would help. This is why we discussed the possibility of including in your training set some data drawn from the same distribution as your dev/test set in the previous chapter. Doing so allows you to compare your performance on the car data in the training set vs. the dev/test set.
 
-Nếu tập huấn luyện và tập phát triển huấn luyện của bạn chứa những đoạn âm thanh thu trong xe hơi, bạn nên kiểm tra kĩ lưỡng chất lượng của hệ thống của bạn trên tập con dữ liệu này. Nếu hệ thống hoạt động tốt với dữ liệu xe hơi trong tập huấn luyện nhưng không tốt với dữ liệu xe hơi trong tập phát triển huấn luyện, điều đó càng khẳng định giả thuyết rằng thu thập thêm dữ liệu xe hơi sẽ có ích. Đó là lí do tại sao chúng ta thảo luận trong chương trước về khả năng thêm một số dữ liệu lấy từ tập phát triển/tập kiểm tra với cùng phân phối vào trong dữ liệu huấn luyện của bạn. Làm như vậy cho phép bạn so sánh chất lượng [hệ thống] trên tập huấn luyện so với trên tập phát triển/kiểm tra.
+Nếu tập huấn luyện và tập phát triển huấn luyện của bạn chứa những đoạn âm thanh thu trong xe hơi, bạn nên kiểm tra kĩ lưỡng chất lượng của hệ thống trên tập con dữ liệu này. Nếu hệ thống hoạt động tốt với dữ liệu xe hơi trong tập huấn luyện nhưng không tốt với dữ liệu xe hơi trong tập phát triển huấn luyện, điều đó càng khẳng định giả thuyết rằng lấy thêm dữ liệu xe hơi sẽ có ích. Đó là lí do tại sao chúng ta thảo luận trong chương trước về khả năng thêm một số dữ liệu lấy từ tập phát triển/tập kiểm tra với cùng phân phối vào trong dữ liệu huấn luyện. Làm như vậy cho phép bạn so sánh chất lượng [hệ thống] trên tập huấn luyện so với trên tập phát triển/kiểm tra.
 
 > Unfortunately, there are no guarantees in this process. For example, if you don't have any way to get more training data that better match the dev set data, you might not have a clear path towards improving performance.
 
-Thật không may, không có một sự bảo đảm nào trong quá trình này. Ví dụ, nếu ban không có cách nào để có thể có thêm dữ liệu huấn luyện tương đồng với dữ liệu trong tập phát triển, bạn có thể không có được một lộ trình rõ ràng nào hướng đến việc cải thiện chất lượng hệ thống.
+Đáng tiếc là không có một sự bảo đảm nào trong quá trình này. Ví dụ, nếu bạn không có cách nào để có thể lấy thêm dữ liệu huấn luyện tương đồng với dữ liệu trong tập phát triển, bạn có thể không định ra được một lộ trình rõ ràng để cải thiện chất lượng hệ thống.
 
 > **FOOTNOTE:**
 
@@ -2263,7 +2258,7 @@ Thật không may, không có một sự bảo đảm nào trong quá trình nà
 
 > [14] There is also some research on "domain adaptation" -- how to train an algorithm on one distribution and have it generalize to a different distribution. These methods are typically applicable only in special types of problems and are much less widely used than the ideas described in this chapter.
 
-[14] Cũng có một số nghiên cứu về "thích ứng miền" -- làm sao để huấn luyện một thuật toán trên một phân phối và để nó tổng quát hóa trên một phân phối khác. Những phương pháp này thường chỉ ứng dụng được với một số loại bài toán đặc biệt, và ít được sử dụng hơn nhiều so với những ý tưởng đã được trình bày trong chương này.
+[14] Cũng có một số nghiên cứu về "thích ứng miền" -- làm sao để huấn luyện một thuật toán trên một phân phối mà vẫn tổng quát hóa được trên một phân phối khác. Những phương pháp này thường chỉ ứng dụng được với một số loại bài toán đặc biệt và ít được sử dụng hơn nhiều so với những ý tưởng đã được trình bày trong chương này.
 
 <!-- ============================ Insert ./chapters/ch43.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch43.md instead -->
@@ -2274,37 +2269,37 @@ Thật không may, không có một sự bảo đảm nào trong quá trình nà
 
 > Your speech system needs more data that sounds as if it were taken from within a car. Rather than collecting a lot of data while driving around, there might be an easier way to get this data: By artificially synthesizing it.
 
-Hệ thống giọng nói của bạn cần thêm dữ liệu nghe giống như được lấy từ trong xe hơi. Thay vì thu thập nhiều dữ liệu trong khi lái xe, bạn có thể lấy chúng dễ dàng hơn bằng: tổng hợp nhân tạo.
+Hệ thống giọng nói của bạn cần thêm dữ liệu nghe giống như được lấy từ trong xe hơi. Thay vì thu thập nhiều dữ liệu trong khi lái xe, bạn có thể lấy chúng dễ dàng hơn bằng tổng hợp nhân tạo.
 
 > Suppose you obtain a large quantity of car/road noise audio clips. You can download this data from several websites. Suppose you also have a large training set of people speaking in a quiet room. If you take an audio clip of a person speaking and "add" to that to an audio clip of car/road noise, you will obtain an audio clip that sounds as if that person was speaking in a noisy car. Using this process, you can "synthesize" huge amounts of data that sound as if it were collected inside a car.
 
-Giả sử bạn có một số lượng lớn đoạn âm thanh tiếng ồn xe hơi/đường phố. Bạn có thể tải dữ liệu này từ một số trang web. Giả sử bạn cũng có một tập huấn luyện lớn của tiếng người đang nói trong một căn phòng yên tĩnh. Nếu bạn lấy đoạn âm thanh của một người đang nói và "thêm" vào một đoạn âm thanh tiếng ồn xe hơi/đường phố, bạn sẽ có được một đoạn âm thanh như thể người đó đang nói trong một chiếc xe ồn ào. Sử dụng quy trình này, bạn có thể "tổng hợp" lượng dữ liệu khổng lồ nghe như thể nó được thu thập bên trong một chiếc xe hơi.
+Giả sử bạn có một số lượng lớn đoạn âm thanh tiếng ồn xe hơi/đường phố. Bạn có thể tải dữ liệu này từ một số trang web. Giả sử bạn cũng có một tập huấn luyện lớn của tiếng người đang nói trong một căn phòng yên tĩnh. Nếu bạn lấy đoạn âm thanh của một người đang nói và "thêm" vào một đoạn âm thanh tiếng ồn xe hơi/đường phố, thì bạn sẽ có được một đoạn âm thanh nghe như thể người đó đang nói trong một chiếc xe ồn ào. Theo quy trình này, bạn có thể "tổng hợp" lượng dữ liệu khổng lồ mà nghe như thể được ghi âm bên trong một chiếc xe hơi.
 
 > More generally, there are several circumstances where artificial data synthesis allows you to create a huge dataset that reasonably matches the dev set. Let’s use the cat image detector as a second example. You notice that dev set images have much more motion blur because they tend to come from cellphone users who are moving their phone slightly while taking the picture. You can take non-blurry images from the training set of internet images, and add simulated motion blur to them, thus making them more similar to the dev set.
 
-Tổng quát hơn, có một số trường hợp mà tổng hợp dữ liệu nhân tạo cho phép bạn tạo một tập dữ liệu khổng lồ phù hợp với tập phát triển. Hãy sử dụng bộ nhận dạng ảnh mèo làm ví dụ thứ hai. Bạn nhận thấy rằng những ảnh của tập phát triển hay bị mờ chuyển động nhiều hơn bởi vì chúng có xu hướng đến từ người dùng điện thoại di động -- thường hơi di chuyển điện thoại khi chụp ảnh. Bạn có thể lấy những ảnh không bị mờ từ tập huấn luyện của ảnh Internet, và thêm vào mô phỏng của hiệu ứng mờ chuyển động cho giống với tập phát triển hơn.
+Tổng quát hơn, có một số trường hợp mà tổng hợp dữ liệu nhân tạo cho phép bạn tạo một tập dữ liệu khổng lồ phù hợp với tập phát triển. Hãy sử dụng bộ nhận dạng ảnh mèo làm ví dụ thứ hai. Bạn nhận thấy rằng, những ảnh của tập phát triển hay bị mờ chuyển động nhiều hơn bởi vì chúng thường do người dùng điện thoại di động tải lên -- họ thường hơi di chuyển điện thoại khi chụp ảnh. Bạn có thể lấy những ảnh không bị mờ từ tập huấn luyện của ảnh Internet và thêm vào mô phỏng của hiệu ứng mờ chuyển động cho giống với tập phát triển hơn.
 
 > Keep in mind that artificial data synthesis has its challenges: it is sometimes easier to create synthetic data that appears realistic to a person than it is to create data that appears realistic to a computer. For example, suppose you have 1,000 hours of speech training data, but only 1 hour of car noise. If you repeatedly use the same 1 hour of car noise with different portions from the original 1,000 hours of training data, you will end up with a synthetic dataset where the same car noise is repeated over and over. While a person listening to this audio probably would not be able to tell——all car noise sounds the same to most of us -- it is possible that a learning algorithm would "overfit" to the 1 hour of car noise. Thus, it could generalize poorly to a new audio clip where the car noise happens to sound different.
 
-Hãy nhớ rằng tổng hợp dữ liệu nhân tạo có những thách thức của nó: đôi khi dễ dàng tạo ra dữ liệu tổng hợp có vẻ giống thật với người hơn là tạo dữ liệu có vẻ giống thật với máy tính. Giả sử bạn có 1.000 giờ dữ liệu huấn luyện giọng nói, nhưng chỉ có một giờ tiếng ồn xe hơi. Nếu bạn liên tục sử dụng cùng một giờ tiếng ồn xe hơi với các phần khác nhau từ 1.000 giờ dữ liệu huấn luyện ban đầu, bạn sẽ nhận được với một tập dữ liệu tổng hợp trong đó tiếng ồn xe hơi giống nhau lặp đi lặp lại. Mặc dù một người nghe âm thanh này có thể sẽ không thể phân biệt được -- tất cả tiếng ồn của xe hơi đều giống nhau với hầu hết chúng ta -- nhưng có thể thuật toán học sẽ "quá khớp" một giờ tiếng ồn của xe hơi đó. Do đó, nó có thể khái quát kém khi gặp một đoạn âm thanh mới với tiếng ồn xe hơi khác.
+Hãy nhớ rằng tổng hợp dữ liệu nhân tạo có những thách thức của nó: đôi khi dễ dàng tạo ra dữ liệu tổng hợp có vẻ giống thật với người hơn là tạo dữ liệu có vẻ giống thật với máy tính. Giả sử bạn có 1.000 giờ dữ liệu huấn luyện giọng nói, nhưng chỉ có một giờ tiếng ồn xe hơi. Nếu bạn liên tục sử dụng cùng một giờ tiếng ồn xe hơi với các phần khác nhau từ 1.000 giờ dữ liệu huấn luyện ban đầu, bạn sẽ nhận được với một tập dữ liệu tổng hợp trong đó tiếng ồn xe hơi giống nhau lặp đi lặp lại. Mặc dù một người nghe âm thanh này có thể sẽ không thể phân biệt được -- với phần lớn mọi người thì tất cả tiếng ồn của xe hơi đều giống nhau -- nhưng có thể thuật toán học sẽ "quá khớp" một giờ tiếng ồn của xe hơi đó. Do đó, thuật toán có thể khái quát kém khi gặp một đoạn âm thanh mới với tiếng ồn xe hơi khác.
 
 > Alternatively, suppose you have 1,000 unique hours of car noise, but all of it was taken from just 10 different cars. In this case, it is possible for an algorithm to "overfit" to these 10 cars and perform poorly if tested on audio from a different car. Unfortunately, these problems can be hard to spot.
 
-Ngoài ra, giả sử bạn có 1.000 giờ tiếng ồn xe hơi khác biệt, nhưng tất cả đều được lấy từ 10 chiếc xe khác nhau. Trong trường hợp này, thuật toán có thể "quá khớp" 10 chiếc xe này và đạt chất lượng kém nếu được thử nghiệm trên âm thanh từ một chiếc xe khác. Thật không may, những vấn đề này có thể khó phát hiện.
+Ngoài ra, giả sử bạn có 1.000 giờ tiếng ồn xe hơi khác biệt, nhưng tất cả đều được lấy từ 10 chiếc xe khác nhau. Trong trường hợp này, thuật toán có thể "quá khớp" 10 chiếc xe này và đạt chất lượng kém nếu được thử nghiệm trên âm thanh từ một chiếc xe khác. Đáng tiếc là những vấn đề này thường khó phát hiện.
 
 ![img](../imgs/C43_01.png)
 
 > To take one more example, suppose you are building a computer vision system to recognize cars. Suppose you partner with a video gaming company, which has computer graphics models of several cars. To train your algorithm, you use the models to generate synthetic images of cars. Even if the synthesized images look very realistic, this approach (which has been independently proposed by many people) will probably not work well. The video game might have ~20 car designs in the entire video game. It is very expensive to build a 3D car model of a car; if you were playing the game, you probably wouldn’t notice that you’re seeing the same cars over and over, perhaps only painted differently. I.e., this data looks very realistic to you. But compared to the set of all cars out on roads—and therefore what you’re likely to see in the dev/test sets—this set of 20 synthesized cars captures only a minuscule fraction of the world’s distribution of cars. Thus if your 100,000 training examples all come from these 20 cars, your system will "overfit" to these 20 specific car designs, and it will fail to generalize well to dev/test sets that include other car designs.
 
-Lấy một ví dụ nữa, giả sử bạn đang xây dựng một hệ thống thị giác máy để nhận diện xe hơi. Giả sử bạn hợp tác với một công ty sản xuất game có mô hình đồ họa máy tính của một số xe hơi. Để huấn luyện thuật toán của bạn, bạn sử dụng các mô hình để tạo ra hình ảnh xe hơi. Ngay cả khi các hình ảnh tổng hợp trông rất giống thật, phương pháp này (đã được nhiều người độc lập đề xuất) có thể sẽ không hoạt động tốt. Trong toàn bộ game có thể có ~20 thiết kế xe hơi. Nó rất tốn kém để xây dựng một mô hình 3D của một chiếc xe hơi; Nếu bạn đang chơi game, có lẽ bạn sẽ nhận thấy rằng bạn đang nhìn thấy những chiếc xe giống nhau lặp đi lặp lại, có lẽ chỉ được sơn khác nhau. Tức là, dữ liệu này trông rất giống thật với bạn. Nhưng so với tập hợp tất cả các xe hơi trên đường phố (hay những gì bạn có thể thấy trong tập phát triển/kiểm tra), bộ 20 chiếc xe được tổng hợp này chỉ chiếm một phần rất nhỏ trong phân phối xe hơi thế giới. Do đó, nếu 100.000 mẫu huấn luyện của bạn đều đến từ 20 chiếc xe này, hệ thống của bạn sẽ "quá khớp" với 20 thiết kế xe cụ thể này và sẽ không thể khái quát tốt cho các tập phát triển/kiểm tra bao gồm các thiết kế xe khác.
+Lấy một ví dụ nữa, giả sử bạn đang xây dựng một hệ thống thị giác máy để nhận diện xe hơi. Giả sử bạn hợp tác với một công ty sản xuất game có mô hình đồ họa máy tính của một số xe hơi. Để huấn luyện thuật toán, bạn sử dụng các mô hình này để tạo ra hình ảnh xe hơi. Ngay cả khi các hình ảnh tổng hợp trông rất giống thật, phương pháp này (đã được nhiều người độc lập đề xuất) có thể sẽ không hoạt động tốt. Trong toàn bộ game có thể có gần ~20 thiết kế xe hơi. Việc xây dựng một mô hình 3D của một chiếc xe hơi rất tốn kém; Nếu bạn từng chơi game, thì có lẽ bạn có thể nhận thấy rằng phần lớn xe hơi trong game là giống nhau và có lẽ chỉ khác nhau về màu sơn. Tức là, dữ liệu này tuy trông rất giống thật với bạn, nhưng so với tập hợp tất cả các xe hơi trên đường phố (hay những gì bạn có thể thấy trong tập phát triển/kiểm tra), thì bộ 20 chiếc xe được tổng hợp này chỉ chiếm một phần rất nhỏ trong phân phối xe hơi trên toàn thế giới. Do đó, nếu 100.000 mẫu huấn luyện của bạn đều đến từ 20 chiếc xe này, hệ thống của bạn sẽ "quá khớp" với 20 thiết kế xe cụ thể này và sẽ không thể khái quát tốt cho các tập phát triển/kiểm tra bao gồm các thiết kế xe khác.
 
 > When synthesizing data, put some thought into whether you’re really synthesizing a representative set of examples. Try to avoid giving the synthesized data properties that makes it possible for a learning algorithm to distinguish synthesized from non-synthesized examples—such as if all the synthesized data comes from one of 20 car designs, or all the synthesized audio comes from only 1 hour of car noise. This advice can be hard to follow.
 
-Khi tổng hợp dữ liệu, hãy suy nghĩ xem bạn có thực sự tổng hợp một tập hợp các mẫu đại diện hay không. Cố gắng tránh đưa ra các thuộc tính dữ liệu tổng hợp mà thuật toán học có thể phân biệt được các mẫu được tổng hợp với các mẫu không được tổng hợp, ví dụ như nếu tất cả dữ liệu được tổng hợp đến từ một trong 20 thiết kế xe hơi hoặc tất cả âm thanh được tổng hợp chỉ từ một giờ tiếng ồn xe hơi. Có thể rất khó để thực hiện lời khuyên này.
+Khi tổng hợp dữ liệu, hãy suy nghĩ kỹ xem bạn có thực sự tổng hợp được một tập các mẫu mang tính đại diện hay không. Cố gắng tránh đưa ra các thuộc tính dữ liệu tổng hợp mà thuật toán học có thể phân biệt được mẫu nào là được tổng hợp với mẫu nào không. Ví dụ, nếu tất cả dữ liệu được tổng hợp đến từ một trong 20 thiết kế xe hơi hoặc tất cả âm thanh được tổng hợp chỉ từ một giờ tiếng ồn xe hơi. Lời khuyên này đôi khi là rất khó để làm theo.
 
 > When working on data synthesis, my teams have sometimes taken weeks before we produced data with details that are close enough to the actual distribution for the synthesized data to have a significant effect. But if you are able to get the details right, you can suddenly access a far larger training set than before.
 
-Khi làm việc về tổng hợp dữ liệu, các nhóm của tôi đôi khi phải mất vài tuần để tạo ra dữ liệu với các chi tiết đủ gần với phân phối thực tế để dữ liệu được tổng hợp có hiệu quả rõ rệt. Nhưng nếu bạn có thể có được các chi tiết đúng, bạn có thể đột nhiên có được một tập huấn luyện lớn hơn nhiều so với trước đây.
+Khi làm việc về tổng hợp dữ liệu, các nhóm của tôi đôi khi phải mất hàng tuần trời để tạo ra dữ liệu với các chi tiết đủ gần giống với phân phối thực tế để có thể cho hiệu quả rõ rệt. Nhưng nếu bạn có thể có được các chi tiết này đúng, bạn có thể tức thì có được một tập huấn luyện lớn hơn nhiều so với trước đấy.
 
 <!-- ============================ Insert ./chapters/p07_44_46.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p07_44_46.md instead -->
@@ -2321,7 +2316,7 @@ Khi làm việc về tổng hợp dữ liệu, các nhóm của tôi đôi khi p
 
 > Suppose you are building a speech recognition system. Your system works by inputting an audio clip *A*, and computing some Score<sub>A</sub>(*S*) for each possible output sentence *S*. For example, you might try to estimate Score<sub>A</sub>(*S*) = P(*S*|*A*), the probability that the correct output transcription is the sentence *S*, given that the input audio was *A*.
 
-Giả sử bạn đang xây dựng một hệ thống nhận dạng giọng nói. Hệ thống của bạn hoạt động bằng cách nhập một đoạn âm thanh *A*, và tính toán một giá trị Điểm<sub>A</sub>(*S*) cho mỗi câu đầu ra khả dĩ *S*. Ví dụ: bạn có thể thử ước tính Điểm<sub>A</sub>(*S*) = P(*S*|*A*), tức xác suất bản ghi thoại đầu ra chính xác là câu *S* với điều kiện âm thanh đầu vào là *A*.
+Giả sử bạn đang xây dựng một hệ thống nhận dạng giọng nói. Hệ thống hoạt động bằng cách nhập một đoạn âm thanh *A*, và tính toán một giá trị Điểm<sub>A</sub>(*S*) cho mỗi câu đầu ra khả dĩ *S*. Ví dụ: bạn có thể thử ước tính Điểm<sub>A</sub>(*S*) = P(*S*|*A*), tức xác suất bản ghi thoại đầu ra chính xác là câu *S* với điều kiện âm thanh đầu vào là *A*.
 
 > Given a way to compute Score<sub>A</sub>(*S*), you still have to find the English sentence *S* that maximizes it:
 
@@ -2331,11 +2326,11 @@ Khi có cách tính Điểm<sub>A</sub>(*S*), bạn vẫn phải tìm câu tiế
 
 > How do you compute the "arg max" above? If the English language has 50,000 words, then there are (50,000)<sup>N</sup> possible sentences of length *N* -- far too many to exhaustively enumerate.
 
-Làm thế nào để bạn tính toán được "arg max" ở trên? Nếu tiếng Anh có 50.000 từ thì sẽ có (50.000)<sup>N</sup> câu khả dĩ có độ dài *N* -- quá nhiều để liệt kê ra một cách triệt để.
+Làm thế nào để tính toán được "arg max" ở trên? Nếu tiếng Anh có 50.000 từ thì sẽ có (50.000)<sup>N</sup> câu khả dĩ có độ dài *N* -- quá nhiều để liệt kê một cách triệt để.
 
 > So, you need to apply an approximate search algorithm, to try to find the value of *S* that optimizes (maximizes) Score<sub>A</sub>(*S*). One example search algorithm is "beam search," which keeps only *K* top candidates during the search process. (For the purposes of this chapter, you don’t need to understand the details of beam search.) Algorithms like this are not guaranteed to find the value of *S* that maximizes Score<sub>A</sub>(*S*).
 
-Vì vậy, bạn cần áp dụng thuật toán tìm kiếm gần đúng, để cố gắng tìm giá trị của *S* để tối ưu hóa (tối đa hóa) Điểm<sub>A</sub>(*S*). Ví dụ với thuật toán tìm kiếm chùm tia (beam search), thuật toán này chỉ giữ *K* ứng viên hàng đầu trong quá trình tìm kiếm. (Đối với mục đích của chương này, bạn không cần phải hiểu chi tiết về tìm kiếm chùm tia.) Các thuật toán như thế này không đảm bảo được việc tìm giá trị của *S* mà tối đa hóa Điểm<sub>A</sub>(*S*).
+Vì vậy, bạn cần áp dụng thuật toán tìm kiếm gần đúng, để cố gắng tìm giá trị *S* nhằm tối ưu hóa (tối đa hóa) Điểm<sub>A</sub>(*S*). Ví dụ, với thuật toán tìm kiếm chùm tia (beam search), thuật toán này chỉ giữ *K* ứng viên hàng đầu trong quá trình tìm kiếm. (Đối với mục đích của chương này, bạn không cần phải hiểu chi tiết về tìm kiếm chùm tia.) Các thuật toán như thế này không đảm bảo được việc tìm giá trị của *S* mà tối đa hóa Điểm<sub>A</sub>(*S*).
 
 > Suppose that an audio clip *A* records someone saying "I love machine learning." But instead of outputting the correct transcription, your system outputs the incorrect "I love robots." There are now two possibilities for what went wrong:
 
@@ -2343,7 +2338,7 @@ Giả sử rằng một đoạn âm thanh *A* ghi lại một người nào đó
 
 > 1. **Search algorithm problem**. The approximate search algorithm (beam search) failed to find the value of *S* that maximizes Score<sub>A</sub>(*S*).
 
-1. **Vấn đề về thuật toán tìm kiếm**. Thuật toán tìm kiếm gần đúng (tìm kiếm chùm tia) không thể tìm thấy giá trị của *S* thỏa mãn việc tối đa hóa Điểm<sub>A</sub>(*S*).
+1. **Vấn đề về thuật toán tìm kiếm**. Thuật toán tìm kiếm gần đúng (tìm kiếm chùm tia) không thể tìm thấy giá trị *S* thỏa mãn việc tối đa hóa Điểm<sub>A</sub>(*S*).
 
 > 2. **Objective (scoring function) problem.** Our estimates for Score<sub>A</sub>(*S*) = P(*S*|*A*) were inaccurate. In particular, our choice of Score<sub>A</sub>(*S*) failed to recognize that "I love machine learning" is the correct transcription.
 
@@ -2375,15 +2370,15 @@ Trường hợp 2: Điểm<sub>A</sub>(*S*<sup>\*</sup>) ≤ Điểm<sub>A</sub>
 
 > In this case, you know that the way you’re computing Score<sub>A</sub>(.) is at fault: It is failing to give a strictly higher score to the correct output *S*<sup>\*</sup> than the incorrect S<sub>out</sub>. The Optimization Verification test tells you that you have an objective (scoring) function problem. Thus, you should focus on improving how you learn or approximate Score<sub>A</sub>(*S*) for different sentences *S*.
 
-Trong trường hợp này, bạn biết việc bạn tính toán Điểm<sub>A</sub>(.) có lỗi: Không thể cho điểm cao hơn hẳn cho đầu ra chính xác *S*<sup>\*</sup> so với S<sub>out</sub> không chính xác. Bài kiểm tra xác minh tối ưu cho bạn biết rằng bạn có vấn đề về hàm mục tiêu (tính điểm). Vì vậy, bạn nên tập trung vào việc cải thiện cách bạn học hoặc tính gần đúng Điểm<sub>A</sub>(*S*) cho các câu khác nhau *S*. Vì vậy, bạn nên tập trung vào việc cải thiện thuật toán học hoặc cách xấp xỉ ĐiểmA(S) cho các câu khác nhau S.
+Trong trường hợp này, bạn biết việc bạn tính toán Điểm<sub>A</sub>(.) có lỗi: Không thể cho điểm đầu ra chính xác *S*<sup>\*</sup> cao hơn hẳn so với S<sub>out</sub> không chính xác. Bài kiểm tra xác minh tối ưu cho bạn biết rằng bạn có vấn đề về hàm mục tiêu (tính điểm). Vì vậy, bạn nên tập trung vào việc cải thiện thuật toán học hoặc cách xấp xỉ Điểm<sub>A</sub>(*S*) cho các câu *S* khác nhau.
 
 > Our discussion has focused on a single example. To apply the Optimization Verification test in practice, you should examine the errors in your dev set. For each error, you would test whether Score<sub>A</sub>(*S*<sup>\*</sup>) > Score<sub>A</sub>(*S*<sub>out</sub>). Each dev example for which this inequality holds will get marked as an error caused by the optimization algorithm. Each example for which this does not hold (Score<sub>A</sub>(S<sup>\*</sup>) ≤ Score<sub>A</sub>(S<sub>out</sub>)) gets counted as a mistake due to the way you’re computing Score<sub>A</sub>(.).
 
-Thảo luận của chúng ta đã tập trung vào một ví dụ duy nhất. Để áp dụng Bài kiểm tra xác minh tối ưu trong thực tế, bạn nên kiểm tra các lỗi trong tập phát triển của mình. Đối với mỗi lỗi, bạn sẽ kiểm tra xem Điểm<sub>A</sub>(*S*<sup>\*</sup>) > Điểm<sub>A</sub>(*S*<sub>out</sub>) không. Mỗi ví dụ trong tập phát triển mà bất đẳng thức này thoả mãn được đánh dấu là lỗi gây ra bởi thuật toán tối ưu. Mỗi ví dụ không thỏa mãn (Điểm<sub>A</sub>(S<sup>\*</sup>) ≤ Điểm<sub>A</sub>(S<sub>out</sub>)) được tính là một lỗi do cách bạn tính toán Điểm<sub>A</sub>(.).
+Thảo luận của chúng ta tới giờ mới chỉ tập trung vào một ví dụ duy nhất. Để áp dụng Bài kiểm tra xác minh tối ưu trong thực tế, bạn nên kiểm tra lỗi trong tập phát triển của mình. Với mỗi lỗi, bạn sẽ kiểm tra xem liệu Điểm<sub>A</sub>(*S*<sup>\*</sup>) > Điểm<sub>A</sub>(*S*<sub>out</sub>) không. Mỗi ví dụ trong tập phát triển mà bất đẳng thức này thoả mãn được đánh dấu là lỗi gây ra bởi thuật toán tối ưu. Mỗi ví dụ không thỏa mãn (Điểm<sub>A</sub>(S<sup>\*</sup>) ≤ Điểm<sub>A</sub>(S<sub>out</sub>)) được đánh dấu là một lỗi do cách tính Điểm<sub>A</sub>(.).
 
 > For example, suppose you find that 95% of the errors were due to the scoring function Score<sub>A</sub>(.), and only 5% due to the optimization algorithm. Now you know that no matter how much you improve your optimization procedure, you would realistically eliminate only 5% of our errors. Thus, you should instead focus on improving how you estimate Score<sub>A</sub>(.).
 
-Ví dụ, giả sử bạn tìm ra rằng 95% các lỗi là do hàm tính điểm Điểm<sub>A</sub>(.), và chỉ 5% có nguyên do từ phía thuật toán tối ưu. Giờ bạn biết rằng dù có cải thiện quá trình tối ưu thế nào thì bạn cũng chỉ có thể loại bỏ được khoảng 5% lỗi. Thay vào đó, bạn nên tập trung cải thiện cách ước lượng Điểm<sub>A</sub>(.).
+Ví dụ, giả sử bạn tìm ra rằng 95% các lỗi là do hàm tính điểm Điểm<sub>A</sub>(.) và chỉ 5% có nguyên do từ phía thuật toán tối ưu. Giờ bạn biết rằng dù có cải thiện quá trình tối ưu thế nào thì bạn cũng chỉ có thể loại bỏ được khoảng 5% lỗi. Thay vào đó, bạn nên tập trung cải thiện cách ước lượng Điểm<sub>A</sub>(.).
 
 <!-- ============================ Insert ./chapters/ch45.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch45.md instead -->
@@ -2394,16 +2389,15 @@ Ví dụ, giả sử bạn tìm ra rằng 95% các lỗi là do hàm tính đi�
 
 > You can apply the Optimization Verification test when, given some input *x*, you know how to compute Score<sub>\*</sub>(*y*) that indicates how good a response *y* is to an input *x*. Furthermore, you are using an approximate algorithm to try to find arg max<sub>y</sub> Score<sub>\*</sub>(*y*), but suspect that the search algorithm is sometimes failing to find the maximum. In our previous speech recognition example, *x=A* was an audio clip, and *y=S* was the output transcript.
 
-Bạn có thể áp dụng bài kiểm tra xác minh tối ưu khi, với một số đầu vào *x*, bạn biết cách tính Điểm<sub>\*</sub> (*y*) dùng để thể hiện mức độ phản hồi *y* tốt như thế nào với *x*. Hơn nữa, bạn đang sử dụng thuật toán gần đúng để cố gắng tìm arg max <sub>y</sub>Điểm<sub>\*</sub>(*y*), nhưng nghi ngờ rằng thuật toán tìm kiếm đôi khi không tìm thấy giá trị lớn nhất. Trong ví dụ nhận dạng giọng nói trước đây của chúng tôi, *x=A* là một đoạn âm thanh và *y=S* là bản ghi thoại đầu ra.
-
+Bạn có thể áp dụng Bài kiểm tra xác minh tối ưu khi, với đầu vào *x*, bạn biết cách tính Điểm<sub>\*</sub>(*y*) dùng để thể hiện mức độ phản hồi *y* tốt như thế nào với *x*. Hơn nữa, bạn đang sử dụng thuật toán gần đúng để cố gắng tìm arg max<sub>y</sub> Điểm<sub>\*</sub>(*y*), nhưng nghi ngờ rằng thuật toán tìm kiếm đôi khi không tìm thấy giá trị lớn nhất. Trong ví dụ nhận dạng giọng nói trước đây, *x=A* là một đoạn âm thanh và đầu ra *y=S* là bản ghi thoại.
 
 > Suppose y\* is the "correct" output but the algorithm instead outputs y<sub>out</sub>. Then the key test is to measure whether Score<sub>\*</sub>(y*) > Score<sub>\*</sub>(y<sub>out</sub>). If this inequality holds, then we blame the optimization algorithm for the mistake. Refer to the previous chapter to make sure you understand the logic behind this. Otherwise, we blame the computation of Score​<sub>\*</sub>(y).
 
-Giả sử y\* là đầu ra "chính xác" nhưng thuật toán thay vào đó tìm ra y<sub>out</sub>. Thì bài kiểm tra chính là đo xem liệu Điểm<sub>\*</sub>(y\*) > Điểm<sub>\*</sub>(y<sub>out</sub>) có đúng hay không. Nếu bất đẳng thức này đúng, thì chúng ta coi lỗi là do thuật toán tối ưu. Tham khảo chương trước để đảm bảo bạn hiểu logic đằng sau điều này. Ngược lại, chúng ta coi lỗi thuộc về cách tính Điểm<sub>\*</sub>(y).
+Giả sử y\* là đầu ra "chính xác" nhưng thuật toán thay vào đó tìm ra y<sub>out</sub>. Khi đó bài kiểm tra then chốt là đo xem liệu Điểm<sub>\*</sub>(y\*) > Điểm<sub>\*</sub>(y<sub>out</sub>) có đúng hay không. Nếu bất đẳng thức này đúng thì chúng ta coi lỗi là do thuật toán tối ưu. Tham khảo chương trước để đảm bảo bạn hiểu logic đằng sau điều này. Ngược lại, chúng ta coi lỗi thuộc về cách tính Điểm<sub>\*</sub>(y).
 
 > Let’s look at one more example. Suppose you are building a Chinese-to-English machine translation system. Your system works by inputting a Chinese sentence *C*, and computing some Score<sub>C</sub>(*E*) for each possible translation E. For example, you might use Score<sub>C</sub>(*E*) = P(*E*|*C*), the probability of the translation being E given that the input sentence was *C*.
 
-Xem xét một ví dụ nữa. Giả sử bạn đang xây dựng một hệ thống dịch máy từ tiếng Trung sang tiếng Anh. Hệ thống của bạn nhận một câu tiếng Trung *C* và tính gía trị Điểm<sub>C</sub>(*E*) cho mỗi bản dịch khả dĩ E. Ví dụ, bạn có thể sử dụng Điểm<sub>C</sub>(*E*) = P(*E*|*C*), xác suất dịch ra E với câu đầu vào *C*.
+Xem xét một ví dụ nữa. Giả sử bạn đang xây dựng một hệ thống dịch máy từ tiếng Trung sang tiếng Anh. Hệ thống của bạn nhận một câu tiếng Trung *C* và tính giá trị Điểm<sub>C</sub>(*E*) cho mỗi bản dịch khả dĩ E. Ví dụ, bạn có thể sử dụng Điểm<sub>C</sub>(*E*) = P(*E*|*C*), xác suất dịch ra E với câu đầu vào *C*.
 
 > Your algorithm translates sentences by trying to compute:
 
@@ -2413,15 +2407,15 @@ Thuật toán của bạn dịch các câu bằng cách cố gắng tính:
 
 > However, the set of all possible English sentences *E* is too large, so you rely on a heuristic search algorithm.
 
-Tuy nhiên, tập hợp các câu tiếng Anh có thể *E* quá lớn nên bạn dựa vào thuật toán tìm kiếm thực nghiệm.
+Tuy nhiên, tập hợp các câu tiếng Anh khả dĩ *E* quá lớn nên bạn dựa vào thuật toán tìm kiếm thực nghiệm.
 
 > Suppose your algorithm outputs an incorrect translation ​*E​*<sub>out</sub> rather than some correct translation ​E​*. Then the Optimization Verification test would ask you to compute whether Score​<sub>C</sub>(*E*\*) > Score​<sub>C</sub>(*E*<sub>out</sub>). If this inequality holds, then the Score​<sub>C</sub>(.) correctly recognized E\* as a superior output to *E​*<sub>out</sub>; thus, you would attribute this error to the approximate search algorithm. Otherwise, you attribute this error to the computation of Score​<sub>C</sub>(.).
 
-Giả sử thuật toán của bạn dịch ra một bản không chính xác *E*<sub>out</sub> thay vì một bản dịch chính xác E\* nào đó. Thì bài kiểm tra xác minh tối ưu sẽ yêu cầu bạn tính toán xem liệu Điểm<sub>C</sub>(*E\**) > Điểm<sub>C</sub>(*E*<sub>out</sub>) có đúng hay không. Nếu bất đẳng thức này đúng thì cách tính Điểm<sub>C</sub>(.) đã nhận dạng chính xác E\* tốt hơn so với *E*<sub>out</sub>; do đó, bạn sẽ coi lỗi này là do thuật toán tìm kiếm gần đúng. Ngược lại, bạn coi lỗi này thuộc về cách tính Điểm<sub>C</sub>(.)
+Giả sử thuật toán cho ra một bản dịch không chính xác *E*<sub>out</sub> thay vì một bản dịch chính xác E\* nào đó. Khi đó bài kiểm tra xác minh tối ưu sẽ yêu cầu bạn tính toán xem liệu Điểm<sub>C</sub>(*E\**) > Điểm<sub>C</sub>(*E*<sub>out</sub>) đúng hay không. Nếu bất đẳng thức này đúng thì cách tính Điểm<sub>C</sub>(.) đã nhận dạng chính xác E\* tốt hơn so với *E*<sub>out</sub>; do đó, bạn sẽ coi lỗi này là do thuật toán tìm kiếm gần đúng. Ngược lại, bạn coi lỗi này thuộc về cách tính Điểm<sub>C</sub>(.)
 
 > It is a very common "design pattern" in AI to first learn an approximate scoring function Score<sub>\*</sub>(.), then use an approximate maximization algorithm. If you are able to spot this pattern, you will be able to use the Optimization Verification test to understand your source of errors.
 
-Đây là một “mẫu thiết kế” rất phổ biến trong AI khi lần đầu học một hàm tính điểm gần đúng Điểm<sub>\*</sub>(.), sau đó sử dụng một thuật toán tối đa xấp xỉ. Nếu bạn có thể phát hiện ra kiểu mẫu này, bạn sẽ có thể sử dụng bài kiểm tra xác minh tối ưu để hiểu nguồn gốc lỗi của mình.
+Đây là một “mẫu thiết kế” rất phổ biến trong AI khi đầu tiên học một hàm tính điểm gần đúng Điểm<sub>\*</sub>(.), sau đó sử dụng một thuật toán tối đa xấp xỉ. Nếu bạn có thể phát hiện ra kiểu mẫu này, bạn sẽ có thể sử dụng Bài kiểm tra xác minh tối ưu để hiểu nguồn gốc lỗi của mình.
 
 <!-- ============================ Insert ./chapters/ch46.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch46.md instead -->
@@ -2442,7 +2436,7 @@ Giả sử như bạn đang sử dụng học máy để dạy trực thăng bay
 
 > To apply reinforcement learning, you have to develop a "Reward function" *R*(.) that gives a score measuring how good each possible trajectory *T* is. For example, if *T* results in the helicopter crashing, then perhaps the reward is *R(T)* = -1,000 -- a huge negative reward. A trajectory *T* resulting in a safe landing might result in a positive *R(T)* with the exact value depending on how smooth the landing was. The reward function *R*(.) is typically chosen by hand to quantify how desirable different trajectories *T* are. It has to trade off how bumpy the landing was, whether the helicopter landed in exactly the desired spot, how rough the ride down was for passengers, and so on. It is not easy to design good reward functions.
 
-Để áp dụng học tăng cường, bạn phải phát triển một "hàm điểm thưởng" *R*(.) trả về một chỉ số đánh giá mức độ tốt của mỗi quỹ đạo *T*. Lấy ví dụ, nếu *T* kết thúc bằng việc trực thăng bị rơi, thì có thể nhận điểm thưởng *R(T)* = -1.000 -- một điểm thưởng âm rất lớn. Một quỹ đạo *T* kết thúc bằng việc trực thăng hạ cánh an toàn có thể sẽ cho *R(T)* dương với giá trị chính xác phụ thuộc vào việc hạ cánh êm ái như thế nào. Hàm điểm thưởng *R*(.) thường được chọn thủ công để định lượng mức độ mong muốn của những quỹ đạo *T* khác nhau. Nó phải đánh đổi giữa những đặc tính như mức độ xóc khi hạ cánh, trực thăng có hạ cánh đúng vị trí mong muốn không, quá trình hạ độ cao có nhiều biến động đối với hành khách không, và vân vân. Thiết kế để có được những hàm điểm thưởng tốt không hề dễ dàng.
+Để áp dụng học tăng cường, bạn phải phát triển một "hàm điểm thưởng" *R*(.) trả về một chỉ số đánh giá mức độ tốt của mỗi quỹ đạo *T*. Lấy ví dụ, nếu *T* kết thúc bằng việc trực thăng bị rơi, thì có thể nhận điểm thưởng *R(T)* = -1.000 -- một điểm thưởng âm rất lớn. Một quỹ đạo *T* kết thúc bằng việc trực thăng hạ cánh an toàn có thể sẽ cho *R(T)* dương với giá trị chính xác phụ thuộc vào việc hạ cánh êm ái như thế nào. Hàm điểm thưởng *R*(.) thường được chọn thủ công để định lượng mức độ mong muốn của những quỹ đạo *T* khác nhau. Nó phải đánh đổi giữa những đặc tính như độ xóc khi hạ cánh, trực thăng có hạ cánh đúng vị trí mong muốn không, quá trình hạ độ cao có nhiều biến động đối với hành khách không, cùng nhiều yếu tố khác. Thiết kế hàm điểm thưởng tốt là một việc không hề dễ dàng.
 
 > Given a reward function *R(T)*, the job of the reinforcement learning algorithm is to control the helicopter so that it achieves max<sub>*T*</sub>*R(T)*. However, reinforcement learning algorithms make many approximations and may not succeed in achieving this maximization.
 
@@ -2450,17 +2444,17 @@ Với một hàm điểm thưởng *R(T)* cho trước, công việc của thu�
 
 > Suppose you have picked some reward *R(.)* and have run your learning algorithm. However, its performance appears far worse than your human pilot—the landings are bumpier and seem less safe than what a human pilot achieves. How can you tell if the fault is with the reinforcement learning algorithm—which is trying to carry out a trajectory that achieves max<sub>*T*</sub>*R(T)* -- or if the fault is with the reward function -- which is trying to measure as well as specify the ideal tradeoff between ride bumpiness and accuracy of landing spot?
 
-Giả sử bạn đã có một hàm điểm thưởng *R(.)* nào đó và đã chạy thuật toán học của bạn. Tuy nhiên chất lượng của nó còn thua xa chất lượng của người lái (ví dụ: hạ cánh xóc hơn và có vẻ kém an toàn hơn so với chất lượng của phi công). Làm sao để bạn biết được liệu đó có phải là lỗi của thuật toán học tăng cường -- được dùng để tính toán một quỹ đạo để tối đa max<sub>*T*</sub>*R(T)*, hay là lỗi của hàm điểm thưởng -- được dùng để đo cũng như xác định mức đánh đổi lý tưởng giữa độ xóc của chuyến bay và độ chính xác của vị trí hạ cánh?
+Giả sử bạn đã có một hàm điểm thưởng *R(.)* nào đó và đã chạy thuật toán học của bạn. Tuy nhiên, chất lượng của nó còn thua xa chất lượng của người lái (ví dụ: hạ cánh xóc hơn và có vẻ kém an toàn hơn so với chất lượng của phi công). Làm sao để bạn biết được liệu đó có phải là lỗi của thuật toán học tăng cường -- được dùng để tính toán một quỹ đạo để tối đa max<sub>*T*</sub>*R(T)* -- hay là lỗi của hàm điểm thưởng -- được dùng để đo cũng như xác định mức đánh đổi lý tưởng giữa độ xóc của chuyến bay và độ chính xác của vị trí hạ cánh?
 
 > To apply the Optimization Verification test, let *T*<sub>human</sub> be the trajectory achieved by the human pilot, and let *T*<sub>out</sub> be the trajectory achieved by the algorithm. According to our description above, *T*<sub>human</sub> is a superior trajectory to *T*<sub>out</sub>. Thus, the key test is the following:
 > Does it hold true that *R*(*T*<sub>human</sub>) > *R*(*T*<sub>out</sub>)?
 
-Để áp dụng bài kiểm tra xác minh tố ưu, cho *T*<sub>người</sub> là quỹ đạo bay của phi công, và cho *T*<sub>ra</sub> là quỹ đạo đạt được của thuật toán. Dựa theo mô tả ở phía trên của chúng ta, *T*<sub>người</sub> là quỹ đạo tốt hơn so với *T*<sub>ra</sub>. Do vậy, bài kiểm tra chính là:
+Để áp dụng Bài kiểm tra xác minh tố ưu, cho *T*<sub>người</sub> là quỹ đạo bay của phi công và cho *T*<sub>ra</sub> là quỹ đạo đạt được của thuật toán. Dựa theo mô tả phía trên, *T*<sub>người</sub> là quỹ đạo tốt hơn so với *T*<sub>ra</sub>. Do vậy, bài kiểm tra then chốt là:
 Liệu có đúng không khi *R*(*T*<sub>người</sub>) > *R*(*T*<sub>ra</sub>)?
 
 > Case 1: If this inequality holds, then the reward function *R(.)* is correctly rating *T*<sub>human</sub> as superior to *T*<sub>out</sub>. But our reinforcement learning algorithm is finding the inferior *T*<sub>out</sub>. This suggests that working on improving our reinforcement learning algorithm is worthwhile.
 
-Trường hợp 1: Nếu bất đẳng thức này đúng, thì hàm điểm thưởng *R(.)* đang đánh giá đúng rằng *T*<sub>người</sub> vượt trội hơn so với *T*<sub>ra</sub>. Nhưng vậy thì thuật toán học tăng cường của chúng ta đang tìm *T*<sub>ra</sub> kém hơn. Điều này gợi ý rằng bỏ công sức cải thiện thuật toán học tăng cường của chúng ta là xứng đáng.
+Trường hợp 1: Nếu bất đẳng thức này đúng, thì hàm điểm thưởng *R(.)* đang đánh giá đúng rằng *T*<sub>người</sub> vượt trội hơn so với *T*<sub>ra</sub>. Nhưng vậy thì thuật toán học tăng cường đang tìm *T*<sub>ra</sub> kém hơn. Điều này gợi ý rằng bỏ công sức để cải thiện thuật toán học tăng cường là xứng đáng.
 
 > Case 2: The inequality does not hold: *R*(*T*<sub>human</sub>) ≤ *R*(*T*<sub>out</sub>). This mean *R(.)* assigns a worse score to *T*<sub>human</sub> even though it is the superior trajectory. You should work on improving *R(.)* to better capture the tradeoffs that correspond to a good landing.
 
@@ -2469,11 +2463,11 @@ Trường hợp 2: Bất đẳng thức trên không đúng: *R*(*T*<sub>ngườ
 > Many machine learning applications have this "pattern" of optimizing an approximate
 > scoring function Score<sub>x</sub>(.) using an approximate search algorithm. Sometimes, there is no specified input *x*, so this reduces to just Score(.). In our example above, the scoring function was the reward function Score(*T*) = R(*T*) , and the optimization algorithm was the reinforcement learning algorithm trying to execute a good trajectory *T*.
 
-Nhiều ứng dụng machine learning có chung "khuôn mẫu" là tối ưu xấp xỉ một hàm tính điểm Điểm<sub>x</sub>(.) sử dụng một thuật toán tìm kiếm xấp xỉ. Đôi khi cũng không tồn tại một đầu vào *x* được chỉ định trước, vậy nên nó suy giảm thành Điểm(.). Trong ví dụ trên của chúng ta, hàm tính điểm chính là hàm điểm thưởng Điểm(*T*) = R(*T*), và thuật toán tối ưu là thuật toán học tăng cường đang cố thực thi một quỹ đạo bay *T* tốt.
+Nhiều ứng dụng machine learning có chung "khuôn mẫu" là tối ưu xấp xỉ một hàm tính điểm Điểm<sub>x</sub>(.) sử dụng một thuật toán tìm kiếm xấp xỉ. Đôi khi, cũng không tồn tại một đầu vào *x* được chỉ định trước vậy nên hàm chỉ còn là Điểm(.). Trong ví dụ trên, hàm tính điểm chính là hàm điểm thưởng Điểm(*T*) = R(*T*) và thuật toán tối ưu là thuật toán học tăng cường đang cố thực thi một quỹ đạo bay *T* tốt.
 
 > One difference between this and earlier examples is that, rather than comparing to an "optimal" output, you were instead comparing to human-level performance *T*<sub>human</sub>. We assumed *T*<sub>human</sub> is pretty good, even if not optimal. In general, so long as you have some y* (in this example, *T*<sub>human</sub>) that is a superior output to the performance of your current learning algorithm -- even if it is not the "optimal" output -- then the Optimization Verification test can indicate whether it is more promising to improve the optimization algorithm or the scoring function.
 
-Một điểm khác biệt so với những ví dụ trước là, thay vì so sánh với một kết quả "tối ưu", bạn so sánh với chất lượng mức con người *T*<sub>người</sub>. Chúng ta giả sử *T*<sub>người</sub> khá là tốt, hoặc thậm chí là tối ưu. Nhìn chung, miễn là bạn có kết quả y* (trong ví dụ này, *T*<sub>người</sub>) tốt hơn so với thuật toán học của bạn hiện thời -- mặc dù có thể nó không phải là kết quả "tối ưu" -- thì Bài kiểm tra xác minh tối ưu có thể chỉ ra xem liệu cải thiện thuật toán tối ưu hay cải thiện hàm tính điểm sẽ hứa hẹn hơn.
+Một điểm khác biệt so với những ví dụ trước là, thay vì so sánh với một kết quả "tối ưu", bạn so sánh với chất lượng mức con người *T*<sub>người</sub>. Chúng ta giả sử *T*<sub>người</sub> khá là tốt, dù có thể không tối ưu. Nhìn chung, miễn là bạn có kết quả y* (trong ví dụ này, *T*<sub>người</sub>) tốt hơn so với thuật toán học hiện thời -- mặc dù có thể nó không phải là kết quả "tối ưu" -- thì Bài kiểm tra xác minh tối ưu có thể chỉ ra liệu cải thiện thuật toán tối ưu hay cải thiện hàm tính điểm sẽ hứa hẹn hơn.
 
 <!-- ============================ Insert ./chapters/p08_47_52.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p08_47_52.md instead -->
@@ -2490,7 +2484,7 @@ Một điểm khác biệt so với những ví dụ trước là, thay vì so s
 
 > Suppose you want to build a system to examine online product reviews and automatically tell you if the writer liked or disliked that product. For example, you hope to recognize the following review as highly positive:
 
-Giả sử bạn muốn xây dựng một hệ thống kiểm tra đánh giá các phản hồi sản phẩm trực tuyến và tự động cho biết liệu người viết có thích sản phẩm đó hay không. Ví dụ, bạn hi vọng có thể nhận ra phản hồi dưới đây là tích cực:
+Giả sử bạn muốn xây dựng một hệ thống để kiểm tra các đánh giá trực tuyến cho sản phẩm và tự động cho biết liệu người viết đánh giá có thích sản phẩm đó hay không. Ví dụ, bạn muốn hệ thống đó phân loại phản hồi dưới đây là tích cực:
 
 > This is a great mop!
 
@@ -2498,7 +2492,7 @@ Cây lau nhà này thật tuyệt!
 
 > and the following as highly negative:
 
-và đoạn dưới đây với kết quả là tiêu cực:
+và phản hồi dưới đây là tiêu cực:
 
 > This mop is low quality -- I regret buying it.
 
@@ -2506,11 +2500,11 @@ Cây lau nhà này thật kém chất lượng -- Tôi hối hận vì đã mua 
 
 > The problem of recognizing positive vs. negative opinions is called "sentiment classification." To build this system, you might build a "pipeline" of two components:
 
-Bài toán về nhận dạng các quan điểm tích cực và tiêu cực được gọi là "phân loại cảm xúc". Để xây dựng hệ thống này, bạn có thể tạo một "pipeline" bao gồm hai thành phần:
+Bài toán về nhận dạng quan điểm tích cực hoặc tiêu cực được gọi là "phân loại cảm xúc". Để xây dựng hệ thống này, bạn có thể tạo một "pipeline" gồm hai phần:
 
 > 1. Parser: A system that annotates the text with information identifying the most important words.[15] For example, you might use the parser to label all the adjectives and nouns. You would therefore get the following annotated text:
 
-1. Bộ phân tích cú pháp: Một hệ thống tạo chú thích văn bản trích xuất thông tin từ những từ quan trọng nhất. [15] Ví dụ, bạn có thể sử dụng bộ phân tích cú pháp để tạo nhãn tất cả tính từ và danh từ. Từ đó có được đoạn chú thích như sau:
+1. Bộ phân tích cú pháp: Một hệ thống tạo chú thích văn bản trích xuất thông tin từ những từ quan trọng nhất [15]. Ví dụ, bạn có thể sử dụng bộ phân tích cú pháp để tạo nhãn cho tất cả tính từ và danh từ. Từ đó có được đoạn chú thích như sau:
 
 > This is a great<sub>Adjective</sub> mop<sub>Noun</sub>!
 
@@ -2518,7 +2512,7 @@ Cây lau nhà<sub>Danh Từ</sub> này thật tuyệt<sub>Tính từ</sub>!
 
 > 2. Sentiment classifier: A learning algorithm that takes as input the annotated text and predicts the overall sentiment. The parser’s annotation could help this learning algorithm greatly: By giving adjectives a higher weight, your algorithm will be able to quickly hone in on the important words such as "great," and ignore less important words such as "this."
 
-2. Bộ phân loại cảm xúc: Một thuật toán học sử dụng đầu vào là văn bản đã chú thích để dự đoán cảm xúc tổng thể. Khả năng chú thích của bộ phân tích cú pháp có thể giúp ích rất nhiều thuật toán học: Bằng việc tập trung hơn vào các tính từ, thuật toán của bạn có thể nhanh chóng xác định các từ quan trọng như "tuyệt", và lờ đi những từ ít quan trọng hơn như "này".
+2. Bộ phân loại cảm xúc: Một thuật toán học sử dụng đầu vào là văn bản đã chú thích để dự đoán cảm xúc tổng thể. Những chú thích của bộ phân tích cú pháp có thể giúp ích thuật toán học này rất nhiều: Bằng việc tập trung hơn vào các tính từ, thuật toán có thể nhanh chóng xác định các từ quan trọng như "tuyệt", và lờ đi những từ ít quan trọng hơn như "này".
 
 > We can visualize your "pipeline" of two components as follows:
 
@@ -2528,17 +2522,17 @@ Chúng ta có thể hình dung "pipeline" của hai thành phần này như sau:
 
 > There has been a recent trend toward replacing pipeline systems with a single learning algorithm. An **end-to-end learning algorithm** for this task would simply take as input the raw, original text "This is a great mop!", and try to directly recognize the sentiment:
 
-Xu hướng gần đây là thay đổi hệ thống pipeline với một thuật toán duy nhất. Một **thuật toán đầu-cuối** cho tác vụ này sẽ đơn giản là thu thập văn bản gốc "Cây lau nhà này thật tuyệt!", và cố gắng trực tiếp nhận ra cảm xúc từ nó:
+Xu hướng gần đây là thay đổi hệ thống pipeline bởi một thuật toán duy nhất. Một **thuật toán học đầu-cuối** cho tác vụ này chỉ cần nhận vào đoạn văn bản gốc "Cây lau nhà này thật tuyệt!", rồi cố gắng trực tiếp nhận ra cảm xúc từ văn bản gốc đó:
 
 ![img](../imgs/C47_02.png)
 
 > Neural networks are commonly used in end-to-end learning systems. The term "end-to-end" refers to the fact that we are asking the learning algorithm to go directly from the input to the desired output. I.e., the learning algorithm directly connects the "input end" of the system to the "output end."
 
-Mạng neural được sử dụng phổ biến trong các hệ thống đầu-cuối. Thuật ngữ "đầu-cuối" phản ánh thực tế là chúng ta yêu cầu thuật toán chạy trực tiếp từ đầu vào cho đến đầu ra mong muốn. Tức là, thuật toán học kết nối trực tiếp "đầu vào" cho đến "đầu ra" của hệ thống.
+Mạng nơ-ron được sử dụng phổ biến trong các hệ thống đầu-cuối. Thuật ngữ "đầu-cuối" phản ánh việc chúng ta yêu cầu thuật toán chạy trực tiếp từ đầu vào cho đến đầu ra mong muốn: Thuật toán học trực tiếp nhận "đầu vào" và trả về "đầu ra" của hệ thống.
 
 > In problems where data is abundant, end-to-end systems have been remarkably successful. But they are not always a good choice. The next few chapters will give more examples of end-to-end systems as well as give advice on when you should and should not use them.
 
-Đối với các vấn đề khi mà dữ diệu rất phong phú, hệ thống đầu-cuối hoạt động khá hiệu quả. Tuy nhiên không phải lúc nào nó cũng là một lựa chọn tốt. Các chương tiếp theo sẽ cung cấp thêm một số ví dụ về hệ thống đầu-cuối cũng như lời khuyên để bạn biết thời điểm nào nên hoặc không nên sử dụng chúng.
+Với các bài toán có dữ diệu dồi dào, hệ thống đầu-cuối hoạt động khá hiệu quả. Tuy nhiên, không phải lúc nào các hệ thống đầu-cuối cũng là lựa chọn tốt. Các chương tiếp theo sẽ cung cấp thêm một số ví dụ về hệ thống đầu-cuối cũng như lời khuyên để bạn biết thời điểm nào nên hoặc không nên sử dụng chúng.
 
 > **FOOTNOTE:**
 
@@ -2546,14 +2540,14 @@ Mạng neural được sử dụng phổ biến trong các hệ thống đầu-c
 
 > [15]  parser gives a much richer annotation of the text than this, but this simplified description will suffice for explaining end-to-end deep learning.
 
-[15] Bộ phân tích cú pháp có thể cung cấp nhiều hơn các chú thích từ văn bản, tuy nhiên định nghĩa tối giản này là đủ để giải thích cho hệ thống học sâu đầu-cuối.
+[15] Bộ phân tích cú pháp có thể cung cấp nhiều hơn các chú thích cho văn bản, tuy nhiên định nghĩa giản lược này là đủ để giải thích hệ thống học sâu đầu-cuối.
 
 <!-- ============================ Insert ./chapters/ch48.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch48.md instead -->
 <a name="48"></a>
 > ## 48. More end-to-end learning examples
 
-## 48. Thêm những ví dụ về học đầu-cuối.
+## 48. Những ví dụ học đầu-cuối khác
 
 > Suppose you want to build a speech recognition system. You might build a system with three components:
 
@@ -2567,45 +2561,45 @@ Các thành phần sẽ hoạt động như sau:
 
 > 1. Compute features: Extract hand-designed features, such as MFCC (​Mel-frequency cepstrum coefficients) features, ​which try to capture the content of an utterance while disregarding less relevant properties, such as the speaker’s pitch.
 
-1. Tính toán các đặc trưng: Trích xuất các đặc trưng được thiết kế thủ công, ví dụ như đặc trưng MFCC (Hệ số Mel-frequency cepstrum), được sử dụng để nắm bắt nội dung của đoạn phát biểu trong khi bỏ qua những thuộc tính ít liên quan hơn như âm sắc của người nói.
+1. Tính toán đặc trưng: Trích xuất các đặc trưng được thiết kế thủ công, ví dụ như đặc trưng MFCC (Hệ số Mel-frequency cepstrum), được sử dụng để nắm bắt nội dung của đoạn phát biểu trong khi bỏ qua những thuộc tính ít liên quan hơn như âm sắc của người nói.
 
 > 2. Phoneme recognizer: Some linguists believe that there are basic units of sound called "phonemes." For example, the initial "k" sound in "keep" is the same phoneme as the "c" sound in "cake." This system tries to recognize the phonemes in the audio clip.
 
-2. Nhận diện các âm vị: Các nhà ngôn ngữ học tin rằng trong ngôn ngữ có các đơn vị cơ bản gọi là "âm vị." Ví dụ, âm bắt đầu "k" trong từ "keep" thì phát âm giống âm "c" trong từ "cake". Hệ thống này sẽ cố gắng để nhận diện các âm vị trong các đoạn âm thanh.
+2. Bộ nhận dạng âm vị: Một số nhà ngôn ngữ học tin rằng trong ngôn ngữ có các đơn vị cơ bản gọi là "âm vị." Ví dụ, âm bắt đầu "k" trong từ "keep" thì phát âm giống âm "c" trong từ "cake". Hệ thống này sẽ cố gắng để nhận diện các âm vị trong các đoạn âm thanh.
 
 > 3. Final recognizer: Take the sequence of recognized phonemes, and try to string them together into an output transcript.
 
-3. Bộ nhận dạng cuối cùng: Dùng các chuỗi âm vị đã được nhận dạng, và cố gắng xâu chuỗi chúng lại với nhau thành một bản ghi thoại ở đầu ra.
+3. Bộ nhận dạng sau cuối: Dùng các chuỗi âm vị đã được nhận dạng và cố gắng xâu chuỗi chúng với nhau thành một bản ghi thoại ở đầu ra.
 
 > In contrast, an end-to-end system might input an audio clip, and try to directly output the transcript:
 
-Mặt khác, một hệ thống đầu-cuối có thể nhận đầu vào là một đoạn âm thanh, và sẽ cố gắng cho ra trực tiếp một bản ghi thoại:
+Ngược lại, một hệ thống đầu-cuối có thể nhận đầu vào là một đoạn âm thanh, và cố gắng trả về trực tiếp một bản ghi thoại:
 
 ![img](../imgs/C48_02.png)
 
 > So far, we have only described machine learning "pipelines" that are completely linear: the output is sequentially passed from one staged to the next. Pipelines can be more complex. For example, here is a simple architecture for an autonomous car:
 
-Từ trước tới giờ, chúng ra chỉ mới mô tả các "pipeline" tuyến tính của học máy: đầu ra được truyền tuần tự từ giai đoạn này sang giai đoạn khác. Những pipeline có thể phức tạp hơn như trong ví dụ về một hệ thống xe tự lái đơn giản sau:
+Cho đến giờ, chúng ta chỉ mới mô tả các "pipeline" học máy hoàn toàn tuyến tính: đầu ra được truyền tuần tự từ thành phần này sang thành phần khác. Nhiều pipeline có thể phức tạp hơn như trong ví dụ về một hệ thống xe tự lái đơn giản sau:
 
 ![img](../imgs/C48_03.png)
 
 > It has three components: One detects other cars using the camera images; one detects pedestrians; then a final component plans a path for our own car that avoids the cars and pedestrians.
 
-Hệ thống bao gồm ba thành phần: Một thành phần giúp phát hiện những xe khác bằng việc sử dụng hình ảnh từ máy quay; Một thành phần khác phát hiện người đi bộ; thành phần cuối cùng hoạch định một lộ trình giúp chiếc xe tránh những chiếc xe khác và người đi bộ.
+Hệ thống bao gồm ba thành phần: Một thành phần phát hiện những xe khác qua những hình ảnh từ máy quay; Một thành phần khác phát hiện người đi bộ; thành phần cuối cùng hoạch định một lộ trình giúp xe tránh những xe khác và người đi bộ.
 
 > Not every component in a pipeline has to be learned. For example, the literature on "robot motion planning" has numerous algorithms for the final path planning step for the car. Many of these algorithms do not involve learning.
 
-Không phải mọi thành phần trong pipeline phải được huấn luyện. Ví dụ, các nghiên cứu về "hoạch định chuyển động của robot" đã có rất nhiều thuật toán cho bước hoạch định lộ trình của chiếc xe. Trong đó có nhiều thuật toán không yêu cầu việc huấn luyện.
+Không phải tất cả thành phần trong pipeline đều cần được huấn luyện. Ví dụ, trong các nghiên cứu về "hoạch định chuyển động của robot" đã có rất nhiều thuật toán cho bước hoạch định lộ trình của chiếc xe. Trong đó có nhiều thuật toán không cần phải huấn luyện.
 
 > In contrast, and end-to-end approach might try to take in the sensor inputs and directly output the steering direction:
 
-Ngược lại, hướng tiếp cận đầu-cuối có thể cố gắng lấy đầu vào là những tín hiệu cảm biến và cho ra trực tiếp kết quả hướng lái:
+Ngược lại, hướng tiếp cận đầu-cuối có thể cố gắng lấy đầu vào là những tín hiệu từ cảm biến và trực tiếp trả về hướng bẻ lái:
 
 ![img](../imgs/C48_04.png)
 
 > Even though end-to-end learning has seen many successes, it is not always the best approach. For example, end-to-end speech recognition works well. But I’m skeptical about end-to-end learning for autonomous driving. The next few chapters explain why.
 
-Mặc dù phương pháp học đầu-cuối đã đạt được nhiều kết quả tốt, nó không phải luôn luôn là hướng đi tốt nhất. Ví dụ, phương pháp nhận dạng giọng nói đầu-cuối đạt kết quả tốt. Nhưng tôi cảm thấy hoài nghi về việc sử dụng học đầu-cuối cho xe tự lái. Những chương kế tiếp sẽ giải thích về vấn đề này.
+Mặc dù phương pháp học đầu-cuối đã đạt được nhiều kết quả tốt, nó không luôn là hướng đi tốt nhất. Ví dụ, phương pháp nhận dạng giọng nói đầu-cuối đạt kết quả tốt nhưng tôi không tin tưởng việc sử dụng học đầu-cuối cho xe tự lái. Những chương kế tiếp sẽ giải thích tại sao.
 
 <!-- ============================ Insert ./chapters/ch49.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch49.md instead -->
@@ -2616,7 +2610,7 @@ Mặc dù phương pháp học đầu-cuối đã đạt được nhiều kết 
 
 > Consider the same speech pipeline from our earlier example:
 
-Xét một ví dụ về pipeline nhận dạng tiếng nói như trong các chương trước:
+Xét một ví dụ về pipeline nhận dạng tiếng nói trong các chương trước:
 
 ![img](../imgs/C49_01.png)
 
@@ -2626,31 +2620,31 @@ Rất nhiều thành phần của pipeline này được "thiết kế thủ cô
 
 > * MFCCs are a set of hand-designed audio features. Although they provide a reasonable summary of the audio input, they also simplify the input signal by throwing some information away.
 
-* MFCCs là một tập hợp của các đặc trưng âm thanh được thiết kế thủ công. Mặc dù chúng cung cấp một tóm tắt khá hợp lý cho dữ liệu âm thanh đầu vào, chúng cũng đã giản lược tín hiệu đầu vào bằng cách bỏ đi một vài thông tin.
+* MFCCs là một tập hợp các đặc trưng âm thanh được thiết kế thủ công. Mặc dù chúng cung cấp một tóm tắt khá hợp lý cho dữ liệu âm thanh đầu vào, chúng cũng đã đơn giản hóa tín hiệu đầu vào bằng cách loại bỏ một số thông tin.
 
 > * Phonemes are an invention of linguists. They are an imperfect representation of speech sounds. To the extent that phonemes are a poor approximation of reality, forcing an algorithm to use a phoneme representation will limit the speech system’s performance.
 
-* Hệ âm vị là một phát kiến của ngành ngôn ngữ học. Chúng là một biểu diễn không hoàn hảo của âm thanh thoại. Theo hướng hệ âm vị là một xấp xỉ khá tệ của thực tế, áp đặt một thuật toán sử dụng một biểu diễn âm vị sẽ giới hạn chất lượng của hệ thống tiếng nói.
+* Hệ âm vị, một phát kiến của ngành ngôn ngữ học, là một biểu diễn không hoàn hảo của âm thanh thoại. Trong những trường hợp mà hệ âm vị là một xấp xỉ kém của thực tế, áp đặt một thuật toán sử dụng biểu diễn âm vị sẽ giới hạn chất lượng của hệ thống tiếng nói.
 
 > These hand-engineered components limit the potential performance of the speech system. However, allowing hand-engineered components also has some advantages:
 
-Các thành phần được thiết kế thủ công này giới hạn chất lượng tiềm năng của hệ thống tiếng nói. Tuy nhiên, sử dụng các thành phần được thiết kế thủ công cũng có một vài ưu điểm:
+Các thành phần được thiết kế thủ công này giới hạn chất lượng tiềm năng của hệ thống tiếng nói. Tuy nhiên, việc sử dụng các thành phần được thiết kế thủ công cũng có một vài ưu điểm:
 
 > * The MFCC features are robust to some properties of speech that do not affect the content, such as speaker pitch. Thus, they help simplify the problem for the learning algorithm.
 
-* Đặc trưng MFCC có tính kháng tốt đối với một vài tính chất không ảnh hưởng tới nội dung của tiếng nói, chẳng hạn như cao độ của giọng nói. Bởi vậy, chúng giúp giản lược vấn đề của thuật toán học.
+* Đặc trưng MFCC có tính kháng tốt đối với một vài thuộc tính không ảnh hưởng tới nội dung của tiếng nói, chẳng hạn như cao độ của giọng nói. Bởi vậy, chúng giúp đơn giản hóa vấn đề cho thuật toán học.
 
 > * To the extent that phonemes are a reasonable representation of speech, they can also help the learning algorithm understand basic sound components and therefore improve its performance.
 
-* Theo hướng hệ âm vị là một biểu diễn khá hợp lý của tiếng nói, chúng cũng có thể giúp thuật toán học hiểu được các thành phần cơ bản của âm thanh và bởi vậy cải thiện chất lượng của hệ thống.
+* Xét theo hướng hệ âm vị là một biểu diễn hợp lý của tiếng nói, chúng cũng có thể giúp thuật toán học hiểu được các thành phần cơ bản của âm thanh và vì vậy cải thiện chất lượng của hệ thống.
 
 > Having more hand-engineered components generally allows a speech system to learn with less data. The hand-engineered knowledge captured by MFCCs and phonemes "supplements" the knowledge our algorithm acquires from data. When we don’t have much data, this knowledge is useful.
 
-Có nhiều thành phần được thiết kế thủ công hơn nhìn chung cho phép một hệ thống tiếng nói có thể học với ít dữ liệu hơn. Đặc trưng được thiết kế thủ công bởi MFCC và âm vị "bù đắp" đặc trưng thuật toán lấy được từ dữ liệu. Khi chúng ta không có nhiều dữ liệu, các đặc trưng này là hữu ích.
+Có nhiều thành phần được thiết kế thủ công hơn nhìn chung cho phép một hệ thống tiếng nói có thể học với ít dữ liệu hơn. Đặc trưng được thiết kế thủ công bởi MFCC và âm vị "bù đắp" thông tin thuật toán lấy được từ dữ liệu. Các đặc trưng này rất hữu ích khi chúng ta không có nhiều dữ liệu.
 
 > Now, consider the end-to-end system:
 
-Bây giờ, xét hệ thống đầu-cuối:
+Bây giờ, xét hệ thống đầu-cuối sau:
 
 ![img](../imgs/C49_02.png)
 
@@ -2660,19 +2654,19 @@ Hệ thống này thiếu đặc trưng được thiết kế thủ công. Bởi
 
 > However, when the training set is large, then it is not hampered by the limitations of an MFCC or phoneme-based representation. If the learning algorithm is a large-enough neural network and if it is trained with enough training data, it has the potential to do very well, and perhaps even approach the optimal error rate.
 
-Tuy nhiên, khi tập huấn luyện lớn, nó không bị cản trở bới giới hạn của một biểu diễn MFCC hay hệ dựa trên hệ âm vị. Nếu thuật toán học là một mạng nơ-ron đủ lớn và được huấn luyện trên dữ liệu huấn luyện đủ lớn, nó có tiềm năng hoạt động tốt, và có thể đạt được tỉ lệ lỗi tối ưu.
+Tuy nhiên, khi tập huấn luyện lớn, nó không bị cản trở bởi giới hạn biểu diễn của MFCC hay hệ âm vị. Nếu thuật toán học là một mạng nơ-ron đủ lớn và được huấn luyện trên dữ liệu đủ lớn, nó có tiềm năng hoạt động tốt và còn có thể đạt được tỉ lệ lỗi tối ưu.
 
 > End-to-end learning systems tend to do well when there is a lot of labeled data for "both ends" -- the input end and the output end. In this example, we require a large dataset of (audio, transcript) pairs. When this type of data is not available, approach end-to-end learning with great caution.
 
-Hệ thống học đầu-cuối có xu hướng làm việc tốt khi có rất nhiều dữ liệu được gán nhãn cho "cả hai đầu" -- đầu vào và đầu ra. Trong ví dụ này, chúng ta yêu cầu một tập dữ liệu lớn các cặp (âm thanh, bản ghi). Khi dữ liệu kiểu nay không tồn tại, hãy đặc biệt lưu ý khi sử dụng học đầu-cuối.
+Hệ thống học đầu-cuối có xu hướng làm việc tốt khi có nhiều dữ liệu được gán nhãn cho "cả hai đầu" -- đầu vào và đầu ra. Trong ví dụ này, chúng ta cần một tập dữ liệu lớn các cặp (âm thanh, bản ghi). Khi chúng ta không có dữ liệu kiểu này, cần đặc biệt lưu ý khi sử dụng học đầu-cuối.
 
 > If you are working on a machine learning problem where the training set is very small, most of your algorithm’s knowledge will have to come from your human insight. I.e., from your "hand engineering" components.
 
-Nếu bạn đang làm việc với một bài toán học máy mà tập huấn luyện rất nhỏ, hầu hết các đặc trưng cho thuật toán phải đến từ hiểu biết của con người. Chẳng hạn, từ các thành phần được "thiết kế thủ công".
+Nếu bạn đang làm việc với một bài toán học máy mà tập huấn luyện rất nhỏ, hầu hết các đặc trưng cho thuật toán phải đến từ hiểu biết của con người: Từ các thành phần được "thiết kế thủ công".
 
 > If you choose not to use an end-to-end system, you will have to decide what are the steps in your pipeline, and how they should plug together. In the next few chapters, we’ll give some suggestions for designing such pipelines.
 
-Nếu bạn không chọn sử dụng một hệ thống đầu-cuối, bạn sẽ phải lựa chọn từng bước trong pipeline của bạn và cách chúng được kết nối với nhau. Trong một vài chương tiếp theo, chúng tôi sẽ cung cấp một vài gợi ý khi thiết kế các pipeline dạng này.
+Nếu bạn chọn không sử dụng hệ thống đầu-cuối, bạn sẽ phải quyết định từng bước trong pipeline và cách chúng được kết nối với nhau. Trong một vài chương tiếp theo, chúng tôi sẽ cung cấp một vài gợi ý khi thiết kế các pipeline dạng này.
 
 <!-- ============================ Insert ./chapters/ch50.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch50.md instead -->
@@ -2687,13 +2681,13 @@ Khi xây dựng một hệ thống pipeline không phải đầu-cuối, các th
 
 > For example, consider this autonomous driving architecture:
 
-Ví dụ, xét kiến trúc lái tự động dưới đây:
+Ví dụ, xét kiến trúc xe tự hành dưới đây:
 
 ![img](../imgs/C50_01.png)
 
 > You can use machine learning to detect cars and pedestrians. Further, it is not hard to obtain data for these: There are numerous computer vision datasets with large numbers of labeled cars and pedestrians. You can also use crowdsourcing (such as Amazon Mechanical Turk) to obtain even larger datasets. It is thus relatively easy to obtain training data to build a car detector and a pedestrian detector.
 
-Bạn có thể sử dụng học máy để phát hiện xe hơi và người đi bộ. Hơn nữa, không khó để thu thập những dữ liệu này: Có vô vàn tập dữ liệu thị giác máy tính với lượng lớn xe hơi và người đi bộ được gán nhãn. Bạn cũng có thể dùng các dịch vụ cộng đồng (Amazon Mechanical Turk chẳng hạn) để có được những tập dữ liệu thậm chí lớn hơn. Bởi vậy khá dễ để thu thập dữ liệu huấn luyện để xây dựng một bộ phát hiện xe hơi và phát hiện người đi bộ.
+Bạn có thể sử dụng học máy để phát hiện xe và người đi bộ. Hơn nữa, không khó để thu thập những dữ liệu này: Có vô vàn tập dữ liệu thị giác máy tính với lượng lớn xe hơi và người đi bộ đã được gán nhãn. Bạn cũng có thể dùng các dịch vụ cộng đồng (Amazon Mechanical Turk chẳng hạn) để có được những tập dữ liệu thậm chí lớn hơn. Bởi vậy khá dễ để thu thập dữ liệu huấn luyện cho việc xây dựng một bộ phát hiện xe hơi và phát hiện người đi bộ.
 
 > In contrast, consider a pure end-to-end approach:
 
@@ -2703,7 +2697,7 @@ Ngược lại, xét một hướng tiếp cận thuần đầu-cuối:
 
 > To train this system, we would need a large dataset of (Image, Steering Direction) pairs. It is very time-consuming and expensive to have people drive cars around and record their steering direction to collect such data. You need a fleet of specially-instrumented cars, and a huge amount of driving to cover a wide range of possible scenarios. This makes an end-to-end system difficult to train. It is much easier to obtain a large dataset of labeled car or pedestrian images.
 
-Để huấn luyện hệ thống này, chúng ta sẽ cần một tập dữ liệu lớn các cặp (Ảnh, Hướng Bẻ Lái). Sẽ rất mất thời gian và tiền của để có người lái xe loanh quanh và ghi lại hướng bẻ lái để thu thập dữ liệu này. Bạn cần những chiếc xe được gắn những thiết bị đặc biệt và một lượng lớn dữ liệu thu thập được khi lái xe để đảm bảo bao quát đầy đủ các tình huống khả dĩ. Việc này khiến hệ thống đầu-cuối rất khó để huấn luyện. Sẽ dễ hơn nhiều để đạt được một tập dữ liệu lớn với ảnh xe hơi và người đi bộ.
+Để huấn luyện hệ thống này, chúng ta sẽ cần một tập dữ liệu lớn các cặp (Ảnh, Hướng Bẻ Lái). Sẽ rất mất thời gian và tiền của để thu thập dữ liệu hướng bẻ lái bằng cách cho người lái xe trên đường. Bạn cần những chiếc xe được gắn các thiết bị đặc biệt để thu thập một lượng lớn dữ liệu đảm bảo bao quát đầy đủ các tình huống khả dĩ. Việc này khiến hệ thống đầu-cuối rất khó để huấn luyện. Việc thu thập một tập dữ liệu lớn với ảnh xe hơi và người đi bộ thường đơn giản hơn rất nhiều. 
 
 > More generally, if there is a lot of data available for training "intermediate modules" of a pipeline (such as a car detector or a pedestrian detector), then you might consider using a pipeline with multiple stages. This structure could be superior because you could use all that available data to train the intermediate modules.
 
@@ -2711,7 +2705,7 @@ Tổng quát hơn, nếu có rất nhiều dữ liệu sẵn có để huấn lu
 
 > Until more end-to-end data becomes available, I believe the non-end-to-end approach is significantly more promising for autonomous driving: Its architecture better matches the availability of data.
 
-Cho tới khi nhiều dữ liệu đầu-cuối trở nên sẵn có, tôi tin rằng hướng tiếp cận phi đầu-cuối tiềm năng hơn một cách đáng kể cho xe tự lái: Kiến trúc của nó phù hợp hơn với tính sẵn có của dữ liệu.
+Cho tới khi có thêm nhiều dữ liệu đầu-cuối hơn nữa, tôi tin rằng hướng tiếp cận không phải đầu-cuối vẫn có tiềm năng đáng kể hơn cho xe tự hành: Kiến trúc của nó phù hợp hơn với tính sẵn có của dữ liệu.
 
 <!-- ============================ Insert ./chapters/ch51.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch51.md instead -->
@@ -2772,7 +2766,7 @@ Giả sử bạn đang xây dựng bộ phát hiện một con mèo Xiêm. Dư�
 
 > In contrast, you can alternatively use a pipeline with two steps:
 
-Ngược lại, bọn cũng có thể sử dụng một pipeline với hai bước:
+Ngược lại, bạn cũng có thể sử dụng một pipeline với hai bước sau:
 
 ![img](../imgs/C51_04.png)
 
@@ -2790,7 +2784,7 @@ Bước thứ hai đưa những phần ảnh được cắt ra từ bộ phát h
 
 > Compared to training a purely end-to-end classifier using just labels 0/1, each of the two components in the pipeline -- the cat detector and the cat breed classifier -- seem much easier to learn and will require significantly less data[17].
 
-So với việc huấn luyện bộ phân loại thuần đầu-cuối chỉ sử dụng nhãn 0/1, mỗi trong hai thành phần trong pipeline -- bộ phát hiện mèo và bộ phân loại mèo -- có vẻ dễ hơn nhiều để học và đòi hỏi lượng dữ liệu ít hơn[17].
+So với việc huấn luyện bộ phân loại thuần đầu-cuối chỉ sử dụng nhãn 0/1, từng phần của pipeline -- bộ phát hiện mèo và bộ phân loại mèo -- có vẻ dễ hơn nhiều để học và đòi hỏi lượng dữ liệu ít hơn[17].
 
 > As one final example, let’s revisit the autonomous driving pipeline.
 
@@ -2800,7 +2794,7 @@ Ví dụ cuối cùng, cùng nhìn lại pipeline xe tự lái:
 
 > By using this pipeline, you are telling the algorithm that there are 3 key steps to driving: (1) Detect other cars, (2) Detect pedestrians, and (3) Plan a path for your car. Further, each of these is a relatively simpler function -- and can thus be learned with less data -- than the purely end-to-end approach.
 
-Bằng cách sử dụng pipeline này, bạn đang nói với thuật toán rằng có 3 bước chính để lái xe: (1) Phát hiện những chiếc xe hơi khác, (2) Phát hiện người đi bộ, và (3) Hoạch định đường đi cho xe của bạn. Ngoài ra, mỗi bước này là một hàm số tương đối đơn giản hơn -- và có thể được học với ít dữ liệu hơn -- so với hướng tiếp cận thuần đầu-cuối.
+Bằng cách sử dụng pipeline này, bạn đang chỉ cho thuật toán rằng có 3 bước chính để lái xe: (1) Phát hiện những chiếc xe hơi khác, (2) Phát hiện người đi bộ và (3) Hoạch định đường đi cho xe của bạn. Ngoài ra, mỗi bước này là một hàm số tương đối đơn giản hơn -- và có thể được học với ít dữ liệu hơn -- so với hướng tiếp cận thuần đầu-cuối.
 
 > In summary, when deciding what should be the components of a pipeline, try to build a pipeline where each component is a relatively "simple" function that can therefore be learned from only a modest amount of data.
 
@@ -2812,11 +2806,11 @@ Tóm lại, khi lựa chọn các thành phần cho một pipeline, hãy cố g�
 
 > [16] Information theory has the concept of "Kolmogorov Complexity", which says that the complexity of a learned function is the length of the shortest computer program that can produce that function. However, this theoretical concept has found few practical applications in AI. See also: https://en.wikipedia.org/wiki/Kolmogorov_complexity
 
-[16] Lý thuyết thông tin có khái niệm về "Độ phức tạp Kolmogorov", lý thuyết này nói rằng độ phức tạp của hàm số học được là độ dài của chương trình máy tính ngắn nhất để có thể xây dựng thuật toán đó. Tuy nhiên, khái niệm lý thuyết này ít có ứng dụng thực tế trong AI. Xem thêm https://en.wikipedia.org/wiki/Kolmogorov_complexity
+[16] Lý thuyết thông tin có khái niệm về "Độ phức tạp Kolmogorov", lý thuyết này nói rằng độ phức tạp của hàm số học được đo bằng độ dài của chương trình máy tính ngắn nhất để tính toán hàm số đó. Tuy nhiên, khái niệm lý thuyết này ít có ứng dụng thực tế trong trí tuệ nhân tạo. Xem thêm https://en.wikipedia.org/wiki/Kolmogorov_complexity
 
 > [17] If you are familiar with practical object detection algorithms, you will recognize that they do not learn just with 0/1 image labels, but are instead trained with bounding boxes provided as part of the training data. A discussion of them is beyond the scope of this chapter. See the Deep Learning specialization on Coursera (http://deeplearning.ai) if you would like to learn more about such algorithms.
 
-[17] Nếu bạn quen với các thuật toán thực tế về phát hiện vật thể, bạn sẽ nhận ra rằng chúng không chỉ học với ảnh có nhãn 0/1, và thay vào đó được huấn luyện với các khung chứa từ dữ liệu huấn luyện. Thảo luận về vấn đề này nằm ngoài phạm vi của chương này. Tham khảo khóa "Deep Learning specialization" trên Coursera (http://deeplearning.ai) nếu bạn muốn học thêm về thuật toán này.
+[17] Nếu bạn quen với các thuật toán thực tế về phát hiện vật thể, bạn sẽ nhận ra rằng chúng không chỉ học với ảnh có nhãn 0/1 mà thay vào đó được huấn luyện với các khung chứa từ dữ liệu huấn luyện. Thảo luận về vấn đề đó nằm ngoài phạm vi của chương này. Tham khảo khóa "Deep Learning specialization" trên Coursera (http://deeplearning.ai) nếu bạn muốn học thêm về thuật toán đó.
 
 <!-- ============================ Insert ./chapters/ch52.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch52.md instead -->
@@ -2884,7 +2878,7 @@ Dưới đây là một số ví dụ khác:
 
 > This is an accelerating trend in deep learning: When you have the right (input,output) labeled pairs, you can sometimes learn end-to-end even when the output is a sentence, an image, audio, or other outputs that are richer than a single number.
 
-Đây là một xu hướng đang ngày càng phát triển trong học sâu. Với các cặp có nhãn (đầu vào, đầu ra) phù hợp, đôi khi bạn có thể học đầu cuối ngay cả khi đầu ra là một câu, hình ảnh, âm thanh hoặc các đầu ra khác phức tạp hơn nhiều thay vì chỉ một số.
+Đây là một xu hướng đang ngày càng phát triển trong học sâu. Với các cặp có nhãn (đầu vào, đầu ra) phù hợp, đôi khi bạn có thể học đầu-cuối ngay cả khi đầu ra là một câu, hình ảnh, âm thanh hoặc các đầu ra khác phức tạp hơn nhiều thay vì chỉ một con số.
 
 <!-- ============================ Insert ./chapters/p09_53_57.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p09_53_57.md instead -->
@@ -2911,7 +2905,7 @@ Hãy sử dụng ví dụ bộ phân loại mèo Xiêm của chúng ta:
 
 > The first part, the cat detector, detects cats and crops them out of the image. The second part, the cat breed classifier, decides if it is a Siamese cat. It is possible to spend years working on improving either of these two pipeline components. How do you decide which component(s) to focus on?
 
-Phần đầu tiên, bộ phát hiện mèo, xác định vị trí của mèo và cắt chúng ra khỏi tấm ảnh. Phần thứ hai, bộ phân loại giống mèo, xác định xem đó có phải là một con mèo Xiêm hay không. Việc cải thiện bất kì bộ phận nào trong pipeline này cũng có thể tốn tới hàng năm trời. Làm sao để bạn quyết định được (những) bộ phận nào cần tập trung cải thiện?
+Phần đầu tiên, bộ phát hiện mèo xác định vị trí của mèo và cắt chúng ra khỏi tấm ảnh. Phần thứ hai, bộ phân loại giống mèo xác định xem đó có phải là một con mèo Xiêm hay không. Việc cải thiện bất kì bộ phận nào trong pipeline này cũng có thể tốn tới hàng năm trời. Làm sao để bạn quyết định được (những) bộ phận nào cần tập trung cải thiện?
 
 > By carrying out **error analysis by parts**, you can try to attribute each mistake the algorithm makes to one (or sometimes both) of the two parts of the pipeline. For example, the algorithm misclassifies this image as not containing a Siamese cat (y=0) even though the correct label is y=1.
 
@@ -2927,13 +2921,13 @@ Hãy kiểm chứng một cách thủ công xem hai bước của thuật toán 
 
 > This means that the cat breed classifier is given the following image:
 
-Tức là bộ phận loại giống mèo được đưa cho tấm hình sau:
+Tức là bộ phân loại giống mèo được đưa cho tấm hình sau:
 
 ![img](../imgs/C53_04.png)
 
 > The cat breed classifier then correctly classifies this image as not containing a Siamese cat. Thus, the cat breed classifier is blameless: It was given of a pile of rocks and outputted a very reasonable label y=0. Indeed, a human classifying the cropped image above would also have predicted y=0. Thus, you can clearly attribute this error to the cat detector.
 
-Bộ phân loại giống mèo sau đó xác định chính xác rằng tấm hình này không có mèo Xiêm. Vậy nên, bộ phân loại giống mèo không có lỗi: Nó được đưa cho cho xem một đống đá và trả ra nhãn y=0 rất hợp lý. Thực tế, nếu một người mà phải phân loại tấm ảnh được cắt ra toàn đá ở trên thì cũng sẽ dự đoán y=0 mà thôi. Do vậy, bạn rõ ràng có thể quy lỗi này cho bộ phát hiện mèo.
+Sau đó, bộ phân loại giống mèo xác định chính xác rằng tấm hình này không có mèo Xiêm. Vậy nên, bộ phân loại giống mèo không có lỗi: Nó được đưa cho cho xem một đống đá và trả ra nhãn y=0 rất hợp lý. Vì trên thực tế, con người cũng phân loại tấm ảnh toàn đá ở trên là không có mèo mà thôi -- y=0. Do vậy, bạn rõ ràng có thể quy lỗi này cho bộ phát hiện mèo.
 
 > If, on the other hand, the cat detector had outputted the following bounding box:
 
@@ -2947,15 +2941,15 @@ thì bạn sẽ kết luận rằng bộ phát hiện mèo đã hoàn thành cô
 
 > Say you go through 100 misclassified dev set images and find that 90 of the errors are attributable to the cat detector, and only 10 errors are attributable to the cat breed classifier. You can safely conclude that you should focus more attention on improving the cat detector.
 
-Giả sử bạn kiểm chứng 100 tấm ảnh bị phân loại nhầm trong tập phát triển và nhận ra rằng 90 trong số đó là do lỗi của bộ phát hiện mèo, chỉ có 10 tấm là do lỗi của bộ phân loại giống mèo. Bạn có thể an toàn kết luận rằng bạn nên tập trung nhiều hơn vào việc cải thiện bộ phát hiện mèo.   
+Giả sử bạn kiểm chứng 100 tấm ảnh bị phân loại nhầm trong tập phát triển và nhận ra rằng 90 trong số đó là do lỗi của bộ phát hiện mèo, chỉ có 10 tấm là do lỗi của bộ phân loại giống mèo. Bạn có thể an toàn kết luận rằng mình nên tập trung nhiều hơn vào việc cải thiện bộ phát hiện mèo.   
 
 > Further, you have now also conveniently found 90 examples where the cat detector outputted incorrect bounding boxes. You can use these 90 examples to carry out a deeper level of error analysis on the cat detector to see how to improve that.
 
-Ngoài ra, tiện đây bạn cũng đã tìm ra 90 mẫu mà bộ phát hiện mèo trả về khung chứa chưa chính xác. Bạn có thể sử dụng 90 mẫu này để thực hiện việc phân tích lỗi kĩ hơn trên bộ phát hiện mèo và tìm cách cải thiện nó.
+Ngoài ra, bạn cũng đã tìm ra 90 mẫu mà bộ phát hiện mèo trả về khung chứa chưa chính xác. Bạn có thể sử dụng 90 mẫu này để thực hiện việc phân tích lỗi kĩ hơn trên bộ phát hiện mèo và tìm cách cải thiện nó.
 
 > Our description of how you attribute error to one part of the pipeline has been informal so far: you look at the output of each of the parts and see if you can decide which one made a mistake. This informal method could be all you need. But in the next chapter, you’ll also see a more formal way of attributing error.
 
-Việc làm thế nào để quy lỗi cho một phần của pipeline vẫn đang được mô tả một cách phi chính thống: bạn nhìn vào đầu ra của mỗi phần để xem liệu có thể quyết định phần nào gây ra lỗi. Phương pháp phi chính thống này có thể là đủ với bạn. Tuy nhiên trong chương sau, bạn sẽ thấy một cách chính thống hơn trong việc quy lỗi.
+Việc làm thế nào để quy lỗi cho một phần của pipeline vẫn đang được mô tả một cách không hợp thức: bạn nhìn vào đầu ra của mỗi phần để xem liệu có thể quyết định phần nào gây ra lỗi. Phương pháp không hợp thức này có thể là đủ với bạn. Tuy nhiên ở chương sau, bạn sẽ thấy một cách hợp thức hơn của việc quy lỗi.
 
 <!-- ============================ Insert ./chapters/ch54.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch54.md instead -->
@@ -2978,17 +2972,17 @@ Giả sử bộ phát hiện mèo cho kết quả khung chứa như sau:
 
 > The cat breed classifier is thus given this cropped image, whereupon it incorrectly outputs y=0, or that there is no cat in the picture.
 
-Khi đó bộ phân loại giống mèo nhận một ảnh bị cắt, và cho kết quả không chính xác là y=0, tức là không có con mèo nào trong hình.
+Khi đó bộ phân loại giống mèo nhận một vùng ảnh, và cho kết quả không chính xác là y=0, tức là không có con mèo nào trong hình.
 
 ![img](../imgs/C54_03.png)
 
 > The cat detector did its job poorly. However, a highly skilled human could arguably still recognize the Siamese cat from the poorly cropped image. So do we attribute this error to the cat detector, or the cat breed classifier, or both? It is ambiguous.
 
-Bộ phát hiện mèo đã hoạt động không tốt. Tuy nhiên, một người có kỹ năng vẫn có thể nhận dạng mèo Siamese từ bức ảnh bị cắt lệch. Trường hợp này chúng ta nên quy lỗi cho bộ phát hiện mèo, bộ phân loại giống mèo, hay là cả hai? Có sự không rõ ràng ở đây.
+Bộ phát hiện mèo đã hoạt động không tốt. Tuy nhiên, một người giàu kinh nghiệm vẫn có thể nhận dạng mèo Xiêm từ bức ảnh bị cắt lệch. Trường hợp này chúng ta nên quy lỗi cho bộ phát hiện mèo, bộ phân loại giống mèo, hay là cả hai? Có sự không rõ ràng ở đây.
 
 > If the number of ambiguous cases like these is small, you can make whatever decision you want and get a similar result. But here is a more formal test that lets you more definitively attribute the error to exactly one part:
 
-Nếu số lượng các trường hợp không rõ ràng là nhỏ, thì bất kỳ quyết định nào mà bạn lựa chọn đều sẽ đạt kết quả tương đương. Tuy nhiên một bài kiểm tra chính thức hơn sẽ giúp bạn quy lỗi chính xác cho một thành phần:
+Nếu số lượng các trường hợp không rõ ràng là nhỏ, thì bất kỳ quyết định nào mà bạn lựa chọn đều sẽ đạt kết quả tương đương. Tuy nhiên một bài kiểm tra hợp thức hơn sẽ giúp bạn quy lỗi chính xác cho một thành phần:
 
 > 1. Replace the cat detector output with a hand-labeled bounding box.
 
@@ -3025,7 +3019,7 @@ Bằng cách phân tích các ảnh bị phân loại sai trên tập phát tri�
 
 > Here are the general steps for error attribution. Suppose the pipeline has three steps A, B and C, where A feeds directly into B, and B feeds directly into C.
 
-Đây là những bước tổng quát cho việc quy lỗi. Giả sử một thiết kế pipeline có ba thành phần  A, B, C trong đó A cung cấp thông tin trực tiếp cho B, và B cung cấp thông tin trực tiếp cho C.
+Đây là những bước tổng quát cho việc quy lỗi. Giả sử một pipeline có ba thành phần A, B và C; trong đó A cung cấp thông tin trực tiếp cho B, và B cung cấp thông tin trực tiếp cho C.
 
 ![img](../imgs/C55_01.png)
 
@@ -3061,36 +3055,37 @@ Xe tự lái của bạn sử dụng pipeline như trên. Bạn sẽ sử dụng
 > C: Plan path for car
 
 Bạn có thể gọi tên ba thành phần trong hệ thống là A, B, C tương ứng với các chức năng như sau:<br/>
-A: phát hiện xe hơi<br/>
-B: phát hiện người đi bộ <br/>
-C: hoạch định đường đi cho xe
+A: Phát hiện xe hơi<br/>
+B: Phát hiện người đi bộ <br/>
+C: Hoạch định đường đi cho xe
 
 > Following the procedure described above, suppose you test out your car on a closed track and find a case where the car chooses a more jarring steering direction than a skilled driver would. In the self-driving world, such a case is usually called a **scenario**. You would then:
 
-Với hệ thống xe tự lái mô tả như trên, giả sử bạn kiểm tra xe của bạn trên một cung đường kín và xác định trường hợp nào xe chọn hướng bẻ lái giật nhiều hơn so với một người lái xe kinh nghiệm điều khiển. Trong lĩnh vực lái xe tự động, một trường hợp như thế thường được gọi là "tình huống". Bạn cần thực hiện:
+Với hệ thống xe tự hành mô tả như trên, giả sử bạn kiểm tra xe của bạn trên một cung đường kín và xác định trường hợp nào xe chọn hướng bẻ lái giật nhiều hơn so với một người lái có kinh nghiệm điều khiển. Trong lĩnh vực lái xe tự động, một trường hợp như thế thường được gọi là "tình huống". Bạn cần thực hiện:
 
 > 1. Try manually modifying A (detecting cars)’s output to be a "perfect" output (e.g., manually go in and tell it where the other cars are). Run the rest of the pipeline B, C as before, but allow C (plan path) to use A’s now perfect output. If the algorithm now plans a much better path for the car, then this shows that, if only A had given a better output, the overall algorithm’s output would have been better; Thus, you can attribute this error to component A. Otherwise, go on to Step 2.
 
-1. Thử điều chỉnh thủ công kết quả đầu ra của thành phần A (phát hiện xe hơi) sao cho "hoàn hảo" (ví dụ, cho xe biết vị trí của những chiếc xe khác). Sau đó tiếp tục chạy phần còn lại của pipeline gồm có B, C, nhưng cho phép C (hoạch định đường đi) sử dụng đầu ra đã hoàn hảo của A. Nếu thuật toán hoạch định đường đi cho xe tốt hơn, điều đó cho thấy rằng, kết quả cuối cùng của thuật toán tự lái sẽ được cải thiện nếu mà A trả về kết quả tốt hơn.  Như vậy, bạn có thể quy lỗi cho A. Nếu không, ta tiếp tục bước 2. 
+1. Thử điều chỉnh thủ công kết quả đầu ra của thành phần A (phát hiện xe hơi) sao cho "hoàn hảo" (ví dụ, cho xe biết vị trí của những chiếc xe khác). Sau đó tiếp tục chạy phần còn lại của pipeline gồm có B, C, nhưng cho phép C (hoạch định đường đi) sử dụng đầu ra đã hoàn hảo của A. Nếu thuật toán hoạch định đường đi cho xe tốt hơn, điều đó cho thấy rằng, kết quả cuối cùng của thuật toán tự lái sẽ được cải thiện nếu mà A trả về kết quả tốt hơn. Như vậy, bạn có thể quy lỗi cho A. Nếu không, ta tiếp tục bước 2. 
 
 > 2. Try manually modifying B (detect pedestrian)’s output to be the "perfect" output for B. If the algorithm now gives a correct output, then attribute the error to component B. Otherwise, go on to Step 3.
 
-2. Thử điều chỉnh thủ công kết quả đầu ra ở công đoạn B (phát hiện người đi bộ) cho "hoàn hảo". Nếu thuật toán cho ra kết quả đầu ra cuối cùng chính xác, ta có thể quy lỗi cho B. Ngược lại, ta tiến hành bước 3.
+2. Thử điều chỉnh thủ công kết quả đầu ra ở công đoạn B (phát hiện người đi bộ) cho "hoàn hảo". Nếu thuật toán cho kết quả đầu ra cuối cùng chính xác, ta có thể quy lỗi cho B. Ngược lại, ta tiến hành bước 3.
+
 > 3. Attribute the error to component C.
 
 3. Quy lỗi cho thành phần C. 
 
 > The components of an ML pipeline should be ordered according to a Directed Acyclic Graph (DAG), meaning that you should be able to compute them in some fixed left-to-right order, and later components should depend only on earlier components’ outputs. So long as the mapping of the components to the A->B->C order follows the DAG ordering, then the error analysis will be fine. You might get slightly different results if you swap A and B:
 
-Các thành phần của một mô hình học máy dạng pipeline nên được sắp xếp theo đồ thị có hướng không chu trình (DAG), nghĩa là bạn có thể tính toán chúng theo thứ tự cố định từ trái sang phải nào đó, và các thành phần sau chỉ nên phụ thuộc vào đầu ra của các thành phần trước đó. Miễn là việc xâu chuỗi các thành phần theo thứ tự A->B->C tuân thủ theo quy tắc DAG, việc phân tích lỗi sẽ tốt. Bạn có thể nhận được các kết quả hơi khác nhau nếu hoán chuyển vị trí của A và B cho nhau như sau:
+Các thành phần của một mô hình học máy dạng pipeline nên được sắp xếp theo Đồ thị có hướng không chu trình (Directed Acyclic Graph - DAG), nghĩa là bạn có thể tính toán chúng theo thứ tự cố định từ trái sang phải nào đó, và các thành phần sau chỉ nên phụ thuộc vào đầu ra của các thành phần trước đó. Miễn là việc xâu chuỗi các thành phần theo thứ tự A->B->C tuân thủ theo quy tắc DAG, thì việc phân tích lỗi sẽ diễn ra tốt đẹp. Bạn có thể nhận được các kết quả hơi khác nhau nếu hoán chuyển vị trí của A và B cho nhau như sau:
 
 > A: Detect pedestrians (was previously *Detect cars*)
 
-A: Nhận dạng người đi bộ (trước đây là "Nhận dạng xe")
+A: Phát hiện người đi bộ (trước đây là *Phát hiện xe*)
 
 > B: Detect cars (was previously *Detect pedestrians*)
 
-B: Nhận dạng xe (trước đây là "Nhận dạng người đi bộ")
+B: Phát hiện xe (trước đây là *Phát hiện người đi bộ*)
 
 > C: Plan path for car
 
@@ -3098,7 +3093,7 @@ C: Hoạch định đường đi cho xe
 
 > But the results of this analysis would still be valid and give good guidance for where to focus your attention.
 
-Nhưng các kết quả của việc phân tích lỗi thì sẽ vẫn hợp lệ và cho ta định hướng tốt thành phần nào cần cải thiện.
+Nhưng các kết quả của việc phân tích lỗi sẽ vẫn hợp lệ và cho ta định hướng tới những thành phần nào cần tập trung cải thiện.
 
 <!-- ============================ Insert ./chapters/ch56.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/ch56.md instead -->
@@ -3188,13 +3183,13 @@ Kết luận khả dĩ duy nhất là pipeline học máy đã bị lỗi. Trong
 
 > For example, suppose you realize that a human driver also needs to know the location of the lane markings. This suggests that you should redesign the pipeline as follows:[18]
 
-Ví dụ, giả sử bạn nhận ra rằng người lái xe cũng cần biết vị trí của chỉ dấu làn đường. Điều này gợi ý rằng bạn nên thiết kế lại pipeline như sau:
+Ví dụ, giả sử bạn nhận ra rằng người lái xe cũng cần biết vị trí của vạch kẻ làn đường. Điều này gợi ý rằng bạn nên thiết kế lại pipeline như sau:
 
 ![img](../imgs/C57_02.png)
 
 > Ultimately, if you don’t think your pipeline as a whole will achieve human-level performance, even if every individual component has human-level performance (remember that you are comparing to a human who is given the same input as the component), then the pipeline is flawed and should be redesigned.
 
-Cuối cùng, nếu bạn không nghĩ rằng pipeline như một chỉnh thể sẽ đạt chất lượng mức con người, ngay cả khi mỗi thành phần đơn lẻ đạt chất lượng mức con người (nhớ rằng bạn đang so sánh với một người được cung cấp cùng một đầu vào như các thành phần), có nghĩa là pipeline có lỗi và cần được thiết kế lại.
+Cuối cùng, nếu bạn không nghĩ rằng pipeline hoàn chỉnh sẽ đạt chất lượng mức con người, ngay cả khi mỗi thành phần đơn lẻ đạt chất lượng mức con người (nhớ rằng bạn đang so sánh với một người được cung cấp cùng một đầu vào như các thành phần), có nghĩa là pipeline có lỗi và cần được thiết kế lại.
 
 > **FOOTNOTE:**
 
@@ -3202,7 +3197,8 @@ Cuối cùng, nếu bạn không nghĩ rằng pipeline như một chỉnh thể 
 
 > [18] In the self-driving example above, in theory one could solve this problem by also feeding the raw camera image into the planning component. However, this would violate the design principle of "Task simplicity" described in Chapter 51, because the path planning module now needs to input a raw image and has a very complex task to solve. That’s why adding a Detect lane markings component is a better choice--it helps get the important and previously missing information about lane markings to the path planning module, but you avoid making any particular module overly complex to build/train.
 
-[18] Trong ví dụ về xe tự lái ở trên, theo lý thuyết ta có thể giải quyết vấn đề bằng cách cũng cho hình ảnh thô từ camera vào thành phần lên kế hoạch. Tuy nhiên, điều đó sẽ vi phạm nguyên tắc thiết kế "Tính đơn giản của tác vụ" đã được trình bày ở Chương 51, vì thành phần lên kế hoạch đường đi giờ đây cần có đầu vào là ảnh thô và có một tác vụ rất phức tạp để giải quyết. Thế nên thêm một thành phần Phát hiện chỉ dấu làn đường là một lựa chọn tốt hơn -- nó giúp lấy thêm những thông tin quan trọng vốn thiếu về làn đường cho khối lên kế hoạch đường đi, đồng thời bạn cũng tránh được việc làm bất cứ module nào trở nên quá phức tạp để xây dựng/huấn luyện.
+[18] Trong ví dụ về xe tự hành ở trên, theo lý thuyết ta có thể giải quyết vấn đề bằng cách cũng cho hình ảnh thô từ camera vào thành phần lên kế hoạch. Tuy nhiên, điều đó sẽ vi phạm nguyên tắc thiết kế "Tính đơn giản của tác vụ" đã được trình bày ở Chương 51, vì thành phần lên kế hoạch đường đi giờ đây cần có đầu vào là ảnh thô và có một tác vụ rất phức tạp để giải quyết. Thế nên thêm một thành phần Phát hiện giải phân cách là một lựa chọn tốt hơn -- giúp lấy thêm những thông tin quan trọng vốn thiếu về làn đường cho khối lên kế hoạch đường đi, đồng thời bạn cũng tránh được việc làm bất cứ mô-đun nào trở nên quá phức tạp để xây dựng/huấn luyện.
+
 <!-- ============================ Insert ./chapters/p10_58.md =================================== -->
 <!-- Please do not edit this file directly, edit in ./chapters/p10_58.md instead -->
 <a name="p10"></a>
@@ -3228,5 +3224,5 @@ Trong chương 2, chúng ta đã nói về việc quyển sách này có thể g
 
 > The only thing better than being a superhero is being part of a superhero team. I hope you’ll give copies of this book to your friends and teammates and help create other superheroes!
 
-Điều duy nhất tuyệt vời hơn trở thành một siêu anh hùng là trở thành một phần của một biệt đội siêu anh hùng. Tôi hi vọng bạn sẽ giới thiệu bản sao của quyển sách này cho bạn bè và đồng đội của bạn và tạo ra những siêu anh hùng khác.
+Điều duy nhất tuyệt vời hơn trở thành một siêu anh hùng là trở thành một phần của một biệt đội siêu anh hùng. Tôi hy vọng bạn sẽ giới thiệu bản sao của quyển sách này cho bạn bè và đồng đội của bạn và tạo ra những siêu anh hùng khác.
 

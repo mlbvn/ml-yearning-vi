@@ -27,17 +27,6 @@ PARTS = [
     {'path': './chapters/p10_58.md', 'range': [58, 58]},
 ]
 
-def _is_in_windows():
-    platforms = {
-        'linux1': 'Linux',
-        'linux2': 'Linux',
-        'darwin': 'OS X',
-        'win32' : 'Windows'
-    }
-
-    assert sys.platform in platforms, sys.platform
-    return platforms[sys.platform] == 'Windows'
-
 
 def _convert_title_to_link(title):
     title = title.lower()
@@ -51,12 +40,8 @@ def _convert_title_to_link(title):
     return title
 
 def _convert_html_to_pdf(html_file, pdf_file):
-    if _is_in_windows():
-        # For windows user, please first install wkhtmltopdf to the directory below
-        config = pdfkit.configuration(wkhtmltopdf="C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe")
-        pdfkit.from_file(html_file, pdf_file, configuration=config) 
-    else:
-        pdfkit.from_file(html_file, pdf_file)
+    print("Convert html file {} to pdf file {}".format(html_file, pdf_file))
+    pdfkit.from_file(html_file, pdf_file)
 
 
 NO_PART_LIST = ['p{:02d}'.format(i) for i in range(0, 11)]
@@ -92,7 +77,7 @@ def main(vn_only=True):
             chapter_list.append(_convert_title_to_link(chapter_title))
 
     # export mardown file to html file
-    os.system("grip {} --export {}".format(md_file, html_file))
+    os.system("python3 -m grip {} --export {}".format(md_file, html_file))
 
     f = codecs.open(html_file, "r", "utf-8", "html.parser")
 
