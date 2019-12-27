@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER fnndsc "dev@babymri.org"
+MAINTAINER fnndsc "vuhuutiep@gmail.com"
 
 RUN apt-get update \
   && apt-get install -y python3-pip python3-dev \
