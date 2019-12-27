@@ -18,6 +18,14 @@ ACKNOWLEDGEMENT_PATH = './chapters/acknowledgement.md'
 NO_PART_LIST = ['p{:02d}'.format(i) for i in range(0, 11)]
 NO_CHAPTER_LIST = ['ch{:02d}'.format(i) for i in range(1, 59)]
 
+# Ajust values below to modify font-size (unit:pt), colors and margin(unit:px) in pdf files
+NORMAL_TEXT_SIZE = 16
+SUB_TITLE_SIZE =28
+PART_NAME_SIZE= 72
+PART_NAME_COLOR="#0E275A"
+PADDING_TOP_ALL_CHAPTERS=200
+PADDING_TOP_ALL_CHAPTERS_VN=500
+
 PARTS = [
     {'path': './chapters/p00_01_04.md', 'range': [1, 4]},
     {'path': './chapters/p01_05_12.md', 'range': [5, 12]},
@@ -141,10 +149,18 @@ class Book(object):
         for order, chapter_name in enumerate(NO_CHAPTER_LIST):
             filedata = filedata.replace('#%s' % chapter_name, '%s'% chapter_list[order])
         # Remove the ".md" title bar at begining
+        print(path)
         filedata = filedata.replace(
-            '<h3>\r\n                  <span class="octicon octicon-book"></span>\r\n                  %s.md\r\n                </h3>'%path[11:],
+            '<h3>\n                  <span class="octicon octicon-book"></span>\n                  %s.md\r\n                </h3>'%path[len(CHAPTERS_DIR):],
             ""
         )
+
+        padding_top = PADDING_TOP_ALL_CHAPTERS_VN if vn_only else PADDING_TOP_ALL_CHAPTERS
+        filedata = filedata.replace(
+            '<style>',
+            '<style>tr{font-size: %ipt}h1{padding-top: %ipx;text-align: center;color: %s}li,p{font-size: %ipt}body{text-align: justify;}'%(NORMAL_TEXT_SIZE,padding_top,PART_NAME_COLOR,NORMAL_TEXT_SIZE))
+        filedata=filedata.replace('<h1>','<h1 style="font-size:%ipt">'%PART_NAME_SIZE)    
+        filedata=filedata.replace('<h2>','<h2 style="font-size:%ipt">'%SUB_TITLE_SIZE)
 
         # Centering images in html_file by replace <p> with <p align="center"> for lines that have
         # <img> tag

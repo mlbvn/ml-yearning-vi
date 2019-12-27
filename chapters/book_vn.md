@@ -1613,12 +1613,12 @@ Ví dụ, giả sử mục tiêu tối ưu của bạn là sai số bình phươ
 ![img](../imgs/C39_01.png)
 
 
-Tổng đầu tiên phía trên là trên 5.000 hình ảnh từ di động và tổng thứ hai là trên 200.000 hình ảnh từ internet. Bạn cũng có thể tối ưu với một tham số bổ sung ​𝛽​:
+Tổng đầu tiên phía trên là trên 5.000 hình ảnh từ di động và tổng thứ hai là trên 200.000 hình ảnh từ internet. Bạn cũng có thể tối ưu với một tham số bổ sung <html>&#946;</html>:
 
 ![img](../imgs/C39_02.png)
 
-  
-Nếu bạn chọn trọng số ​𝛽​ = 1/40, thuật toán sẽ đối xử với 5.000 hình ảnh từ di động tương đương với 200.000 hình ảnh từ internet. Bạn cũng có thể chọn các giá trị khác cho ​𝛽​, chẳng hạn như tinh chỉnh theo tập phát triển.
+
+Nếu bạn chọn trọng số <html>&#946;</html> = 1/40, thuật toán sẽ đối xử với 5.000 hình ảnh từ di động tương đương với 200.000 hình ảnh từ internet. Bạn cũng có thể chọn các giá trị khác cho <html>&#946;</html>, chẳng hạn như tinh chỉnh theo tập phát triển.
 
 
 Khi giảm trọng số các hình ảnh được bổ sung từ Internet, bạn không cần phải xây dựng một mạng nơ-ron khổng lồ để đảm bảo thuật toán thực hiện tốt trên cả hai tác vụ. Việc đánh lại trọng số này chỉ cần thiết khi bạn nghi ngờ dữ liệu bổ sung (hình ảnh từ internet) có phân phối rất khác so với tập phát triển/kiểm tra, hoặc nếu dữ liệu bổ sung lớn hơn nhiều so với dữ liệu mà có cùng phân phối với tập phát triển/kiểm tra (hình ảnh từ di động).
