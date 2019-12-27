@@ -11,7 +11,6 @@ import pdf_converter as pdf
 
 NUM_CHAPTERS = 58
 MAX_CHAPTER = 58
-PENDING_CHAPTERS = []
 
 CHAPTERS_DIR = './chapters/'
 ALL_CHAPTERS_FILENAME = 'all_chapters.md'
@@ -47,8 +46,6 @@ def main(vn_only=True):
             _insert_to_toc(all_file_writer, part_path, level=0)
             start_chapter, end_chatper = part['range']
             for chapter_number in range(start_chapter, end_chatper + 1):
-                if chapter_number in PENDING_CHAPTERS or chapter_number > MAX_CHAPTER:
-                    continue
                 chapter_path = _chapter_path_from_chapter_number(chapter_number)
                 _insert_to_toc(all_file_writer, chapter_path, level=1)
 
@@ -58,8 +55,6 @@ def main(vn_only=True):
             _insert_content(all_file_writer, part_path, vn_only, heading=1)
             start_chapter, end_chatper = part['range']
             for chapter_number in range(start_chapter, end_chatper + 1):
-                if chapter_number in PENDING_CHAPTERS or chapter_number > MAX_CHAPTER:
-                    continue
                 chapter_path = _chapter_path_from_chapter_number(chapter_number)
                 _insert_content(all_file_writer, chapter_path, vn_only, heading=2)
 
