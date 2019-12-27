@@ -18,10 +18,6 @@ ALL_CHAPTERS_FILENAME = 'all_chapters.md'
 ALL_CHAPTERS_VN_FILENAME = 'all_chapters_vietnamese_only.md'
 HEADER_TO_LINK_MAP = OrderedDict([(' ', '-'), ('#-', '#')])
 HEADER_TO_LINK_MAP.update({a: '' for a in '.:?/'})
-README_PREFIX = './readme_prefix.md'
-README = './README.md'
-PR_PREFIX = 'https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pull/'
-TRANSLATE_INDICATOR_STR = '--> _replace THIS LINE by your translation for the above line_'
 
 PARTS = [
     {'path': './chapters/p00_01_04.md', 'range': [1, 4]},
