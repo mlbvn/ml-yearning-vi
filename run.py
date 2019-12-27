@@ -7,15 +7,16 @@ import os
 import shutil
 from collections import OrderedDict
 import urllib.request
-import pdf_converter as pdf
+# import pdf_converter as pdf
+import pdfkit
+
 
 CHAPTERS_DIR = './chapters/'
-ALL_CHAPTERS_FILENAME = 'all_chapters.md'
-ALL_CHAPTERS_VN_FILENAME = 'all_chapters_vietnamese_only.md'
-HEADER_TO_LINK_MAP = OrderedDict([(' ', '-'), ('#-', '#')])
-HEADER_TO_LINK_MAP.update({a: '' for a in '.:?/'})
-BOOK_DIR = './book/'
+BOOK_DIR = CHAPTERS_DIR
 ACKNOWLEDGEMENT_PATH = './acknowledgement.md'
+
+NO_PART_LIST = ['p{:02d}'.format(i) for i in range(0, 11)]
+NO_CHAPTER_LIST = ['ch{:02d}'.format(i) for i in range(1, 59)]
 
 PARTS = [
     {'path': './chapters/p00_01_04.md', 'range': [1, 4]},
@@ -32,6 +33,22 @@ PARTS = [
 ]
 
 
+def _convert_title_to_link(title):
+    title = title.lower()
+    title = title.replace(" ", "-")
+    title = title.replace(".", "")
+    title = title.replace(":", "")
+    title = title.replace("/", "")
+    title = title.replace("?", "")
+    title = title.replace(",", "")
+    title = title.replace("#-", "#user-content-")
+    return title
+
+def _convert_html_to_pdf(html_file, pdf_file):
+    print("Convert html file {} to pdf file {}".format(html_file, pdf_file))
+    pdfkit.from_file(html_file, pdf_file)
+
+
 class Book(object):
     def __init__(self):
         self.en_vi_md_path = self._get_path('myl_en_vi.md')
@@ -46,7 +63,7 @@ class Book(object):
     def build_all(self):
         self.build_all_md(vn_only=True)
         self.build_all_md(vn_only=False)
-        # self.build_all_pdf(vn_only=True)
+        self.build_all_pdf(vn_only=True)
         # self.build_all_pdf(vn_only=False)
 
     def build_all_md(self, vn_only):
@@ -56,12 +73,87 @@ class Book(object):
             TableOfContent().add_md(file_writer)
             MainContent(vn_only).add_md(file_writer)
             # Glossary.add_md(file_writer)
-            Acknowledgement().add_md(file_writer)
+            # Acknowledgement().add_md(file_writer)
             file_writer.write('\n\n')
 
-    def build_add_pdf(self, vn_only):
-        output_filename = self.vi_pdf_path if vn_only else self.en_vi_pdf_path
-        pass
+    def build_all_pdf(self, vn_only):
+        md_file = self.vi_md_path if vn_only else self.en_vi_md_path
+        # extract list of all part titles and chapter titles
+        part_list = []
+        path = md_file
+        chapter_list = []
+        html_file = md_file.replace('.md', '.html')
+        pdf_file = md_file.replace('.md', '.pdf')
+
+        for part in PARTS:
+            part_path = part['path']
+            # Extract the original parth title
+            part_title = _get_title_from_file_path(part_path)
+
+            # Convert to the html link syntax
+            part_list.append(_convert_title_to_link(part_title))
+
+            start_chapter, end_chatper = part['range']
+            for chapter_number in range(start_chapter, end_chatper + 1):
+                chapter_path = _chapter_path_from_chapter_number(chapter_number)
+
+                # Extract the original chapter title
+                chapter_title = _get_title_from_file_path(chapter_path)
+                # Convert to html link syntax
+                chapter_list.append(_convert_title_to_link(chapter_title))
+
+        # export mardown file to html file
+        os.system("python3 -m grip {} --export {}".format(md_file, html_file))
+
+        f = codecs.open(html_file, "r", "utf-8", "html.parser")
+
+        filedata = f.read()
+        f.close()
+         
+        # Add an html code for new page before each part
+        for part_name in NO_PART_LIST:
+            filedata = filedata.replace(
+                '<p><a name="user-content-%s"></a></p>' % part_name,
+                '<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>' % part_name
+            )
+
+        # Add an html code for new page before each chapter
+        for chapter_name in NO_CHAPTER_LIST:
+            filedata = filedata.replace(
+                '<p><a name="user-content-%s"></a></p>' % chapter_name,
+                '<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>' % chapter_name
+            )
+
+        # Replace the correct link subsection of each part
+        for order, part_name in enumerate(NO_PART_LIST):
+            filedata = filedata.replace('#%s' % part_name, '%s' % part_list[order])
+
+        # Replace the correct link subsection of each chapter
+        for order, chapter_name in enumerate(NO_CHAPTER_LIST):
+            filedata = filedata.replace('#%s' % chapter_name, '%s'% chapter_list[order])
+        # Remove the ".md" title bar at begining
+        filedata = filedata.replace(
+            '<h3>\r\n                  <span class="octicon octicon-book"></span>\r\n                  %s.md\r\n                </h3>'%path[11:],
+            ""
+        )
+
+        # Centering images in html_file by replace <p> with <p align="center"> for lines that have
+        # <img> tag
+
+        for line in filedata.splitlines():
+            if "<img " in line:
+                new_line = line.replace("<p>","<p align=\"center\">")
+                filedata = filedata.replace(line, new_line)
+
+        f = codecs.open(html_file, "w", "utf-8", "html.parser")
+
+        f.write(filedata)
+        f.close()
+
+        _convert_html_to_pdf(html_file, pdf_file)
+        # Remove the created html file
+        # os.remove(html_file)
+        print(html_file)
 
 
 class BookPart(object):
@@ -189,30 +281,30 @@ def _get_label_from_filename(chapter_or_part_filename):
         assert False, chapter_or_part_filename
 
 
-def main(vn_only=True):
-    if vn_only:
-        output_filename = os.path.join(CHAPTERS_DIR, ALL_CHAPTERS_VN_FILENAME)
-    else:
-        output_filename = os.path.join(CHAPTERS_DIR, ALL_CHAPTERS_FILENAME)
-    with codecs.open(output_filename, 'w', encoding='utf-8') as all_file_writer:
-        # table of content
-        all_file_writer.write("**MỤC LỤC**\n\n")
-        for part in PARTS:
-            part_path = part['path']
-            _insert_to_toc(all_file_writer, part_path, level=0)
-            start_chapter, end_chatper = part['range']
-            for chapter_number in range(start_chapter, end_chatper + 1):
-                chapter_path = _chapter_path_from_chapter_number(chapter_number)
-                _insert_to_toc(all_file_writer, chapter_path, level=1)
+# def main(vn_only=True):
+#     if vn_only:
+#         output_filename = os.path.join(CHAPTERS_DIR, ALL_CHAPTERS_VN_FILENAME)
+#     else:
+#         output_filename = os.path.join(CHAPTERS_DIR, ALL_CHAPTERS_FILENAME)
+#     with codecs.open(output_filename, 'w', encoding='utf-8') as all_file_writer:
+#         # table of content
+#         all_file_writer.write("**MỤC LỤC**\n\n")
+#         for part in PARTS:
+#             part_path = part['path']
+#             _insert_to_toc(all_file_writer, part_path, level=0)
+#             start_chapter, end_chatper = part['range']
+#             for chapter_number in range(start_chapter, end_chatper + 1):
+#                 chapter_path = _chapter_path_from_chapter_number(chapter_number)
+#                 _insert_to_toc(all_file_writer, chapter_path, level=1)
 
-        # main content
-        for part in PARTS:
-            part_path = part['path']
-            _insert_content(all_file_writer, part_path, vn_only, heading=1)
-            start_chapter, end_chatper = part['range']
-            for chapter_number in range(start_chapter, end_chatper + 1):
-                chapter_path = _chapter_path_from_chapter_number(chapter_number)
-                _insert_content(all_file_writer, chapter_path, vn_only, heading=2)
+#         # main content
+#         for part in PARTS:
+#             part_path = part['path']
+#             _insert_content(all_file_writer, part_path, vn_only, heading=1)
+#             start_chapter, end_chatper = part['range']
+#             for chapter_number in range(start_chapter, end_chatper + 1):
+#                 chapter_path = _chapter_path_from_chapter_number(chapter_number)
+#                 _insert_content(all_file_writer, chapter_path, vn_only, heading=2)
 
 
 def _remove_sharp(title):
@@ -271,9 +363,87 @@ def _chapter_path_from_chapter_number(chapter_number):
     return os.path.join(CHAPTERS_DIR, 'ch{:02d}.md'.format(chapter_number))
 
 
+def creat_pdf(vn_only=True):
+    # extract list of all part titles and chapter titles
+    part_list = []
+    chapter_list = []
+    path = Book().vi_md_path() if vn_only else Book().en_vi_md_path()
+    html_file = path + '.html'
+    md_file = path + '.md'
+    pdf_file = path[11:] + '.pdf'
+
+    for part in PARTS:
+        part_path = part['path']
+        # Extract the original parth title
+        part_title = _get_title_from_file_path(part_path)
+
+        # Convert to the html link syntax
+        part_list.append(_convert_title_to_link(part_title))
+
+        start_chapter, end_chatper = part['range']
+        for chapter_number in range(start_chapter, end_chatper + 1):
+            chapter_path = _chapter_path_from_chapter_number(chapter_number)
+
+            # Extract the original chapter title
+            chapter_title = _get_title_from_file_path(chapter_path)
+            # Convert to html link syntax
+            chapter_list.append(_convert_title_to_link(chapter_title))
+
+    # export mardown file to html file
+    os.system("python3 -m grip {} --export {}".format(md_file, html_file))
+
+    f = codecs.open(html_file, "r", "utf-8", "html.parser")
+
+    filedata = f.read()
+    f.close()
+     
+    # Add an html code for new page before each part
+    for part_name in NO_PART_LIST:
+        filedata = filedata.replace(
+            '<p><a name="user-content-%s"></a></p>' % part_name,
+            '<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>' % part_name
+        )
+
+    # Add an html code for new page before each chapter
+    for chapter_name in NO_CHAPTER_LIST:
+        filedata = filedata.replace(
+            '<p><a name="user-content-%s"></a></p>' % chapter_name,
+            '<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>' % chapter_name
+        )
+
+    # Replace the correct link subsection of each part
+    for order, part_name in enumerate(NO_PART_LIST):
+        filedata = filedata.replace('#%s' % part_name, '%s' % part_list[order])
+
+    # Replace the correct link subsection of each chapter
+    for order, chapter_name in enumerate(NO_CHAPTER_LIST):
+        filedata = filedata.replace('#%s' % chapter_name, '%s'% chapter_list[order])
+    # Remove the ".md" title bar at begining
+    filedata = filedata.replace(
+        '<h3>\r\n                  <span class="octicon octicon-book"></span>\r\n                  %s.md\r\n                </h3>'%path[11:],
+        ""
+    )
+
+    # Centering images in html_file by replace <p> with <p align="center"> for lines that have
+    # <img> tag
+
+    for line in filedata.splitlines():
+        if "<img " in line:
+            new_line = line.replace("<p>","<p align=\"center\">")
+            filedata = filedata.replace(line, new_line)
+
+    f = codecs.open(html_file, "w", "utf-8", "html.parser")
+
+    f.write(filedata)
+    f.close()
+
+    _convert_html_to_pdf(html_file, pdf_file)
+    # Remove the created html file
+    # os.remove(html_file)
+
 def create_pdfs():
-    pdf.main(vn_only=False)
-    pdf.main(vn_only=True)
+    create_pdf(vn_only=False)
+    create_pdf(vn_only=True)
 
     # Remove __pycache__ folder  
     shutil.rmtree("__pycache__")
