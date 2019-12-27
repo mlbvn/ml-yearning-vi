@@ -1959,13 +1959,13 @@ Một điểm khác biệt so với những ví dụ trước là, thay vì so s
 Giả sử bạn muốn xây dựng một hệ thống để kiểm tra các đánh giá trực tuyến cho sản phẩm và tự động cho biết liệu người viết đánh giá có thích sản phẩm đó hay không. Ví dụ, bạn muốn hệ thống đó phân loại phản hồi dưới đây là tích cực:
 
 
-Cây lau nhà này thật tuyệt!
+"Cây lau nhà này thật tuyệt!"
 
 
 và phản hồi dưới đây là tiêu cực:
 
 
-Cây lau nhà này thật kém chất lượng -- Tôi hối hận vì đã mua nó.
+"Cây lau nhà này thật kém chất lượng -- Tôi hối hận vì đã mua nó."
 
 
 Bài toán về nhận dạng quan điểm tích cực hoặc tiêu cực được gọi là "phân loại cảm xúc". Để xây dựng hệ thống này, bạn có thể tạo một "pipeline" gồm hai phần:
