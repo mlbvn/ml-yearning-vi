@@ -8,8 +8,6 @@ import shutil
 from collections import OrderedDict
 import urllib.request
 import pdf_converter as pdf
-# reload(sys)
-# sys.setdefaultencoding('utf8') 
 
 NUM_CHAPTERS = 58
 # TODO: get rid of max chapter, auto infer from CONTRIBUTIONS
@@ -236,21 +234,6 @@ def _get_markdown_link_to_pr(pr):
     pr_link = PR_PREFIX + str(pr)
     tiny_url = shorten_url(pr_link)
     res = '[#{}]({})'.format(pr, tiny_url)
-    return res
-
-
-def _gen_progress_table():
-    header = '| Chương | Đóng góp |\n'
-    spliter = '| --- | --- |\n'
-    res = header + spliter
-    for chapter_number in range(1, NUM_CHAPTERS + 1):
-        chapter_path = _chapter_path_from_chapter_number(chapter_number)
-        prs = CONTRIBUTIONS.get(chapter_number, [])
-        title = _get_chapter_title(chapter_number)
-        pr_links = ', '.join(_get_markdown_link_to_pr(pr) for pr in sorted(prs))
-        markdown_table_row = '| [{}]({}) | {} |\n'.format(_remove_sharp(title), chapter_path, pr_links)
-        res += markdown_table_row
-
     return res
 
 
