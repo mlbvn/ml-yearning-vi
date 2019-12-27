@@ -280,32 +280,6 @@ def _get_label_from_filename(chapter_or_part_filename):
         assert False, chapter_or_part_filename
 
 
-# def main(vn_only=True):
-#     if vn_only:
-#         output_filename = os.path.join(CHAPTERS_DIR, ALL_CHAPTERS_VN_FILENAME)
-#     else:
-#         output_filename = os.path.join(CHAPTERS_DIR, ALL_CHAPTERS_FILENAME)
-#     with codecs.open(output_filename, 'w', encoding='utf-8') as all_file_writer:
-#         # table of content
-#         all_file_writer.write("**MỤC LỤC**\n\n")
-#         for part in PARTS:
-#             part_path = part['path']
-#             _insert_to_toc(all_file_writer, part_path, level=0)
-#             start_chapter, end_chatper = part['range']
-#             for chapter_number in range(start_chapter, end_chatper + 1):
-#                 chapter_path = _chapter_path_from_chapter_number(chapter_number)
-#                 _insert_to_toc(all_file_writer, chapter_path, level=1)
-
-#         # main content
-#         for part in PARTS:
-#             part_path = part['path']
-#             _insert_content(all_file_writer, part_path, vn_only, heading=1)
-#             start_chapter, end_chatper = part['range']
-#             for chapter_number in range(start_chapter, end_chatper + 1):
-#                 chapter_path = _chapter_path_from_chapter_number(chapter_number)
-#                 _insert_content(all_file_writer, chapter_path, vn_only, heading=2)
-
-
 def _remove_sharp(title):
     assert title.startswith('# ')
     return title[len('# '):]
@@ -438,7 +412,7 @@ def creat_pdf(vn_only=True):
 
     _convert_html_to_pdf(html_file, pdf_file)
     # Remove the created html file
-    # os.remove(html_file)
+    os.remove(html_file)
 
 def create_pdfs():
     create_pdf(vn_only=False)
@@ -450,6 +424,3 @@ def create_pdfs():
 
 if __name__ == '__main__':
     Book().build_all()
-    # main(vn_only=False)
-    # main(vn_only=True)
-    # create_pdfs()
