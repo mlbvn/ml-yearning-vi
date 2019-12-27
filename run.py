@@ -131,6 +131,12 @@ class Book(object):
             ""
         )
 
+        # add page break before acknowledgement
+        filedata = filedata.replace(
+            '<p><a name="user-content-ack"></a></p>',
+            '<div style="page-break-after: always;"></div>\r\n<p><a name="ack"></a></p>'
+        )
+
         padding_top = PADDING_TOP_ALL_CHAPTERS_VN if vn_only else PADDING_TOP_ALL_CHAPTERS
         filedata = filedata.replace(
             '<style>',
@@ -259,7 +265,7 @@ class Acknowledgement(BookPart):
 
     @classmethod
     def toc_line(cls):
-        return "* [Lời cảm ơn](#{})\n".format(cls.label)
+        return "* [Lời Nhóm Dịch](#{})\n".format(cls.label)
 
     def _get_content_lines_md(self):
         lines = []
