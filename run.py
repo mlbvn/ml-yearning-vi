@@ -1,4 +1,4 @@
-# encoding=utf8
+# -*- coding: utf-8 -*-
 import codecs
 import csv
 import re
@@ -73,7 +73,7 @@ class Book(object):
             TableOfContent().add_md(file_writer)
             MainContent(vn_only).add_md(file_writer)
             # Glossary.add_md(file_writer)
-            # Acknowledgement().add_md(file_writer)
+            Acknowledgement().add_md(file_writer)
             file_writer.write('\n\n')
 
     def build_all_pdf(self, vn_only):
@@ -152,8 +152,7 @@ class Book(object):
 
         _convert_html_to_pdf(html_file, pdf_file)
         # Remove the created html file
-        # os.remove(html_file)
-        print(html_file)
+        os.remove(html_file)
 
 
 class BookPart(object):
@@ -203,7 +202,7 @@ class TableOfContent(BookPart):
         filename = os.path.basename(path)
         link = _get_label_from_filename(filename)
         
-        full_link = "[{display_text}]({link_to_chapter})".format(
+        full_link = "[{display_text}](#{link_to_chapter})".format(
             display_text=_remove_sharp(part_title),
             link_to_chapter=link
         )
