@@ -38,4 +38,5 @@ RUN wget https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.xenial
 RUN dpkg -i ./wkhtmltox_0.12.5-1.xenial_amd64.deb
 RUN apt-get install -f
 
+# install ghostscript
 RUN apt-get install -y ghostscript
