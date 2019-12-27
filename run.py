@@ -9,9 +9,6 @@ from collections import OrderedDict
 import urllib.request
 import pdf_converter as pdf
 
-NUM_CHAPTERS = 58
-MAX_CHAPTER = 58
-
 CHAPTERS_DIR = './chapters/'
 ALL_CHAPTERS_FILENAME = 'all_chapters.md'
 ALL_CHAPTERS_VN_FILENAME = 'all_chapters_vietnamese_only.md'
