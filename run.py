@@ -159,7 +159,7 @@ class Book(object):
 
         _convert_html_to_pdf(html_file, pdf_file)
         # Remove the created html file
-        os.remove(html_file)
+        # os.remove(html_file)
 
 
 class BookPart(object):
