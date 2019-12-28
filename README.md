@@ -1,11 +1,7 @@
 # Dự án dịch sách [Machine Learning Yearning](https://www.deeplearning.ai/machine-learning-yearning/) (Khát khao Học Máy), Andrew Ng ra tiếng Việt
 
-Bản tiếng Anh https://github.com/ajaymache/machine-learning-yearning. Mặc dù là bản Draft, nội dung bản này cũng đã khá đầy đủ.
-
 ![](./book_cover.png)
 
-## Bảng thuật ngữ
-Tất cả các thuật ngữ cần được dịch theo chuẩn trong file [glossary](glossary.md).
 
 ## Bản đầy đủ các chương đã dịch xong
 
@@ -19,3 +15,9 @@ Tất cả các thuật ngữ cần được dịch theo chuẩn trong file [glo
 
 ### Những người thực hiện
 [Nhóm dịch thuật Machine Learning Cơ Bản](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/graphs/contributors)
+
+# Nguồn
+Bản tiếng Anh https://github.com/ajaymache/machine-learning-yearning. Mặc dù là bản Draft, nội dung bản này cũng đã khá đầy đủ.
+
+## Bảng thuật ngữ
+Tất cả các thuật ngữ cần được dịch theo chuẩn trong file [glossary](glossary.md).
