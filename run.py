@@ -1,13 +1,6 @@
 # -*- coding: utf-8 -*-
 import codecs
-import csv
-import re
-import sys
 import os
-import shutil
-from collections import OrderedDict
-import urllib.request
-# import pdf_converter as pdf
 import pdfkit
 
 
@@ -20,11 +13,11 @@ NO_CHAPTER_LIST = ['ch{:02d}'.format(i) for i in range(1, 59)]
 
 # Ajust values below to modify font-size (unit:pt), colors and margin(unit:px) in pdf files
 NORMAL_TEXT_SIZE = 16
-SUB_TITLE_SIZE =28
-PART_NAME_SIZE= 72
-PART_NAME_COLOR="#0E275A"
-PADDING_TOP_ALL_CHAPTERS=200
-PADDING_TOP_ALL_CHAPTERS_VN=500
+SUB_TITLE_SIZE = 28
+PART_NAME_SIZE = 72
+PART_NAME_COLOR = "#0E275A"
+PADDING_TOP_ALL_CHAPTERS = 200
+PADDING_TOP_ALL_CHAPTERS_VN = 500
 
 PARTS = [
     {'path': './chapters/p00_01_04.md', 'range': [1, 4]},
@@ -52,10 +45,8 @@ class BookMD(object):
 
     def build(self):
         with codecs.open(self.md_file, 'w', encoding='utf-8') as file_writer:
-            # Cover.add_md(file_writer)
             TableOfContent().add_md(file_writer)
             MainContent(self.vn_only).add_md(file_writer)
-            # Glossary.add_md(file_writer)
             Acknowledgement().add_md(file_writer)
             file_writer.write('\n\n')
 
@@ -71,11 +62,6 @@ class BookPDF(object):
         self.html_string = ''
         self.part_list = []  # TODO: description
         self.chapter_list = []
-
-    # TODO: remove this function, it is a duplicate of BookMD._get_path()
-    @staticmethod
-    def _get_path(filename):
-        return os.path.join(BOOK_DIR, filename)
 
     def _get_raw_html_string(self):
         os.system("python3 -m grip {} --export {}".format(self.md_file, self.html_file))
