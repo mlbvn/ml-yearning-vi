@@ -320,7 +320,7 @@ class BookPDF(object):
         pdfkit.from_file(self.html_file, self.pdf_file, options=options)
 
         # Remove the created html file
-        # os.remove(self.html_file)
+        os.remove(self.html_file)
 
     def build(self):
         # md to raw html
