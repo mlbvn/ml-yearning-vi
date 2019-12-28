@@ -5,7 +5,6 @@
 
 ## Bản đầy đủ các chương đã dịch xong
 
-
 ### Online
 * [Tiếng Việt](./chapters/book_vn.md)
 * [Song ngữ Anh-Việt](./chapters/book_en_vn.md)
