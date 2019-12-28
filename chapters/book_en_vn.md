@@ -435,16 +435,18 @@ Vậy còn kích thước của tập kiểm tra thì sao? Nó cần đủ lớn
 
 > Classification accuracy is an example of a **single-number evaluation metric**: You run your classifier on the dev set (or test set), and get back a single number about what fraction of examples it classified correctly. According to this metric, if classifier A obtains 97% accuracy, and classifier B obtains 90% accuracy, then we judge classifier A to be superior.
 
-Độ chính xác trong phân loại là ví dụ của **phép đo đơn trị** -- phép đo được biểu diễn bằng chỉ một con số. Khi chạy bộ phân loại trên một tập phát triển (hoặc tập kiểm tra), độ chính xác được tính bằng số mẫu được phân loại chính xác trên tổng số mẫu trong tập đó. Theo phép đo này, nếu độ chính xác của bộ phân loại A là 97% và của bộ phân loại B là 90% thì ta kết luận rằng bộ phân loại A cho kết quả tốt hơn.
+Độ chính xác trong phân loại là ví dụ của **phép đo đơn trị** -- phép đo được biểu diễn bằng chỉ một con số. Khi chạy bộ phân loại trên một tập phát triển (hoặc tập kiểm tra), độ chính xác được tính bằng số mẫu được phân loại đúng trên tổng số mẫu trong tập đó. Theo phép đo này, nếu độ chính xác của bộ phân loại A là 97% và của bộ phân loại B là 90% thì ta kết luận rằng bộ phân loại A cho kết quả tốt hơn.
 
 > In contrast, Precision and Recall[3] is not a single-number evaluation metric: It gives two numbers for assessing your classifier. Having multiple-number evaluation metrics makes it harder to compare algorithms. Suppose your algorithms perform as follows:
 
-Ngược lại, Precision và Recall[3] không phải là một phép đo đơn trị: chúng đưa ra hai chỉ số được sử dụng để đánh giá bộ phân loại. Việc so sánh các thuật toán với nhau sẽ trở nên khó hơn với những phép đo đa trị -- những phép đo được biểu diễn bằng nhiều hơn một số. Giả sử thuật toán trả về kết quả như sau:
+Ngược lại, Precision và Recall[3] không phải là một phép đo đơn trị: chúng đưa ra hai chỉ số để đánh giá bộ phân loại. Việc so sánh các thuật toán với nhau sẽ trở nên khó hơn với những phép đo đa trị -- những phép đo được biểu diễn bằng nhiều hơn một số. Giả sử thuật toán trả về kết quả như sau:
 
 
 > Here, neither classifier is obviously superior, so it doesn’t immediately guide you toward picking one.
 
 Ở đây, không bộ phân loại nào tốt hơn một cách rõ ràng, vì vậy dựa vào kết quả trên ta không thể ngay lập tức chọn ra một bộ phân loại tốt hơn.
+
+<p align="center"></p>
 
 | Bộ Phân Loại  | Precision | Recall |
 | ----- | -------: | -------: |
@@ -464,10 +466,14 @@ Nếu bạn thực sự quan tâm đến cả Precision lẫn Recall. Tôi gợi
 
 Việc có một phép đo đơn trị sẽ giúp tăng tốc khả năng đưa ra quyết định của bạn khi bạn phải lựa chọn một trong số lượng lớn các bộ phân loại. Phép đo đơn trị đưa ra một thứ hạng ưu tiên rõ ràng giữa những thuật toán đó, tạo ra một đường hướng rõ ràng để phát triển. 
 
+<p align="center"></p>
+
 | Bộ Phân Loại | Precision | Recall | Chỉ số F1 |
 | ----- | -------: | -------: | -----: |
 | A  | 95%  | 90% | 92.4% |
 | B  | 98%  | 85% | 91.0% |
+
+<p></p>
 
 > As a final example, suppose you are separately tracking the accuracy of your cat classifier in four key markets: (i) US, (ii) China, (iii) India, and (iv) Other. This gives four metrics. By taking an average or weighted average of these four numbers, you end up with a single number metric. Taking an average or weighted average is one of the most common ways to combine multiple metrics into one.
 
@@ -499,11 +505,15 @@ Một ví dụ cuối cùng, giả sử bạn đang theo dõi riêng biệt đ�
 
 Giả sử bạn quan tâm đến cả độ chính xác lẫn thời gian chạy của một thuật toán học. Bạn cần phải chọn trong ba bộ phân loại sau:
 
+<center>
+
 | Bộ phân loại  | Độ chính xác | Thời gian chạy |
 | ----- | -------: | -------: |
 | A  | 90%  | 80ms |
 | B  | 92%  | 95ms |
 | C  | 95%  | 1,500ms |
+
+</center>
 
 > It seems unnatural to derive a single metric by putting accuracy and running time into a single formula, such as:
 
@@ -2323,7 +2333,7 @@ Giả sử bạn đang xây dựng một hệ thống nhận dạng giọng nói
 
 Khi có cách tính Điểm<sub>A</sub>(*S*), bạn vẫn phải tìm câu tiếng Anh *S* để tối đa hóa nó:
 
-![img](../imgs/C44_01.png)
+<img src="../imgs/C44_01.png" width=400 align=center>
 
 > How do you compute the "arg max" above? If the English language has 50,000 words, then there are (50,000)<sup>N</sup> possible sentences of length *N* -- far too many to exhaustively enumerate.
 
@@ -2404,7 +2414,7 @@ Xem xét một ví dụ nữa. Giả sử bạn đang xây dựng một hệ th�
 
 Thuật toán của bạn dịch các câu bằng cách cố gắng tính:
 
-![img](../imgs/C45_01.png)
+<img src="../imgs/C45_01.png" width=400 align=center>
 
 > However, the set of all possible English sentences *E* is too large, so you rely on a heuristic search algorithm.
 

@@ -356,14 +356,16 @@ Vậy còn kích thước của tập kiểm tra thì sao? Nó cần đủ lớn
 ## 8. Thiết lập một phép đo đơn trị làm mục tiêu tối ưu
 
 
-Độ chính xác trong phân loại là ví dụ của **phép đo đơn trị** -- phép đo được biểu diễn bằng chỉ một con số. Khi chạy bộ phân loại trên một tập phát triển (hoặc tập kiểm tra), độ chính xác được tính bằng số mẫu được phân loại chính xác trên tổng số mẫu trong tập đó. Theo phép đo này, nếu độ chính xác của bộ phân loại A là 97% và của bộ phân loại B là 90% thì ta kết luận rằng bộ phân loại A cho kết quả tốt hơn.
+Độ chính xác trong phân loại là ví dụ của **phép đo đơn trị** -- phép đo được biểu diễn bằng chỉ một con số. Khi chạy bộ phân loại trên một tập phát triển (hoặc tập kiểm tra), độ chính xác được tính bằng số mẫu được phân loại đúng trên tổng số mẫu trong tập đó. Theo phép đo này, nếu độ chính xác của bộ phân loại A là 97% và của bộ phân loại B là 90% thì ta kết luận rằng bộ phân loại A cho kết quả tốt hơn.
 
 
-Ngược lại, Precision và Recall[3] không phải là một phép đo đơn trị: chúng đưa ra hai chỉ số được sử dụng để đánh giá bộ phân loại. Việc so sánh các thuật toán với nhau sẽ trở nên khó hơn với những phép đo đa trị -- những phép đo được biểu diễn bằng nhiều hơn một số. Giả sử thuật toán trả về kết quả như sau:
+Ngược lại, Precision và Recall[3] không phải là một phép đo đơn trị: chúng đưa ra hai chỉ số để đánh giá bộ phân loại. Việc so sánh các thuật toán với nhau sẽ trở nên khó hơn với những phép đo đa trị -- những phép đo được biểu diễn bằng nhiều hơn một số. Giả sử thuật toán trả về kết quả như sau:
 
 
 
 Ở đây, không bộ phân loại nào tốt hơn một cách rõ ràng, vì vậy dựa vào kết quả trên ta không thể ngay lập tức chọn ra một bộ phân loại tốt hơn.
+
+<p align="center"></p>
 
 | Bộ Phân Loại  | Precision | Recall |
 | ----- | -------: | -------: |
@@ -380,10 +382,14 @@ Nếu bạn thực sự quan tâm đến cả Precision lẫn Recall. Tôi gợi
 
 Việc có một phép đo đơn trị sẽ giúp tăng tốc khả năng đưa ra quyết định của bạn khi bạn phải lựa chọn một trong số lượng lớn các bộ phân loại. Phép đo đơn trị đưa ra một thứ hạng ưu tiên rõ ràng giữa những thuật toán đó, tạo ra một đường hướng rõ ràng để phát triển. 
 
+<p align="center"></p>
+
 | Bộ Phân Loại | Precision | Recall | Chỉ số F1 |
 | ----- | -------: | -------: | -----: |
 | A  | 95%  | 90% | 92.4% |
 | B  | 98%  | 85% | 91.0% |
+
+<p></p>
 
 
 Một ví dụ cuối cùng, giả sử bạn đang theo dõi riêng biệt độ chính xác của bộ phân loại mèo trong bốn thị trường trọng điểm: (i) Mỹ, (ii) Trung Quốc, (iii) Ấn Độ, và (iv) những nước khác. Bạn sẽ thu về bốn phép đo. Bằng cách lấy giá trị trung bình hoặc giá trị trung bình có trọng số của bốn chỉ số này, bạn sẽ thu được một phép đo đơn trị. Tính toán giá trị trung bình hoặc giá trị trung bình có trọng số là một trong những cách phổ biển nhất để kết hợp nhiều phép đo thành một.
@@ -408,11 +414,15 @@ Một ví dụ cuối cùng, giả sử bạn đang theo dõi riêng biệt đ�
 
 Giả sử bạn quan tâm đến cả độ chính xác lẫn thời gian chạy của một thuật toán học. Bạn cần phải chọn trong ba bộ phân loại sau:
 
+<center>
+
 | Bộ phân loại  | Độ chính xác | Thời gian chạy |
 | ----- | -------: | -------: |
 | A  | 90%  | 80ms |
 | B  | 92%  | 95ms |
 | C  | 95%  | 1,500ms |
+
+</center>
 
 
 Việc tạo ra một phép đo đơn trị bằng cách gộp độ chính xác và thời gian chạy vào trong cùng một công thức khá là gượng ép, chẳng hạn:
@@ -1833,7 +1843,7 @@ Giả sử bạn đang xây dựng một hệ thống nhận dạng giọng nói
 
 Khi có cách tính Điểm<sub>A</sub>(*S*), bạn vẫn phải tìm câu tiếng Anh *S* để tối đa hóa nó:
 
-![img](../imgs/C44_01.png)
+<img src="../imgs/C44_01.png" width=400 align=center>
 
 
 Làm thế nào để tính toán được "arg max" ở trên? Nếu tiếng Anh có 50.000 từ thì sẽ có (50.000)<sup>N</sup> câu khả dĩ có độ dài *N* -- quá nhiều để liệt kê một cách triệt để.
@@ -1895,7 +1905,7 @@ Xem xét một ví dụ nữa. Giả sử bạn đang xây dựng một hệ th�
 
 Thuật toán của bạn dịch các câu bằng cách cố gắng tính:
 
-![img](../imgs/C45_01.png)
+<img src="../imgs/C45_01.png" width=400 align=center>
 
 
 Tuy nhiên, tập hợp các câu tiếng Anh khả dĩ *E* quá lớn nên bạn dựa vào thuật toán tìm kiếm thực nghiệm.
