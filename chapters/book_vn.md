@@ -192,7 +192,7 @@ Hai nguyên nhân chính là:
 
 Cho dù có thêm nhiều nhiều dữ liệu nữa, thường thì chất lượng của các thuật toán học máy cổ điển, như hồi quy logistic, cũng không tốt hơn. Nghĩa là đồ thị quá trình học chững lại và thuật toán ngừng cải thiện ngay cả khi có thêm dữ liệu:
 
-![img](../imgs/C04_01.png)
+<img src="../imgs/C04_01.png" width=750 align=center>
 
 
 Như thể thuật toán cổ điển không biết xử lý thế nào với tất cả lượng dữ liệu ta đang có.
@@ -200,12 +200,12 @@ Như thể thuật toán cổ điển không biết xử lý thế nào với t�
 
 Nếu bạn huấn luyện một mạng nơ-ron nhỏ cho cùng một tác vụ học có giám sát, bạn có thể đạt chất lượng cao hơn một chút:
 
-![img](../imgs/C04_02.png)
+<img src="../imgs/C04_02.png" width=750 align=center>
 
 
 "Mạng neural nhỏ" ở đây có nghĩa là mạng nơ-ron với ít nút ẩn/tầng/tham số. Sau cùng, bạn có thể cải thiện chất lượng thêm nữa nếu dùng các mạng nơ-ron lớn hơn [1]:
 
-![img](../imgs/C04_03.png)
+<img src="../imgs/C04_03.png" width=750 align=center>
 
 
 Như vậy bạn đạt được chất lượng tốt nhất khi (i) huấn luyện mạng nơ-ron rất lớn -- tương ứng với đường chất lượng màu xanh lục và (ii) có lượng dữ liệu lớn.
@@ -242,7 +242,7 @@ Nhóm của bạn xây dựng một tập huấn luyện lớn bằng cách tả
 
 Tuy nhiên, khi triển khai bộ phát hiện mèo này lên ứng dụng di động của bạn, bạn phát hiện ra chất lượng rất tệ!
 
-![img](../imgs/C05_01.png)
+<img src="../imgs/C05_01.png" width=500 align=center>
 
 
 **Điều gì đã xảy ra?**
@@ -459,7 +459,7 @@ Thật sự rất khó để biết trước phương án tiếp cận nào là 
 
 3. Tiến hành một **thí nghiệm** để đo mức hiệu quả của ý tưởng. (Thường thì những ý tưởng đầu tiên của tôi sẽ không hoạt động!) Học được từ những kết quả đó, tôi quay lại thử nghiệm thêm những ý tưởng mới, và cứ thế lặp lại cả quy trình.
 
-![img](../imgs/C10_01.png)
+<img src="../imgs/C10_01.png" width=550 align=center>
 
 
 Đây là một quy trình lặp đi lặp lại. Bạn thực hiện vòng lặp này càng nhanh thì tốc độ cải tiến kết quả càng cao. Đó là lý do tại sao có tập phát triển/thử nghiệm và một phép đo là rất quan trọng: Việc đánh giá chất lượng của mỗi ý tưởng trên tập phát triển giúp ta xác định được liệu mình có đang đi đúng hướng.
@@ -1205,7 +1205,7 @@ Chúng ta đã xem qua một số cách ước tính số lượng lỗi tạo r
 
 Một đồ thị quá trình học cho thấy sự tương quan giữa lỗi của tập phát triển so với số lượng các mẫu huấn luyện. Để biểu diễn nó, bạn cần áp dụng thuật toán của bạn với các tập huấn luyện có độ lớn khác nhau. Ví dụ, nếu bạn có 1.000 mẫu, bạn có thể huấn luyện riêng biệt các bản sao của thuật toán trên các tập 100, 200, 300, ..., 1.000 mẫu. Sau đó bạn có thể biểu diễn sự thay đổi giữa lỗi của tập phát triển so với độ lớn của tập huấn luyện. Dưới đây là một ví dụ:
 
-![img](../imgs/C28_01.png)
+<img src="../imgs/C28_01.png" width=750 align=center>
 
 
 Khi kích thước tập huấn luyện tăng, lỗi của tập phát triển nên giảm.
@@ -1225,7 +1225,7 @@ Chúng ta thường sẽ có một số "tỉ lệ lỗi mong muốn" mà chúng
 
 Thêm mức chất lượng mong muốn vào đồ thị quá trình học của bạn:
 
-![img](../imgs/C28_02.png)
+<img src="../imgs/C28_02.png" width=750 align=center>
 
 
 Bạn có thể ngoại suy đường cong "lỗi tập phát triển" (màu đỏ) để ước tính mức độ cải thiện có thể đạt được so với mức chất lượng mong muốn bằng cách thêm dữ liệu vào. Ví dụ trên cho thấy bạn có thể đạt được mức chất lượng mong muốn bằng cách tăng gấp đôi độ lớn tập huấn luyện.
@@ -1233,7 +1233,7 @@ Bạn có thể ngoại suy đường cong "lỗi tập phát triển" (màu đ�
 
 Tuy nhiên nếu đường cong lỗi tập phát triển đã "nằm ngang" (phẳng), thì bạn có thể hiểu ngay lập tức rằng việc thêm vào dữ liệu cũng sẽ không giúp bạn đạt được mục tiêu:
 
-![img](../imgs/C28_03.png)
+<img src="../imgs/C28_03.png" width=750 align=center>
 
 
 Do đó nhìn vào đồ thị đường cong học tập có thể giúp bạn tránh khỏi việc dành hàng tháng trời thu thập một lượng dữ liệu lớn gấp đôi, chỉ để nhận ra rằng điều đó là vô ích.
@@ -1262,7 +1262,7 @@ Cuối cùng, giả sử tập huấn luyện có 10.000 mẫu. Trong trường 
 
 Chúng ta hãy thêm một đồ thị sai số huấn luyện vào các hình trước đó:
 
-![img](../imgs/C29_01.png)
+<img src="../imgs/C29_01.png" width=800 align=center>
 
 
 Bạn có thể thấy rằng đồ thị "sai số huấn luyện" (màu xanh lam) tăng theo kích thước của tập huấn luyện. Thêm nữa, thuật toán của bạn thường hoạt động tốt trên tập huấn luyện hơn là tập phát triển; do đó đồ thị sai số tập phát triển (màu đỏ) hoàn toàn nằm trên đồ thị sai số huấn luyện.
@@ -1319,7 +1319,7 @@ Trước kia, chúng ta chỉ đo sai số tập huấn luyện và sai số t�
 
 Hãy xem xét đồ thị quá trình học này:
 
-![img](../imgs/C31_01.png)
+<img src="../imgs/C31_01.png" width=800 align=center>
 
 
 Đồ thị này thể hiện độ chệch lớn, phương sai lớn hay cả hai?
@@ -1330,7 +1330,7 @@ Hãy xem xét đồ thị quá trình học này:
 
 Bây giờ, hãy xem xét đồ thị này:
 
-![img](../imgs/C31_02.png)
+<img src="../imgs/C31_02.png" width=800 align=center>
 
 
 Lần này, lỗi huấn luyện lớn, vì nó cao hơn nhiều so với mức chất lượng mong muốn. Lỗi phát triển cũng lớn hơn nhiều so với lỗi huấn luyện. Vì vậy, bạn có độ chệch đáng kể và phương sai cũng đáng kể. Bạn sẽ phải tìm cách giảm cả độ chệch và phương sai trong thuật toán của mình.
@@ -1563,8 +1563,7 @@ Nhưng nếu bạn không có một mạng nơ-ron đủ lớn (hoặc một thu
 
 Nếu bạn nghĩ rằng dữ liệu nào đó không giá trị, bạn nên loại bỏ dữ liệu đó vì khả năng tính toán là có hạn. Ví dụ: giả sử tập huấn luyện/kiểm tra của bạn chứa chủ yếu là hình ảnh thông thường về người, địa điểm, địa danh, động vật. Giả sử bạn cũng có một bộ sưu tập lớn bản scan các tài liệu lịch sử:
 
-
-![img](../imgs/C37_01.png)
+<img src="../imgs/C37_01.png" width=450 align=center>
 
 
 Những tài liệu này nhìn không có gì giống mèo cả. Chúng cũng trông hoàn toàn không giống như tập phân phối phát triển/kiểm tra của bạn. Hoàn toàn không có ý nghĩa gì khi giữ lại dữ liệu này để làm mẫu thử âm tính vì lợi ích thứ nhất như nêu ở trên là không đáng kể -- mạng nơ-ron hầu như không thể học được gì từ dữ liệu này để có thể áp dụng cho phân phối tập phát triển/kiểm tra của bạn. Giữ lại chúng sẽ lãng phí tài nguyên tính toán và khả năng biễu diễn của mạng nơ-ron.
@@ -1815,7 +1814,7 @@ Hãy nhớ rằng tổng hợp dữ liệu nhân tạo có những thách thức
 
 Ngoài ra, giả sử bạn có 1.000 giờ tiếng ồn xe hơi khác biệt, nhưng tất cả đều được lấy từ 10 chiếc xe khác nhau. Trong trường hợp này, thuật toán có thể "quá khớp" 10 chiếc xe này và đạt chất lượng kém nếu được thử nghiệm trên âm thanh từ một chiếc xe khác. Đáng tiếc là những vấn đề này thường khó phát hiện.
 
-![img](../imgs/C43_01.png)
+<img src="../imgs/C43_01.png" width=750 align=center>
 
 
 Lấy một ví dụ nữa, giả sử bạn đang xây dựng một hệ thống thị giác máy để nhận diện xe hơi. Giả sử bạn hợp tác với một công ty sản xuất game có mô hình đồ họa máy tính của một số xe hơi. Để huấn luyện thuật toán, bạn sử dụng các mô hình này để tạo ra hình ảnh xe hơi. Ngay cả khi các hình ảnh tổng hợp trông rất giống thật, phương pháp này (đã được nhiều người độc lập đề xuất) có thể sẽ không hoạt động tốt. Trong toàn bộ game có thể có gần ~20 thiết kế xe hơi. Việc xây dựng một mô hình 3D của một chiếc xe hơi rất tốn kém; Nếu bạn từng chơi game, thì có lẽ bạn có thể nhận thấy rằng phần lớn xe hơi trong game là giống nhau và có lẽ chỉ khác nhau về màu sơn. Tức là, dữ liệu này tuy trông rất giống thật với bạn, nhưng so với tập hợp tất cả các xe hơi trên đường phố (hay những gì bạn có thể thấy trong tập phát triển/kiểm tra), thì bộ 20 chiếc xe được tổng hợp này chỉ chiếm một phần rất nhỏ trong phân phối xe hơi trên toàn thế giới. Do đó, nếu 100.000 mẫu huấn luyện của bạn đều đến từ 20 chiếc xe này, hệ thống của bạn sẽ "quá khớp" với 20 thiết kế xe cụ thể này và sẽ không thể khái quát tốt cho các tập phát triển/kiểm tra bao gồm các thiết kế xe khác.
