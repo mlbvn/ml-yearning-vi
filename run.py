@@ -41,43 +41,100 @@ PARTS = [
 ]
 
 
-class Book(object):
-    def __init__(self):
-        self.en_vi_md_path = self._get_path('book_en_vn.md')
-        self.vi_md_path = self._get_path('book_vn.md')
-        self.en_vi_pdf_path = self._get_path('book_en_vn.pdf')
-        self.vi_pdf_path = self._get_path('book_vn.pdf')
+class BookMD(object):
+    def __init__(self, vn_only=True):
+        self.vn_only = vn_only
+        self.md_file = self._get_path('book_{}vn.md'.format('' if vn_only else 'en_'))
 
     @staticmethod
     def _get_path(filename):
         return os.path.join(BOOK_DIR, filename)
 
-    def build_all(self):
-        self.build_all_md(vn_only=True)
-        self.build_all_md(vn_only=False)
-        self.build_all_pdf(vn_only=True)
-        self.build_all_pdf(vn_only=False)
-
-    def build_all_md(self, vn_only):
-        output_filename = self.vi_md_path if vn_only else self.en_vi_md_path
-        with codecs.open(output_filename, 'w', encoding='utf-8') as file_writer:
+    def build(self):
+        with codecs.open(self.md_file, 'w', encoding='utf-8') as file_writer:
             # Cover.add_md(file_writer)
             TableOfContent().add_md(file_writer)
-            MainContent(vn_only).add_md(file_writer)
+            MainContent(self.vn_only).add_md(file_writer)
             # Glossary.add_md(file_writer)
             Acknowledgement().add_md(file_writer)
             file_writer.write('\n\n')
 
-    def build_all_pdf(self, vn_only):
+
+class BookPDF(object):
+    def __init__(self, vn_only=True):
+        self.vn_only = vn_only
+        self.md_file = BookMD(vn_only=vn_only).md_file
+        self.html_file = self.md_file.replace('.md', '.html')
+        self.pdf_file = self.md_file.replace('.md', '.pdf')
+        self.no_part_list = ['p{:02d}'.format(i) for i in range(0, 11)]
+        self.no_chapter_list = ['ch{:02d}'.format(i) for i in range(1, 59)]
+        self.html_string = ''
+
+    # TODO: remove this function, it is a duplicate of BookMD._get_path()
+    @staticmethod
+    def _get_path(filename):
+        return os.path.join(BOOK_DIR, filename)
+
+    def _get_raw_html_string(self):
+        os.system("python3 -m grip {} --export {}".format(self.md_file, self.html_file))
+
+        f = codecs.open(self.html_file, "r", "utf-8", "html.parser")
+        self.html_string = f.read()
+        f.close()
+
+    def _add_break_page_before_each_part(self):
+        for part_name in self.no_part_list:
+            self.html_string = self.html_string.replace(
+                '<p><a name="user-content-%s"></a></p>' % part_name,
+                '<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>' % part_name
+            )
+    def _add_break_page_before_each_chapter(self):
+        for part_name in self.no_part_list:
+            self.html_string = self.html_string.replace(
+                '<p><a name="user-content-%s"></a></p>' % part_name,
+                '<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>' % part_name
+            )
+
+    def _correct_part_links(self, part_list):
+        for order, part_name in enumerate(self.no_part_list):
+            self.html_string = self.html_string.replace('#%s' % part_name, '%s' % part_list[order])
+
+    def _correct_chapter_links(self, chapter_list):
+        # Replace the correct link subsection of each chapter
+        for order, chapter_name in enumerate(self.no_chapter_list):
+            self.html_string = self.html_string.replace(
+                '#%s' % chapter_name, '%s'% chapter_list[order]
+            )
+
+    def _remove_title_bar(self):
+        # Remove the ".md" title bar at begining
+        self.html_string = self.html_string.replace(
+            '<h3>\n                  <span class="octicon octicon-book"></span>\n                  %s.md\r\n                </h3>'%os.path.basename(self.md_file),
+            ""
+        )
+
+    def _center_images(self):
+        # TODO: avoide replace multiple times inside for loop
+        for line in self.html_string.splitlines():
+            if "<img " in line:
+                new_line = line.replace("<p>","<p align=\"center\">")
+                self.html_string = self.html_string.replace(line, new_line)
+
+    def build(self):
         # TODO: refactor this method, divide it into multiple small methods/functions.
-        md_file = self.vi_md_path if vn_only else self.en_vi_md_path
+        md_file = self.md_file
         # extract list of all part titles and chapter titles
         part_list = []
         path = md_file
         chapter_list = []
-        html_file = md_file.replace('.md', '.html')
-        pdf_file = md_file.replace('.md', '.pdf')
+        html_file = self.html_file
+        pdf_file = self.pdf_file
 
+        self._get_raw_html_string()
+        self._add_break_page_before_each_part()
+        self._add_break_page_before_each_chapter()
+
+        # export mardown file to html file
         for part in PARTS:
             part_path = part['path']
             # Extract the original parth title
@@ -95,69 +152,28 @@ class Book(object):
                 # Convert to html link syntax
                 chapter_list.append(_convert_title_to_link(chapter_title))
 
-        # export mardown file to html file
-        os.system("python3 -m grip {} --export {}".format(md_file, html_file))
-
-        f = codecs.open(html_file, "r", "utf-8", "html.parser")
-
-        filedata = f.read()
-        f.close()
-         
-        # Add an html code for new page before each part
-        for part_name in NO_PART_LIST:
-            filedata = filedata.replace(
-                '<p><a name="user-content-%s"></a></p>' % part_name,
-                '<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>' % part_name
-            )
-
-        # Add an html code for new page before each chapter
-        for chapter_name in NO_CHAPTER_LIST:
-            filedata = filedata.replace(
-                '<p><a name="user-content-%s"></a></p>' % chapter_name,
-                '<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>' % chapter_name
-            )
-
-        # Replace the correct link subsection of each part
-        for order, part_name in enumerate(NO_PART_LIST):
-            filedata = filedata.replace('#%s' % part_name, '%s' % part_list[order])
-
-        # Replace the correct link subsection of each chapter
-        for order, chapter_name in enumerate(NO_CHAPTER_LIST):
-            filedata = filedata.replace('#%s' % chapter_name, '%s'% chapter_list[order])
-        # Remove the ".md" title bar at begining
-        print(path)
-        filedata = filedata.replace(
-            '<h3>\n                  <span class="octicon octicon-book"></span>\n                  %s.md\r\n                </h3>'%os.path.basename(path),
-            ""
-        )
+        self._correct_part_links(part_list)
+        self._correct_chapter_links(chapter_list)
+        self._remove_title_bar()
 
         # add page break before acknowledgement
-        filedata = filedata.replace(
+        self.html_string = self.html_string.replace(
             '<p><a name="user-content-ack"></a></p>',
             '<div style="page-break-after: always;"></div>\r\n<p><a name="ack"></a></p>'
         )
 
-        padding_top = PADDING_TOP_ALL_CHAPTERS_VN if vn_only else PADDING_TOP_ALL_CHAPTERS
-        filedata = filedata.replace(
+        padding_top = PADDING_TOP_ALL_CHAPTERS_VN if self.vn_only else PADDING_TOP_ALL_CHAPTERS
+        self.html_string = self.html_string.replace(
             '<style>',
             '<style>tr{font-size: %ipt}h1{padding-top: %ipx;text-align: center;color: %s}li,p{font-size: %ipt}body{text-align: justify;}'%(NORMAL_TEXT_SIZE,padding_top,PART_NAME_COLOR,NORMAL_TEXT_SIZE))
-        filedata=filedata.replace('<h1>','<h1 style="font-size:%ipt">'%PART_NAME_SIZE)    
-        filedata=filedata.replace('<h2>','<h2 style="font-size:%ipt">'%SUB_TITLE_SIZE)
+        self.html_string=self.html_string.replace('<h1>','<h1 style="font-size:%ipt">'%PART_NAME_SIZE)    
+        self.html_string=self.html_string.replace('<h2>','<h2 style="font-size:%ipt">'%SUB_TITLE_SIZE)
 
-        # Centering images in html_file by replace <p> with <p align="center"> for lines that have
-        # <img> tag
-
-        for line in filedata.splitlines():
-            if "<img " in line:
-                new_line = line.replace("<p>","<p align=\"center\">")
-                filedata = filedata.replace(line, new_line)
-
-        f = codecs.open(html_file, "w", "utf-8", "html.parser")
-
-        f.write(filedata)
+        f = codecs.open(self.html_file, "w", "utf-8", "html.parser")
+        f.write(self.html_string)
         f.close()
 
-        _convert_html_to_pdf(html_file, pdf_file)
+        _convert_html_to_pdf(self.html_file, self.pdf_file)
         # Remove the created html file
         # os.remove(html_file)
 
@@ -329,4 +345,6 @@ def _chapter_path_from_chapter_number(chapter_number):
 
 
 if __name__ == '__main__':
-    Book().build_all()
+    BookMD(vn_only=True).build()
+    BookMD(vn_only=False).build()
+    BookPDF(vn_only=True).build()
