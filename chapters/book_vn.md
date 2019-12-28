@@ -2533,6 +2533,7 @@ Trong chương 2, chúng ta đã nói về việc quyển sách này có thể g
 Điều duy nhất tuyệt vời hơn trở thành một siêu anh hùng là trở thành một phần của một biệt đội siêu anh hùng. Tôi hy vọng bạn sẽ giới thiệu bản sao của quyển sách này cho bạn bè và đồng đội của bạn và tạo ra những siêu anh hùng khác.
 
 <a name="ack"></a>
+
 # Lời Nhóm Dịch
 
 **Dự án dịch sách này không thể thành công nếu không có sự đóng góp của cộng đồng.**
@@ -2544,7 +2545,8 @@ Hy vọng quyển sách này sẽ trở thành một sổ tay Học Máy hữu �
 
 Thông tin chi tiết đóng góp các thành viên cho dự án "Machine Learning Yearning" - "Khát khao học máy". Các đóng góp dịch, phản biệt, hiệu đính được thống kê dựa trên tên tài khoản Github cùng đường dẫn tới các repo tương ứng.   
 
-### Giai đoạn 1
+## Giai đoạn 1
+
 Đây là giai đoạn dịch từ bản tiếng Anh sang bản tiếng Việt lần đầu tiên. Bản dịch này phải đảm bảo ý nghĩa của bản dịch sát với bản gốc, việc trau chuốt ngôn từ sẽ được làm kỹ hơn ở giai đoạn 2.
 
 | Chương                     | Thảo luận                                                             | Dịch                    | Phản biện                                                      |
@@ -2625,7 +2627,7 @@ Mỗi chương được một hai bạn dịch chính sau đó các thành viên
 Trung bình mỗi chương có ba phản biện với tổng số 176 phản biện trên 58 chương sách.
 
 
-### Giai đoạn 2
+## Giai đoạn 2
 Trong giai đoạn này, các chương sẽ được trau chuốt hơn về mặt ngôn từ, cách diễn đạt.
 
 | Chương | Dịch | Phản biện |
@@ -2653,7 +2655,7 @@ Giai đoạn hai được hoàn thành với 16 bài hiệu đính (mỗi bài t
 
 <p align="center"><img src="../imgs/ACK_Phase2_Reviewers.PNG" width=80%</p>
 
-### Thuật ngữ
+## Thuật ngữ
 
 Còn rất nhiều các đóng góp từ các bạn dịch, phản biện cũng như thảo luận về các thuật ngữ tiếng Anh trong [Bảng thuật ngữ](glossary.md) với một số từ khóa điển hình được hoàn thiện trong quá trình dịch như:
 
@@ -2690,7 +2692,7 @@ Còn rất nhiều các đóng góp từ các bạn dịch, phản biện cũng 
 
 Chi tiết xem thêm tại [Bảng thuật ngữ](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/blob/master/glossary.md).
 
-### Các đóng góp khác
+## Các đóng góp khác
 Ngoài các đóng góp về bài dịch, phản biện, cũng như hiệu đính tuyệt vời nêu trên, cũng không thể không nêu những đóng góp thầm lặng khác cho đề tài như
 
 | STT | Nội dung                         | Đóng góp                                         |
@@ -2703,7 +2705,7 @@ Ngoài các đóng góp về bài dịch, phản biện, cũng như hiệu đín
 | 6   | Thiết kế bìa bản tiếng Việt      | duythanhvn                                       |
 | 7   | Tổng hợp nội dung, lời cảm ơn    | ngcthuong, tiepvupsu                             |
 
-### Tên các thành viên  
+## Tên các thành viên  
 
 Chi tiết tên và tài khoản github các thành viên có đóng góp cho đề tài không theo thứ tự nào cả.   
 

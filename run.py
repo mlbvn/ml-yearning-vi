@@ -92,10 +92,10 @@ class BookPDF(object):
             )
 
     def _add_break_page_before_each_chapter(self):
-        for part_name in self.no_chapter_list:
+        for chapter_name in self.no_chapter_list:
             self.html_string = self.html_string.replace(
-                '<p><a name="user-content-%s"></a></p>' % part_name,
-                '<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>' % part_name
+                '<p><a name="user-content-%s"></a></p>' % chapter_name,
+                '<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>' % chapter_name
             )
 
     def _add_break_before_acknowledgement(self):
@@ -104,7 +104,6 @@ class BookPDF(object):
             '<p><a name="user-content-ack"></a></p>',
             '<div style="page-break-after: always;"></div>\r\n<p><a name="ack"></a></p>'
         )
-
 
     def _correct_part_links(self):
         for order, part_name in enumerate(self.no_part_list):
@@ -116,6 +115,14 @@ class BookPDF(object):
             self.html_string = self.html_string.replace(
                 '#%s' % chapter_name, '%s'% self.chapter_list[order]
             )
+
+    def _correct_acknowledgement_link(self):
+        ack_title = _get_title_from_file_path(ACKNOWLEDGEMENT_PATH)
+        # Convert to the html link syntax
+        ack_link = _convert_title_to_link(ack_title)
+        self.html_string = self.html_string.replace(
+            '#ack', ack_link
+        )
 
     def _remove_title_bar(self):
         # Remove the ".md" title bar at begining
@@ -190,6 +197,7 @@ class BookPDF(object):
         self._get_part_and_chapter_lists()
         self._correct_part_links()
         self._correct_chapter_links()
+        self._correct_acknowledgement_link()
         self._remove_title_bar()
         self._center_images()
         self._other_format()
@@ -302,7 +310,7 @@ class Acknowledgement(BookPart):
 
     def _get_content_lines_md(self):
         lines = []
-        lines.append('<a name="{}"></a>\n'.format(self.label))
+        lines.append('<a name="{}"></a>\n\n'.format(self.label))
         with codecs.open(ACKNOWLEDGEMENT_PATH, 'r', encoding='utf-8') as ack_file:
             for line in ack_file:
                 lines.append(line)
