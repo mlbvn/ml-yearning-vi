@@ -21,3 +21,6 @@ Bản tiếng Anh https://github.com/ajaymache/machine-learning-yearning. Mặc 
 
 ## Bảng thuật ngữ
 Tất cả các thuật ngữ cần được dịch theo chuẩn trong file [glossary](glossary.md).
+
+## Báo lỗi
+Nếu bạn đọc gặp bất cứ lỗi nào về cuốn sách: chính tả, cách dịch, hình vẽ, công thức, ..., nhờ bạn [tạo pull request](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/pulls) để sửa trực tiếp hoặc [tạo một issue](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/issues) thông báo lỗi. Cảm ơn các bạn.
