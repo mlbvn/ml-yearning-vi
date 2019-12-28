@@ -242,7 +242,7 @@ Nhóm của bạn xây dựng một tập huấn luyện lớn bằng cách tả
 
 Tuy nhiên, khi triển khai bộ phát hiện mèo này lên ứng dụng di động của bạn, bạn phát hiện ra chất lượng rất tệ!
 
-<img src="../imgs/C05_01.png" width=500 align=center>
+<img src="../imgs/C05_01.png" width=400 align=center>
 
 
 **Điều gì đã xảy ra?**
