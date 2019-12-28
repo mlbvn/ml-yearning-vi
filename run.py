@@ -7,6 +7,7 @@ import pdfkit
 CHAPTERS_DIR = './chapters/'
 BOOK_DIR = CHAPTERS_DIR
 ACKNOWLEDGEMENT_PATH = './chapters/acknowledgement.md'
+GLOSSARY_PATH = './glossary.md'
 
 NO_PART_LIST = ['p{:02d}'.format(i) for i in range(0, 11)]
 NO_CHAPTER_LIST = ['ch{:02d}'.format(i) for i in range(1, 59)]
@@ -47,6 +48,7 @@ class BookMD(object):
         with codecs.open(self.md_file, 'w', encoding='utf-8') as file_writer:
             TableOfContent().add_md(file_writer)
             MainContent(self.vn_only).add_md(file_writer)
+            Glossary().add_md(file_writer)
             Acknowledgement().add_md(file_writer)
             file_writer.write('\n\n')
 
@@ -79,6 +81,7 @@ class TableOfContent(BookPart):
                 chapter_path = _chapter_path_from_chapter_number(chapter_number)
                 lines.append(self.get_toc_line(chapter_path, level=1))
         # ack
+        lines.append(Glossary.toc_line())
         lines.append(Acknowledgement.toc_line())
         return lines
 
@@ -135,6 +138,25 @@ class MainContent(BookPart):
         return lines
 
 
+class Glossary(BookPart):
+    label = 'glossary'
+
+    def __init__(self, vn_only=True):
+        super().__init__(vn_only=vn_only)
+
+    @classmethod
+    def toc_line(cls):
+        return "* [Bảng thuật ngữ Anh-Việt](#{})\n".format(cls.label)
+
+    def _get_content_lines_md(self):
+        lines = []
+        lines.append('<a name="{}"></a>\n\n'.format(self.label))
+        with codecs.open(GLOSSARY_PATH, 'r', encoding='utf-8') as ack_file:
+            for line in ack_file:
+                lines.append(line)
+        return lines
+
+
 class Acknowledgement(BookPart):
     label = 'ack'
 
@@ -187,6 +209,19 @@ class BookPDF(object):
                 '<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>' % chapter_name
             )
 
+    def _add_break_page_before_glossary(self):
+        # add page break before acknowledgement
+        self.html_string = self.html_string.replace(
+            '<p><a name="user-content-glossary"></a></p>',
+            '<div style="page-break-after: always;"></div>\r\n<p><a name="glossary"></a></p>'
+        )
+        splits = ['a-d', 'e-l', 'm-r', 's-z']
+        for split in splits:
+            self.html_string = self.html_string.replace(
+                '<p><a name="user-content-glossary-%s"></a></p>' % split,
+                '<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>' % split
+            )
+
     def _add_break_before_acknowledgement(self):
         # add page break before acknowledgement
         self.html_string = self.html_string.replace(
@@ -209,6 +244,12 @@ class BookPDF(object):
             self.html_string = self.html_string.replace(
                 '#%s' % chapter_name, '%s'% self.chapter_list[order]
             )
+
+    def _correct_glossary_link(self):
+        glossary_link = _convert_title_to_link(self._get_link_from_file(GLOSSARY_PATH))
+        self.html_string = self.html_string.replace(
+            '#glossary', glossary_link
+        )
 
     def _correct_acknowledgement_link(self):
         ack_link = _convert_title_to_link(self._get_link_from_file(ACKNOWLEDGEMENT_PATH))
@@ -285,10 +326,12 @@ class BookPDF(object):
         # raw html to fine html
         self._add_break_page_before_each_part()
         self._add_break_page_before_each_chapter()
+        self._add_break_page_before_glossary()
         self._add_break_before_acknowledgement()
         self._get_part_and_chapter_lists()
         self._correct_part_links()
         self._correct_chapter_links()
+        self._correct_glossary_link()
         self._correct_acknowledgement_link()
         self._remove_title_bar()
         self._center_images()
