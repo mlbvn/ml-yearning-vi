@@ -215,6 +215,12 @@ class BookPDF(object):
             '<p><a name="user-content-glossary"></a></p>',
             '<div style="page-break-after: always;"></div>\r\n<p><a name="glossary"></a></p>'
         )
+        splits = ['a-d', 'e-l', 'm-r', 's-z']
+        for split in splits:
+            self.html_string = self.html_string.replace(
+                '<p><a name="user-content-glossary-%s"></a></p>' % split,
+                '<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>' % split
+            )
 
     def _add_break_before_acknowledgement(self):
         # add page break before acknowledgement
@@ -311,7 +317,7 @@ class BookPDF(object):
         pdfkit.from_file(self.html_file, self.pdf_file, options=options)
 
         # Remove the created html file
-        os.remove(self.html_file)
+        # os.remove(self.html_file)
 
     def build(self):
         # md to raw html
