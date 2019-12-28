@@ -202,6 +202,11 @@ class BookPDF(object):
             '<div style="page-break-after: always;"></div>\r\n<p><a name="ack"></a></p>'
         )
 
+    @staticmethod
+    def _get_link_from_file(filename):
+        title = _get_title_from_file_path(filename)
+        return _convert_title_to_link(title)
+
     def _correct_part_links(self):
         for order, part_name in enumerate(self.no_part_list):
             self.html_string = self.html_string.replace('#%s' % part_name, '%s' % self.part_list[order])
@@ -214,9 +219,7 @@ class BookPDF(object):
             )
 
     def _correct_acknowledgement_link(self):
-        ack_title = _get_title_from_file_path(ACKNOWLEDGEMENT_PATH)
-        # Convert to the html link syntax
-        ack_link = _convert_title_to_link(ack_title)
+        ack_link = _convert_title_to_link(self._get_link_from_file(ACKNOWLEDGEMENT_PATH))
         self.html_string = self.html_string.replace(
             '#ack', ack_link
         )
@@ -236,25 +239,16 @@ class BookPDF(object):
                 self.html_string = self.html_string.replace(line, new_line)
 
     def _get_part_and_chapter_lists(self):
-        # export mardown file to html file
         assert len(self.part_list) == 0, self.part_list
         assert len(self.chapter_list) == 0, self.chapter_list
         for part in PARTS:
             part_path = part['path']
-            # Extract the original parth title
-            part_title = _get_title_from_file_path(part_path)
-
-            # Convert to the html link syntax
-            self.part_list.append(_convert_title_to_link(part_title))
+            self.part_list.append(self._get_link_from_file(part_path))
 
             start_chapter, end_chatper = part['range']
             for chapter_number in range(start_chapter, end_chatper + 1):
                 chapter_path = _chapter_path_from_chapter_number(chapter_number)
-
-                # Extract the original chapter title
-                chapter_title = _get_title_from_file_path(chapter_path)
-                # Convert to html link syntax
-                self.chapter_list.append(_convert_title_to_link(chapter_title))
+                self.chapter_list.append(self._get_link_from_file(chapter_path))
 
     def _other_format(self):
         padding_top = PADDING_TOP_ALL_CHAPTERS_VN if self.vn_only else PADDING_TOP_ALL_CHAPTERS
