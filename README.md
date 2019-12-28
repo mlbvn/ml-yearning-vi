@@ -10,7 +10,6 @@
 * [Song ngữ Anh-Việt](./chapters/book_en_vn.md)
 
 ### Ebook
-
 * [Tiếng Việt](./chapters/book_mly_with_cover_vn.pdf)
 * **Hiện tại bản ebook song ngữ bị lỗi, nhóm sẽ cập nhật trong thời gian sớm nhất**
 
