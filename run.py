@@ -219,7 +219,7 @@ class BookPDF(object):
     def _remove_title_bar(self):
         # Remove the ".md" title bar at begining
         self.html_string = self.html_string.replace(
-            '<h3>\n                  <span class="octicon octicon-book"></span>\n                  %s.md\r\n                </h3>'%os.path.basename(self.md_file),
+            '<h3>\n                  <span class="octicon octicon-book"></span>\n                  %s\n                </h3>'%os.path.basename(self.md_file),
             ""
         )
 
@@ -342,3 +342,4 @@ if __name__ == '__main__':
     BookMD(vn_only=True).build()
     BookMD(vn_only=False).build()
     BookPDF(vn_only=True).build()
+    BookPDF(vn_only=False).build()
