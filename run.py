@@ -209,6 +209,13 @@ class BookPDF(object):
                 '<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>' % chapter_name
             )
 
+    def _add_break_page_before_glossary(self):
+        # add page break before acknowledgement
+        self.html_string = self.html_string.replace(
+            '<p><a name="user-content-glossary"></a></p>',
+            '<div style="page-break-after: always;"></div>\r\n<p><a name="glossary"></a></p>'
+        )
+
     def _add_break_before_acknowledgement(self):
         # add page break before acknowledgement
         self.html_string = self.html_string.replace(
@@ -231,6 +238,12 @@ class BookPDF(object):
             self.html_string = self.html_string.replace(
                 '#%s' % chapter_name, '%s'% self.chapter_list[order]
             )
+
+    def _correct_glossary_link(self):
+        glossary_link = _convert_title_to_link(self._get_link_from_file(GLOSSARY_PATH))
+        self.html_string = self.html_string.replace(
+            '#glossary', glossary_link
+        )
 
     def _correct_acknowledgement_link(self):
         ack_link = _convert_title_to_link(self._get_link_from_file(ACKNOWLEDGEMENT_PATH))
@@ -307,10 +320,12 @@ class BookPDF(object):
         # raw html to fine html
         self._add_break_page_before_each_part()
         self._add_break_page_before_each_chapter()
+        self._add_break_page_before_glossary()
         self._add_break_before_acknowledgement()
         self._get_part_and_chapter_lists()
         self._correct_part_links()
         self._correct_chapter_links()
+        self._correct_glossary_link()
         self._correct_acknowledgement_link()
         self._remove_title_bar()
         self._center_images()

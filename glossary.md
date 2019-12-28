@@ -1,4 +1,7 @@
 # Bảng thuật ngữ Anh Việt
+
+<p><a name="glossary-a-d"></a></p>
+
 ## A-D
 | English                           | Tiếng Việt| Thảo luận tại                                                |
 |-----------------------------------|----------------------------------------------------------------|--------------------------------------------------------------|
@@ -24,6 +27,8 @@
 | distribution                      | phân phối                                                      |                                                              |
 | domain adaptation                 | thích ứng miền                                                 |                                                              |
 | dropout                           |                                                                |                                                              |
+
+<p><a name="glossary-e-l"></a></p>
 
 ## E-L
 | English                           | Tiếng Việt| Thảo luận tại                                                |
@@ -53,6 +58,8 @@
 | linear regression                 | hồi quy tuyến tính                                             |                                                              |
 | logistic regression               | hồi quy logistic                                               |                                                              |
 
+<p><a name="glossary-m-r"></a></p>
+
 ## M-R
 | English                           | Tiếng Việt| Thảo luận tại                                                |
 |-----------------------------------|----------------------------------------------------------------|--------------------------------------------------------------|
@@ -79,6 +86,8 @@
 | reinforcement learning            | học tăng cường                                                 |                                                              |
 | reward function                   | hàm điểm thưởng                                                |                                                              |
 | running time                      | thời gian chạy                                                 |                                                              |
+
+<p><a name="glossary-s-z"></a></p>
 
 ## S-Z
 | English                           | Tiếng Việt| Thảo luận tại                                                |
