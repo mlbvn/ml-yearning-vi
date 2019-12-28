@@ -1,13 +1,12 @@
 # Lời Nhóm Dịch
 
-**Dự án dịch sách này không thể thành công nếu không có sự đóng góp của cộng đồng.**
+Sau hơn hai tháng kêu gọi và thực hiện việc dịch, cuốn sách đã nhận được sự tiếp nhận nồng ấm từ độc giả. Rất nhiều thành viên đã tham gia dịch và giúp đỡ các vấn đề kỹ thuật. Tới thời điểm này (28/12/2019), chúng tôi vui mừng thông báo cuốn sách có thể được coi đã hoàn thành. Mọi sự thay đổi nếu có đều có thể thực hiện một cách nhanh chóng.
 
-Việc thiết lập repo đầu tiên với dịch những chương đầu và kêu gọi.
+**Dự án dịch sách này không thể thành công nếu không có sự đóng góp của cộng đồng.** Xin gửi lời cảm ơn tới [Forum Machine Learning Cơ Bản](https://www.facebook.com/groups/machinelearningcoban) đã theo dõi và ủng hộ suốt quá trình dự án.
 
-Lời cuối cùng xin gửi lời cảm ơn tới cộng đồng Machine Learning Cơ Bản đã theo dõi và ủng hộ suốt quá trình dự án.
-Hy vọng quyển sách này sẽ trở thành một sổ tay Học Máy hữu ích cho các độc giả. Và hi vọng đây sẽ là dự án đầu tiên đặt nền móng cho các dự án *open book* -- sách mở khác.
+Hy vọng quyển sách này sẽ trở thành một sổ tay Học Máy hữu ích cho các độc giả. Và hy vọng đây sẽ là dự án đầu tiên đặt nền móng cho các dự án cộng đồng tương tự khác. Hiện tại, các thành viên trong nhóm đang triển khai dự án thứ hai -- dịch [Dive into Deep Learning -- Đắm mình vào Học Sâu](https://github.com/aivivn/d2l-vn). Nếu bạn đang đọc những dòng này và nghĩ mình có thể đóng góp, mời bạn tham gia đóng góp thực hiện.
 
-Thông tin chi tiết đóng góp các thành viên cho dự án "Machine Learning Yearning" - "Khát khao học máy". Các đóng góp dịch, phản biệt, hiệu đính được thống kê dựa trên tên tài khoản Github cùng đường dẫn tới các repo tương ứng.   
+Thông tin chi tiết đóng góp các thành viên cho dự án "Machine Learning Yearning" -- "Khát khao học máy". Các đóng góp dịch, phản biệt, hiệu đính được thống kê dựa trên tên tài khoản Github cùng đường dẫn tới các repo tương ứng.
 
 ## Giai đoạn 1
 
@@ -200,7 +199,3 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | van-tienhoang |                      |
 | kiemrong08    |                      |
 | freeloneman   |                      |
-
-
-**Mọi đóng góp của các bạn đều được lưu lại trong lịch sử của trang này.**
-các bạn chưa có tên đầy đủ, hoặc tên đóng góp trong trang này xin vui lòng liên hệ lại với nhóm để lưu lại những đóng góp của các bạn.
