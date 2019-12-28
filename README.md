@@ -5,13 +5,15 @@
 
 ## Bản đầy đủ các chương đã dịch xong
 
+
 ### Online
 * [Tiếng Việt](./chapters/book_vn.md)
 * [Song ngữ Anh-Việt](./chapters/book_en_vn.md)
 
 ### Ebook
+
 * [Tiếng Việt](./chapters/book_mly_with_cover_vn.pdf)
-* [Song ngữ Anh-Việt](./chapters/book_mly_with_cover_en_vn.pdf)
+* **Hiện tại bản ebook song ngữ bị lỗi, nhóm sẽ cập nhật trong thời gian sớm nhất**
 
 ### Những người thực hiện
 [Nhóm dịch thuật Machine Learning Cơ Bản](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/graphs/contributors)
