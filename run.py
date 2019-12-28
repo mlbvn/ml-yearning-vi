@@ -7,6 +7,7 @@ import pdfkit
 CHAPTERS_DIR = './chapters/'
 BOOK_DIR = CHAPTERS_DIR
 ACKNOWLEDGEMENT_PATH = './chapters/acknowledgement.md'
+GLOSSARY_PATH = './glossary.md'
 
 NO_PART_LIST = ['p{:02d}'.format(i) for i in range(0, 11)]
 NO_CHAPTER_LIST = ['ch{:02d}'.format(i) for i in range(1, 59)]
@@ -47,6 +48,7 @@ class BookMD(object):
         with codecs.open(self.md_file, 'w', encoding='utf-8') as file_writer:
             TableOfContent().add_md(file_writer)
             MainContent(self.vn_only).add_md(file_writer)
+            Glossary().add_md(file_writer)
             Acknowledgement().add_md(file_writer)
             file_writer.write('\n\n')
 
@@ -79,6 +81,7 @@ class TableOfContent(BookPart):
                 chapter_path = _chapter_path_from_chapter_number(chapter_number)
                 lines.append(self.get_toc_line(chapter_path, level=1))
         # ack
+        lines.append(Glossary.toc_line())
         lines.append(Acknowledgement.toc_line())
         return lines
 
@@ -132,6 +135,25 @@ class MainContent(BookPart):
                     print('Line with decode error:')
                     print(e)
         lines.append('\n')
+        return lines
+
+
+class Glossary(BookPart):
+    label = 'glossary'
+
+    def __init__(self, vn_only=True):
+        super().__init__(vn_only=vn_only)
+
+    @classmethod
+    def toc_line(cls):
+        return "* [Bảng thuật ngữ Anh-Việt](#{})\n".format(cls.label)
+
+    def _get_content_lines_md(self):
+        lines = []
+        lines.append('<a name="{}"></a>\n\n'.format(self.label))
+        with codecs.open(GLOSSARY_PATH, 'r', encoding='utf-8') as ack_file:
+            for line in ack_file:
+                lines.append(line)
         return lines
 
 
