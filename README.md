@@ -16,7 +16,7 @@
 ### Những người thực hiện
 [Nhóm dịch thuật Machine Learning Cơ Bản](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/graphs/contributors)
 
-# Nguồn
+## Nguồn
 Bản tiếng Anh https://github.com/ajaymache/machine-learning-yearning. Mặc dù là bản Draft, nội dung bản này cũng đã khá đầy đủ.
 
 ## Bảng thuật ngữ
