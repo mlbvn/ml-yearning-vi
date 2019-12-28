@@ -69,6 +69,8 @@ class BookPDF(object):
         self.no_part_list = ['p{:02d}'.format(i) for i in range(0, 11)]
         self.no_chapter_list = ['ch{:02d}'.format(i) for i in range(1, 59)]
         self.html_string = ''
+        self.part_list = []  # TODO: description
+        self.chapter_list = []
 
     # TODO: remove this function, it is a duplicate of BookMD._get_path()
     @staticmethod
@@ -88,22 +90,31 @@ class BookPDF(object):
                 '<p><a name="user-content-%s"></a></p>' % part_name,
                 '<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>' % part_name
             )
+
     def _add_break_page_before_each_chapter(self):
-        for part_name in self.no_part_list:
+        for part_name in self.no_chapter_list:
             self.html_string = self.html_string.replace(
                 '<p><a name="user-content-%s"></a></p>' % part_name,
                 '<div style="page-break-after: always;"></div>\r\n<p><a name="%s"></a></p>' % part_name
             )
 
-    def _correct_part_links(self, part_list):
-        for order, part_name in enumerate(self.no_part_list):
-            self.html_string = self.html_string.replace('#%s' % part_name, '%s' % part_list[order])
+    def _add_break_before_acknowledgement(self):
+        # add page break before acknowledgement
+        self.html_string = self.html_string.replace(
+            '<p><a name="user-content-ack"></a></p>',
+            '<div style="page-break-after: always;"></div>\r\n<p><a name="ack"></a></p>'
+        )
 
-    def _correct_chapter_links(self, chapter_list):
+
+    def _correct_part_links(self):
+        for order, part_name in enumerate(self.no_part_list):
+            self.html_string = self.html_string.replace('#%s' % part_name, '%s' % self.part_list[order])
+
+    def _correct_chapter_links(self):
         # Replace the correct link subsection of each chapter
         for order, chapter_name in enumerate(self.no_chapter_list):
             self.html_string = self.html_string.replace(
-                '#%s' % chapter_name, '%s'% chapter_list[order]
+                '#%s' % chapter_name, '%s'% self.chapter_list[order]
             )
 
     def _remove_title_bar(self):
@@ -120,28 +131,17 @@ class BookPDF(object):
                 new_line = line.replace("<p>","<p align=\"center\">")
                 self.html_string = self.html_string.replace(line, new_line)
 
-    def build(self):
-        # TODO: refactor this method, divide it into multiple small methods/functions.
-        md_file = self.md_file
-        # extract list of all part titles and chapter titles
-        part_list = []
-        path = md_file
-        chapter_list = []
-        html_file = self.html_file
-        pdf_file = self.pdf_file
-
-        self._get_raw_html_string()
-        self._add_break_page_before_each_part()
-        self._add_break_page_before_each_chapter()
-
+    def _get_part_and_chapter_lists(self):
         # export mardown file to html file
+        assert len(self.part_list) == 0, self.part_list
+        assert len(self.chapter_list) == 0, self.chapter_list
         for part in PARTS:
             part_path = part['path']
             # Extract the original parth title
             part_title = _get_title_from_file_path(part_path)
 
             # Convert to the html link syntax
-            part_list.append(_convert_title_to_link(part_title))
+            self.part_list.append(_convert_title_to_link(part_title))
 
             start_chapter, end_chatper = part['range']
             for chapter_number in range(start_chapter, end_chatper + 1):
@@ -150,18 +150,9 @@ class BookPDF(object):
                 # Extract the original chapter title
                 chapter_title = _get_title_from_file_path(chapter_path)
                 # Convert to html link syntax
-                chapter_list.append(_convert_title_to_link(chapter_title))
+                self.chapter_list.append(_convert_title_to_link(chapter_title))
 
-        self._correct_part_links(part_list)
-        self._correct_chapter_links(chapter_list)
-        self._remove_title_bar()
-
-        # add page break before acknowledgement
-        self.html_string = self.html_string.replace(
-            '<p><a name="user-content-ack"></a></p>',
-            '<div style="page-break-after: always;"></div>\r\n<p><a name="ack"></a></p>'
-        )
-
+    def _other_format(self):
         padding_top = PADDING_TOP_ALL_CHAPTERS_VN if self.vn_only else PADDING_TOP_ALL_CHAPTERS
         self.html_string = self.html_string.replace(
             '<style>',
@@ -169,13 +160,42 @@ class BookPDF(object):
         self.html_string=self.html_string.replace('<h1>','<h1 style="font-size:%ipt">'%PART_NAME_SIZE)    
         self.html_string=self.html_string.replace('<h2>','<h2 style="font-size:%ipt">'%SUB_TITLE_SIZE)
 
+    def _to_pdf(self):
         f = codecs.open(self.html_file, "w", "utf-8", "html.parser")
         f.write(self.html_string)
         f.close()
+        options = {
+            'page-size': 'A4',
+            'margin-top': '2.5cm',
+            'margin-right': '2.5cm',
+            'margin-bottom': '2.5cm',
+            'margin-left': '2.5cm',
+            'encoding': "UTF-8",
+            'footer-center': '[page]'
+        }
+        print("Convert html file {} to pdf file {}".format(self.html_file, self.pdf_file))
+        pdfkit.from_file(self.html_file, self.pdf_file, options=options)
 
-        _convert_html_to_pdf(self.html_file, self.pdf_file)
         # Remove the created html file
         # os.remove(html_file)
+
+    def build(self):
+        # md to raw html
+        self._get_raw_html_string()
+
+        # raw html to fine html
+        self._add_break_page_before_each_part()
+        self._add_break_page_before_each_chapter()
+        self._add_break_before_acknowledgement()
+        self._get_part_and_chapter_lists()
+        self._correct_part_links()
+        self._correct_chapter_links()
+        self._remove_title_bar()
+        self._center_images()
+        self._other_format()
+
+        # fine html to pdf
+        self._to_pdf()
 
 
 class BookPart(object):
@@ -216,9 +236,6 @@ class TableOfContent(BookPart):
         # ack
         lines.append(Acknowledgement.toc_line())
         return lines
-
-    def _get_content_lines_html(self):
-        pass
 
     def get_toc_line(self, path, level):
         part_title = _get_title_from_file_path(path)
@@ -302,19 +319,6 @@ def _convert_title_to_link(title):
     title = title.replace(",", "")
     title = title.replace("#-", "#user-content-")
     return title
-
-def _convert_html_to_pdf(html_file, pdf_file):
-    options = {
-        'page-size': 'A4',
-        'margin-top': '2.5cm',
-        'margin-right': '2.5cm',
-        'margin-bottom': '2.5cm',
-        'margin-left': '2.5cm',
-        'encoding': "UTF-8",
-        'footer-center': '[page]'
-    }
-    print("Convert html file {} to pdf file {}".format(html_file, pdf_file))
-    pdfkit.from_file(html_file, pdf_file, options=options)
 
 
 def _get_label_from_filename(chapter_or_part_filename):
