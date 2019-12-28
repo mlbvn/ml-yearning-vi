@@ -3347,14 +3347,13 @@ Trong chương 2, chúng ta đã nói về việc quyển sách này có thể g
 
 # Lời Nhóm Dịch
 
-**Dự án dịch sách này không thể thành công nếu không có sự đóng góp của cộng đồng.**
+Sau hơn hai tháng kêu gọi và thực hiện việc dịch, cuốn sách đã nhận được sự tiếp nhận nồng ấm từ độc giả. Rất nhiều thành viên đã tham gia dịch và giúp đỡ các vấn đề kỹ thuật. Tới thời điểm này (28/12/2019), chúng tôi vui mừng thông báo cuốn sách có thể được coi đã hoàn thành. Mọi sự thay đổi nếu có đều có thể thực hiện một cách nhanh chóng.
 
-Việc thiết lập repo đầu tiên với dịch những chương đầu và kêu gọi.
+**Dự án dịch sách này không thể thành công nếu không có sự đóng góp của cộng đồng.** Xin gửi lời cảm ơn tới [Forum Machine Learning Cơ Bản](https://www.facebook.com/groups/machinelearningcoban) đã theo dõi và ủng hộ suốt quá trình dự án.
 
-Lời cuối cùng xin gửi lời cảm ơn tới cộng đồng Machine Learning Cơ Bản đã theo dõi và ủng hộ suốt quá trình dự án.
-Hy vọng quyển sách này sẽ trở thành một sổ tay Học Máy hữu ích cho các độc giả. Và hi vọng đây sẽ là dự án đầu tiên đặt nền móng cho các dự án *open book* -- sách mở khác.
+Hy vọng quyển sách này sẽ trở thành một sổ tay Học Máy hữu ích cho các độc giả. Và hy vọng đây sẽ là dự án đầu tiên đặt nền móng cho các dự án cộng đồng tương tự khác. Hiện tại, các thành viên trong nhóm đang triển khai dự án thứ hai -- dịch [Dive into Deep Learning -- Đắm mình vào Học Sâu](https://github.com/aivivn/d2l-vn). Nếu bạn đang đọc những dòng này và nghĩ mình có thể đóng góp, mời bạn tham gia đóng góp thực hiện.
 
-Thông tin chi tiết đóng góp các thành viên cho dự án "Machine Learning Yearning" - "Khát khao học máy". Các đóng góp dịch, phản biệt, hiệu đính được thống kê dựa trên tên tài khoản Github cùng đường dẫn tới các repo tương ứng.   
+Thông tin chi tiết đóng góp các thành viên cho dự án "Machine Learning Yearning" -- "Khát khao học máy". Các đóng góp dịch, phản biệt, hiệu đính được thống kê dựa trên tên tài khoản Github cùng đường dẫn tới các repo tương ứng.
 
 ## Giai đoạn 1
 
@@ -3466,43 +3465,6 @@ Giai đoạn hai được hoàn thành với 16 bài hiệu đính (mỗi bài t
 
 <p align="center"><img src="../imgs/ACK_Phase2_Reviewers.PNG" width=80%</p>
 
-## Thuật ngữ
-
-Còn rất nhiều các đóng góp từ các bạn dịch, phản biện cũng như thảo luận về các thuật ngữ tiếng Anh trong [Bảng thuật ngữ](glossary.md) với một số từ khóa điển hình được hoàn thiện trong quá trình dịch như:
-
-| English                           | Tiếng Việt                | Thảo luận tại                                                |
-|-----------------------------------|---------------------------|--------------------------------------------------------------|
-| artificial data synthesis         | tổng hợp dữ liệu nhân tạo | [#297](http://bit.ly/2PVhv5V)                                |
-| background noise                  | nhiễu nền                 | [#193](http://bit.ly/31ObyKI)                                |
-| benchmark                         | đánh giá xếp hạng         | [#87](http://bit.ly/2BvfPYA)                                 |
-| bias (bias as variance)           | độ chệch                  | [#125](http://bit.ly/32HJI3S)                                |
-| data mismatch                     | dữ liệu không tương đồng  | [#305](http://bit.ly/2PRYVLV)                                |
-| domain adaptation                 | thích ứng miền            | [#256](http://bit.ly/2ZoBtJ7)                                |
-| Eyeball dev set                   | Tập phát triển Eyeball    | [#162](http://bit.ly/2MVHcl7)                                |
-| human-level performance           | chất lượng mức con người  | [#259](http://bit.ly/36IzQcB), [#287](http://bit.ly/33CJfjX) |
-| learning curve                    | đồ thị quá trình học      | [#87](http://bit.ly/2BvfPYA)                                 |
-| multiple-number evaluation metric | phép đo đa trị            | [#305](http://bit.ly/2PRYVLV)                                |
-| multitask learning                | học đa nhiệm              | [#256](http://bit.ly/2ZoBtJ7)                                |
-| negative sample/example           | mẫu âm                    |                                                              |
-| neural network                    | mạng nơ-ron               | [#87](http://bit.ly/2BvfPYA) [#115](http://bit.ly/2MAkizG)   |
-| optimizing metric                 | phép đo để tối ưu         | [#87](http://bit.ly/2BvfPYA)                                 |
-| overfit                           | overfit                   | [#87](http://bit.ly/2BvfPYA)                                 |
-| performance                       | chất lượng                | [#259](http://bit.ly/36IzQcB)                                |
-| plateau (danh từ)                 | vùng nằm ngang            | [#260](http://bit.ly/35XznCO)                                |
-| plateau (động từ)                 | nằm ngang                 | [#260](http://bit.ly/35XznCO)                                |
-| pipeline                          | pipeline                  | [#334](http://bit.ly/2OyYuEf)                                |
-| positive sample/example           | mẫu dương                 |                                                              |
-| sampling with replacement         | lấy mẫu có hoàn lại       | [#251](http://bit.ly/34wQuKr)                                |
-| sampling without replacement      | lấy mẫu không hoàn lại    | [#251](http://bit.ly/34wQuKr)                                |
-| satisficing metric                | phép đo thỏa mãn          | [#87](http://bit.ly/2BvfPYA)                                 |
-| single-number evaluation metric   | phép đo đơn trị           |                                                              |
-| training dev set                  | tập phát triển huấn luyện | [#305](http://bit.ly/2PRYVLV)                                |
-| unavoidable bias                  | độ chệch không tránh được |                                                              |
-| underfit                          | underfit                  | [#87](http://bit.ly/2BvfPYA)                                 |
-| variance (bias as variance)       | phương sai                | [#125](http://bit.ly/32HJI3S)                                |
-
-Chi tiết xem thêm tại [Bảng thuật ngữ](https://github.com/aivivn/Machine-Learning-Yearning-Vietnamese-Translation/blob/master/glossary.md).
-
 ## Các đóng góp khác
 Ngoài các đóng góp về bài dịch, phản biện, cũng như hiệu đính tuyệt vời nêu trên, cũng không thể không nêu những đóng góp thầm lặng khác cho đề tài như
 
@@ -3547,9 +3509,5 @@ Chi tiết tên và tài khoản github các thành viên có đóng góp cho đ
 | van-tienhoang |                      |
 | kiemrong08    |                      |
 | freeloneman   |                      |
-
-
-**Mọi đóng góp của các bạn đều được lưu lại trong lịch sử của trang này.**
-các bạn chưa có tên đầy đủ, hoặc tên đóng góp trong trang này xin vui lòng liên hệ lại với nhóm để lưu lại những đóng góp của các bạn.
 
 
