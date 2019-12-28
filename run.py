@@ -59,16 +59,8 @@ class BookPart(object):
         """a list of markdown lines to be written, must be implemented in subclasses"""
         raise NotImplementedError
 
-    def _get_content_lines_html(self):
-        """a list of markdown lines to be written, must be implemented in subclasses"""
-        raise NotImplementedError
-
     def add_md(self, file_writer):
         for line in self._get_content_lines_md():
-            file_writer.write(line)
-
-    def add_html(self, file_writer):
-        for line in self._get_content_lines_html():
             file_writer.write(line)
 
 
@@ -235,12 +227,12 @@ class BookPDF(object):
         # TODO: avoide replace multiple times inside for loop
         for line in self.html_string.splitlines():
             if "<img " in line:
-                new_line = line.replace("<p>","<p align=\"center\">")
+                new_line = line.replace("<p>", "<p align=\"center\">")
                 self.html_string = self.html_string.replace(line, new_line)
 
     def _get_part_and_chapter_lists(self):
-        assert len(self.part_list) == 0, self.part_list
-        assert len(self.chapter_list) == 0, self.chapter_list
+        assert not self.part_list, self.part_list
+        assert not self.chapter_list, self.chapter_list
         for part in PARTS:
             part_path = part['path']
             self.part_list.append(self._get_link_from_file(part_path))
@@ -254,9 +246,18 @@ class BookPDF(object):
         padding_top = PADDING_TOP_ALL_CHAPTERS_VN if self.vn_only else PADDING_TOP_ALL_CHAPTERS
         self.html_string = self.html_string.replace(
             '<style>',
-            '<style>tr{font-size: %ipt}h1{padding-top: %ipx;text-align: center;color: %s}li,p{font-size: %ipt}body{text-align: justify;}'%(NORMAL_TEXT_SIZE,padding_top,PART_NAME_COLOR,NORMAL_TEXT_SIZE))
-        self.html_string=self.html_string.replace('<h1>','<h1 style="font-size:%ipt">'%PART_NAME_SIZE)
-        self.html_string=self.html_string.replace('<h2>','<h2 style="font-size:%ipt">'%SUB_TITLE_SIZE)
+            '<style>tr{font-size: %ipt}h1{padding-top: %ipx;text-align: center;color: %s}li,p{font-size: %ipt}body{text-align: justify;}' % (
+                NORMAL_TEXT_SIZE, padding_top, PART_NAME_COLOR, NORMAL_TEXT_SIZE
+            )
+        )
+        self.html_string = self.html_string.replace(
+            '<h1>',
+            '<h1 style="font-size:%ipt">'%PART_NAME_SIZE
+        )
+        self.html_string = self.html_string.replace(
+            '<h2>',
+            '<h2 style="font-size:%ipt">'%SUB_TITLE_SIZE
+        )
 
     def _to_pdf(self):
         f = codecs.open(self.html_file, "w", "utf-8", "html.parser")
@@ -314,8 +315,8 @@ def _get_label_from_filename(chapter_or_part_filename):
         return chapter_or_part_filename[:3]  # pxx
     elif chapter_or_part_filename.startswith('ch'):
         return chapter_or_part_filename[:4]  # chxx
-    else:
-        assert False, chapter_or_part_filename
+    assert False, chapter_or_part_filename
+    return ''
 
 
 def _remove_sharp(title):
@@ -330,6 +331,7 @@ def _get_title_from_file_path(part_path):
                 line = line.strip()
                 return line
     assert False, part_path
+    return ''
 
 
 def _chapter_path_from_chapter_number(chapter_number):
