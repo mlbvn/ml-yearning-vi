@@ -1,19 +1,5 @@
-# Bảng thuật ngữ
-
-Các thuật ngữ cần được dịch theo chuẩn trong file này.
-
-Nếu một từ chưa có trong bảng Anh - Việt, bạn có thể tạo một Pull Request mới để thêm từ đó vào bảng dưới đây.
-Nếu bạn cho rằng một từ không nên dịch ra tiếng Việt, bạn có thể giữ nguyên bản tiếng Anh.
-
-*Chú ý giữ thứ tự theo bảng chữ cái để tiện tra cứu.*
-
-## Tham khảo bảng glossary của nhóm dịch sách Deep Learning
-
-Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn có thể tham khảo [cách làm của nhóm dịch sách Deep Learning](https://docs.google.com/spreadsheets/d/1Hcd4AqR7Xzd08Ws0gwhZ-LX6XNzJKgCDy0VcFc3D66c/edit#gid=0). Các từ trong danh sách này đều đã được thảo luận khá kỹ. Khi nhận được sự đồng thuận của nhiều thành viên, các từ đó sẽ được cập nhật vào trang này.
-
-## Anh - Việt
-
-
+# Bảng thuật ngữ Anh Việt
+## A-D
 | English                           | Tiếng Việt| Thảo luận tại                                                |
 |-----------------------------------|----------------------------------------------------------------|--------------------------------------------------------------|
 | accuracy                          | độ chính xác                                                   |                                                              |
@@ -38,6 +24,10 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | distribution                      | phân phối                                                      |                                                              |
 | domain adaptation                 | thích ứng miền                                                 |                                                              |
 | dropout                           |                                                                |                                                              |
+
+## E-L
+| English                           | Tiếng Việt| Thảo luận tại                                                |
+|-----------------------------------|----------------------------------------------------------------|--------------------------------------------------------------|
 | early stopping                    | dừng sớm                                                       |                                                              |
 | end-to-end                        | đầu-cuối                                                       | [#334](http://bit.ly/2OyYuEf)                                |
 | error analysis                    | phân tích lỗi                                                  |                                                              |
@@ -62,6 +52,10 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | learning algorithm                | thuật toán học                                                 |                                                              |
 | linear regression                 | hồi quy tuyến tính                                             |                                                              |
 | logistic regression               | hồi quy logistic                                               |                                                              |
+
+## M-R
+| English                           | Tiếng Việt| Thảo luận tại                                                |
+|-----------------------------------|----------------------------------------------------------------|--------------------------------------------------------------|
 | machine learning                  | học máy                                                        |                                                              |
 | metric                            | phép đo                                                        |                                                              |
 | misclassified                     | bị phân loại nhầm                                              |                                                              |
@@ -85,6 +79,10 @@ Nếu một từ chưa có trong bảng thuật ngữ dưới đây, các bạn 
 | reinforcement learning            | học tăng cường                                                 |                                                              |
 | reward function                   | hàm điểm thưởng                                                |                                                              |
 | running time                      | thời gian chạy                                                 |                                                              |
+
+## S-Z
+| English                           | Tiếng Việt| Thảo luận tại                                                |
+|-----------------------------------|----------------------------------------------------------------|--------------------------------------------------------------|
 | sampling with replacement         | lấy mẫu có hoàn lại                                            | [#251](http://bit.ly/34wQuKr)                                |
 | sampling without replacement      | lấy mẫu không hoàn lại                                         | [#251](http://bit.ly/34wQuKr)                                |
 | satisficing metric                | phép đo thỏa mãn                                               | [#87](http://bit.ly/2BvfPYA)                                 |
