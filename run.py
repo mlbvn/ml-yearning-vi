@@ -13,9 +13,9 @@ NO_PART_LIST = ['p{:02d}'.format(i) for i in range(0, 11)]
 NO_CHAPTER_LIST = ['ch{:02d}'.format(i) for i in range(1, 59)]
 
 # Ajust values below to modify font-size (unit:pt), colors and margin(unit:px) in pdf files
-NORMAL_TEXT_SIZE = 16
-SUB_TITLE_SIZE = 28
-PART_NAME_SIZE = 72
+NORMAL_TEXT_SIZE = 17
+SUB_TITLE_SIZE = 27
+PART_NAME_SIZE = 48
 PART_NAME_COLOR = "#0E275A"
 PADDING_TOP_ALL_CHAPTERS = 200
 PADDING_TOP_ALL_CHAPTERS_VN = 500
@@ -271,6 +271,9 @@ class BookPDF(object):
                 new_line = line.replace("<p>", "<p align=\"center\">")
                 self.html_string = self.html_string.replace(line, new_line)
 
+    def _center_tabels(self):
+        self.html_string = self.html_string.replace("<table>", '<table style="margin:0px auto; width:100%">')
+
     def _get_part_and_chapter_lists(self):
         assert not self.part_list, self.part_list
         assert not self.chapter_list, self.chapter_list
@@ -335,6 +338,7 @@ class BookPDF(object):
         self._correct_acknowledgement_link()
         self._remove_title_bar()
         self._center_images()
+        self._center_tabels()
         self._other_format()
 
         # fine html to pdf

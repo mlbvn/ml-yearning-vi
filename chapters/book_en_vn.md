@@ -224,7 +224,7 @@ Hai nguyên nhân chính là:
 
 Cho dù có thêm nhiều nhiều dữ liệu nữa, thường thì chất lượng của các thuật toán học máy cổ điển, như hồi quy logistic, cũng không tốt hơn. Nghĩa là đồ thị quá trình học chững lại và thuật toán ngừng cải thiện ngay cả khi có thêm dữ liệu:
 
-![img](../imgs/C04_01.png)
+<img src="../imgs/C04_01.png" width=750 align=center>
 
 > It was as if the older algorithms didn’t know what to do with all the data we now have.
 
@@ -234,13 +234,13 @@ Như thể thuật toán cổ điển không biết xử lý thế nào với t�
 
 Nếu bạn huấn luyện một mạng nơ-ron nhỏ cho cùng một tác vụ học có giám sát, bạn có thể đạt chất lượng cao hơn một chút:
 
-![img](../imgs/C04_02.png)
+<img src="../imgs/C04_02.png" width=750 align=center>
 
 > Here, by "Small NN" we mean a neural network with only a small number of hidden units/layers/parameters. Finally, if you train larger and larger neural networks, you can obtain even better performance [1]:
 
 "Mạng neural nhỏ" ở đây có nghĩa là mạng nơ-ron với ít nút ẩn/tầng/tham số. Sau cùng, bạn có thể cải thiện chất lượng thêm nữa nếu dùng các mạng nơ-ron lớn hơn [1]:
 
-![img](../imgs/C04_03.png)
+<img src="../imgs/C04_03.png" width=750 align=center>
 
 > Thus, you obtain the best performance when you (i) Train a very large neural network, so that you are on the green curve above; (ii) Have a huge amount of data.
 
@@ -287,7 +287,7 @@ Nhóm của bạn xây dựng một tập huấn luyện lớn bằng cách tả
 
 Tuy nhiên, khi triển khai bộ phát hiện mèo này lên ứng dụng di động của bạn, bạn phát hiện ra chất lượng rất tệ!
 
-![img](../imgs/C05_01.png)
+<img src="../imgs/C05_01.png" width=500 align=center>
 
 > **What happened?**
 
@@ -435,16 +435,18 @@ Vậy còn kích thước của tập kiểm tra thì sao? Nó cần đủ lớn
 
 > Classification accuracy is an example of a **single-number evaluation metric**: You run your classifier on the dev set (or test set), and get back a single number about what fraction of examples it classified correctly. According to this metric, if classifier A obtains 97% accuracy, and classifier B obtains 90% accuracy, then we judge classifier A to be superior.
 
-Độ chính xác trong phân loại là ví dụ của **phép đo đơn trị** -- phép đo được biểu diễn bằng chỉ một con số. Khi chạy bộ phân loại trên một tập phát triển (hoặc tập kiểm tra), độ chính xác được tính bằng số mẫu được phân loại chính xác trên tổng số mẫu trong tập đó. Theo phép đo này, nếu độ chính xác của bộ phân loại A là 97% và của bộ phân loại B là 90% thì ta kết luận rằng bộ phân loại A cho kết quả tốt hơn.
+Độ chính xác trong phân loại là ví dụ của **phép đo đơn trị** -- phép đo được biểu diễn bằng chỉ một con số. Khi chạy bộ phân loại trên một tập phát triển (hoặc tập kiểm tra), độ chính xác được tính bằng số mẫu được phân loại đúng trên tổng số mẫu trong tập đó. Theo phép đo này, nếu độ chính xác của bộ phân loại A là 97% và của bộ phân loại B là 90% thì ta kết luận rằng bộ phân loại A cho kết quả tốt hơn.
 
 > In contrast, Precision and Recall[3] is not a single-number evaluation metric: It gives two numbers for assessing your classifier. Having multiple-number evaluation metrics makes it harder to compare algorithms. Suppose your algorithms perform as follows:
 
-Ngược lại, Precision và Recall[3] không phải là một phép đo đơn trị: chúng đưa ra hai chỉ số được sử dụng để đánh giá bộ phân loại. Việc so sánh các thuật toán với nhau sẽ trở nên khó hơn với những phép đo đa trị -- những phép đo được biểu diễn bằng nhiều hơn một số. Giả sử thuật toán trả về kết quả như sau:
+Ngược lại, Precision và Recall[3] không phải là một phép đo đơn trị: chúng đưa ra hai chỉ số để đánh giá bộ phân loại. Việc so sánh các thuật toán với nhau sẽ trở nên khó hơn với những phép đo đa trị -- những phép đo được biểu diễn bằng nhiều hơn một số. Giả sử thuật toán trả về kết quả như sau:
 
 
 > Here, neither classifier is obviously superior, so it doesn’t immediately guide you toward picking one.
 
 Ở đây, không bộ phân loại nào tốt hơn một cách rõ ràng, vì vậy dựa vào kết quả trên ta không thể ngay lập tức chọn ra một bộ phân loại tốt hơn.
+
+<p align="center"></p>
 
 | Bộ Phân Loại  | Precision | Recall |
 | ----- | -------: | -------: |
@@ -464,10 +466,14 @@ Nếu bạn thực sự quan tâm đến cả Precision lẫn Recall. Tôi gợi
 
 Việc có một phép đo đơn trị sẽ giúp tăng tốc khả năng đưa ra quyết định của bạn khi bạn phải lựa chọn một trong số lượng lớn các bộ phân loại. Phép đo đơn trị đưa ra một thứ hạng ưu tiên rõ ràng giữa những thuật toán đó, tạo ra một đường hướng rõ ràng để phát triển. 
 
+<p align="center"></p>
+
 | Bộ Phân Loại | Precision | Recall | Chỉ số F1 |
 | ----- | -------: | -------: | -----: |
 | A  | 95%  | 90% | 92.4% |
 | B  | 98%  | 85% | 91.0% |
+
+<p></p>
 
 > As a final example, suppose you are separately tracking the accuracy of your cat classifier in four key markets: (i) US, (ii) China, (iii) India, and (iv) Other. This gives four metrics. By taking an average or weighted average of these four numbers, you end up with a single number metric. Taking an average or weighted average is one of the most common ways to combine multiple metrics into one.
 
@@ -499,11 +505,15 @@ Một ví dụ cuối cùng, giả sử bạn đang theo dõi riêng biệt đ�
 
 Giả sử bạn quan tâm đến cả độ chính xác lẫn thời gian chạy của một thuật toán học. Bạn cần phải chọn trong ba bộ phân loại sau:
 
+<center>
+
 | Bộ phân loại  | Độ chính xác | Thời gian chạy |
 | ----- | -------: | -------: |
 | A  | 90%  | 80ms |
 | B  | 92%  | 95ms |
 | C  | 95%  | 1,500ms |
+
+</center>
 
 > It seems unnatural to derive a single metric by putting accuracy and running time into a single formula, such as:
 
@@ -551,7 +561,7 @@ Thật sự rất khó để biết trước phương án tiếp cận nào là 
 
 3. Tiến hành một **thí nghiệm** để đo mức hiệu quả của ý tưởng. (Thường thì những ý tưởng đầu tiên của tôi sẽ không hoạt động!) Học được từ những kết quả đó, tôi quay lại thử nghiệm thêm những ý tưởng mới, và cứ thế lặp lại cả quy trình.
 
-![img](../imgs/C10_01.png)
+<img src="../imgs/C10_01.png" width=550 align=center>
 
 > This is an iterative process. The faster you can go round this loop, the faster you will make progress. This is why having dev/test sets and a metric are important: Each time you try an idea, measuring your idea’s performance on the dev set lets you quickly decide if you’re heading in the right direction.
 
@@ -1504,7 +1514,7 @@ Chúng ta đã xem qua một số cách ước tính số lượng lỗi tạo r
 
 Một đồ thị quá trình học cho thấy sự tương quan giữa lỗi của tập phát triển so với số lượng các mẫu huấn luyện. Để biểu diễn nó, bạn cần áp dụng thuật toán của bạn với các tập huấn luyện có độ lớn khác nhau. Ví dụ, nếu bạn có 1.000 mẫu, bạn có thể huấn luyện riêng biệt các bản sao của thuật toán trên các tập 100, 200, 300, ..., 1.000 mẫu. Sau đó bạn có thể biểu diễn sự thay đổi giữa lỗi của tập phát triển so với độ lớn của tập huấn luyện. Dưới đây là một ví dụ:
 
-![img](../imgs/C28_01.png)
+<img src="../imgs/C28_01.png" width=750 align=center>
 
 > As the training set size increases, the dev set error should decrease.
 
@@ -1530,7 +1540,7 @@ Chúng ta thường sẽ có một số "tỉ lệ lỗi mong muốn" mà chúng
 
 Thêm mức chất lượng mong muốn vào đồ thị quá trình học của bạn:
 
-![img](../imgs/C28_02.png)
+<img src="../imgs/C28_02.png" width=750 align=center>
 
 > You can visually extrapolate the red "dev error" curve to guess how much closer you could get to the desired level of performance by adding more data. In the example above, it looks plausible that doubling the training set size might allow you to reach the desired performance.
 
@@ -1540,7 +1550,7 @@ Bạn có thể ngoại suy đường cong "lỗi tập phát triển" (màu đ�
 
 Tuy nhiên nếu đường cong lỗi tập phát triển đã "nằm ngang" (phẳng), thì bạn có thể hiểu ngay lập tức rằng việc thêm vào dữ liệu cũng sẽ không giúp bạn đạt được mục tiêu:
 
-![img](../imgs/C28_03.png)
+<img src="../imgs/C28_03.png" width=750 align=center>
 
 > Looking at the learning curve might therefore help you avoid spending months collecting twice as much training data, only to realize it does not help.
 
@@ -1577,7 +1587,7 @@ Cuối cùng, giả sử tập huấn luyện có 10.000 mẫu. Trong trường 
 
 Chúng ta hãy thêm một đồ thị sai số huấn luyện vào các hình trước đó:
 
-![img](../imgs/C29_01.png)
+<img src="../imgs/C29_01.png" width=800 align=center>
 
 > You can see that the blue "training error" curve increases with the size of the training set. Furthermore, your algorithm usually does better on the training set than on the dev set; thus the red dev error curve usually lies strictly above the blue training error curve.
 
@@ -1649,7 +1659,7 @@ Trước kia, chúng ta chỉ đo sai số tập huấn luyện và sai số t�
 
 Hãy xem xét đồ thị quá trình học này:
 
-![img](../imgs/C31_01.png)
+<img src="../imgs/C31_01.png" width=800 align=center>
 
 > Does this plot indicate high bias, high variance, or both?
 
@@ -1663,7 +1673,7 @@ Hãy xem xét đồ thị quá trình học này:
 
 Bây giờ, hãy xem xét đồ thị này:
 
-![img](../imgs/C31_02.png)
+<img src="../imgs/C31_02.png" width=800 align=center>
 
 > This time, the training error is large, as it is much higher than the desired level of performance. The dev error is also much larger than the training error. Thus, you have significant bias and significant variance. You will have to find a way to reduce both bias and variance in your algorithm.
 
@@ -1962,8 +1972,7 @@ Nhưng nếu bạn không có một mạng nơ-ron đủ lớn (hoặc một thu
 
 Nếu bạn nghĩ rằng dữ liệu nào đó không giá trị, bạn nên loại bỏ dữ liệu đó vì khả năng tính toán là có hạn. Ví dụ: giả sử tập huấn luyện/kiểm tra của bạn chứa chủ yếu là hình ảnh thông thường về người, địa điểm, địa danh, động vật. Giả sử bạn cũng có một bộ sưu tập lớn bản scan các tài liệu lịch sử:
 
-
-![img](../imgs/C37_01.png)
+<img src="../imgs/C37_01.png" width=450 align=center>
 
 > These documents don’t contain anything resembling a cat. They also look completely unlike your dev/test distribution. There is no point including this data as negative examples, because the benefit from the first effect above is negligible -- there is almost nothing your neural network can learn from this data that it can apply to your dev/test set distribution. Including them would waste computation resources and representation capacity of the neural network.
 
@@ -2288,7 +2297,7 @@ Hãy nhớ rằng tổng hợp dữ liệu nhân tạo có những thách thức
 
 Ngoài ra, giả sử bạn có 1.000 giờ tiếng ồn xe hơi khác biệt, nhưng tất cả đều được lấy từ 10 chiếc xe khác nhau. Trong trường hợp này, thuật toán có thể "quá khớp" 10 chiếc xe này và đạt chất lượng kém nếu được thử nghiệm trên âm thanh từ một chiếc xe khác. Đáng tiếc là những vấn đề này thường khó phát hiện.
 
-![img](../imgs/C43_01.png)
+<img src="../imgs/C43_01.png" width=750 align=center>
 
 > To take one more example, suppose you are building a computer vision system to recognize cars. Suppose you partner with a video gaming company, which has computer graphics models of several cars. To train your algorithm, you use the models to generate synthetic images of cars. Even if the synthesized images look very realistic, this approach (which has been independently proposed by many people) will probably not work well. The video game might have ~20 car designs in the entire video game. It is very expensive to build a 3D car model of a car; if you were playing the game, you probably wouldn’t notice that you’re seeing the same cars over and over, perhaps only painted differently. I.e., this data looks very realistic to you. But compared to the set of all cars out on roads—and therefore what you’re likely to see in the dev/test sets—this set of 20 synthesized cars captures only a minuscule fraction of the world’s distribution of cars. Thus if your 100,000 training examples all come from these 20 cars, your system will "overfit" to these 20 specific car designs, and it will fail to generalize well to dev/test sets that include other car designs.
 
@@ -2323,7 +2332,7 @@ Giả sử bạn đang xây dựng một hệ thống nhận dạng giọng nói
 
 Khi có cách tính Điểm<sub>A</sub>(*S*), bạn vẫn phải tìm câu tiếng Anh *S* để tối đa hóa nó:
 
-![img](../imgs/C44_01.png)
+<img src="../imgs/C44_01.png" width=400 align=center>
 
 > How do you compute the "arg max" above? If the English language has 50,000 words, then there are (50,000)<sup>N</sup> possible sentences of length *N* -- far too many to exhaustively enumerate.
 
@@ -2404,7 +2413,7 @@ Xem xét một ví dụ nữa. Giả sử bạn đang xây dựng một hệ th�
 
 Thuật toán của bạn dịch các câu bằng cách cố gắng tính:
 
-![img](../imgs/C45_01.png)
+<img src="../imgs/C45_01.png" width=400 align=center>
 
 > However, the set of all possible English sentences *E* is too large, so you rely on a heuristic search algorithm.
 

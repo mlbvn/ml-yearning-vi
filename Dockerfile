@@ -41,4 +41,4 @@ RUN apt-get install -f
 # install ghostscript
 RUN apt-get install -y ghostscript
 
-CMD ["bash", "create_pdf.sh"] 
+# CMD ["bash", "create_pdf.sh"] 
